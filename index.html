@@ -8,8 +8,8 @@
         <title>FCTR Identity Portal - Okta</title>
 
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      <script type="module" crossorigin src="./assets/solutions.b4da7483.js"></script>
-      <link rel="stylesheet" href="./assets/solutions.b76fbcbc.css">
+      <script type="module" crossorigin src="./assets/solutions.7f9e8488.js"></script>
+      <link rel="stylesheet" href="./assets/solutions.82e1df22.css">
     </head>
     <body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <header>
@@ -114,7 +114,7 @@
                     <div class="relative items-center gap-12 lg:flex">
                         <div class="text-center sm:mx-auto sm:w-11/12 md:mt-12 md:w-4/5 lg:mt-0 lg:mr-auto lg:w-6/12 lg:text-left">
                             <p class="mt-12 text-lg text-gray-600 dark:text-gray-300 sm:text-xl">FCTR's Identity Portal ensures secure verification of end users in your OKTA workforce or CIS tenants using their enrolled factors, eliminating social engineering risks. It enables seamless verification, allowing support teams to handle critical user requests swiftly and securely.</p>
-                            <form action="" class="mt-12">
+                            <form id="contactForm1" class="mt-12">
                                 <div class="relative flex items-center rounded-full border border-primary/20 bg-white p-1 px-2 shadow-md focus-within:ring-2 dark:border-white/10 dark:bg-dark md:p-2 lg:pr-3">
                                     <div class="py-3 pl-4 lg:pl-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="m-auto h-6 w-6 fill-gray-500 dark:fill-gray-400" viewBox="0 0 20 20" fill="currentColor">
@@ -122,9 +122,9 @@
                                             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                         </svg>
                                     </div>
-                                    <input aria-label="your email" autocomplete="email" placeholder="Enter your email" class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none dark:text-white dark:placeholder-white" type="email" />
+                                    <input aria-label="your email" autocomplete="email" placeholder="Enter your email" class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none dark:text-white dark:placeholder-white" type="email" name="email" required />
                                     <div class="md:pr-1.5 lg:pr-0">
-                                        <button type="button" title="Join" class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight sm:w-auto sm:px-6">
+                                        <button type="submit" title="Join" class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight sm:w-auto sm:px-6">
                                             <span class="relative hidden w-max font-semibold text-white dark:text-gray-900 md:block"> Schedule a Demo </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative mx-auto h-6 w-6 text-white dark:text-gray-900 md:hidden">
                                                 <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
@@ -133,6 +133,9 @@
                                     </div>
                                 </div>
                             </form>
+                            <div id="thankYouMessage1" class="hidden mt-12 text-center text-lg text-green-600 dark:text-green-400 slide-in-bottom">
+                                Thank you for signing up! We will get in touch with you soon.
+                            </div>
                         </div>
                         <div class="z-20 w-full overflow-hidden mt-8 sm:-mt-32 lg:-mt-48 lg:w-6/12">
                             <img class="animate-up-down w-full" src="./images/hero_2fa.svg" alt="Illustration" height="600" width="800" />
@@ -348,19 +351,19 @@
                                     Ready to Transform Your <br />
                                     Support Experience?
                                 </h2>
-                                <p class="mb-8 mt-6 text-gray-600 dark:text-gray-300">Join leading organizations in modernizing their identity verification process</p>
-                                <form action="" class="mt-12">
-                                    <div class="relative flex items-center rounded-full border border-primary/20 bg-white p-1 px-2 shadow-md focus-within:ring-2 dark:border-white/10 dark:bg-dark dark:text-white md:p-2 lg:pr-3">
+                                <p class="mb-8 mt-6 text-gray-600 dark:text-gray-300">Join leading organizations in modernizing and securing  their identity verification process</p>
+                                <form id="contactForm2" class="mt-12">
+                                    <div class="relative flex items-center rounded-full border border-primary/20 bg-white p-1 px-2 shadow-md focus-within:ring-2 dark:border-white/10 dark:bg-dark md:p-2 lg:pr-3">
                                         <div class="py-3 pl-4 lg:pl-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="m-auto h-6 w-6 fill-gray-500 dark:fill-gray-400" viewBox="0 0 20 20" fill="currentColor">
                                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                             </svg>
                                         </div>
-                                        <input autocomplete="email" aria-label="your email" placeholder="Your email address" class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none dark:placeholder-white" type="email" />
+                                        <input aria-label="your email" autocomplete="email" placeholder="Enter your email" class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none dark:text-white dark:placeholder-white" type="email" name="email" required />
                                         <div class="md:pr-1.5 lg:pr-0">
-                                            <button type="button" title="Get Started" class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight sm:w-auto sm:px-6">
-                                                <span class="relative hidden w-max font-semibold text-white dark:text-gray-900 md:block"> Schedule a Demo</span>
+                                            <button type="submit" title="Join" class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight sm:w-auto sm:px-6">
+                                                <span class="relative hidden w-max font-semibold text-white dark:text-gray-900 md:block"> Schedule a Demo </span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative mx-auto h-6 w-6 text-white dark:text-gray-900 md:hidden">
                                                     <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
                                                 </svg>
@@ -368,6 +371,9 @@
                                         </div>
                                     </div>
                                 </form>
+                                <div id="thankYouMessage2" class="hidden mt-12 text-center text-lg text-green-600 dark:text-green-400 slide-in-bottom">
+                                    Thank you for signing up! We will get in touch with you soon.
+                                </div>
                             </div>
                         </div>
 
