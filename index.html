@@ -8,8 +8,8 @@
         <title>FCTR Identity Portal - Okta</title>
 
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      <script type="module" crossorigin src="./assets/main.a944cad0.js"></script>
-      <link rel="stylesheet" href="./assets/index.82e1df22.css">
+      <script type="module" crossorigin src="./assets/main.a14dbb69.js"></script>
+      <link rel="stylesheet" href="./assets/index.553a9cf7.css">
     </head>
     <body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <header>
@@ -47,12 +47,13 @@
                                     </li>
                                 </ul>
                             </div>
-
+                           <!--
                             <div class="mt-12 -ml-1 flex w-full flex-col space-y-2 border-primary/10 dark:border-gray-700 sm:flex-row md:w-max lg:mt-0 lg:mr-6 lg:space-y-0 lg:border-l lg:pl-6">
-                                <a href="./pages/contact.html" class="relative ml-auto flex h-9 w-full items-center justify-center before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-primaryLight sm:px-4 lg:before:border lg:before:border-gray-200 lg:before:bg-gray-100 lg:dark:before:bg-gray-800">
+                                <a href="#cta" class="relative ml-auto flex h-9 w-full items-center justify-center before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-primaryLight sm:px-4 lg:before:border lg:before:border-gray-200 lg:before:bg-gray-100 lg:dark:before:bg-gray-800">
                                     <span class="relative text-sm font-semibold text-white dark:text-gray-900 lg:text-primary lg:dark:text-white">Get started</span>
                                 </a>
                             </div>
+                            -->
                             <button aria-label="switch theme" class="switcher group relative hidden h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 lg:flex">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
@@ -130,9 +131,13 @@
                                                 <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
                                             </svg>
                                         </button>
+                                        <div class="loader hidden ml-auto h-12 w-12 border-4 border-t-4 border-gray-200 rounded-full animate-spin"></div>
                                     </div>
                                 </div>
                             </form>
+                            <div id="thankYouMessage1" class="hidden mt-12 text-center text-lg text-green-600 dark:text-green-400 slide-in-bottom">
+                                Thank you for signing up! We will get in touch with you soon.
+                            </div>
                             <div id="thankYouMessage1" class="hidden mt-12 text-center text-lg text-green-600 dark:text-green-400 slide-in-bottom">
                                 Thank you for signing up! We will get in touch with you soon.
                             </div>
@@ -368,9 +373,13 @@
                                                     <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
                                                 </svg>
                                             </button>
+                                            <div class="loader hidden ml-auto h-12 w-12 border-4 border-t-4 border-gray-200 rounded-full animate-spin"></div>
                                         </div>
                                     </div>
                                 </form>
+                                <div id="thankYouMessage2" class="hidden mt-12 text-center text-lg text-green-600 dark:text-green-400 slide-in-bottom">
+                                    Thank you for signing up! We will get in touch with you soon.
+                                </div>
                                 <div id="thankYouMessage2" class="hidden mt-12 text-center text-lg text-green-600 dark:text-green-400 slide-in-bottom">
                                     Thank you for signing up! We will get in touch with you soon.
                                 </div>
@@ -503,7 +512,8 @@
             <div class="mx-auto px-4 sm:px-12 xl:max-w-5xl xl:px-0">
                 <div class="relative z-10 text-center md:mx-auto md:w-5/6 lg:w-4/6">
                     <h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl xl:text-5xl">Pricing</h2>
-                    <p class="mt-6 text-gray-700 dark:text-gray-300">Our pricing plans are tailored to meet the needs of organizations. For custom pricing, please contact us.</p>
+                    <p class="mt-6 text-gray-700 dark:text-gray-300">Our pricing plans are tailored to meet the needs of organizations of all sizes.<br/>
+                         For custom pricing, please contact us.</p>
                 </div>
                 <div class="relative mt-20">
                     <div aria-hidden="true" class="absolute inset-0 -bottom-20 mx-auto mt-auto h-[50rem] w-[68rem] rounded-full bg-secondaryLight/50 blur-3xl dark:bg-secondary/40 md:m-auto"></div>
@@ -511,7 +521,7 @@
                         <div class="relative z-10 -mx-2 rounded-3xl border border-gray-100 bg-gray-50 shadow-2xl shadow-gray-600/10 dark:border-gray-300 dark:bg-gray-100 dark:shadow-none md:mx-0 md:w-6/12 lg:w-5/12">
                             <div class="space-y-6 p-8 sm:p-12 text-center">
                                 <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-900">Organizations</h3>
-                                <p class="mt-1 text-gray-600 dark:text-gray-700">Custom pricing for eneterprises</p>
+                                <p class="mt-1 text-gray-600 dark:text-gray-700">Custom pricing for enterprises</p>
                                 <ul role="list" class="m-auto w-max space-y-4 py-6 text-gray-600 dark:text-gray-700">
                                     <li class="flex items-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 opacity-60">
@@ -690,6 +700,13 @@
                             </svg>
                         </a>
                         <span>&copy; FCTR 2023</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <path d="M22 6l-10 7L2 6" />
+                        </svg>
+                        <a href="mailto:info@fctr.io" class="text-base text-gray-600 dark:text-gray-400">info@fctr.io</a>
                     </div>
                     <!--
                     <div class="flex space-x-4">
