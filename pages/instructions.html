@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.5bd3c4c8.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FCTR Identity Portal - Secure verification for OKTA users">
+    <title>Setup Instructions - FCTR Identity Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+  <script type="module" crossorigin src="../assets/solutions.723967d9.js"></script>
+  <link rel="stylesheet" href="../assets/solutions.80a6d219.css">
+</head>
+<body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
+    <header>
+        <nav id="navbar" class="fixed inset-x-0 z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blur dark:border-gray-700/30 dark:bg-gray-900/80">
+            <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
+                <div class="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
+                    <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
+                        <a href="../index.html" aria-label="FCTR logo" class="nav-link flex items-center space-x-2">
+                            <img src="../images/logo.png" alt="FCTR Logo" class="h-10 w-auto">
+                        </a>
+                        <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
+                            <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
+                            <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
+                        </button>
+                    </div>
+                    <div aria-hidden="true" id="layer" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 dark:bg-darker/70 lg:hidden"></div>
+                    <div id="navlinks" class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-auto lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none dark:lg:bg-transparent">
+                        <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
+                            <ul class="space-y-6 text-base font-medium tracking-wide lg:flex lg:space-y-0 lg:text-sm">
+                                <li>
+                                    <a href="../index.html#home" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../index.html#features" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
+                                        <span>Features</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../index.html#cta" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
+                                        <span>Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button aria-label="switch theme" class="switcher group relative hidden h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 lg:flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:-rotate-90 group-hover:fill-blue-900 dark:hidden" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="fixed top-3 right-14 z-20 sm:right-24 lg:hidden">
+                        <button aria-label="switche theme" class="switcher group relative flex h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:-rotate-90 group-hover:fill-blue-900 dark:hidden" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+<body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
+    <header>
+        <nav id="navbar" class="fixed inset-x-0 z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blur dark:border-gray-700/30 dark:bg-gray-900/80">
+            <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
+                <div class="flex items-center justify-between py-4">
+                    <a href="/" class="text-xl font-bold text-gray-800 dark:text-white">Your Website</a>
+                    <div class="hidden space-x-8 lg:flex">
+                        <a href="/" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primaryLight">Home</a>
+                        <a href="/pages/terms.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primaryLight">Terms of Service</a>
+                        <a href="/pages/privacy.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primaryLight">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-32">
+        <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
+            <h1 class="text-3xl font-bold text-gray-800 dark:text-white">FCTR Identity Portal Setup Guide</h1>
+            
+            <!-- Prerequisites -->
+            <div class="mt-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Prerequisites</h2>
+                <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                    <li>Administrative access to your Okta tenant</li>
+                    <li>Super Administrator privileges</li>
+                    <li>Service account credentials</li>
+                </ul>
+            </div>
+    
+            <!-- Navigation -->
+            <nav class="mt-8">
+                <ul class="list-disc list-inside text-gray-600 dark:text-gray-300">
+                    <li><a href="#okta-api-token" class="text-primary dark:text-primaryLight">Setting Up Okta API Token</a>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><a href="#creating-service-account" class="text-primary dark:text-primaryLight">Creating a Service Account</a></li>
+                            <li><a href="#configuring-roles" class="text-primary dark:text-primaryLight">Configuring Administrative Roles</a></li>
+                            <li><a href="#generating-token" class="text-primary dark:text-primaryLight">Generating the API Token</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#saml-configuration" class="text-primary dark:text-primaryLight">SAML Configuration</a>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><a href="#creating-integration" class="text-primary dark:text-primaryLight">Creating SAML Integration</a></li>
+                            <li><a href="#saml-settings" class="text-primary dark:text-primaryLight">SAML Settings Configuration</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    
+            <!-- Okta API Token Section -->
+            <section id="okta-api-token" class="mt-12">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Setting Up Okta API Token</h2>
+                
+                <div id="creating-service-account" class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white subheading-green">Creating a Service Account</h3>
+                    <ol class="mt-4 list-decimal list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>Access your Okta tenant administration dashboard</li>
+                        <li>Create a dedicated service account or synchronize from your directory service</li>
+                        <li>Ensure the account is set to ACTIVE status with no expiration date</li>
+                        <li>Store the service account credentials securely in your password vault</li>
+                    </ol>
+                </div>
+    
+                <div id="configuring-roles" class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white subheading-green">Configuring Administrative Roles</h3>
+                    <ol class="mt-4 list-decimal list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>Log in to the Okta admin dashboard with Super Administrator credentials</li>
+                        <li>Navigate to the newly created service account</li>
+                        <li>Select the "Admin Roles" tab</li>
+                        <li>Click "Add Individual Assignments"</li>
+                        <div class="relative w-[500px] ml-4 my-4">
+                            <img 
+                                src="../assets/sa-roles-assign-1.f3f9e15b.png" 
+                                alt="Okta Admin Roles" 
+                                class="w-full h-auto rounded-lg shadow-md transition-transform hover:opacity-95"
+                                onclick="openZoomModal(this)"
+                            >
+                            <div class="absolute bottom-2 right-2 bg-black/50 rounded-full p-1.5 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <li>Assign the following roles:
+                            <ul class="list-disc list-inside ml-6 mt-2">
+                                <li>Help Desk Administrator</li>
+                                <li>Super Administrator (temporary)</li>
+                            </ul>
+                        </li>
+                        <div class="relative w-[500px] ml-4 my-4">
+                            <img 
+                                src="../assets/sa-roles-assign-2.0295353a.png" 
+                                alt="Okta Admin Roles" 
+                                class="w-full h-auto rounded-lg shadow-md transition-transform hover:opacity-95"
+                                onclick="openZoomModal(this)"
+                            >
+                            <div class="absolute bottom-2 right-2 bg-black/50 rounded-full p-1.5 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <li>Verify both role assignments are active</li>
+                    </ol>
+                </div>
+    
+                <div id="generating-token" class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white subheading-green">Generating the API Token</h3>
+                    <ol class="mt-4 list-decimal list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>Open a new private browsing session</li>
+                        <li>Log in using the service account credentials</li>
+                        <li>Navigate to Security > API > Tokens</li>
+                        <div class="relative w-[500px] ml-4 my-4 mb-8">
+                            <img 
+                                src="../assets/api-token-1.d33cfe6a.png" 
+                                alt="Okta Admin Roles" 
+                                class="w-full h-auto rounded-lg shadow-md transition-transform hover:opacity-95"
+                                onclick="openZoomModal(this)"
+                            >
+                            <div class="absolute bottom-2 right-2 bg-black/50 rounded-full p-1.5 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <li class="mt-12">Select "Create Token"</li>
+                        <li>Configure the token:
+                            <ul class="list-disc list-inside ml-6 mt-2">
+                                <li>Name: Enter a descriptive name (e.g., "fctr-id-portal")</li>
+                                <li>IP Address Range:
+                                    <ul class="list-disc list-inside ml-6">
+                                        <li>Development: Select "Any IP"</li>
+                                        <li>Production: Use FCTR-provided IP address</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="relative w-[500px]  ml-4 my-4">
+                            <img 
+                                src="../assets/api-token-2.f4ba5d51.png" 
+                                alt="Okta Admin Roles" 
+                                class="w-full h-full  rounded-lg shadow-md transition-transform hover:opacity-95"
+                                onclick="openZoomModal(this)"
+                            >
+                            <div class="absolute bottom-2 right-2 bg-black/50 rounded-full p-1.5 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <li>Copy and securely store the generated token</li>
+                        <div class="relative w-[500px] ml-4 my-4">
+                            <img 
+                                src="../assets/api-token-3.9a928b54.png" 
+                                alt="Okta Admin Roles" 
+                                class="w-full h-auto rounded-lg shadow-md transition-transform hover:opacity-95"
+                                onclick="openZoomModal(this)"
+                            >
+                            <div class="absolute bottom-2 right-2 bg-black/50 rounded-full p-1.5 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="flex items-center gap-4 px-4 py-3 my-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-lg">
+                            <!-- Stop/Warning icon -->
+                            <svg class="w-6 h-6 text-red-600 dark:text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <div class="space-y-1">
+                                <p class="font-bold text-red-600 dark:text-red-400 text-lg">⚠️ CRITICAL SECURITY ACTION REQUIRED</p>
+                                <p class="text-red-700 dark:text-red-300">
+                                    Stop here and remove the Super Administrator role assigned to the service account before proceeding further
+                                </p>
+                            </div>
+                        </div>
+                    </ol>
+                </div>
+            </section>
+    
+            <!-- SAML Configuration Section -->
+            <section id="saml-configuration" class="mt-12">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white">SAML Configuration</h2>
+    
+                <div id="creating-integration" class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white subheading-green">Creating SAML Integration</h3>
+                    <ol class="mt-4 list-decimal list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>Access Okta admin console with Super Administrator credentials</li>
+                        <li>Navigate to Applications > Create App Integration > SAML 2.0</li>
+                        <li>Configure basic settings:
+                            <ul class="list-disc list-inside ml-6 mt-2">
+                                <li>Application name: "FCTR Identity Portal"</li>
+                                <li>Upload the FCTR logo image.
+                                    <a href="../assets/instruct/FCTR-LOGO.png" 
+                                    download="fctr-logo.png"
+                                    class="inline-flex items-center gap-1 text-primary hover:text-primary-dark dark:text-primaryLight">
+                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                     </svg>
+                                     Download logo here
+                                 </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+    
+                <div id="saml-settings" class="mt-8">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white subheading-green">SAML Settings Configuration</h3>
+                    <div class="mt-4 space-y-6">
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-bold text-gray-800 dark:text-white mb-2">Required Endpoints</h4>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                                <li>Single Sign-on URL: <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">https://&lt;tenant&gt;.fctr.io</code></li>
+                                <li>Audience URI (SP Entity ID): <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">&lt;tenant&gt;-fctr</code></li>
+                                <li>Name ID format: Unspecified (recommended)</li>
+                            </ul>
+                        </div>
+                       
+    
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-bold text-gray-800 dark:text-white mb-2">Additional Attributes</h4>
+                            <table class="min-w-full mt-2">
+                                <thead class="bg-gray-100 dark:bg-gray-700">
+                                    <tr class="text-gray-100">
+                                        <th class="px-4 py-2 text-left">Attribute Name</th>
+                                        <th class="px-4 py-2 text-left">Okta Expression</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-white">
+                                    <tr>
+                                        <td class="px-4 py-2">email</td>
+                                        <td class="px-4 py-2">user.email</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">firstName</td>
+                                        <td class="px-4 py-2">user.firstName</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">lastName</td>
+                                        <td class="px-4 py-2">user.lastName</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        
+                        <div class="relative w-[500px] ml-4 my-4">
+                            <img 
+                                src="../assets/saml-config-1.f100aa6b.png" 
+                                alt="Okta Admin Roles" 
+                                class="w-full h-auto rounded-lg shadow-md transition-transform hover:opacity-95"
+                                onclick="openZoomModal(this)"
+                            >
+                            <div class="absolute bottom-2 right-2 bg-black/50 rounded-full p-1.5 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                                </svg>
+                            </div>
+                        </div> 
+
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-bold text-gray-800 dark:text-white mb-2">Group Attributes (options)</h4>
+                            <table class="min-w-full mt-2">
+                                <thead class="bg-gray-100 dark:bg-gray-700">
+                                    <tr class="text-gray-100">
+                                        <th class="px-4 py-2 text-left">Attribute Name</th>
+                                        <th class="px-4 py-2 text-left">Filter</th>
+                                        <th class="px-4 py-2 text-left">Okta Expression</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-white">
+                                    <tr>
+                                        <td class="px-4 py-2">groups</td>
+                                        <td class="px-4 py-2">Starts With - <b>OR</b> - contains (Recommended)</td>
+                                        <td class="px-4 py-2">GROUP-Prefix</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">groups</td>
+                                        <td class="px-4 py-2">Matches regex (Not Recommended)</td>
+                                        <td class="px-4 py-2"> .* </td>
+                                    </tr>
+                                    <tr>
+                            </table>
+                        </div>
+
+                        <div class="relative w-[500px] ml-4 my-4">
+                            <img 
+                                src="../assets/saml-config-2.1728268d.png" 
+                                alt="Okta Admin Roles" 
+                                class="w-full h-auto rounded-lg shadow-md transition-transform hover:opacity-95"
+                                onclick="openZoomModal(this)"
+                            >
+                            <div class="absolute bottom-2 right-2 bg-black/50 rounded-full p-1.5 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                                </svg>
+                            </div>
+                        </div> 
+    
+                        <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                            <h4 class="font-bold text-blue-800 dark:text-blue-200 mb-2">Required Groups for FCTR portal roles</h4>
+                            <p class="text-blue-700 dark:text-blue-300 mb-2">You will need a minimum of 3 groups which will be assigned to the following roles in FCTR portal:</p>
+                            <ul class="list-disc list-inside text-blue-600 dark:text-blue-400">
+                                <li>Super admin</li>
+                                <li>HD admin</li>
+                                <li>HD user</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="border-t border-gray-100 pt-16 pb-8 dark:border-gray-800">
+        <div class="m-auto space-y-8 px-4 text-gray-600 dark:text-gray-400 sm:px-12 xl:max-w-6xl xl:px-0">
+            <div class="flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
+                <div class="flex items-center space-x-4">
+                    <a href="../index.html" aria-label="FCTR logo" class="flex items-center">
+                        <img src="../images/logo.png" alt="FCTR Logo" class="h-7 w-auto">
+                    </a>
+                    <span>&copy; FCTR 2023</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <path d="M22 6l-10 7L2 6"></path>
+                    </svg>
+                    <a href="mailto:info@fctr.io" class="text-base text-gray-600 dark:text-gray-400">info@fctr.io</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="/pages/terms.html" class="text-sm duration-100 hover:text-primary dark:hover:text-primaryLight">Terms of Service</a>
+                    <a href="/pages/privacy.html" class="text-sm duration-100 hover:text-primary dark:hover:text-primaryLight">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4">
+        <div class="relative max-w-7xl w-full">
+          <button onclick="closeZoomModal()" class="absolute -top-10 right-0 text-white hover:text-gray-300">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+          <img id="zoomedImage" class="w-full h-auto" src="" alt="">
+        </div>
+      </div>
+    
+</body>
+</html>
