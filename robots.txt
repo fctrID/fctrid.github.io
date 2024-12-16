@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://fctr.io/sitemap.xml
+
+# Block access to specific folders
+Disallow: /assets/admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
