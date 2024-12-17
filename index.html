@@ -51,8 +51,8 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
-      <script type="module" crossorigin src="./assets/solutions.c78958a0.js"></script>
-      <link rel="stylesheet" href="./assets/solutions.ef19ed11.css">
+      <script type="module" crossorigin src="./assets/solutions.a60d072e.js"></script>
+      <link rel="stylesheet" href="./assets/solutions.045c40e6.css">
     </head>
     <body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <header>
@@ -166,7 +166,19 @@
                                             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                         </svg>
                                     </div>
-                                    <input aria-label="your email" autocomplete="email" placeholder="Enter your work email address" class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none dark:text-white dark:placeholder-white" type="email" name="email" required />
+                                    <div class="relative w-full">
+                                        <input 
+                                            id="work-email"
+                                            aria-label="your work email" 
+                                            autocomplete="email" 
+                                            placeholder="Enter your work email for a demo" 
+                                            class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none peer invalid:border-red-500 dark:text-white dark:placeholder-white" 
+                                            type="email" 
+                                            name="email" 
+                                            required 
+                                        />
+                                        <span id="email-error" class="absolute -bottom-9 left-4 hidden text-md text-red-500"></span>
+                                    </div>
                                     <div class="md:pr-1.5 lg:pr-0">
                                         <button type="submit" title="Join" class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight sm:w-auto sm:px-6">
                                             <span class="relative hidden w-max font-semibold text-white dark:text-gray-900 md:block"> Get a Demo </span>
