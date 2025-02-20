@@ -54,7 +54,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
       <script type="module" crossorigin src="./assets/solutions.dba8c52a.js"></script>
-      <link rel="stylesheet" href="./assets/solutions.91d985ad.css">
+      <link rel="stylesheet" href="./assets/solutions.272b8476.css">
     </head>
     <body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <header>
@@ -74,18 +74,35 @@
                         <div aria-hidden="true" id="layer" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 dark:bg-darker/70 lg:hidden"></div>
                         <div id="navlinks" class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-auto lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none dark:lg:bg-transparent">
                             <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
-                                <ul class="space-y-6 text-base font-medium tracking-wide lg:flex lg:space-y-0 lg:text-sm">
-                                    <li>
+                                <ul class="space-y-6 text-base font-medium tracking-wide lg:flex lg:items-center lg:space-y-0 lg:text-sm">
+                                    <!-- AI Agent Button -->
+                                    <li class="flex items-center">
+                                        <a href="./ai-agent.html" 
+                                           class="nav-link group relative inline-flex items-center gap-2 rounded-lg px-4 py-2 overflow-hidden transition-transform hover:scale-105 active:scale-95">
+                                            <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-orange-400 dark:via-pink-400 dark:to-purple-500"></div>
+                                            <span class="relative flex items-center gap-1 text-white dark:text-gray-900">
+                                                AI Agent for Okta
+                                                <sup class="ml-0.5 text-[10px] font-bold">BETA</sup>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <!-- Regular Nav Links -->
+                                    <li class="flex items-center">
                                         <a href="#home" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
                                             <span>Home</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="flex items-center">
                                         <a href="#features" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
                                             <span>Features</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="flex items-center">
+                                        <a href="#pricing" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
+                                            <span>Pricing</span>
+                                        </a>
+                                    </li>                                    
+                                    <li class="flex items-center">
                                         <a href="#cta" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
                                             <span>Contact</span>
                                         </a>
@@ -274,9 +291,10 @@
 
                         <!-- Steps section -->
                         <div class="mx-auto w-full max-w-3xl">
+ <!-- 
                             <p class="mb-6 bg-gradient-to-r from-primary to-secondaryLight bg-clip-text text-xl font-bold text-transparent dark:from-primaryLight dark:to-secondaryLight">It's as easy as 4 steps:</p>
 
-                            <!-- List with gradient bullets -->
+                           List with gradient bullets
                             <ul class="space-y-2">
                                 <li class="flex items-start gap-3">
                                     <svg class="mt-1 h-6 w-6 flex-shrink-0" viewBox="0 0 24 24">
@@ -312,6 +330,7 @@
                                     <span class="text-gray-700 dark:text-gray-300">Secure, modern verification via SMS, Email, or PUSH authenticators.</span>
                                 </li>
                             </ul>
+                             -->
                         </div>
                     </div>
                     <div role="tablist" aria-label="tabs" class="relative mx-auto mt-12 grid h-auto w-auto grid-cols-1 items-center gap-y-2 gap-x-1 overflow-hidden rounded-full border border-gray-200 bg-gray-100 px-[3px] text-gray-600 dark:border-gray-700 dark:border-opacity-60 dark:bg-darker dark:text-gray-300 dark:shadow-none sm:w-max sm:grid-cols-3 sm:gap-y-0">
@@ -432,17 +451,68 @@
             </div>
         </section>
 
-        <section id="company" class="pt-16 md:pt-32">
+        <section id="privacy" class="pt-16 md:pt-32">
             <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <div class="items-center justify-center space-y-6 md:flex md:gap-6 md:space-y-0">
                     <div class="md:w-1/2 lg:w-3/5">
-                        <img class="h-full rounded-3xl object-cover md:-ml-8" src="./images/hero-stats-login.svg" alt="FCTR Identity Portal" loading="lazy" width="1865" height="1750" />
+                        <img class="h-full rounded-3xl object-cover md:-ml-8" 
+                             src="./images/security-privacy.svg" 
+                             alt="FCTR Data Privacy" 
+                             loading="lazy" 
+                             width="450" 
+                             />
                     </div>
                     <div class="md:w-1/2">
-                        <span class="text-sm font-semibold uppercase tracking-widest text-primary dark:text-secondaryLight">FCTR</span>
-                        <h2 class="my-8 text-4xl font-bold text-gray-900 dark:text-white lg:text-5xl">Empowering Teams with Secure Verification</h2>
-                        <p class="mb-4 text-gray-600 dark:text-gray-300">FCTR's Identity Portal is designed to help organizations streamline secure identity verification processes.</p>
-                        <p class="text-gray-600 dark:text-gray-300">Our portal provides a seamless and efficient way to authenticate employees, associates, and customers, ensuring that your support team can handle critical requests such as password resets, account unlocks, and more with ease and confidence. By leveraging OKTA's robust security features, we help reduce the risk of social engineering attacks and enhance overall security.</p>
+                        <span class="text-sm font-semibold uppercase tracking-widest text-primary dark:text-secondaryLight">
+                            Data Privacy & Security
+                        </span>
+                        <h2 class="my-8 text-4xl font-bold text-gray-900 dark:text-white lg:text-5xl">
+                            Your Security Is Our Priority
+                        </h2>
+                        <p class="mb-4 text-gray-600 dark:text-gray-300">
+                            We maintain a strict minimal data storage policy. Only admin and end-user login IDs are stored for auditing purposes - nothing more.
+                        </p>
+                        <ul class="space-y-4 text-gray-600 dark:text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                     class="h-6 w-6 flex-none mt-0.5 text-green-500" 
+                                     fill="none" 
+                                     viewBox="0 0 24 24" 
+                                     stroke="currentColor">
+                                    <path stroke-linecap="round" 
+                                          stroke-linejoin="round" 
+                                          stroke-width="2" 
+                                          d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>User data such as attributes, factors, events are never logged</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                     class="h-6 w-6 flex-none mt-0.5 text-green-500" 
+                                     fill="none" 
+                                     viewBox="0 0 24 24" 
+                                     stroke="currentColor">
+                                    <path stroke-linecap="round" 
+                                          stroke-linejoin="round" 
+                                          stroke-width="2" 
+                                          d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Login IDs are logged solely for audit trail purposes</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                     class="h-6 w-6 flex-none mt-0.5 text-green-500" 
+                                     fill="none" 
+                                     viewBox="0 0 24 24" 
+                                     stroke="currentColor">
+                                    <path stroke-linecap="round" 
+                                          stroke-linejoin="round" 
+                                          stroke-width="2" 
+                                          d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Zero storage of organizational data or user credentials</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -663,6 +733,9 @@
             </div>
         </section> -->
 
+        
+
+                
         <section id="pricing" class="overflow-x-clip pt-32">
             <div class="mx-auto px-4 sm:px-12 xl:max-w-5xl xl:px-0">
                 <div class="relative z-10 text-center md:mx-auto md:w-5/6 lg:w-4/6">
@@ -673,38 +746,97 @@
                     </p>
                 </div>
                 <div class="relative mt-20">
+                    <!-- Gradient blur effect -->
                     <div aria-hidden="true" class="absolute inset-0 -bottom-20 mx-auto mt-auto h-[50rem] w-[68rem] rounded-full bg-secondaryLight/50 blur-3xl dark:bg-secondary/40 md:m-auto"></div>
+                    
+                    <!-- Pricing cards container -->
                     <div class="m-auto items-center justify-center -space-y-4 md:flex md:space-y-0 md:-space-x-1">
-                        <div class="relative z-10 -mx-2 rounded-3xl border border-gray-100 bg-gray-50 shadow-2xl shadow-gray-600/10 dark:border-gray-300 dark:bg-gray-100 dark:shadow-none md:mx-0 md:w-6/12 lg:w-5/12">
-                            <div class="space-y-6 p-8 text-center sm:p-12">
-                                <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-900">Organizations</h3>
-                                <p class="mt-1 text-gray-600 dark:text-gray-700">Custom pricing for enterprises</p>
-                                <ul role="list" class="m-auto w-max space-y-4 py-6 text-gray-600 dark:text-gray-700">
+                        <!-- Free Trial Card -->
+                        <div class="relative z-10 -mx-2 rounded-3xl border border-gray-100 bg-white shadow-2xl shadow-gray-600/10 dark:border-gray-700/50 dark:bg-gray-800 dark:shadow-none md:mx-0 md:w-6/12 lg:w-5/12">
+                            <div class="space-y-6 p-8 sm:p-12">
+                                <div class="flex items-center justify-center gap-4">
+                                    <div class="flex h-16 w-16 rounded-full border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="m-auto h-8 w-8 text-primary dark:text-primaryLight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">Free Trial</h3>
+                                        <p class="mt-1 text-gray-600 dark:text-gray-400">Try all features</p>
+                                    </div>
+                                </div>
+                                <div class="relative flex justify-around">
+                                    <div class="flex items-end">
+                                        <span class="leading-0 text-8xl font-bold text-gray-800 dark:text-white">60</span>
+                                        <div class="pb-2">
+                                            <span class="block text-2xl font-bold text-gray-700 dark:text-white">Days</span>
+                                            <span class="block text-xl font-bold text-primary dark:text-primaryLight">Trial</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul role="list" class="m-auto w-max space-y-4 py-6 text-gray-600 dark:text-gray-300">
+                                    <li class="space-x-2">
+                                        <span class="font-semibold text-primary">&check;</span>
+                                        <span>Full feature access</span>
+                                    </li>
+                                    <li class="space-x-2">
+                                        <span class="font-semibold text-primary">&check;</span>
+                                        <span>Basic support included</span>
+                                    </li>
+                                    <li class="space-x-2">
+                                        <span class="font-semibold text-primary">&check;</span>
+                                        <span>No credit card required</span>
+                                    </li>
+                                </ul>
+                                <a href="#cta" class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight">
+                                    <span class="relative text-base font-semibold text-white dark:text-dark">Start Free Trial</span>
+                                </a>
+                            </div>
+                        </div>
+        
+                        <!-- Organizations Card -->
+                        <div class="relative mx-4 rounded-3xl border border-gray-700 bg-gray-800 shadow-2xl shadow-gray-600/10 dark:border-gray-100 dark:bg-white dark:shadow-none md:mx-0 md:w-6/12 md:rounded-l-none md:rounded-tl-none md:rounded-tr-3xl lg:w-7/12">
+                            <div class="space-y-6 p-8 sm:p-12">
+                                <div class="flex items-center justify-center gap-4">
+                                    <div class="rounded-full bg-gradient-to-br from-primaryLight to-yellow-500 dark:from-primary dark:to-yellow-400">
+                                        <div class="flex h-16 w-16 scale-[0.96] rounded-full bg-gray-900 dark:bg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="m-auto h-8 w-8 text-white dark:text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-semibold text-white dark:text-gray-800">Organizations</h3>
+                                        <p class="mt-1 text-gray-400 dark:text-gray-600">Custom pricing for enterprises</p>
+                                    </div>
+                                </div>
+        
+                                <ul role="list" class="m-auto w-max space-y-4 py-6 text-white dark:text-gray-600">
                                     <li class="flex items-center space-x-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 opacity-60">
-                                            <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primaryLight dark:text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                         </svg>
                                         <span>Customizable plans</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 opacity-60">
-                                            <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z" clip-rule="evenodd" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primaryLight dark:text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                         </svg>
                                         <span>Dedicated support</span>
                                     </li>
                                     <li class="flex items-center space-x-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 opacity-60">
-                                            <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd" />
-                                            <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primaryLight dark:text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                         </svg>
-                                        <span>Cringe-free sales</span>
+                                        <span>Flexible deployment options</span>
                                     </li>
                                 </ul>
-                                <div class="mt-12">
-                                    <span class="inline-block rounded-full bg-gray-200 px-6 py-3 text-gray-600 dark:bg-gray-300 dark:text-gray-700"
-                                        >Contact Us for Custom Pricing<br />
-                                        <a href="mailto:info@fctr.io" class="text-base text-primary dark:text-primary">info@fctr.io</a>
-                                    </span>
+        
+                                <div class="mt-12 space-y-4">
+                                    <span class="block text-center text-white dark:text-gray-800">Contact us at</span>
+                                    <a href="mailto:info@fctr.io" class="block rounded-2xl border border-gray-700 bg-gray-700/50 p-6 text-center dark:border-primary/20 dark:bg-primary/5">
+                                        <span class="text-l  text-primaryLight dark:text-primary">info@fctr.io</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
