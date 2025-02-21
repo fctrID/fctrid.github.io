@@ -54,7 +54,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
       <script type="module" crossorigin src="./assets/solutions.dba8c52a.js"></script>
-      <link rel="stylesheet" href="./assets/solutions.93b30906.css">
+      <link rel="stylesheet" href="./assets/solutions.21c9572b.css">
     </head>
     <body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <header>
@@ -66,6 +66,17 @@
                                 <img src="./images/logo.svg" alt="FCTR Logo" class="h-10 w-auto" />
                             </a>
 
+                            <!-- AI Agent Button - Visible on mobile -->
+                            <div class="mr-0 flex items-center lg:hidden align-right">
+                                <a href="./ai-agent.html" class="nav-link group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-3 py-1.5 transition-transform hover:scale-105 active:scale-95">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-orange-400 dark:via-pink-400 dark:to-purple-500"></div>
+                                    <span class="relative flex items-center gap-1 text-sm text-white dark:text-gray-900">
+                                        AI Agent
+                                        <sup class="ml-0.5 text-[8px] font-bold">BETA</sup>
+                                    </span>
+                                </a>
+                            </div>
+
                             <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
                                 <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
                                 <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
@@ -76,9 +87,8 @@
                             <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
                                 <ul class="space-y-6 text-base font-medium tracking-wide lg:flex lg:items-center lg:space-y-0 lg:text-sm">
                                     <!-- AI Agent Button -->
-                                    <li class="flex items-center">
-                                        <a href="./ai-agent.html" 
-                                           class="nav-link group relative inline-flex items-center gap-2 rounded-lg px-4 py-2 overflow-hidden transition-transform hover:scale-105 active:scale-95">
+                                    <li class="hidden items-center lg:flex">
+                                        <a href="./ai-agent.html" class="nav-link group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
                                             <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-orange-400 dark:via-pink-400 dark:to-purple-500"></div>
                                             <span class="relative flex items-center gap-1 text-white dark:text-gray-900">
                                                 AI Agent for Okta
@@ -101,7 +111,7 @@
                                         <a href="#pricing" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
                                             <span>Pricing</span>
                                         </a>
-                                    </li>                                    
+                                    </li>
                                     <li class="flex items-center">
                                         <a href="#cta" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
                                             <span>Contact</span>
@@ -233,41 +243,34 @@
                                 <span class="font-medium text-[#10B981] transition-colors group-hover:text-[#059669] dark:text-[#34D399] dark:group-hover:text-[#10B981]"> Available on Okta Integration Network </span>
                             </a>
                             <form id="contactForm1" class="mt-12">
-                                <div class="relative p-[2px] rounded-full gradient-border">
+                                <div class="gradient-border relative rounded-full p-[2px]">
                                     <div class="relative flex items-center rounded-full border-0 bg-white p-1 px-2 shadow-md focus-within:ring-2 dark:bg-gray-900 md:p-2 lg:pr-3">
-                                    <div class="py-3 pl-4 lg:pl-5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="m-auto h-6 w-6 fill-gray-500 dark:fill-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                                        </svg>
-                                    </div>
-                                    <div class="relative w-full">
-                                        <input id="work-email" aria-label="your work email" autocomplete="email" placeholder="Enter your work email for a demo" class="peer w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none invalid:border-red-500 dark:text-white dark:placeholder-white" type="email" name="email" required />
-                                        <span id="email-error" class="text-md absolute -bottom-9 left-4 hidden text-red-500"></span>
-                                    </div>
-                                    <div class="md:pr-1.5 lg:pr-0">
-                                        <button type="submit" title="Join" class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight sm:w-auto sm:px-6">
-                                            <span class="relative hidden w-max font-semibold text-white dark:text-gray-900 md:block"> Get a Demo </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative mx-auto h-6 w-6 text-white dark:text-gray-900 md:hidden">
-                                                <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                                        <div class="py-3 pl-4 lg:pl-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="m-auto h-6 w-6 fill-gray-500 dark:fill-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                             </svg>
-                                        </button>
-                                        <div class="loader ml-auto hidden h-12 w-12 animate-spin rounded-full border-4 border-t-4 border-gray-200"></div>
+                                        </div>
+                                        <div class="relative w-full">
+                                            <input id="work-email" aria-label="your work email" autocomplete="email" placeholder="Enter your work email for a demo" class="peer w-full rounded-full bg-transparent p-4 placeholder-gray-600 outline-none invalid:border-red-500 dark:text-white dark:placeholder-white" type="email" name="email" required />
+                                            <span id="email-error" class="text-md absolute -bottom-9 left-4 hidden text-red-500"></span>
+                                        </div>
+                                        <div class="md:pr-1.5 lg:pr-0">
+                                            <button type="submit" title="Join" class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-primaryLight sm:w-auto sm:px-6">
+                                                <span class="relative hidden w-max font-semibold text-white dark:text-gray-900 md:block"> Get a Demo </span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative mx-auto h-6 w-6 text-white dark:text-gray-900 md:hidden">
+                                                    <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                                                </svg>
+                                            </button>
+                                            <div class="loader ml-auto hidden h-12 w-12 animate-spin rounded-full border-4 border-t-4 border-gray-200"></div>
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </form>
                             <div id="thankYouMessage1" class="slide-in-bottom mt-12 hidden text-center text-lg text-green-600 dark:text-green-400">Thank you for signing up! We will get in touch with you soon.</div>
                         </div>
                         <div class="z-20 mt-8 w-full overflow-hidden sm:-mt-60 lg:-mt-80 lg:w-7/12">
-                            <img 
-                                src="./images/hero_2fa.svg" 
-                                alt="FCTR Identity Portal 2FA Verification" 
-                                class="w-full h-auto rounded-2xl shadow-xl"
-                                loading="lazy"
-                                width="1000"
-                                height="800"
-                            />
+                            <img src="./images/hero_2fa.svg" alt="FCTR Identity Portal 2FA Verification" class="h-auto w-full rounded-2xl shadow-xl" loading="lazy" width="1000" height="800" />
                         </div>
                     </div>
                 </div>
@@ -281,17 +284,13 @@
                         <div class="space-y-8 text-center">
                             <!-- Main Heading -->
                             <div class="space-y-4">
-                                <h2 class="text-center max-w-4xl mx-auto">
-                                    <span class="block mb-2">
-                                        <span class="bg-gradient-to-r from-primary to-secondaryLight bg-clip-text text-transparent dark:from-primaryLight dark:to-secondaryLight text-xl md:text-2xl lg:text-3xl font-semibold">
-                                            Struggling to align Identity and Helpdesk teams?
-                                        </span>
+                                <h2 class="mx-auto max-w-4xl text-center">
+                                    <span class="mb-2 block">
+                                        <span class="bg-gradient-to-r from-primary to-secondaryLight bg-clip-text text-xl font-semibold text-transparent dark:from-primaryLight dark:to-secondaryLight md:text-2xl lg:text-3xl"> Struggling to align Identity and Helpdesk teams? </span>
                                     </span>
-                                    <span class="text-gray-700 dark:text-gray-300 text-xl md:text-2xl lg:text-3xl font-semibold">
-                                        Let the portal bridge the gap for seamless verification without affecting call center timelines
-                                    </span>
+                                    <span class="text-xl font-semibold text-gray-700 dark:text-gray-300 md:text-2xl lg:text-3xl"> Let the portal bridge the gap for seamless verification without affecting call center timelines </span>
                                 </h2>
-                        
+
                                 <!-- Zero Footprint Message 
                                 <div class="pt-4">
                                     <div class="mx-auto max-w-3xl flex items-center justify-center">
@@ -317,7 +316,7 @@
 
                         <!-- Steps section -->
                         <div class="mx-auto w-full max-w-3xl">
- <!-- 
+                            <!-- 
                             <p class="mb-6 bg-gradient-to-r from-primary to-secondaryLight bg-clip-text text-xl font-bold text-transparent dark:from-primaryLight dark:to-secondaryLight">It's as easy as 4 steps:</p>
 
                            List with gradient bullets
@@ -481,60 +480,28 @@
             <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <div class="items-center justify-center space-y-6 md:flex md:gap-6 md:space-y-0">
                     <div class="md:w-1/2 lg:w-3/5">
-                        <img class="h-full rounded-3xl object-cover md:-ml-8" 
-                             src="./images/security-privacy.svg" 
-                             alt="FCTR Data Privacy" 
-                             loading="lazy" 
-                             width="450" 
-                             />
+                        <img class="h-full rounded-3xl object-cover md:-ml-8" src="./images/security-privacy.svg" alt="FCTR Data Privacy" loading="lazy" width="450" />
                     </div>
                     <div class="md:w-1/2">
-                        <span class="text-sm font-semibold uppercase tracking-widest text-primary dark:text-secondaryLight">
-                            Data Privacy & Security
-                        </span>
-                        <h2 class="my-8 text-2xl font-bold text-gray-900 dark:text-white lg:text-3xl">
-                            Your Security Is Our Priority
-                        </h2>
-                        <p class="mb-4 text-gray-600 dark:text-gray-300">
-                            We maintain a strict minimal data storage policy. Only admin and end-user login IDs are stored for auditing purposes - nothing more.
-                        </p>
+                        <span class="text-sm font-semibold uppercase tracking-widest text-primary dark:text-secondaryLight"> Data Privacy & Security </span>
+                        <h2 class="my-8 text-2xl font-bold text-gray-900 dark:text-white lg:text-3xl">Your Security Is Our Priority</h2>
+                        <p class="mb-4 text-gray-600 dark:text-gray-300">We maintain a strict minimal data storage policy. Only admin and end-user login IDs are stored for auditing purposes - nothing more.</p>
                         <ul class="space-y-4 text-gray-600 dark:text-gray-300">
                             <li class="flex items-start gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" 
-                                     class="h-6 w-6 flex-none mt-0.5 text-green-500" 
-                                     fill="none" 
-                                     viewBox="0 0 24 24" 
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" 
-                                          stroke-linejoin="round" 
-                                          stroke-width="2" 
-                                          d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-6 w-6 flex-none text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
                                 <span>User data such as attributes, factors, events are never logged</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" 
-                                     class="h-6 w-6 flex-none mt-0.5 text-green-500" 
-                                     fill="none" 
-                                     viewBox="0 0 24 24" 
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" 
-                                          stroke-linejoin="round" 
-                                          stroke-width="2" 
-                                          d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-6 w-6 flex-none text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
                                 <span>Login IDs are logged solely for audit trail purposes</span>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" 
-                                     class="h-6 w-6 flex-none mt-0.5 text-green-500" 
-                                     fill="none" 
-                                     viewBox="0 0 24 24" 
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" 
-                                          stroke-linejoin="round" 
-                                          stroke-width="2" 
-                                          d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-6 w-6 flex-none text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
                                 <span>Zero storage of organizational data or user credentials</span>
                             </li>
@@ -759,9 +726,6 @@
             </div>
         </section> -->
 
-        
-
-                
         <section id="pricing" class="overflow-x-clip pt-32">
             <div class="mx-auto px-4 sm:px-12 xl:max-w-5xl xl:px-0">
                 <div class="relative z-10 text-center md:mx-auto md:w-5/6 lg:w-4/6">
@@ -774,7 +738,7 @@
                 <div class="relative mt-20">
                     <!-- Gradient blur effect -->
                     <div aria-hidden="true" class="absolute inset-0 -bottom-20 mx-auto mt-auto h-[50rem] w-[68rem] rounded-full bg-secondaryLight/50 blur-3xl dark:bg-secondary/40 md:m-auto"></div>
-                    
+
                     <!-- Pricing cards container -->
                     <div class="m-auto items-center justify-center -space-y-4 md:flex md:space-y-0 md:-space-x-1">
                         <!-- Free Trial Card -->
@@ -819,7 +783,7 @@
                                 </a>
                             </div>
                         </div>
-        
+
                         <!-- Organizations Card -->
                         <div class="relative mx-4 rounded-3xl border border-gray-700 bg-gray-800 shadow-2xl shadow-gray-600/10 dark:border-gray-100 dark:bg-white dark:shadow-none md:mx-0 md:w-6/12 md:rounded-l-none md:rounded-tl-none md:rounded-tr-3xl lg:w-7/12">
                             <div class="space-y-6 p-8 sm:p-12">
@@ -836,7 +800,7 @@
                                         <p class="mt-1 text-gray-400 dark:text-gray-600">Custom pricing for enterprises</p>
                                     </div>
                                 </div>
-        
+
                                 <ul role="list" class="m-auto w-max space-y-4 py-6 text-white dark:text-gray-600">
                                     <li class="flex items-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primaryLight dark:text-primary" viewBox="0 0 20 20" fill="currentColor">
@@ -857,11 +821,11 @@
                                         <span>Flexible deployment options</span>
                                     </li>
                                 </ul>
-        
+
                                 <div class="mt-12 space-y-4">
                                     <span class="block text-center text-white dark:text-gray-800">Contact us at</span>
                                     <a href="mailto:info@fctr.io" class="block rounded-2xl border border-gray-700 bg-gray-700/50 p-6 text-center dark:border-primary/20 dark:bg-primary/5">
-                                        <span class="text-l  text-primaryLight dark:text-primary">info@fctr.io</span>
+                                        <span class="text-l text-primaryLight dark:text-primary">info@fctr.io</span>
                                     </a>
                                 </div>
                             </div>
