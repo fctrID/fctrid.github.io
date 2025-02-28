@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
       <script type="module" crossorigin src="./assets/solutions.dba8c52a.js"></script>
-      <link rel="stylesheet" href="./assets/solutions.d3dab8c5.css">
+      <link rel="stylesheet" href="./assets/solutions.9d9871d8.css">
     </head>
     <body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <!-- Navigation Section -->
@@ -137,21 +137,18 @@
                                 <span class="relative text-lg font-semibold">View on GitHub</span>
                             </a>
 
-                            <!-- NEW WEB UI Button -->
-                            <a href="#web-ui" class="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-lg px-8 py-4 text-white sm:w-auto">
+                            <!-- Update the button to say "Demo Video" -->
+                            <a href="#demo-video" class="group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-lg px-8 py-4 text-white sm:w-[200px]">
                                 <!-- Gradient Background -->
-                                <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-blue-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-green-400 dark:to-blue-500"></div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-purple-400 dark:to-blue-500"></div>
 
-                                <!-- Web UI Icon -->
+                                <!-- Video Icon -->
                                 <svg xmlns="http://www.w3.org/2000/svg" class="relative h-6 w-6 flex-shrink-0 stroke-white dark:stroke-gray-900" fill="none" viewBox="0 0 24 24" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
                                 </svg>
 
-                                <!-- Button Text and Badge -->
-                                <span class="relative flex items-center gap-2 text-lg font-semibold">
-                                    Web UI
-                                    <span class="inline-flex h-5 items-center justify-center rounded-full bg-white px-2 text-xs font-bold text-green-600 dark:bg-gray-900 dark:text-green-400">NEW</span>
-                                </span>
+                                <!-- Button Text -->
+                                <span class="relative text-lg font-semibold">Demo </span>
                             </a>
                         </div>
                     </div>
@@ -162,49 +159,56 @@
                     </p>
 
                     <!-- Blog link -->
-                    <div class="mx-auto mb-8 mt-10 px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                        <div class="text-center">
-                            <a href="https://iamse.blog/2025/02/20/okta-ai-agent-for-natural-language-querying/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary hover:underline dark:text-primaryLight">
-                                <span>Read more about the AI Agent on IAMSE Blog</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                            </a>
-                        </div>
+                    <div class="mt-4 text-center lg:text-left">
+                        <a href="https://iamse.blog/2025/02/20/okta-ai-agent-for-natural-language-querying/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary hover:underline dark:text-primaryLight">
+                            <span>Read more about the AI Agent on IAMSE Blog</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
                     </div>
 
-                    <!-- Demo Video -->
-                    <div class="mt-16 aspect-video w-full overflow-hidden rounded-2xl shadow-xl">
-                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/mEg_TqMjOvM" title="FCTR AI Agent Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+                    <!-- Clear separation before Web UI section -->
+                    <div class="mt-4 mb-6 border-t border-gray-100 dark:border-gray-800"></div>
+
+                    <!-- Web UI header with slight modifications -->
+                    <div class="mb-6 text-center">
+                        <h2 class="inline-flex flex-wrap items-center justify-center gap-3 text-2xl font-bold md:text-3xl xl:text-4xl">
+                            <span class="bg-gradient-to-br from-green-500 to-blue-600 bg-clip-text text-transparent dark:from-green-400 dark:to-blue-500"> Web Interface </span>
+                            <span class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1.5 align-middle text-xs text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 md:text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="font-semibold">Coming very soon</span>
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="demo-video" class="mt-4 aspect-video w-full overflow-hidden rounded-2xl shadow-xl">
+                        <img src="./images/agent-new-web-ui.gif" alt="FCTR AI Agent Web Interface Preview" class="h-full w-full object-cover" />
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Coming Soon Web UI Section -->
+        <!-- Place YouTube video in the Web UI section -->
         <section id="web-ui" class="bg-gray-50 py-20 dark:bg-gray-800/50">
+            <div class="mt-12 mb-6 text-center">
+                <h2 class="text-2xl font-bold md:text-3xl xl:text-4xl">
+                    <span class="bg-gradient-to-br from-purple-500 to-blue-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-blue-500">
+                        Installation & Demo
+                    </span>
+                </h2>
+            </div>
             <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                <div class="mb-10 text-center">
-                    <h2 class="inline-flex flex-wrap items-center justify-center gap-3 text-3xl font-bold md:text-4xl xl:text-5xl">
-                        <span class="bg-gradient-to-br from-green-500 to-blue-600 bg-clip-text text-transparent dark:from-green-400 dark:to-blue-500"> Web UI </span>
-                        <span class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 align-middle text-sm text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 md:text-base">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="font-semibold">Coming very soon</span>
-                        </span>
-                    </h2>
+                <!-- YouTube Video now in Web UI section -->
+                <div class="aspect-video w-full overflow-hidden rounded-2xl shadow-xl">
+                    <iframe class="h-full w-full" src="https://www.youtube.com/embed/mEg_TqMjOvM" title="FCTR AI Agent Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
                 </div>
 
-                <div class="relative mx-auto max-w-4xl">
-                    <!-- Preview Image with Coming Soon Overlay -->
-                    <div class="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl dark:border-gray-700 dark:bg-gray-800">
-                        <!-- Replace with your actual preview image -->
-                        <img src="./images/agent-new-web-ui.gif" alt="FCTR AI Agent Web Interface Preview" class="h-auto w-full opacity-100" />
-                    </div>
+                <!-- Feature highlights below video -->
+                <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+                    <!-- ...existing feature cards... -->
                 </div>
-
-
             </div>
         </section>
 
