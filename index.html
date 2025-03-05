@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="./assets/favicon.5703e038.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <!-- Primary Meta Tags -->
         <title>Fctr Identity Portal | Simplify Okta User Management & Secure Identity verification, Identity Proofing</title>
         <meta name="description" content="Streamline helpdesk operations with Fctr Identity Portal. Our secure platform offers Okta integration, multi-factor authentication, identity proofing, and simplified user verification - reducing support call times by up to 60%." />
@@ -60,7 +60,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
       <script type="module" crossorigin src="./assets/solutions.d4f2424d.js"></script>
-      <link rel="stylesheet" href="./assets/solutions.a44a4994.css">
+      <link rel="stylesheet" href="./assets/solutions.55f8d152.css">
     </head>
     <body class="min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
         <header>
@@ -68,8 +68,13 @@
                 <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                     <div class="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
                         <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
-                            <a href="#home" aria-label="Fctr logo" class="nav-link flex items-center space-x-2">
-                                <img src="./images/logo.svg" alt="Fctr Logo" class="h-10 w-auto" />
+                            <!-- For both header and footer logos -->
+                            <a href="#" class="flex items-center">
+                                <!-- Light theme logo -->
+                                <img src="./images/logo.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
+
+                                <!-- Dark theme logo - add negative left margin to compensate -->
+                                <img src="./images/logo_dark.svg" alt="Fctr Logo" class="-ml-6 hidden h-7 w-auto max-w-[140px] dark:block" />
                             </a>
 
                             <!-- AI Agent Button - Visible on mobile -->
@@ -92,10 +97,11 @@
                         <div id="navlinks" class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-auto lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none dark:lg:bg-transparent">
                             <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
                                 <ul class="space-y-6 text-base font-medium tracking-wide lg:flex lg:items-center lg:space-y-0 lg:text-sm">
+
                                     <!-- AI Agent Button -->
-                                    <li class="hidden items-center lg:flex">
+                                    <li class="hidden items-center lg:flex lg:mr-3">
                                         <a href="./ai-agent.html" class="nav-link group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
-                                            <div class="absolute inset-0 bg-gradient-to-br from-teal-400 via-cyan-500 to-purple-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-teal-300 dark:via-cyan-400 dark:to-purple-500"></div>
+                                            <div class="absolute inset-0 bg-gradient-to-br from-teal-400 via-cyan-500 to-purple-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-teal-300 dark:via-cyan-400 dark:to-purple-500 "></div>
                                             <span class="relative flex items-center gap-1 text-white dark:text-gray-900">
                                                 AI Agent for Okta
                                                 <sup class="ml-0.5 text-[10px] font-bold">BETA</sup>
@@ -1457,9 +1463,16 @@
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                     <!-- Column 1: Logo and info -->
                     <div class="flex flex-col space-y-4">
-                        <a href="#" class="flex items-center space-x-2">
-                            <img src="./images/logo.png" alt="Fctr Logo" class="h-8 w-auto" />
+                        <!-- Reset to original position with no extra margin -->
+                        <a href="#" class="flex items-center">
+                            <!-- Light theme logo -->
+                            <img src="./images/logo.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
+                            
+                            <!-- Dark theme logo - only adjust proportions, not position -->
+                            <img src="./images/logo_dark.svg" alt="Fctr Logo" class="hidden h-7 w-auto max-w-[140px] -ml-5 dark:block" />
                         </a>
+                        
+                        <!-- Rest of content unchanged -->
                         <p class="text-sm text-gray-700 dark:text-gray-300">Secure identity verification portal integrated with Okta for enhanced helpdesk authentication</p>
                         <!-- Contact info moved here and improved -->
                         <div class="mt-2 flex items-center space-x-2">
