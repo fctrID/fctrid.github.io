@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
       <script type="module" crossorigin src="./assets/solutions.d4f2424d.js"></script>
-      <link rel="stylesheet" href="./assets/solutions.8c05fcc3.css">
+      <link rel="stylesheet" href="./assets/solutions.860e9a79.css">
     </head>
     <body class="overflow-y- min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <!-- Navigation Section -->
@@ -30,8 +30,13 @@
                 <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                     <div class="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
                         <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
-                            <a href="../index.html" aria-label="Fctr logo" class="nav-link flex items-center space-x-2">
-                                <img src="./images/logo.svg" alt="Fctr Logo" class="h-10 w-auto" />
+                            <!-- For both header and footer logos -->
+                            <a href="#" class="flex items-center">
+                                <!-- Light theme logo -->
+                                <img src="./images/logo.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
+
+                                <!-- Dark theme logo - add negative left margin to compensate -->
+                                <img src="./images/logo_dark.svg" alt="Fctr Logo" class="-ml-6 hidden h-7 w-auto max-w-[140px] dark:block" />
                             </a>
 
                             <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
@@ -339,24 +344,64 @@
             <span id="email-error"></span>
         </div>
 
-        <!-- Footer -->
-        <footer class="border-t border-gray-100 pt-16 pb-8 dark:border-gray-800">
-            <div class="m-auto space-y-8 px-4 text-gray-600 dark:text-gray-400 sm:px-12 xl:max-w-6xl xl:px-0">
-                <div class="flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
-                    <div class="flex items-center space-x-4">
-                        <span>&copy; Fctr 2025</span>
+        <footer class="relative border-t border-gray-100 pt-12 pb-8 dark:border-gray-800">
+            <!-- Background elements -->
+            <div aria-hidden="true" class="absolute inset-0 top-10 grid grid-cols-2 -space-x-52 opacity-30 dark:opacity-20">
+                <div class="h-40 bg-gradient-to-br from-primary/20 to-purple-400/20 blur-[106px] dark:from-blue-700/30"></div>
+                <div class="h-40 bg-gradient-to-r from-cyan-400/20 to-sky-300/20 blur-[106px] dark:to-indigo-600/30"></div>
+            </div>
+
+            <div class="relative mx-auto max-w-5xl px-4 pl-10 sm:px-12 sm:pl-20 md:pl-24 lg:pl-28 xl:px-0 xl:pl-32">
+                <!-- Main footer content -->
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <!-- Column 1: Logo and info -->
+                    <div class="flex flex-col space-y-4">
+                        <!-- Reset to original position with no extra margin -->
+                        <a href="#" class="flex items-center">
+                            <!-- Light theme logo -->
+                            <img src="./images/logo.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
+
+                            <!-- Dark theme logo - only adjust proportions, not position -->
+                            <img src="./images/logo_dark.svg" alt="Fctr Logo" class="-ml-5 hidden h-7 w-auto max-w-[140px] dark:block" />
+                        </a>
+
+                        <!-- Rest of content unchanged -->
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Secure identity verification portal integrated with Okta for enhanced helpdesk authentication</p>
+                        <!-- Contact info moved here and improved -->
+                        <div class="mt-2 flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primaryLight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <path d="M22 6l-10 7L2 6"></path>
+                            </svg>
+                            <a href="mailto:info@fctr.io" class="text-sm text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">info@fctr.io</a>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <path d="M22 6l-10 7L2 6"></path>
-                        </svg>
-                        <a href="mailto:info@fctr.io" class="text-base text-gray-600 dark:text-gray-400">info@fctr.io</a>
+
+                    <!-- Column 2: Quick Links -->
+                    <div class="flex flex-col space-y-4">
+                        <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Quick Links</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#features" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Features</a></li>
+                            <li><a href="#pricing" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Pricing</a></li>
+                            <li><a href="#faqs" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">FAQs</a></li>
+                            <li><a href="#cta" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Get a Demo</a></li>
+                        </ul>
                     </div>
-                    <div class="flex space-x-4">
-                        <a href="/pages/terms.html" class="text-sm duration-100 hover:text-primary dark:hover:text-primaryLight">Terms of Service</a>
-                        <a href="/pages/privacy.html" class="text-sm duration-100 hover:text-primary dark:hover:text-primaryLight">Privacy Policy</a>
+
+                    <!-- Column 3: Legal -->
+                    <div class="flex flex-col space-y-4">
+                        <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Legal</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="/pages/terms.html" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Terms of Service</a></li>
+                            <li><a href="/pages/privacy.html" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Privacy Policy</a></li>
+                            <li><a href="#privacy" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Security</a></li>
+                        </ul>
                     </div>
+                </div>
+
+                <!-- Divider and copyright -->
+                <div class="mt-10 border-t border-gray-200 pt-6 dark:border-gray-700">
+                    <p class="text-center text-sm text-gray-700 dark:text-gray-300">&copy; Fctr 2025. All rights reserved.</p>
                 </div>
             </div>
         </footer>
