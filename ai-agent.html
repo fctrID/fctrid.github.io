@@ -7,58 +7,73 @@
         
 
         <!-- Primary Meta Tags -->
-        <title>Fctr AI Agent | Open Source Okta Management</title>
-        <meta name="description" content="Open-source AI-powered natural language interface for Okta management. Features include multi-provider AI support, secure local data storage, and enterprise-grade security." />
-        <meta name="keywords" content="okta ai, natural language, identity management, okta automation, ai agent, enterprise ai, open source" />
+        <title>Tako | AI Agent for Okta | Natural Language Identity Management</title>
+        <meta name="description" content="Meet Tako, the open-source AI agent that revolutionizes Okta management with natural language. Built for admins, IAM managers, and audit teams." />
+        <meta name="keywords" content="okta ai, tako ai agent, natural language, identity management, okta automation, ai agent, enterprise ai, open source" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fctr.io/ai-agent" />
-        <meta property="og:title" content="Fctr AI Agent for Okta | Natural language okta management" />
-        <meta property="og:description" content="Transform your Okta management with open-source AI-powered natural language interface." />
+        <meta property="og:title" content="Tako: AI Agent for Okta | Natural language Okta management" />
+        <meta property="og:description" content="Transform your Okta management with natural language. Ask questions in plain English, get instant answers." />
         <meta property="og:image" content="https://fctr.io/images/ai_agent-og-image.png" />
+        
         <link rel="preload" href="./images/agent-new-web-ui.mp4" as="video" type="video/mp4" />
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
         
+        <!-- AOS Animation Library -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+        <!-- Site scripts -->
+        
+         
+         
         
       <script type="module" crossorigin src="./assets/ai_agent.0e347ffe.js"></script>
       <link rel="modulepreload" crossorigin href="./assets/cross-promotion.361c3f7e.js">
-      <link rel="stylesheet" href="./assets/cross-promotion.952f8de0.css">
+      <link rel="stylesheet" href="./assets/cross-promotion.7d60c146.css">
     </head>
     <body class="min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gray-900">
         <!-- Navigation Section -->
         <header>
-            <nav id="navbar" class="fixed inset-x-0 z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blur dark:border-gray-700/30 dark:bg-gray-900/80">
-                <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                    <div class="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
+            <nav id="navbar" class="fixed inset-x-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md dark:border-gray-800/30 dark:bg-gray-900/90 transition-shadow duration-300">
+                <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+                    <div class="relative flex items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
                         <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
-                            <!-- For both header and footer logos -->
-                            <a href="/index.html" class="flex items-center">
-                                <!-- Light theme logo -->
+                            <!-- Logo -->
+                            <a href="/index.html" class="flex items-center" aria-label="Tako - AI Agent for Okta">
                                 <img src="./images/logo.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
-
-                                <!-- Dark theme logo - add negative left margin to compensate -->
                                 <img src="./images/logo_dark.svg" alt="Fctr Logo" class="-ml-6 hidden h-7 w-auto max-w-[140px] dark:block" />
                             </a>
 
-                            <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
+                            <!-- Mobile menu button -->
+                            <button aria-label="Toggle mobile menu" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
                                 <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
                                 <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
                             </button>
                         </div>
+                        
+                        <!-- Mobile menu overlay -->
                         <div aria-hidden="true" id="layer" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 dark:bg-darker/70 lg:hidden"></div>
+                        
+                        <!-- Navigation Links -->
                         <div id="navlinks" class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-auto lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none dark:lg:bg-transparent">
                             <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
                                 <ul class="space-y-6 text-base font-medium tracking-wide lg:flex lg:space-y-0 lg:text-sm">
                                     <li>
-                                        <a href="../index.html" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
-                                            <span>Home</span>
+                                        <a href="#features" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
+                                            <span>Features</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#features" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
-                                            <span>Features</span>
+                                        <a href="#demo" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
+                                            <span>Demo</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#use-cases" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
+                                            <span>Use Cases</span>
                                         </a>
                                     </li>
                                     <li>
@@ -67,33 +82,50 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#roadmap" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
-                                            <span>Roadmap</span>
+                                        <a href="#get-started" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
+                                            <span>Get Started</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <!--
-                            <div class="mt-12 -ml-1 flex w-full flex-col space-y-2 border-primary/10 dark:border-gray-700 sm:flex-row md:w-max lg:mt-0 lg:mr-6 lg:space-y-0 lg:border-l lg:pl-6">
-                                <a href="#cta" class="relative ml-auto flex h-9 w-full items-center justify-center before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-primaryLight sm:px-4 lg:before:border lg:before:border-gray-200 lg:before:bg-gray-100 lg:dark:before:bg-gray-800">
-                                    <span class="relative text-sm font-semibold text-white dark:text-gray-900 lg:text-primary lg:dark:text-white">Get started</span>
-                                </a>
-                            </div>
-                            -->
-                            <button aria-label="switch theme" class="switcher group relative hidden h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 lg:flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                            
+                            <!-- Theme Switcher (Desktop) - Fixing the sun SVG icon -->
+                            <button aria-label="Switch theme" class="switcher group relative hidden h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 lg:ml-4 lg:flex">
+                                <!-- Sun icon with fixed SVG (shows in dark mode) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 text-gray-500 duration-300 group-hover:rotate-180 group-hover:text-yellow-400 dark:block dark:text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                                 </svg>
+                                <!-- Moon icon (shows in light mode) remains the same -->
                                 <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:-rotate-90 group-hover:fill-blue-900 dark:hidden" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <div class="fixed top-3 right-14 z-20 sm:right-24 lg:hidden">
-                            <button aria-label="switche theme" class="switcher group relative flex h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        
+                        <!-- Theme Switcher (Mobile) - Improved vertical alignment with hamburger -->
+                        <div class="fixed top-5 right-14 z-20 sm:right-24 lg:hidden">
+                            <button aria-label="Switch theme" class="switcher group relative flex h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
+                                <!-- Sun icon with fixed SVG (shows in dark mode) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 text-gray-500 duration-300 group-hover:rotate-180 group-hover:text-yellow-400 dark:block dark:text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                                 </svg>
+                                <!-- Moon icon remains the same -->
                                 <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:-rotate-90 group-hover:fill-blue-900 dark:hidden" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                                 </svg>
@@ -104,314 +136,561 @@
             </nav>
         </header>
 
-        <!-- Hero Section -->
-        <section id="home" class="pt-24 pb-12 sm:pt-32 sm:pb-16 md:pt-40 md:pb-20">
-            <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                <div class="relative">
-                    <!-- Banner container with responsive layout -->
-                    <div class="mb-8 text-center lg:text-left">
-                        <div class="flex flex-col items-center space-y-4 sm:flex-row sm:items-start sm:space-y-0 sm:space-x-4 lg:justify-start">
-                            <!-- AI Agent Banner -->
-                            <div class="inline-flex w-full items-center gap-3 rounded-full bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 p-[2px] sm:w-auto">
-                                <span class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-4 py-2 text-base font-bold dark:bg-gray-900 sm:w-auto sm:px-6 sm:text-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary sm:h-5 sm:w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span class="bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent dark:from-orange-400 dark:via-pink-400 dark:to-purple-500">
-                                        AI Agent for Okta
-                                        <sup class="ml-1 inline-flex items-center justify-center text-[8px] font-bold tracking-wider text-primary dark:text-primaryLight sm:text-[10px]">BETA</sup>
-                                    </span>
-                                </span>
-                            </div>
-                        
-                            <!-- MCP Server Banner - now matching width -->
-                            <div class="inline-flex w-full items-center gap-3 rounded-full bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-600 p-[2px] sm:w-auto">
-                                <span class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-4 py-2 text-base font-bold dark:bg-gray-900 sm:w-auto sm:px-6 sm:text-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-500 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                    <span class="bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-600 bg-clip-text text-transparent dark:from-blue-400 dark:via-cyan-400 dark:to-teal-500">
-                                        Okta MCP Server
-                                        <sup class="ml-1 inline-flex items-center justify-center text-[8px] font-bold tracking-wider text-teal-600 dark:text-teal-400 sm:text-[10px]">ALPHA</sup>
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
+        <!-- New Banner for Okta MCP Server - Modified with equal padding top and bottom -->
+        <section id="mcp-banner" class="relative py-4 pt-28 sm:py-3 sm:pt-20 md:pt-20 bg-gradient-to-r from-indigo-600/80 to-purple-700/80 dark:from-indigo-700/70 dark:to-purple-800/70">
+            <!-- Close button for mobile - positioned at top right -->
+            <button id="close-banner" class="absolute top-3 right-3 z-10 p-1.5 text-white/70 hover:text-white bg-black/10 rounded-full sm:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-                    <div class="mt-8 mb-6 border-t border-gray-100 dark:border-gray-800"></div>
-                        <h1 class="text-center text-4xl font-bold text-blue-900 dark:text-white sm:text-5xl lg:text-left lg:text-7xl">
-                            Natural Language<br />
-                            <span class="relative">
-                                <span class="relative bg-gradient-to-r from-primary to-secondaryLight bg-clip-text text-transparent dark:from-primaryLight dark:to-secondaryLight md:px-2">Okta Management</span>
-                            </span>
-                        </h1>
+            <!-- Reduced opacity background orbs - smaller on mobile -->
+            <div class="absolute inset-0 -z-10 overflow-hidden">
+                <div class="absolute -top-20 left-1/4 h-20 w-20 sm:h-40 sm:w-40 rounded-full bg-pink-500/10 sm:bg-pink-500/20 blur-[40px] sm:blur-[60px] dark:bg-pink-400/20 sm:dark:bg-pink-400/30"></div>
+                <div class="absolute top-1/2 right-1/4 h-30 w-30 sm:h-60 sm:w-60 rounded-full bg-fuchsia-500/10 sm:bg-fuchsia-500/20 blur-[50px] sm:blur-[70px] dark:bg-fuchsia-400/15 sm:dark:bg-fuchsia-400/25"></div>
+            </div>
 
-                        <!-- GitHub CTA with NEW WEB UI button -->
-                        <!-- Button container with grid for equal-width buttons -->
-                          <!-- Updated button container -->
-                        <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                            <!-- AI Agent GitHub button -->
-                            <a href="https://github.com/fctr-id/okta-ai-agent" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 px-6 py-4 text-white">
-                                <div class="absolute inset-0 h-full translate-y-full bg-gradient-to-br from-blue-500 to-purple-500 transition-transform duration-300 group-hover:translate-y-0"></div>
-                                <span class="relative flex items-center justify-center gap-2">
-                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    AI Agent
-                                </span>
-                            </a>
-                        
-                            <!-- MCP Server GitHub button -->
-                            <a href="https://github.com/fctr-id/okta-mcp-server" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-teal-500 to-blue-500 px-6 py-4 text-white">
-                                <div class="absolute inset-0 h-full translate-y-full bg-gradient-to-br from-blue-500 to-teal-500 transition-transform duration-300 group-hover:translate-y-0"></div>
-                                <span class="relative flex items-center justify-center gap-2">
-                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    MCP Server
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Add subtle connection to the hero section -->
+            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-indigo-500/10"></div>
 
-                    <p class="mt-8 text-center text-lg text-gray-700 dark:text-gray-300 lg:text-left">
-                        The first open source AI agent for Okta that lets you use natural language to query your Okta tenant's details.
-                        <br />Built for admins, IAM managers, IT GRC teams and audit teams.
-                    </p>
-                    
-                    <!-- Blog links section with both articles -->
-                    <div class="mt-6 text-center lg:text-left">
-                        <h3 class="mb-3 text-base font-semibold text-gray-800 dark:text-gray-200">Learn More on IAMSE Blog</h3>
-                        <div class="space-y-3">
-                            <!-- AI Agent Blog Link -->
-                            <a href="https://iamse.blog/2025/02/20/okta-ai-agent-for-natural-language-querying/" target="_blank" rel="noopener noreferrer" 
-                               class="inline-block rounded-md border border-transparent bg-gradient-to-r from-purple-50 to-indigo-50 px-4 py-2 text-sm hover:bg-gradient-to-r hover:from-purple-100 hover:to-indigo-100 dark:border-gray-700 dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-700 dark:hover:from-gray-700 dark:hover:to-gray-600">
-                                <div class="flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                    <span class="text-purple-700 dark:text-purple-300">AI Agent: Natural Language Querying for Okta</span>
-                                </div>
-                            </a>
-                            
-                            <!-- MCP Server Blog Link -->
-                            <a href="https://iamse.blog/2025/04/09/okta-mcp-ai-powered-soar-workflows-for-identity-management/" target="_blank" rel="noopener noreferrer"
-                               class="inline-block rounded-md border border-transparent bg-gradient-to-r from-teal-50 to-blue-50 px-4 py-2 text-sm hover:bg-gradient-to-r hover:from-teal-100 hover:to-blue-100 dark:border-gray-700 dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-700 dark:hover:from-gray-700 dark:hover:to-gray-600">
-                                <div class="flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-teal-600 dark:text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                    <span class="text-teal-700 dark:text-teal-300">MCP Server: AI-Powered SOAR Workflows</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Clear separation before Web UI section -->
-                    <div class="mt-4 mb-6 border-t border-gray-100 dark:border-gray-800"></div>
-
-                    <!-- Web UI header with slight modifications -->
-                    <div class="mb-6 text-center">
-                        <h2 class="inline-flex flex-wrap items-center justify-center gap-3 text-2xl font-bold md:text-3xl xl:text-4xl">
-                            <span class="bg-gradient-to-br from-green-500 to-blue-600 bg-clip-text text-transparent dark:from-green-400 dark:to-blue-500"> Web Interface </span>
-                            <span class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1.5 align-middle text-xs text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 md:text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <div class="mx-auto px-3 sm:px-6 lg:px-8 xl:max-w-7xl">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
+                    <div class="text-white text-center sm:text-left">
+                        <h3 class="text-sm sm:text-base md:text-lg font-bold line-clamp-1">Okta MCP Server: AI-Powered SOAR Workflows</h3>
+                        <p class="text-white/80 text-2xs sm:text-xs mt-0.5 sm:mt-1 hidden sm:block">
+                            Read more about it on the
+                            <a href="https://iamse.blog/2025/04/09/okta-mcp-ai-powered-soar-workflows-for-identity-management/" 
+                               class="underline hover:text-white transition-colors inline-flex items-center" 
+                               target="_blank" rel="noopener noreferrer">
+                                <span>iamse.blog</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                 </svg>
-                                <span class="font-semibold">Now Available!</span>
+                            </a>
+                        </p>
+                    </div>
+                    <a href="https://github.com/fctr-id/okta-mcp-server" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-1 sm:gap-2 px-3 py-1 sm:px-5 sm:py-2 rounded-lg bg-white/30 border border-white/40 shadow-sm hover:bg-white/40 hover:border-white/50 text-white text-xs sm:text-base font-medium transition-all hover:-translate-y-1 hover:shadow-md">
+                        <svg class="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="whitespace-nowrap">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <!-- Hero Section with cosmic universe effect - lighter background to blend with rest of site -->
+            <section id="home" class="relative overflow-hidden bg-white/80 pt-16 pb-20 dark:bg-gray-900/80 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28">
+                <!-- Enhanced cosmic/universe background elements with more random positioning and increased brightness -->
+                <div class="absolute inset-0 -z-10">
+                    <!-- Light backdrop instead of deep space -->
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-gray-50 to-white/80 opacity-70 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900/90"></div>
+                    
+                    <!-- Subtle star field using pseudo-random dots -->
+                    <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px), radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 1px); background-size: 40px 40px, 20px 20px; opacity: 0.3;"></div>
+                    
+                    <!-- Enhanced bright orbs with higher opacity and larger sizes -->
+                    <div class="absolute top-1/4 left-1/3 h-[800px] w-[800px] rounded-full bg-gradient-to-br from-indigo-400/40 via-purple-400/30 to-pink-400/25 blur-[100px] dark:from-indigo-500/50 dark:via-purple-500/40 dark:to-pink-600/30"></div>
+                    <div class="absolute -top-1/4 right-1/4 h-[700px] w-[700px] rounded-full bg-gradient-to-tl from-blue-400/35 via-violet-400/30 to-purple-400/25 blur-[130px] dark:from-blue-500/45 dark:via-violet-500/35 dark:to-purple-600/30"></div>
+                    
+                    <!-- Brighter pink/purple light orbs -->
+                    <div class="absolute top-2/3 left-2/5 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-pink-500/40 via-fuchsia-500/30 to-transparent blur-[100px] dark:from-pink-400/60 dark:via-fuchsia-500/50"></div>
+                    <div class="absolute bottom-1/4 right-1/3 h-[450px] w-[450px] rounded-full bg-gradient-to-tl from-fuchsia-500/40 via-pink-500/30 to-transparent blur-[80px] dark:from-fuchsia-400/50 dark:via-pink-400/40"></div>
+                    
+                    <!-- More intense galaxy-like swirls -->
+                    <div class="absolute bottom-1/5 left-1/3 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-fuchsia-400/35 via-pink-400/25 to-purple-400/15 blur-[110px] dark:from-fuchsia-500/40 dark:via-pink-500/30 dark:to-purple-500/25"></div>
+                    <div class="absolute top-1/3 right-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-bl from-blue-400/30 via-indigo-400/25 to-violet-400/15 blur-[120px] dark:from-blue-500/35 dark:via-indigo-500/30 dark:to-violet-500/25"></div>
+                    
+                    <!-- Brighter distant star clusters -->
+                    <div class="absolute top-1/2 left-2/3 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-purple-400/25 via-indigo-400/15 to-transparent blur-[90px] dark:from-purple-500/35 dark:via-indigo-500/25"></div>
+                    <div class="absolute top-1/4 right-2/5 h-[450px] w-[450px] rounded-full bg-gradient-to-l from-blue-400/30 via-cyan-400/15 to-transparent blur-[100px] dark:from-blue-500/40 dark:via-cyan-500/30"></div>
+
+                    <!-- Subtle grid pattern overlay with reduced opacity -->
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzMzIiBvcGFjaXR5PSIwLjAzIiBzdHJva2Utd2lkdGg9IjEiPjxwYXRoIGQ9Ik0tMSwzMCBoNjEgTTMwLC0xIHYwLDYxIi8+PC9nPjwvc3ZnPg==')] opacity-20 dark:opacity-10"></div>
+                </div>
+
+                <!-- Hero Content - Centered without image -->
+                <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+                    <div class="relative z-40">
+                        <!-- Version Badge with glass effect -->
+                        <div class="mb-8 flex justify-center" data-aos="fade-down">
+                            <div class="inline-flex items-center rounded-full border border-white/20 bg-white/60 px-4 py-1.5 text-xs font-medium shadow-lg backdrop-blur-xl transition-all hover:-translate-y-0.5 dark:border-white/10 dark:bg-gray-800/60 sm:text-sm">
+                                <span class="mr-1.5 inline-block h-2 w-2 animate-pulse rounded-full bg-green-400"></span>
+                                <span class="text-gray-700 dark:text-gray-300">BETA - Now Available for all Organizations</span>
+                            </div>
+                        </div>
+
+                        <!-- Hero Title and Description - Centered -->
+                        <div class="mx-auto max-w-4xl text-center z-40 relative">
+                            <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl" data-aos="fade-up">
+                                <span class="inline-block text-shadow">Meet Tako,</span><span class="relative z-20 inline-block mb-0 leading-none pb-2 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent dark:from-primaryLight dark:to-purple-400">AI Agent for Okta</span>
+                            </h1>
+                            <p class="mx-auto mt-10 max-w-2xl text-xl bg-transparent text-gray-600 dark:text-gray-300" data-aos="fade-up" data-aos-delay="100">
+                                Transform Okta management with natural language. Ask questions in plain English, get instant answers. No scrtipts, no hassle.
+                            </p>
+                            
+                            <!-- CTA Buttons with modern glossy effect - Centered -->
+                            <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row relative z-50" data-aos="fade-up" data-aos-delay="200">
+                                <a href="#demo" class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg bg-gradient-to-r from-primary/90 to-primary/80 px-7 py-3.5 text-base font-medium text-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 dark:from-primaryLight/90 dark:to-primaryLight/80 dark:text-gray-900 dark:hover:shadow-primary/20 dark:focus:ring-primaryLight/20 dark:focus:ring-offset-gray-800 z-50">
+                                    <span class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/20 to-white/0 opacity-0 transition-opacity group-hover:opacity-100"></span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="relative">Watch Demo</span>
+                                </a>
+                                <a href="https://github.com/fctr-id/okta-ai-agent" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg border border-gray-300/70 bg-white/70 px-7 py-3.5 text-base font-medium text-gray-700 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-gray-200 hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2 dark:border-gray-700/70 dark:bg-gray-800/70 dark:text-gray-300 dark:hover:border-gray-600 dark:hover:bg-gray-800/90 dark:focus:ring-gray-600 dark:focus:ring-offset-gray-800 z-50">
+                                    <span class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity group-hover:opacity-100 dark:via-white/5"></span>
+                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="relative">View on GitHub</span>
+                                </a>
+                            </div>
+                            
+                            <!-- Built For Section - Centered -->
+                            <div class="mt-10 flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                                <p class="text-sm font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">TRUSTED BY</p>
+                                <div class="mt-3 flex flex-wrap items-center justify-center gap-3">
+                                    <div class="inline-flex items-center rounded-full bg-blue-50/60 px-3 py-1 text-xs font-medium text-blue-700 backdrop-blur-sm transition-all hover:-translate-y-0.5 dark:bg-blue-900/20 dark:text-blue-300">IAM Managers</div>
+                                    <div class="inline-flex items-center rounded-full bg-purple-50/60 px-3 py-1 text-xs font-medium text-purple-700 backdrop-blur-sm transition-all hover:-translate-y-0.5 dark:bg-purple-900/20 dark:text-purple-300">IT Security Teams</div>
+                                    <div class="inline-flex items-center rounded-full bg-green-50/60 px-3 py-1 text-xs font-medium text-green-700 backdrop-blur-sm transition-all hover:-translate-y-0.5 dark:bg-green-900/20 dark:text-green-300">Compliance Officers</div>
+                                    <div class="inline-flex items-center rounded-full bg-amber-50/60 px-3 py-1 text-xs font-medium text-amber-700 backdrop-blur-sm transition-all hover:-translate-y-0.5 dark:bg-amber-900/20 dark:text-amber-300">Okta Administrators</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Web UI Preview Section - Changed color gradients to differentiate from AI Agent section -->
+            <section class="relative overflow-hidden bg-white/80 pt-0 pb-16 -mt-2 dark:bg-gray-900/80 lg:pb-20 pt-10 lg:pt-20">
+                <!-- Blending gradient between sections -->
+                <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white/80 to-transparent dark:from-gray-900/80 -z-5"></div>
+                
+                <div aria-hidden="true" class="absolute inset-0 -z-10">
+                    <!-- Changed color gradients for Web UI section to be different from main hero section -->
+                    <div class="absolute top-1/3 right-1/4 h-64 w-72 rounded-full bg-gradient-to-bl from-teal-300/15 to-emerald-300/10 blur-[100px] dark:from-teal-400/20 dark:to-emerald-400/15"></div>
+                    <div class="absolute bottom-1/4 left-1/3 h-60 w-60 rounded-full bg-gradient-to-tr from-amber-200/15 to-yellow-300/10 blur-[90px] dark:from-amber-300/20 dark:to-yellow-400/15"></div>
+                </div>
+
+                <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+                    <!-- Section Header -->
+                    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                            <span class="bg-gradient-to-r from-teal-500 to-emerald-500 bg-clip-text text-transparent dark:from-teal-400 dark:to-emerald-400">
+                                Modern Web Interface
                             </span>
                         </h2>
+                        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">
+                            Tako's intuitive web interface provides visualization, filtering, and CSV export for all your Okta data.
+                        </p>
                     </div>
-                    <!-- Add this container div around your video -->
-                    <div id="demo-video" class="relative aspect-video w-full overflow-hidden rounded-2xl">
-                        <video id="demo-player" class="h-full w-full object-cover transition-opacity duration-300" controls autoplay muted loop playsinline poster="./images/web-ui-placeholder.png">
-                            <source src="./images/agent-new-web-ui.mp4" type="video/mp4" />
-                            <track kind="captions" label="English" srclang="en" default />
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Place YouTube video in the Web UI section -->
-        <section id="web-ui" class="bg-gray-50 py-16 dark:bg-gray-800/50 sm:py-20">
-            <div class="mb-8 text-center sm:mb-10">
-                <h2 class="text-2xl font-bold md:text-3xl xl:text-4xl">
-                    <span class="bg-gradient-to-br from-purple-500 to-blue-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-blue-500"> Installation & Demo </span>
-                </h2>
-            </div>
-            <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                <!-- YouTube Video Container -->
-                <div class="relative">
-                    <!-- Video loading placeholder -->
-                    <div id="yt-placeholder" class="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-gray-200 dark:bg-gray-700 sm:rounded-2xl">
-                        <div class="flex flex-col items-center">
-                            <svg class="h-8 w-8 animate-spin text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            <p class="mt-2 text-gray-600 dark:text-gray-300">Loading video...</p>
+                    <!-- Web UI Preview -->
+                    <div class="mx-auto mt-10 max-w-6xl" data-aos="fade-up">
+                        <div id="demo-video" class="relative aspect-video w-full overflow-hidden rounded-2xl">
+                            <video id="demo-player" class="h-full w-full object-cover transition-opacity duration-300" controls autoplay muted loop playsinline poster="./images/web-ui-placeholder.png">
+                                <source src="./images/agent-new-web-ui.mp4" type="video/mp4" />
+                                <track kind="captions" label="English" srclang="en" default />
+                                Your browser does not support HTML5 video.
+                            </video>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <!-- YouTube iframe with improved attributes -->
-                    <div class="aspect-video w-full overflow-hidden rounded-xl shadow-lg sm:rounded-2xl">
-                        <iframe class="h-full w-full" src="https://www.youtube.com/embed/PC8arYq5kZk?rel=0" title="Fctr AI Agent Demo" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onload="document.getElementById('yt-placeholder').style.display='none';"> </iframe>
+            <!-- Key Features Section - Transparent background -->
+            <section id="features" class="relative bg-transparent py-20 dark:bg-transparent lg:py-28">
+                <div aria-hidden="true" class="absolute inset-0 -z-10">
+                    <div class="absolute top-20 left-0 h-64 w-64 rounded-full bg-gradient-to-tr from-green-400/10 to-teal-300/10 blur-[90px] dark:from-green-400/20 dark:to-teal-300/20"></div>
+                    <div class="absolute bottom-40 right-10 h-72 w-72 rounded-full bg-gradient-to-br from-primary/5 to-purple-400/10 blur-[100px] dark:from-primary/15 dark:to-purple-400/20"></div>
+                </div>
+
+                <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+                    <!-- Section header -->
+                    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                            <span class="bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent dark:from-green-400 dark:to-teal-400">
+                                Why Organizations Choose Tako
+                            </span>
+                        </h2>
+                        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">
+                            Unlock the power of your Okta data with our intuitive AI solution
+                        </p>
+                    </div>
+
+                    <!-- Features Grid -->
+                    <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                        <!-- Feature cards with transparent backgrounds -->
+                        <div data-aos="fade-up" data-aos-delay="0" class="group rounded-2xl bg-white/70 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-gray-900/60 dark:hover:bg-gray-800/60">
+                            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary dark:bg-primaryLight/10 dark:text-primaryLight">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Natural Language Queries</h3>
+                            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                                Ask questions about your Okta environment in natural language and get immediate, accurate insights.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="100" class="group rounded-2xl bg-white/70 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-gray-900/60 dark:hover:bg-gray-800/60">
+                            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Save Hours of Work</h3>
+                            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                                Eliminate complex API scripts and manual console navigation to get the Okta data you need instantly.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="200" class="group rounded-2xl bg-white/70 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-gray-900/60 dark:hover:bg-gray-800/60">
+                            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Enterprise Ready</h3>
+                            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                                Choose from multiple AI providers or deploy locally for maximum security and compliance.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="300" class="group rounded-2xl bg-white/70 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-gray-900/60 dark:hover:bg-gray-800/60">
+                            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-teal-100 text-teal-600 dark:bg-teal-900/30 dark:text-teal-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Complete Visualization</h3>
+                            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                                Intuitive dashboards with filtering, sorting, and export capabilities for your identity data.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Features Section -->
-        <section id="features" class="py-20">
-            <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                <h2 class="text-center text-3xl font-bold md:text-4xl xl:text-5xl">
-                    <span class="bg-gradient-to-br from-green-400 to-green-600 bg-clip-text text-transparent dark:from-green-300 dark:to-green-500"> Key Features </span>
-                </h2>
-                <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- AI Providers Card -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Multiple AI Providers</h3>
-                            <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
-                                <li>• Google Vertex AI (Gemini 1.5 Pro)</li>
-                                <li>• OpenAI (GPT-4)</li>
-                                <li>• Azure OpenAI (GPT-4)</li>
-                                <li>• Ollama (Local deployment)</li>
-                                <li>• OpenAI-Compatible APIs</li>
+            <!-- Use Cases Section - Transparent background -->
+            <section id="use-cases" class="relative bg-transparent py-20 dark:bg-transparent lg:py-28">
+                <div aria-hidden="true" class="absolute inset-0 -z-10">
+                    <div class="absolute top-10 right-0 h-60 w-60 rounded-full bg-gradient-to-bl from-orange-300/20 to-amber-200/10 blur-[90px] dark:from-orange-400/20 dark:to-amber-300/10"></div>
+                    <div class="absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-gradient-to-tr from-amber-100/20 to-orange-300/10 blur-[120px] dark:from-amber-200/20 dark:to-orange-400/20"></div>
+                </div>
+
+                <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+                    <!-- Section Header -->
+                    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                            <span class="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent dark:from-orange-400 dark:to-amber-400">
+                                Transform How You Work with Okta
+                            </span>
+                        </h2>
+                        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">
+                            Ask questions in plain English and receive immediate answers
+                        </p>
+                    </div>
+
+                    <!-- Query Examples - More transparent background -->
+                    <div class="mx-auto mt-16 max-w-4xl" data-aos="fade-up">
+                        <div class="rounded-2xl bg-gray-50/70 p-8 shadow-lg backdrop-blur-sm dark:bg-gray-800/50">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Example Queries You Can Ask Tako</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="rounded-lg bg-white/90 p-4 shadow-md backdrop-blur-sm dark:bg-gray-900/80">
+                                    <div class="flex items-center mb-3">
+                                        <div class="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 dark:bg-primary/20">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary dark:text-primaryLight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-lg font-medium text-gray-800 dark:text-gray-200">"Show me users created in the last 2 days with created timestamp"</p>
+                                    </div>
+                                    <div class="ml-11 text-gray-600 dark:text-gray-400">
+                                        <p>Quickly identify recent user additions to your Okta tenant</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="rounded-lg bg-white/90 p-4 shadow-md backdrop-blur-sm dark:bg-gray-900/80">
+                                    <div class="flex items-center mb-3">
+                                        <div class="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 dark:bg-primary/20">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary dark:text-primaryLight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-lg font-medium text-gray-800 dark:text-gray-200">"Which applications are assigned to the 'Finance' group and use SAML?"</p>
+                                    </div>
+                                    <div class="ml-11 text-gray-600 dark:text-gray-400">
+                                        <p>Audit application assignments and authentication methods for compliance reviews</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="rounded-lg bg-white/90 p-4 shadow-md backdrop-blur-sm dark:bg-gray-900/80">
+                                    <div class="flex items-center mb-3">
+                                        <div class="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center mr-3 dark:bg-primary/20">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary dark:text-primaryLight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-lg font-medium text-gray-800 dark:text-gray-200">"Show me users who are locked out and their last updated timestamp"</p>
+                                    </div>
+                                    <div class="ml-11 text-gray-600 dark:text-gray-400">
+                                        <p>Quickly identify and address access issues for better user experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Demo Video Section - Transparent background -->
+            <section id="demo" class="relative overflow-hidden bg-transparent py-20 dark:bg-transparent lg:py-28">
+                <div aria-hidden="true" class="absolute inset-0 -z-10">
+                    <div class="absolute top-20 right-0 h-64 w-64 rounded-full bg-gradient-to-bl from-primary/10 to-purple-400/10 blur-[90px] dark:from-primary/20 dark:to-purple-400/20"></div>
+                    <div class="absolute bottom-40 left-10 h-72 w-72 rounded-full bg-gradient-to-tr from-secondary/5 to-blue-400/10 blur-[100px] dark:from-secondary/15 dark:to-blue-400/20"></div>
+                </div>
+
+                <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+                    <!-- Section Header -->
+                    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                            <span class="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent dark:from-primaryLight dark:to-purple-400">
+                                See Tako in Action
+                            </span>
+                        </h2>
+                        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">
+                            Watch our step-by-step installation guide and feature demonstration.
+                        </p>
+                    </div>
+
+                    <!-- Video Container -->
+                    <div class="mx-auto mt-12 max-w-4xl" data-aos="zoom-in">
+                        <div class="relative aspect-video overflow-hidden rounded-2xl bg-gray-100 shadow-xl dark:bg-gray-800">
+                            <!-- Loading Animation -->
+                            <div id="yt-placeholder" class="absolute inset-0 z-10 flex items-center justify-center">
+                                <div class="flex flex-col items-center">
+                                    <svg class="h-12 w-12 animate-spin text-primary dark:text-primaryLight" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                    </svg>
+                                    <p class="mt-3 text-gray-600 dark:text-gray-300">Loading video...</p>
+                                </div>
+                            </div>
+
+                            <!-- YouTube Video -->
+                            <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/PC8arYq5kZk?rel=0" title="Tako: Fctr AI Agent Demo" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onload="document.getElementById('yt-placeholder').style.display='none';"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security & Privacy Section - Adding lists to all cards for consistency -->
+            <section id="security" class="relative bg-transparent py-20 dark:bg-transparent lg:py-28">
+                <div aria-hidden="true" class="absolute inset-0 -z-10">
+                    <div class="absolute top-20 left-0 h-64 w-64 rounded-full bg-gradient-to-tr from-blue-300/10 to-teal-300/10 blur-[90px] dark:from-blue-400/20 dark:to-teal-300/20"></div>
+                    <div class="absolute bottom-20 right-20 h-80 w-80 rounded-full bg-gradient-to-bl from-blue-400/15 to-cyan-300/10 blur-[100px] dark:from-blue-400/25 dark:to-cyan-400/15"></div>
+                </div>
+
+                <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+                    <!-- Section header - properly contained -->
+                    <div class="mx-auto max-w-3xl text-center mb-12" data-aos="fade-up">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                            <span class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent dark:from-blue-400 dark:to-teal-400">
+                                Enterprise-Grade Security
+                            </span>
+                        </h2>
+                        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">
+                            We prioritize your data protection with a security-first approach
+                        </p>
+                    </div>
+
+                    <!-- Security Features with transparent backgrounds and consistent list formatting -->
+                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <div data-aos="fade-up" class="group rounded-2xl bg-white/70 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 dark:bg-gray-900/60">
+                            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Complete Data Control</h3>
+                            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                                Your Okta data stays within your infrastructure with our security-first approach:
+                            </p>
+                            <ul class="mt-3 space-y-2 text-gray-600 dark:text-gray-400 list-disc pl-5">
+                                <li>All data stored locally within your environment</li>
+                                <li>Zero cloud dependencies for maximum security</li>
+                                <li>Full compliance with data sovereignty requirements</li>
+                                <li>Audit trails for all identity operations</li>
+                            </ul>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="100" class="group rounded-2xl bg-white/70 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 dark:bg-gray-900/60">
+                            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Flexible AI Options</h3>
+                            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                                Choose what works for your company from multiple provider options:
+                            </p>
+                            <ul class="mt-3 space-y-2 text-gray-600 dark:text-gray-400 list-disc pl-5">
+                                <li>Google Vertex AI</li>
+                                <li>Azure OpenAI Service</li>
+                                <li>OpenAI API</li>
+                                <li>Anthropic Claude</li>
+                                <li>Self-hosted open-source LLMs</li>
+                            </ul>
+                            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                                Deploy the option that best meets your security and privacy requirements.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="200" class="group rounded-2xl bg-white/70 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 dark:bg-gray-900/60">
+                            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Transparent Privacy</h3>
+                            <p class="mt-3 text-gray-600 dark:text-gray-400">
+                                We maintain clear privacy practices with no hidden data collection:
+                            </p>
+                            <ul class="mt-3 space-y-2 text-gray-600 dark:text-gray-400">
+                                <li class="flex items-center gap-2">
+                                    <svg class="h-5 w-5 flex-none text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 010 1.414l-8 8a1 1 01-1.414 0l-4-4a1 1 011.414-1.414L8 12.586l7.293-7.293a1 1 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Only queries & system prompts sent to LLMs</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="h-5 w-5 flex-none text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 010 1.414l-8 8a1 1 01-1.414 0l-4-4a1 1 011.414-1.414L8 12.586l7.293-7.293a1 1 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Comprehensive audit logging and monitoring</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="h-5 w-5 flex-none text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 011.414 0L10 8.586l4.293-4.293a1 1 111.414 1.414L11.414 10l4.293 4.293a1 1 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 01-1.414-1.414L8.586 10 4.293 5.707a1 1 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>No sensitive data or organization information leaves your environment</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <!-- Fast Sync Card -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Fast Data Sync</h3>
-                            <p class="mt-4 text-gray-600 dark:text-gray-300">Parallel data fetching for quick synchronization with your Okta tenant. Local SQLite storage ensures rapid query responses.</p>
-                        </div>
+            <!-- Get Started Section - Transparent background -->
+            <section id="get-started" class="relative overflow-hidden bg-transparent py-20 dark:bg-transparent lg:py-28">
+                <div aria-hidden="true" class="absolute inset-0 -z-10">
+                    <div class="absolute top-1/4 left-0 h-64 w-72 rounded-full bg-gradient-to-tr from-primary/10 to-secondary/10 blur-[100px] dark:from-primary/20 dark:to-secondary/20"></div>
+                    <div class="absolute bottom-0 right-1/4 h-60 w-60 rounded-full bg-gradient-to-bl from-secondary/10 to-purple-300/10 blur-[120px] dark:from-secondary/20 dark:to-purple-300/20"></div>
+                </div>
+
+                <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
+                    <!-- Section Header -->
+                    <div class="mx-auto max-w-3xl text-center">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:from-primaryLight dark:to-secondaryLight">
+                                Ready to Transform Your Okta Experience?
+                            </span>
+                        </h2>
+                        <p class="mt-4 text-xl text-gray-600 dark:text-gray-300">
+                            Tako is open-source and ready for deployment in your environment
+                        </p>
                     </div>
 
-                    <!-- Data Model Card -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Data Transparency</h3>
-                            <p class="mt-4 text-gray-600 dark:text-gray-300">Full visibility into stored data including Users, Groups, Applications, Factors, and Policies. Inspect data using SQLite Browser.</p>
+                    <!-- CTA Card with transparent background -->
+                    <div class="mx-auto mt-12 max-w-2xl rounded-2xl bg-gradient-to-br from-gray-50/60 to-gray-100/60 p-8 shadow-lg backdrop-blur-sm dark:from-gray-800/40 dark:to-gray-900/40">
+                        <div class="flex flex-col items-center justify-center text-center">
+                            <div class="mb-6 rounded-full bg-primary/10 p-4 dark:bg-primaryLight/10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary dark:text-primaryLight" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Get Started Today</h3>
+                            <p class="mt-4 text-gray-600 dark:text-gray-300">
+                                Our team is ready to help you implement Tako AI Agent in your environment. Whether you need assistance with deployment, configuration, or have questions about integration with your existing systems.
+                            </p>
+                            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+                                <a href="https://github.com/fctr-id/okta-ai-agent" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700/50">
+                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>View on GitHub</span>
+                                </a>
+                                <a href="mailto:support@fctr.io" class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-medium text-white shadow-md transition-all hover:bg-primary/90 dark:bg-primaryLight dark:text-gray-900 dark:hover:bg-primaryLight/90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                    </svg>
+                                    <span>Contact Our Team</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Security Section -->
-        <section id="security" class="bg-gray-50 py-20 dark:bg-gray-800/50">
-            <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                <h2 class="text-center text-3xl font-bold md:text-4xl xl:text-5xl">
-                    <span class="bg-gradient-to-br from-blue-400 to-teal-500 bg-clip-text text-transparent dark:from-blue-300 dark:to-teal-400"> Security First </span>
-                </h2>
-                <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- Local Storage Card -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Local Data Storage</h3>
-                            <p class="mt-4 text-gray-600 dark:text-gray-300">Your Okta data never leaves your machine. All data is stored locally in a SQLite database.</p>
-                        </div>
-                    </div>
+            <!-- Support & CTA Section - Transparent background -->
+            <section class="relative bg-transparent py-16 dark:bg-transparent sm:py-24">
+                <div aria-hidden="true" class="absolute inset-0 -z-10">
+                    <div class="absolute top-0 right-0 h-48 w-48 rounded-full bg-gradient-to-bl from-red-200/20 to-primary/10 blur-[70px] dark:from-red-300/10 dark:to-primary/20"></div>
+                    <div class="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-gradient-to-tr from-green-200/10 to-secondary/10 blur-[90px] dark:from-green-300/20 dark:to-secondary/20"></div>
+                </div>
 
-                    <!-- API Control Card -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">API Control</h3>
-                            <p class="mt-4 text-gray-600 dark:text-gray-300">You control the Okta API token, its permissions, and network restrictions. Full control over access.</p>
-                        </div>
-                    </div>
-
-                    <!-- Data Privacy Card -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Data Privacy</h3>
-                            <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
-                                <li>✓ Only queries sent to LLMs</li>
-                                <li>✗ No user data sent</li>
-                                <li>✗ No organizational data sent</li>
-                                <li>✗ No synced database contents sent</li>
-                            </ul>
-                        </div>
+                <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+                    <h2 class="text-base font-semibold uppercase tracking-wider text-primary dark:text-primaryLight" data-aos="fade-up">Support & Feedback</h2>
+                    <p class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl" data-aos="fade-up" data-aos-delay="100">
+                        Need Help or Have Ideas?
+                    </p>
+                    <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500 dark:text-gray-400" data-aos="fade-up" data-aos-delay="200">
+                        Check your setup first, then open an issue on GitHub or email us. We value your feedback for improving Tako!
+                    </p>
+                    <div class="mt-12 flex justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="https://github.com/fctr-id/okta-ai-agent/issues/new?labels=bug" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-md border border-transparent bg-red-100 px-5 py-3 text-base font-medium text-red-700 hover:bg-red-200 dark:bg-red-900/30 dark:text-red-300 dark:hover:bg-red-900/50">
+                           Report a Bug
+                        </a>
+                        <a href="https://github.com/fctr-id/okta-ai-agent/issues/new?labels=enhancement" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-md border border-transparent bg-green-100 px-5 py-3 text-base font-medium text-green-700 hover:bg-green-200 dark:bg-green-900/30 dark:text-green-300 dark:hover:bg-green-900/50">
+                           Request a Feature
+                        </a>
+                         <a href="mailto:support@fctr.io" class="inline-flex items-center rounded-md border border-gray-300 bg-white px-5 py-3 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700/50">
+                           Email Support
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <!-- Roadmap Section -->
-        <section id="roadmap" class="py-20">
-            <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                <h2 class="text-center text-3xl font-bold md:text-4xl xl:text-5xl">
-                    <span class="bg-gradient-to-br from-purple-400 to-indigo-500 bg-clip-text text-transparent dark:from-purple-300 dark:to-indigo-400"> Future Roadmap </span>
-                </h2>
-                <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- Real-time Integration -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Real-time Data</h3>
-                            <p class="mt-4 text-gray-600 dark:text-gray-300">Moving beyond periodic syncs to interact with real-time Okta data and APIs.</p>
-                        </div>
-                    </div>
-
-                    <!-- Event Analytics -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Event Analytics</h3>
-                            <p class="mt-4 text-gray-600 dark:text-gray-300">Natural language queries against Okta System Logs for security investigation and reporting.</p>
-                        </div>
-                    </div>
-
-                    <!-- Managed Changes -->
-                    <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none">
-                        <div class="space-y-4">
-                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Managed Changes</h3>
-                            <p class="mt-4 text-gray-600 dark:text-gray-300">Moving beyond read-only queries to actionable commands with approval workflows.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hidden elements for JS functionality -->
-        <div class="hidden">
-            <input type="email" id="work-email" />
-            <span id="email-error"></span>
-        </div>
-
-        <footer class="relative border-t border-gray-100 pt-12 pb-8 dark:border-gray-800">
-            <!-- Background elements -->
-            <div aria-hidden="true" class="absolute inset-0 top-10 grid grid-cols-2 -space-x-52 opacity-30 dark:opacity-20">
-                <div class="h-40 bg-gradient-to-br from-primary/20 to-purple-400/20 blur-[106px] dark:from-blue-700/30"></div>
-                <div class="h-40 bg-gradient-to-r from-cyan-400/20 to-sky-300/20 blur-[106px] dark:to-indigo-600/30"></div>
-            </div>
-
-            <div class="relative mx-auto max-w-5xl px-4 pl-10 sm:px-12 sm:pl-20 md:pl-24 lg:pl-28 xl:px-0 xl:pl-32">
-                <!-- Main footer content -->
+        <!-- Footer with more transparency -->
+        <footer class="relative border-t border-gray-100/60 bg-gray-50/60 pt-12 pb-8 dark:border-gray-800/60 dark:bg-gray-800/30">
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                     <!-- Column 1: Logo and info -->
                     <div class="flex flex-col space-y-4">
-                        <!-- Reset to original position with no extra margin -->
-                        <a href="#" class="flex items-center">
-                            <!-- Light theme logo -->
+                        <a href="/index.html" class="flex items-center" aria-label="Fctr Home">
                             <img src="./images/logo.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
-
-                            <!-- Dark theme logo - only adjust proportions, not position -->
                             <img src="./images/logo_dark.svg" alt="Fctr Logo" class="-ml-5 hidden h-7 w-auto max-w-[140px] dark:block" />
                         </a>
-
-                        <!-- Rest of content unchanged -->
-                        <p class="text-sm text-gray-700 dark:text-gray-300">Secure identity verification portal integrated with Okta for enhanced helpdesk authentication</p>
-                        <!-- Contact info moved here and improved -->
-                        <div class="mt-2 flex items-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primaryLight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <path d="M22 6l-10 7L2 6"></path>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Open-source AI tools for modern identity management.</p>
+                        <div class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primaryLight" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                             </svg>
-                            <a href="mailto:info@fctr.io" class="text-sm text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">info@fctr.io</a>
+                            <a href="mailto:info@fctr.io" class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">info@fctr.io</a>
+                        </div>
+                         <div class="flex items-center space-x-2">
+                             <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            <a href="https://github.com/fctr-id" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">GitHub</a>
                         </div>
                     </div>
 
@@ -419,10 +698,11 @@
                     <div class="flex flex-col space-y-4">
                         <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Quick Links</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#features" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Features</a></li>
-                            <li><a href="#pricing" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Pricing</a></li>
-                            <li><a href="#faqs" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">FAQs</a></li>
-                            <li><a href="#cta" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Get a Demo</a></li>
+                            <li><a href="#features" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Features</a></li>
+                            <li><a href="#demo" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Demo</a></li>
+                             <li><a href="#security" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Security</a></li>
+                            <li><a href="#quickstart" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Quick Start</a></li>
+                            <li><a href="#roadmap" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Roadmap</a></li>
                         </ul>
                     </div>
 
@@ -430,24 +710,187 @@
                     <div class="flex flex-col space-y-4">
                         <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Legal</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="/pages/terms.html" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Terms of Service</a></li>
-                            <li><a href="/pages/privacy.html" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Privacy Policy</a></li>
-                            <li><a href="#privacy" class="text-gray-700 transition-colors duration-200 hover:text-primary dark:text-gray-300 dark:hover:text-primaryLight">Security</a></li>
+                            <li><a href="/pages/terms.html" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Terms of Service</a></li>
+                            <li><a href="/pages/privacy.html" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Privacy Policy</a></li>
+                            <li><a href="https://github.com/fctr-id/okta-ai-agent/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">License (MIT)</a></li>
                         </ul>
                     </div>
                 </div>
-
                 <!-- Divider and copyright -->
                 <div class="mt-10 border-t border-gray-200 pt-6 dark:border-gray-700">
-                    <p class="text-center text-sm text-gray-700 dark:text-gray-300">&copy; Fctr 2025. All rights reserved.</p>
+                    <p class="text-center text-sm text-gray-600 dark:text-gray-400">&copy; Fctr 2025. All rights reserved.</p>
                 </div>
             </div>
         </footer>
 
         <!-- Scripts -->
-        
-        
-        
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                AOS.init({
+                    duration: 800, // values from 0 to 3000, with step 50ms
+                    once: true, // whether animation should happen only once - while scrolling down
+                });
+            });
+        </script>
+         <style>
+            /* Ensure particles container has proper size and visibility */
+            #particles-js {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            
+            /* Add explicit smooth scrolling behavior to html element */
+            html {
+                scroll-behavior: smooth;
+            }
+            
+            /* Floating animation for hero image */
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+                100% { transform: translateY(0px); }
+            }
+            
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            /* Text shadow effect for dark mode */
+            .text-shadow {
+                text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            }
+            
+            .dark .text-shadow {
+                text-shadow: 0 1px 3px rgba(255,255,255,0.1);
+            }
+            
+            /* Add twinkling stars effect */
+            @keyframes twinkle {
+                0%, 100% { opacity: 0.2; }
+                50% { opacity: 0.8; }
+            }
+            
+            .star {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                background-color: white;
+                opacity: 0.2;
+                animation: twinkle 4s infinite ease-in-out;
+                pointer-events: none;
+            }
+            
+            /* Generate stars with different animation delays */
+            .star:nth-child(3n) { animation-delay: 0.5s; }
+            .star:nth-child(3n+1) { animation-delay: 1s; }
+            .star:nth-child(3n+2) { animation-delay: 1.5s; }
+            
+            /* Random star positions will be added via JS */
+            
+            /* FIX: Only apply pointer-events:none to background decorative elements, not navigation */
+            [aria-hidden="true"] {
+                pointer-events: none;
+            }
+            
+            /* FIX: Ensure navbar elements are clickable with higher specificity */
+            #navbar, #navbar a, #navbar button, .switcher, #navlinks, #navlinks a {
+                pointer-events: auto !important;
+            }
+            
+            /* Make buttons clickable */
+            #home a {
+                position: relative;
+                pointer-events: auto;
+            }
+        </style>
+        <!-- Add after the existing DOMContentLoaded script or integrate with it -->
+        <script>
+            // Create twinkling stars
+            function createStars() {
+                const heroSection = document.getElementById('home');
+                const starsContainer = document.createElement('div');
+                starsContainer.className = 'absolute inset-0 -z-5 overflow-hidden pointer-events-none';
+                
+                // Add 100 stars with random positions
+                for (let i = 0; i < 100; i++) {
+                    const star = document.createElement('div');
+                    star.className = 'star';
+                    star.style.top = `${Math.random() * 100}%`;
+                    star.style.left = `${Math.random() * 100}%`;
+                    star.style.animationDuration = `${3 + Math.random() * 3}s`;
+                    starsContainer.appendChild(star);
+                }
+                
+                heroSection.appendChild(starsContainer);
+            }
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize AOS
+                AOS.init({
+                    duration: 800,
+                    once: true
+                    // Keep animations on all devices (removed mobile disable)
+                });
+                
+                // Create stars effect for the hero section
+                createStars();
+                
+                // Banner dismiss functionality
+                const closeButton = document.getElementById('close-banner');
+                const banner = document.getElementById('mcp-banner');
+                
+                if (closeButton && banner) {
+                    closeButton.addEventListener('click', function() {
+                        banner.classList.add('hidden');
+                        // Optional: save to session storage to keep it dismissed
+                        sessionStorage.setItem('mcp-banner-closed', 'true');
+                    });
+                    
+                    // Check if the banner was previously dismissed
+                    if (sessionStorage.getItem('mcp-banner-closed') === 'true') {
+                        banner.classList.add('hidden');
+                    }
+                }
+                
+                // Add smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            // Offset for fixed header
+                            const headerOffset = 100;
+                            const elementPosition = target.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition - headerOffset;
+                            
+                            window.scrollBy({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Update URL hash without jumping
+                            history.pushState(null, null, this.getAttribute('href'));
+                        }
+                    });
+                });
+                
+                // Reduce AOS animations on scroll events to improve performance
+                let scrollTimeout;
+                window.addEventListener('scroll', function() {
+                    if (scrollTimeout) {
+                        window.cancelAnimationFrame(scrollTimeout);
+                    }
+                    scrollTimeout = window.requestAnimationFrame(function() {
+                        // Any intensive scroll operations can go here
+                    });
+                }, { passive: true });
+            });
+        </script>
     </body>
-    <style></style>
 </html>
