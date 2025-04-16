@@ -59,8 +59,8 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
-      <script type="module" crossorigin src="./assets/cross-promotion.361c3f7e.js"></script>
-      <link rel="stylesheet" href="./assets/cross-promotion.6dec74f5.css">
+      <script type="module" crossorigin src="./assets/solutions.d4f2424d.js"></script>
+      <link rel="stylesheet" href="./assets/solutions.3a034a92.css">
     </head>
     <body class="min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
         <header>
@@ -77,7 +77,7 @@
                                 <img src="./images/logo_dark.svg" alt="Fctr Logo" class="-ml-6 hidden h-7 w-auto max-w-[140px] dark:block" />
                             </a>
 
-                            <!-- AI Agent Button - Visible on mobile -->
+                            <!-- AI Agent Button - Visible on mobile 
                             <div class="mr-0 flex items-center lg:hidden">
                                 <a href="./ai-agent.html" class="nav-link group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-3 py-1.5 transition-transform hover:scale-105 active:scale-95">
                                     <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-orange-400 dark:via-pink-400 dark:to-purple-500"></div>
@@ -87,6 +87,7 @@
                                     </span>
                                 </a>
                             </div>
+                        -->
 
                             <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
                                 <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
@@ -97,17 +98,16 @@
                         <div id="navlinks" class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-auto lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none dark:lg:bg-transparent">
                             <div class="text-gray-600 dark:text-gray-300 lg:pr-4">
                                 <ul class="space-y-6 text-base font-medium tracking-wide lg:flex lg:items-center lg:space-y-0 lg:text-sm">
-
-                                    <!-- AI Agent Button -->
-                                    <li class="hidden items-center lg:flex lg:mr-3">
+                                    <!-- AI Agent Button 
+                                    <li class="hidden items-center lg:mr-3 lg:flex">
                                         <a href="./ai-agent.html" class="nav-link group relative inline-flex items-center gap-2 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
-                                            <div class="absolute inset-0 bg-gradient-to-br from-teal-400 via-cyan-500 to-purple-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-teal-300 dark:via-cyan-400 dark:to-purple-500 "></div>
+                                            <div class="absolute inset-0 bg-gradient-to-br from-teal-400 via-cyan-500 to-purple-600 opacity-100 transition-opacity group-hover:opacity-90 dark:from-teal-300 dark:via-cyan-400 dark:to-purple-500"></div>
                                             <span class="relative flex items-center gap-1 text-white dark:text-gray-900">
                                                 AI Agent for Okta
                                                 <sup class="ml-0.5 text-[10px] font-bold">BETA</sup>
                                             </span>
                                         </a>
-                                    </li>
+                                    </li>-->
                                     <!-- Regular Nav Links -->
                                     <li class="flex items-center">
                                         <a href="#home" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
@@ -165,12 +165,38 @@
                     </div>
                 </div>
             </nav>
-            
         </header>
-        
 
-        <section id="home" class="pt-32 sm:pt-40 md:pt-48">
-            
+        <!-- New Banner for Tako AI Agent - Using vibrant purple/indigo color scheme -->
+        <section id="tako-banner" class="relative bg-gradient-to-r from-indigo-600/90 to-purple-700/90 py-4 pt-28 dark:from-indigo-600/80 dark:to-purple-700/80 sm:py-3 sm:pt-20 md:pt-20">
+            <!-- Enhanced background orbs with more vibrant colors -->
+            <div class="absolute inset-0 -z-10 overflow-hidden">
+                <div class="absolute -top-20 left-1/4 h-20 w-20 rounded-full bg-pink-500/20 blur-[40px] dark:bg-pink-400/30 sm:h-40 sm:w-40 sm:bg-pink-500/30 sm:blur-[60px] sm:dark:bg-pink-400/40"></div>
+                <div class="h-30 w-30 dark:bg-purple-400/25 absolute top-1/2 right-1/4 rounded-full bg-purple-500/20 blur-[50px] sm:h-60 sm:w-60 sm:bg-purple-500/30 sm:blur-[70px] sm:dark:bg-purple-400/35"></div>
+            </div>
+
+            <!-- Add subtle connection to the hero section -->
+            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-indigo-500/10"></div>
+
+            <div class="mx-auto px-3 sm:px-6 lg:px-8 xl:max-w-7xl">
+                <div class="flex flex-col items-center justify-between gap-2 sm:flex-row sm:gap-4">
+                    <div class="relative text-center text-white sm:text-left">
+                        <h3 class="line-clamp-1 text-sm font-bold sm:text-base md:text-lg">Meet Tako: your AI-powered agent for Okta</h3>
+                        <p class="text-2xs mt-0.5 hidden text-white/80 sm:mt-1 sm:block sm:text-xs">Use natural language to simplify Okta management</p>
+                    </div>
+                    <a href="./ai-agent.html" target="_blank" rel="noopener noreferrer" 
+                       class="relative z-20 inline-flex w-auto items-center gap-1 rounded-lg border border-white/40 bg-white/30 px-2 py-1 text-xs font-medium text-white shadow-sm transition-all hover:-translate-y-1 hover:border-white/50 hover:bg-white/40 hover:shadow-md sm:gap-2 sm:px-5 sm:py-2 sm:text-base"
+                       style="cursor: pointer; pointer-events: auto;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <span class="whitespace-nowrap">Learn More</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="home" class="pt-16 sm:pt-20 md:pt-24">
             <div aria-hidden="true" class="absolute inset-0 top-10 grid grid-cols-2 -space-x-52 opacity-30 dark:opacity-10">
                 <div class="h-40 bg-gradient-to-br from-primary/20 to-purple-400/20 blur-[106px] dark:from-zinc-800 dark:to-zinc-900 dark:blur-[120px]"></div>
                 <div class="h-40 bg-gradient-to-r from-cyan-400/20 to-sky-300/20 blur-[106px] dark:from-neutral-900 dark:to-neutral-800 dark:blur-[120px]"></div>
@@ -796,7 +822,7 @@
                                     </div>
                                     <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white p-2 shadow-md dark:bg-gray-800">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" />
                                         </svg>
                                     </div>
                                     <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white p-2 shadow-md dark:bg-gray-800">
@@ -978,27 +1004,27 @@
                                 <div class="mb-8 grid grid-cols-2 rounded-3xl border border-gray-700 text-white dark:border-gray-200 dark:text-gray-600 [&>*]:border-gray-700 [&>*]:p-4 [&>*]:dark:border-gray-200">
                                     <div class="flex justify-center gap-2 border-b">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 opacity-60">
-                                            <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd" />
+                                            <path fill-rule="evenodd" d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5zM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5zM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15z" clip-rule="evenodd" />
                                         </svg>
                                         Shine
                                     </div>
                                     <div class="flex justify-center gap-2 border-b border-l">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 opacity-60">
-                                            <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 00-1.071-.136 9.742 9.742 0 00-3.539 6.177A7.547 7.547 0 016.648 6.61a.75.75 0 00-1.152-.082A9 9 0 1015.68 4.534a7.46 7.46 0 01-2.717-2.248zM15.75 14.25a3.75 3.75 0 11-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 011.925-3.545 3.75 3.75 0 013.255 3.717z" clip-rule="evenodd" />
+                                            <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.177A7.547 7.547 0 0 1 6.648 6.61a.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248zM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.545 3.75 3.75 0 0 1 3.255 3.717z" clip-rule="evenodd" />
                                         </svg>
                                         Feature
                                     </div>
                                     <div class="flex justify-center gap-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 opacity-60">
-                                            <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd" />
-                                            <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
+                                            <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666zM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5z" />
+                                            <path d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
                                         </svg>
                                         Boost
                                     </div>
                                     <div class="flex justify-center gap-2 border-l">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 opacity-60">
-                                            <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clip-rule="evenodd" />
-                                            <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
+                                            <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666zM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5z" />
+                                            <path d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
                                         </svg>
                                         Build
                                     </div>
@@ -1286,7 +1312,7 @@
                                 <div class="flex items-center">
                                     <div class="mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/20 dark:text-primaryLight">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" />
                                         </svg>
                                     </div>
                                     <span class="font-medium text-gray-900 dark:text-white">How does Fctr enhance security?</span>
@@ -1473,11 +1499,11 @@
                         <a href="#" class="flex items-center">
                             <!-- Light theme logo -->
                             <img src="./images/logo.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
-                            
+
                             <!-- Dark theme logo - only adjust proportions, not position -->
-                            <img src="./images/logo_dark.svg" alt="Fctr Logo" class="hidden h-7 w-auto max-w-[140px] -ml-5 dark:block" />
+                            <img src="./images/logo_dark.svg" alt="Fctr Logo" class="-ml-5 hidden h-7 w-auto max-w-[140px] dark:block" />
                         </a>
-                        
+
                         <!-- Rest of content unchanged -->
                         <p class="text-sm text-gray-700 dark:text-gray-300">Secure identity verification portal integrated with Okta for enhanced helpdesk authentication</p>
                         <!-- Contact info moved here and improved -->
