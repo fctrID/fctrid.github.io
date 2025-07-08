@@ -50,8 +50,8 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
-      <script type="module" crossorigin src="./assets/solutions.6b39e5dc.js"></script>
-      <link rel="stylesheet" href="./assets/solutions.d35f7395.css">
+        
+      <link rel="stylesheet" href="./assets/app.256b9bb2.css">
     </head>
     <body class="min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
         <div id="ai-agent-modal" class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
@@ -211,24 +211,35 @@
             </nav>
         </header>
 
-        <section id="tako-banner" class="relative bg-gradient-to-r from-indigo-600/90 to-purple-700/90 py-3 pt-20 dark:from-indigo-600/80 dark:to-purple-700/80 sm:py-3 sm:pt-20 md:pt-20">
-            <!-- Enhanced background orbs with more vibrant colors -->
+        <section id="scatter-spider-alert" class="relative bg-gradient-to-r from-orange-600/90 to-red-600/90 py-3 pt-20 dark:from-orange-600/80 dark:to-red-600/80 sm:py-3 sm:pt-20 md:pt-20">
+            <!-- Enhanced background effects for urgency -->
             <div class="absolute inset-0 -z-10 overflow-hidden">
-                <div class="absolute -top-20 left-1/4 h-20 w-20 rounded-full bg-pink-500/20 blur-[40px] dark:bg-pink-400/30 sm:h-40 sm:w-40 sm:bg-pink-500/30 sm:blur-[60px] sm:dark:bg-pink-400/40"></div>
-                <div class="h-30 w-30 sm:dark:bg-purple-400/35 absolute top-1/2 right-1/4 rounded-full bg-purple-500/20 blur-[50px] dark:bg-purple-400/25 sm:h-60 sm:w-60 sm:bg-purple-500/30 sm:blur-[70px]"></div>
+                <div class="absolute -top-10 left-1/3 h-16 w-16 rounded-full bg-yellow-500/25 blur-[30px] dark:bg-yellow-400/35 sm:h-32 sm:w-32 sm:blur-[50px]"></div>
+                <div class="absolute top-1/2 right-1/3 h-24 w-24 rounded-full bg-red-500/20 blur-[40px] dark:bg-red-400/30 sm:h-48 sm:w-48 sm:blur-[60px]"></div>
             </div>
-        
-            <!-- Add subtle connection to the hero section -->
-            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-indigo-500/10"></div>
-        
-            <div class="mx-auto px-3 sm:px-6 lg:px-8 xl:max-w-7xl">
-                <div class="flex flex-col items-center justify-between gap-2 sm:flex-row sm:gap-4">
-                    <div class="relative text-center text-white sm:text-left ml-6">
-                        <h3 class="text-sm font-bold sm:text-base md:text-lg ">
-                            🚀 AI Event Insights
-                            <sup class="ml-2 inline-block rounded-md bg-red-500 px-2 py-3 text-[10px] font-bold uppercase tracking-wide text-white">COMING SOON !</sup>
-                        </h3>
-                        <p class="mt-1 block text-xs text-white/80 sm:mt-1 sm:text-xs">Smart user event analysis with risk scoring and threat detection summary - powered by AI</p>
+            
+            <div class="relative mx-auto px-3 sm:px-6 lg:px-8 xl:max-w-7xl z-10">
+                <div class="flex flex-col items-center justify-between gap-3 sm:flex-row sm:gap-4">
+                    <!-- Alert icon and main content -->
+                    <div class="flex items-center gap-3 text-center text-white sm:text-left">
+                        <div class="ml-6">
+                            <h3 class="text-sm font-bold sm:text-base md:text-lg">
+                                 🚨 ACTIVE THREAT: Scattered Spider Attacks
+                            </h3>
+                            <p class="mt-1 text-xs text-white/90 sm:text-sm">
+                                Cybercriminals are targeting help desks with voice phishing attacks. <strong>Fctr Identity Portal blocks these threats.</strong>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <div class="relative flex-shrink-0 z-20">
+                        <a href="https://www.axios.com/newsletters/axios-future-of-cybersecurity-fab0c0d0-5760-11f0-8c09-e72f7ef7d797.html?stream=top" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center gap-2 rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-orange-700 shadow-lg transition-all hover:bg-white hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white/50 dark:bg-gray-100 dark:text-orange-800 z-30">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.168 18.477 18.582 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                            Read the Article
+                        </a>
                     </div>
                 </div>
             </div>
@@ -322,7 +333,7 @@
                                         </defs>
                                         <path stroke="url(#grad4)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                     </svg>
-                                    <span class="text-base font-semibold text-gray-700 dark:text-gray-300 sm:text-lg lg:text-xl">Eliminate Social Engineering</span>
+                                    <span class="text-base font-semibold text-gray-700 dark:text-gray-300 sm:text-lg lg:text-xl">Block Scattered Spider voice phishing attacks</span>
                                 </div>
                             </div>
                             <a href="https://www.Okta.com/integrations/Fctr-identity-support-portal-api-integration/" class="group relative z-30 mt-8 inline-flex items-center gap-2 rounded-lg border-2 border-[#10B981] bg-[#10B981]/10 px-6 py-3 shadow-md transition-all hover:bg-[#10B981]/20 hover:shadow-lg dark:border-[#10B981]/70 dark:bg-[#10B981]/20" onclick="window.open(this.href, '_blank'); return false;" onkeypress="if(event.key === 'Enter') { window.open(this.href, '_blank'); return false; }">
@@ -394,11 +405,11 @@
                             <!-- Enhanced main heading with clearer value proposition -->
                             <div class="space-y-4">
                                 <h2 class="mx-auto max-w-4xl text-center">
-                                    <span class="mb-2 block text-xl font-bold text-primary dark:text-primaryLight"> The Workforce Identity Verification Challenge </span>
-                                    <span class="text-xl font-semibold text-gray-700 dark:text-gray-300 md:text-2xl lg:text-3xl"> Struggling to align Identity and Helpdesk support teams? </span>
+                                    <span class="mb-2 block text-xl font-bold text-red-600 dark:text-red-400">Scattered Spider: The Help Desk Nightmare</span>
+                                    <span class="text-xl font-semibold text-gray-700 dark:text-gray-300 md:text-2xl lg:text-3xl">Cybercriminals are "ninjas with identity" targeting your help desk</span>
                                 </h2>
 
-                                <p class="mx-auto mt-6 max-w-3xl text-gray-600 dark:text-gray-400">Traditional verification methods frustrate users and overload support teams. Fctr’s Identity Portal seamlessly integrates with Okta, eliminating outdated KBAs and enhancing security through MFA.</p>
+                                <p class="mx-auto mt-6 max-w-3xl text-gray-600 dark:text-gray-400"> MFA. Fctr’s Identity Portal seamlessly integrates with Okta, eliminating outdated KBAs and enhancing security through MFA.</p>
 
                                 <!-- Updated statistics section aligned with product benefits -->
                                 <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
@@ -407,15 +418,15 @@
                                         <p class="mt-2 text-gray-600 dark:text-gray-300">Minutes saved per support call</p>
                                     </div>
                                     <div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-                                        <h3 class="text-3xl font-bold text-primary dark:text-primaryLight">#1</h3>
-                                        <p class="mt-2 text-gray-600 dark:text-gray-300">Pretexting: top security incident*</p>
+                                        <h3 class="text-3xl font-bold text-blue-600 dark:text-blue-400">&lt;24h</h3>
+                                        <p class="mt-2 text-gray-600 dark:text-gray-300">Scattered Spider: access to ransomware*</p>
                                     </div>
                                     <div class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                                         <h3 class="text-3xl font-bold text-primary dark:text-primaryLight">100%</h3>
                                         <p class="mt-2 text-gray-600 dark:text-gray-300">Elimination of knowledge-based verification</p>
                                     </div>
                                 </div>
-                                <p class="mt-4 text-center text-xs text-gray-500">*Verizon Data Breach Investigations Report 2024</p>
+                                <p class="mt-4 text-center text-xs text-gray-500">*Axios Future of Cybersecurity Newsletter, July 2025</p>
                             </div>
                         </div>
                     </div>
@@ -465,8 +476,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <span class="block font-medium text-gray-900 dark:text-white">Social Engineering Vulnerability</span>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Agents rely on subjective judgment to verify callers</p>
+                                    <span class="block font-medium text-gray-900 dark:text-white">Vulnerable to Scattered Spider Attacks</span>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Voice phishing calls can bypass traditional verification methods</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -511,8 +522,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <span class="block font-medium text-gray-900 dark:text-white">Social Engineering Prevention</span>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Eliminate human judgment with automated verification</p>
+                                    <span class="block font-medium text-gray-900 dark:text-white">Blocks Scattered Spider Voice Attacks</span>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Okta-based verification stops impersonation attempts cold</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -542,7 +553,7 @@
                         </div>
                         <div class="md:w-3/4">
                             <h3 class="mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-xl font-bold text-transparent dark:from-primaryLight dark:to-secondaryLight">Measurable Business Impact</h3>
-                            <p class="mb-5 text-gray-700 dark:text-gray-300">By reducing verification time by 5-8 minutes per call, Fctr Identity Portal delivers immediate ROI for busy support teams while strengthening security against social engineering — the #1 cause of security incidents according to the 2024 Verizon DBIR.</p>
+                            <p class="mb-5 text-gray-700 dark:text-gray-300">By reducing verification time by 5-8 minutes per call, Fctr Identity Portal delivers immediate ROI for busy support teams while strengthening security against voice phishing attacks like Scattered Spider — which can compromise systems in under 24 hours.</p>
                             <div class="grid gap-4 text-center md:grid-cols-3">
                                 <div class="rounded-lg border border-indigo-100 bg-white p-4 shadow-md transition-transform duration-300 hover:-translate-y-1 dark:border-gray-700 dark:bg-gray-800">
                                     <span class="block text-2xl font-bold text-primary dark:text-primaryLight">60+</span>
@@ -1635,5 +1646,11 @@
     }
   });
 </script>
+
+<!-- Include JavaScript modules -->
+<script src="./src/js/theme.js"></script>
+<script src="./src/js/navbar.js"></script>
+<script src="./src/js/solutions.js"></script>
+<script src="./src/js/faqs.js"></script>
     </body>
 </html>
