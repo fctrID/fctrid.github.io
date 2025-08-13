@@ -52,7 +52,7 @@
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
         
       <script type="module" crossorigin src="./assets/faqs.b23c2ba0.js"></script>
-      <link rel="stylesheet" href="./assets/faqs.8dc4f198.css">
+      <link rel="stylesheet" href="./assets/faqs.c2d3b23b.css">
     </head>
     <body class="min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
     <div id="ai-agent-modal" role="dialog" aria-modal="true" aria-labelledby="tako-modal-title" tabindex="-1" class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
@@ -195,10 +195,52 @@
                                             <span>Pricing</span>
                                         </a>
                                     </li>
-                                    <li class="flex items-center">
-                                        <a href="#ROI" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
-                                            <span>ROI Calculator</span>
-                                        </a>
+                                    <!-- Products Dropdown -->
+                                    <li class="relative flex items-center group">
+                                        <button class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4 flex items-center gap-1" aria-expanded="false">
+                                            <span>Products</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        <!-- Dropdown menu -->
+                                        <div class="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 dark:bg-gray-800 dark:border-gray-700">
+                                            <div class="py-2">
+                                                <a href="#home" class="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors dark:text-gray-300 dark:hover:bg-gray-700">
+                                                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primaryLight mt-0.5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-medium text-gray-900 dark:text-white">Identity Verification</div>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Secure identity proofing and verification portal</div>
+                                                    </div>
+                                                </a>
+                                                <a href="./ai-agent.html" class="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors dark:text-gray-300 dark:hover:bg-gray-700">
+                                                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500/10 to-purple-500/10 text-indigo-600 dark:from-indigo-400/20 dark:to-purple-400/20 dark:text-indigo-400 mt-0.5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-medium text-gray-900 dark:text-white">AI Agent for Okta (Tako AI)</div>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Autonomous Okta management with AI</div>
+                                                    </div>
+                                                </a>
+                                                <a href="./okta-mcp-server.html" class="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors dark:text-gray-300 dark:hover:bg-gray-700">
+                                                    <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:bg-emerald-400/20 dark:text-emerald-400 mt-0.5">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-medium text-gray-900 dark:text-white">Okta MCP Server</div>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Model Context Protocol server for Okta APIs</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li class="flex items-center">
                                         <a href="#cta" class="nav-link block transition hover:text-primary dark:hover:text-primaryLight lg:px-4">
