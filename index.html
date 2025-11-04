@@ -3,24 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="./assets/favicon.5703e038.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Primary Meta Tags -->
-        <title>Fctr Identity Portal | Simplify Okta User Management & Secure Identity verification, Identity Proofing</title>
-        <meta name="description" content="Streamline helpdesk operations with Fctr Identity Portal. Our secure platform offers Okta integration, multi-factor authentication, identity proofing, and simplified user verification - reducing support call times by up to 60%. Okta helpdesk" />
-        <meta name="keywords" content="identity verification, Okta integration, helpdesk security, multi-factor authentication, MFA, authenticators, customer support security, okta helpdesk, okta helpdesk, verification,  RockStar plugin, identity proofing, ID proofing, user verification, Okta administration, support efficiency, secure authentication, identity management" />
+        <title>Fctr Identity Portal | Simplify Okta/Entra ID User Management & Secure Identity verification, Identity Proofing</title>
+        <meta name="description" content="Streamline helpdesk operations with Fctr Identity Portal. Secure alternative to caller verify solutions with Okta and Entra ID integration, multi-factor authentication, identity proofing, and simplified user verification - reducing support call times by up to 60%." />
+        <meta name="keywords" content="identity verification, Okta integration, Entra ID integration, Microsoft Entra ID, Microsoft Authenticator, helpdesk security, multi-factor authentication, MFA, authenticators, TOTP, push notifications, customer support security, okta helpdesk, entra id helpdesk, verification, RockStar plugin, identity proofing, ID proofing, user verification, Okta administration, Entra ID administration, support efficiency, secure authentication, identity management, social engineering prevention, Scattered Spider protection, helpdesk caller verification, zero trust, passwordless authentication, caller verify, caller verify alternative, caller authentication, phone verification" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fctr.io/" />
         <meta property="og:title" content="Fctr Identity Portal | Secure Identity Verification" />
-        <meta property="og:description" content="Enhance helpdesk security with Fctr Identity Portal. Seamless Okta integration for secure user verification. Okta Helpdesk verification" />
+        <meta property="og:description" content="Enhance helpdesk security with Fctr Identity Portal. Seamless Okta/Entra ID integration for secure user verification. Okta Helpdesk verification" />
         <meta property="og:image" content="https://fctr.io/images/fctr_og_image.png" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://fctr.io/" />
         <meta property="twitter:title" content="Fctr Identity Portal | Secure Identity Verification" />
-        <meta property="twitter:description" content="Enhance helpdesk security with Fctr Identity Portal. Seamless Okta integration for secure user verification. okta helpdesk verification portal" />
+        <meta property="twitter:description" content="Enhance helpdesk security with Fctr Identity Portal. Seamless Okta/Entra ID integration for secure user verification. okta helpdesk verification portal" />
         <meta property="twitter:image" content="https://fctr.io/images/fctr_og_image.png" />
 
         <!-- Schema.org markup -->
@@ -31,8 +31,8 @@
                 "name": "Fctr Identity Portal",
                 "applicationCategory": "SecurityApplication",
                 "operatingSystem": "Web-based",
-                "description": "Secure identity verification portal integrated with Okta for enhanced helpdesk authentication",
-                "featureList": ["Multi-factor authentication", "Okta integration", "Secure user verification", "Simplified identity management", "Helpdesk support tools", "RockStar Plugin", "Identity Proofing", "ID proofing"],
+                "description": "Secure identity verification portal integrated with Okta and Microsoft Entra ID for enhanced helpdesk authentication. Alternative to caller verify solutions with support for Microsoft Authenticator, multi-factor authentication, and identity proofing to prevent social engineering attacks.",
+                "featureList": ["Multi-factor authentication", "Okta integration", "Microsoft Entra ID integration", "Entra ID support", "Microsoft Authenticator support", "Secure user verification", "Identity verification", "Simplified identity management", "Helpdesk support tools", "RockStar Plugin", "Identity Proofing", "ID proofing", "Social engineering prevention", "Scattered Spider protection", "Push notification authentication", "TOTP authentication", "SMS authentication", "Email authentication", "Voice authentication", "Passwordless authentication", "Helpdesk caller verification", "Zero trust security", "Caller authentication", "Phone verification"],
                 "offers": {
                     "@type": "Offer",
                     "category": "Enterprise Solution"
@@ -48,11 +48,18 @@
         <meta name="author" content="Fctr" />
         <meta name="robots" content="index, follow" />
 
+        <!-- Preconnect to Google Fonts for faster loading -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
         
-      <script type="module" crossorigin src="./assets/faqs.b23c2ba0.js"></script>
-      <link rel="stylesheet" href="./assets/faqs.2c8910d6.css">
+        <!-- AOS Animation Library -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        
+      <script type="module" crossorigin src="./assets/faqs.b3f2d38f.js"></script>
+      <link rel="stylesheet" href="./assets/faqs.16f759b6.css">
     </head>
     <body class="min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
     <div id="ai-agent-modal" role="dialog" aria-modal="true" aria-labelledby="tako-modal-title" tabindex="-1" class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
@@ -160,7 +167,7 @@
                             </div>
                         -->
 
-                            <button aria-label="humburger" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
+                            <button aria-label="hamburger" id="hamburger" class="relative -mr-6 p-6 lg:hidden">
                                 <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
                                 <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
                             </button>
@@ -266,7 +273,7 @@
                             </button>
                         </div>
                         <div class="fixed top-3 right-14 z-20 sm:right-24 lg:hidden">
-                            <button aria-label="switche theme" class="switcher group relative flex h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
+                            <button aria-label="switch theme" class="switcher group relative flex h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                                 </svg>
@@ -280,7 +287,7 @@
             </nav>
         </header>
 
-        <section id="scatter-spider-alert" class="relative bg-gradient-to-r from-orange-600/90 to-red-600/90 py-3 pt-20 dark:from-orange-600/80 dark:to-red-600/80 sm:py-3 sm:pt-20 md:pt-20">
+        <section id="scatter-spider-alert" class="relative bg-gradient-to-r from-orange-600/90 to-red-600/90 py-2 pt-20 dark:from-orange-600/80 dark:to-red-600/80 sm:py-2 sm:pt-20 md:pt-20">
             <!-- Enhanced background effects for urgency -->
             <div class="absolute inset-0 -z-10 overflow-hidden">
                 <div class="absolute -top-10 left-1/3 h-16 w-16 rounded-full bg-yellow-500/25 blur-[30px] dark:bg-yellow-400/35 sm:h-32 sm:w-32 sm:blur-[50px]"></div>
@@ -292,10 +299,10 @@
                     <!-- Alert icon and main content -->
                     <div class="flex items-center gap-3 text-center text-white sm:text-left">
                         <div class="ml-6">
-                            <h3 class="text-sm font-bold sm:text-base md:text-lg">
+                            <h3 class="text-xs font-bold sm:text-sm">
                                  🚨 <span class="font-normal">Scattered Spider and $380M household brand name hack in recent news:</span> Is your helpdesk next?
                             </h3>
-                            <p class="mt-1 text-xs text-white/90 sm:text-sm">
+                            <p class="mt-1 text-2xs text-white/90 sm:text-xs">
                                 Fctr verification portal blocks social engineering attacks.
                             </p>
                         </div>
@@ -320,95 +327,76 @@
             </div>
         </section>
 
-        <section id="home" class="pt-16 sm:pt-20 md:pt-24">
-            <div aria-hidden="true" class="absolute inset-0 top-10 grid grid-cols-2 -space-x-52 opacity-30 dark:opacity-10">
-                <div class="h-40 bg-gradient-to-br from-primary/20 to-purple-400/20 blur-[106px] dark:from-zinc-800 dark:to-zinc-900 dark:blur-[120px]"></div>
-                <div class="h-40 bg-gradient-to-r from-cyan-400/20 to-sky-300/20 blur-[106px] dark:from-neutral-900 dark:to-neutral-800 dark:blur-[120px]"></div>
+        <!-- Hero Section with simplified background -->
+        <section id="home" class="relative overflow-hidden bg-gray-50/50 pt-8 pb-12 dark:bg-gray-900/90 sm:pt-12 md:pt-16 md:pb-16 lg:pb-20">
+            <!-- Simplified background elements -->
+            <div class="absolute inset-0 -z-10">
+                <!-- Light backdrop -->
+                <div class="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-900"></div>
+                
+                <!-- Key gradient orbs - reduced from 8 to 2 -->
+                <div class="absolute top-1/4 left-1/3 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-indigo-400/20 via-purple-400/15 to-pink-400/10 blur-[100px] dark:from-indigo-500/25 dark:via-purple-500/20 dark:to-pink-600/15"></div>
+                <div class="absolute top-1/2 right-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-tl from-blue-400/20 via-violet-400/15 to-purple-400/10 blur-[90px] dark:from-blue-500/25 dark:via-violet-500/20 dark:to-purple-600/15"></div>
             </div>
-            <div class="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
-                <div class="relative">
-                    <h1 class="text-center text-5xl font-bold text-blue-900 dark:text-white sm:text-6xl lg:text-left lg:text-7xl">
-                        Verify With<br />
-                        <span class="relative">
-                            <svg class="absolute inset-x-0 -bottom-1 w-full opacity-50" xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 260 15.6">
-                                <style>
-                                    .st0 {
-    fill: #957fef
-}
-                                </style>
-                                <path class="st0" d="M206.8 7.3l-.1.3c.1-.2.2-.3.1-.3zM234.7 10h-.1c-.2.4-.1.3.1 0zM54.8 4.2l-.6-.4c.2.4.4.5.6.4zM17.1 5.1zM34.5 9.6l.1.3c0-.2 0-.3-.1-.3zM22.4 10.8c-.3-.1-.7-.1-1-.1.2.1.7.1 1 .1zM17.5 5c-.1.1-.2.1-.4.2.2-.1.3-.2.4-.2zM52.7 9.8l.5.9c-.1-.3-.3-.6-.5-.9zM19.5 11.6c-.2-.2-.4-.2-.6-.3 0 .2.3.3.6.3zM120.9 11.4c-.1.1-.2.2-.2.3.3-.1.3-.2.2-.3zM80.9 10.4h-.1s.1.1.2.1l-.1-.1zM92.6 10.4l-.2.2c.2-.1.2-.1.2-.2zM72.1 11.3c-.1.1-.3.2-.4.3l.4-.3z" />
-                                <path
-                                    class="st0"
-                                    d="M260 6c-1-.6-4.7-1.2-5.8.3-.2-.1.1-.3.2-.4-.9.2-2.2.1-3.6 0s-2.9-.2-4.2 0c-1 1.5-3.9-.6-4.8 1.4l.5-.4c.9.5-1.2 1.4-1.5 1.9-.8-1.2-.1-1-1-2l1.1.4-.3-1c-3.1 2.8-6.2-.9-8.2 1.1.1-.1.1-.3.2-.4-1.4-.5-2.3.8-3.3 1.2-.1-.5.6-.9 1.1-1.3-2.4-.3-6.4 1.2-9 .4-.9.7.4.9-.6 1.5-.8-.2-1.4-.7-.4-1.1-2.3-1.2-7.6 1-11.1-.2-1.8.8-.7 1.1-3.5 1.6.7-.5-.7-1.7 1-1.7l.2-.5c-2.8-.1-6.6-.3-8.1 1.2-.1-1.1-.5-.2-1.6-.8-.4.1 0 .2.2.2-1 .9-1.6-.1-2.3.1l.3-.2-2 .7c-.3-.2-.8-.4-.9-.7v.8c-1.1 0-.5-1-1.9-.8l.3.6c-.9-.4-2.2.4-2.4-.5 0-.2.1-.1.4-.1-1.3-1.2-3.5.3-5.1-.3l.4 1.3c-1.6.4-1-.3-.9-.7-1.1 0-1.3-.4-2.7-.6-.7.3-.4.5-.6.8l-1.5-.4 1-.7c-2.3 1.8-5.6-.4-7.2 1.2-.8-.4.8-.7.3-1-2.6-.9-6 1-8.2 0-3.6-1-7.8-.4-11.8-1.1l.1.3-2.9-.4c-.8.7-2.7.3-4 1.1.1-.3-.1-.7.2-.9-1.2.1-2.6.4-3.3-.1l.4-.3c-2.7-.3-6.4-.5-7.9.1-.9 0-.9-.6-1.1-1-1.6-.1-2.6.2-3.9.7-.3-.2-.7-.3-1-.6l-.6.8c-.6-.1-.1-.7-.6-.9-2.5.9-5.3-.1-7-.1l.2.4c-.7.3-2.1-.3-1.2-.7-3.4-.6-5.1 1.2-9.6.8-.6-1.5-4.1.3-4.8-1.4-1.9.4-3.2-.3-4.5.6 0-.2-.2-.2.1-.3-.8-.6-3.3-.2-5.3.2l-.1-.5c-.9 1.2-4.2.9-4.9 2-.2-.2.4-.5.7-.7-1-1.1-1.8.5-3.1.2.1-.3-.3-.6 0-.8-4.4-1.2-10.6.7-16.3-.1-1.6 0 .6 1.2-1.5 1.1-.6-.6 1-1.1-.3-1.4-.9.7-1.3.5-2.6.5.2-.4 0-.6.9-.9-.7-.5-3.1.9-4.5 0 .1.3-.2.5-.5.7-2.1 1-4.9-.9-5.1-.4 0 0-.7.2-.1.3-.8 0-1.9-.2-1.7-.7-.4.3-.8.8-1.4.8l.3-.6c-.4.1-.8.5-1.1.6l.6.4c-.9-.5-2.6.8-2.6-.4h.3l-1.7-.5c-.7.5-1.3 1-2.5.9-.5-1.3-2.9-.2-4.3-.3l.1-.4c-1.1.6-4 .4-3.5.6-1.1 0-2.6-.2-2-.6-.8.1-2.7.1-3.2.9l-1.8-1c-1 1.6-3.6-.5-3.6 1.2-1-.2-.8-.6-1.5-.9-1.4.9-2.8.8-4.2.7v-.2c-1.4-.1-3.1.8-5.1 1l-.5-1.2c-1 .2-1.3 1.2-2.3 1-.2-.2 0-.3.2-.3-1 .3-2.3.1-3.1-.2-1.5 1-2.7.7-3.9 1.8-1.3-1 1.7-.6.6-1.6-2.2-.4-4.4.4-6.7 1.1-.2-.2 0-.4.1-.7 0 0-1.2.9-2.2 1.8C.9 8.3 0 9.4.5 10c-.5.9-1.2 1.4.9 2 .6-.5 2.5-1.3 2.9-.4l.1-.9c2.6-.6.4 1.8 3.6 1.6l-.7-.3c.6-.1 1.1-.7 1.8-.5.2.2-.2.4-.5.6.9-.5 1.7-.9 2.6-1.4.1.5.1.8-.4 1.2 2.5-.2-.6-1.6 2.4-1.4.6.4-.2.6-.5.9 1.4.7 2.3-.1 3.8-.6.1.8-.9.7.3 1.2-.3-.4-.5-1.1.5-1.2-.4.8.7.4 1.6.5-.2-.3-.1-.6.2-.8.4-.1.8.1 1.4.1l-1.1-.7c1.5-.8 2.4.3 3.6.6-.1.1-.3.3-.5.3 1.2.3 2.5.9 4.1.1l-.3.1c2.9-.9-1-1.3 2.4-2.2 1.1.1-.4 2.6 2.1 1.6-1.3-.6 1.6-1.7 3.1-2L32.4 10c.6 0 1.6-.5 2-.3l-.1-.3c-.2-1.3 1.9.1 3-.7-1.3 1.8-1.4 1.5-1.6 3.2 1-1 2.2-1.9 4.1-1.8l-1.5 1.4c2.5.2 5.5-1.9 7.6-3-.5 1 .3 1.4-.6 2.2l2.4-.3-.7 1.1c1-1.2 2.1-.4 1.9-1.9-.3.2-.2.4-.7.3.1-.4.5-1.4 1.7-1.3.9.3-.5.6-.2 1 .8-.6.9.3 1.7-.1l-.8-.6c.6-.9 1.4-.1 2.2-.5-1 .4-.7.9-.3 1.4l-.1-.1c.8-.1 1.6-.7 2-.2l-.5 1.2.9-.9c.3.1.6.6 0 .8 2.8.7-.1-2.5 3.6-1.5 0 .5-.4.8-1.4.5-.2.7.1 1.1 1.1 1.4v.1c1.9 0 4.4 0 5.6-.8.4.3 0 .6-.4.9 2.1.4 2.8-.7 5 .1l-1-.4c1.4-.6 4-.8 5.3.1l-.4.3c1.3-.7 3.5.6 4 0-.6-.4 0-.6-.8-1l3.4-.7.2 1.2 1.8-.4c-.4-.5 2.4.4 2.5-.7 1 .4-.4.9-.8 1.4 1-.3 1.1.2 2.1-.5l1 1.1 2.6-.7c-.1.1 0 .2-.1.3 1.2-.9 3.1.6 4.6-.9-.1.1-.1.1-.1.2.9-.8 2.9-.2 3.7 0 1.4-.2.6-1 .6-1.4 3.9.4 2.7.3 6-.9 2 1.4-2.4 2.1.1 3 .4-.6 2.1-1.1 4.1-1.3 1.8.5 4.8.9 6.5 1.9l-.2-.9 2.6-.4-1.5 1.2c.4-.3 1.7-.8 2.6-1.2 2.7-.7 1.4 1.9 3.5.7.1.1.1.2.2.3.7-.6 2.4-.3 4.4-.5l-.7 1.1-1.3-.3c.7 1.1 2.1-.1 3.4 0 1.3-.3.7-1.3 1.4-1.6.5.1 1.2-.2 1.6.1 1.1.4.1 1.3-.3 1.8 1-1.1 1.4-.9 3.6-1.3.1.5-.1.8-.4.9.5-.1.9-.3 1.2-.8l.7.7c2.5 1 2.6-2 5.6-1.5-.8.6 2.6 0 3.5.7-1.1.1.4 1.6-.2 2.3 2.4.5 1-1.3 3-1.4l-.9 1.3c1.9-.5.5-.7 2.4-1.1-.5.4.8.4-.3.8 2.5.2 1.9.1 4.1.3l.2-1.3c.7-.1 1 .5 1.2.7-.3 0-.8-.1-.7.1.8 1.2 1.4-.6 2.4.5-.2-.4-.5-1 .4-1.1-.3.8 1.4.8 1.4 1.2-.6-.6 2-.2 2.1-1 1 .7-.4.6-.4 1.1.9-1 3.7 0 4.6-.6 0 .1.1.1.1.2 1.2-.6 3-.7 5.3-1.5l-.8.7c2.2.4 1.4-1.5 3.3-1.5-.4 1.1 3.1 0 2.2 1.2 1.1-.6 2.3-.8 3.1-1.7 1 .6-2.1 1.4-.6 1.8l1.6-.5.3.6c.1-.4 1.5-.4 1.4-.8.2.7.9 1.2.8 1.8 1-.2 2.4.5 3.3-.1l.1.3c1-1.3 3.1-.2 3.6-1.5l.6.7c1.5-.1 1.3-1.5 2-1.8.6 0 1.4-.2 2 0-2 .8 1 1.1 1.4 1.6.8 0 3.1 0 3.7-.7-1 .7-.4 1.2-2.1 1.3.9 1.3 2.6-.2 4.5-.1v.6c2.7-.4 2.8-1.5 4-2.5.3.8.1 1-.7 1.7 1.8.5 4.7-.1 6.7 0 .6.5.2.9-.5 1.1 2.1-.6 4.7.1 6-1.2-.5.5.9.3 1.6.6 0-.3.1-.6.2-.6 1.3-.6 4.1-1.1 5.6-.7l-.5.4c1.7.1 3-.5 4.3-.9 1.3-.4 2.6-.8 4.5-.4.7.3-.7 1.1.7 1 .7-.5.4-1.5 2.2-1.3l-.1.9 1.2-.9c-.7-.7-2.6-.4-1.3-1.2 1.6.8 1.3-.9 3.3 0-.4.1-1 .8-1.3 1.2 2 .4 3.4.1 4.8-.1 1.4-.3 2.8-.6 4.9-.2 2-.8 4.6-1.2 5.9-1.9 0 .9 0 1.7-.8 2.4 1.8 0 2.4-2.1 3.7-.9.7-1.3 4.7-1.2 5-3l2-.8z"
-                                />
-                                <path class="st0" d="M58.1 11.1c-1 0-1.9 0-2.3.2.2.2 2.3.6 2.3-.2zM208.2 13.3c-.1 0-.3.1-.4.1.1 0 .3 0 .4-.1zM216.3 12.9c-.1-.1-.2-.2-.4-.3 0 .3.1.5.4.3zM132.6 11.5zM178.5 13.7c.7-.4 1-.7 1-1-.4.1-.7.3-1 1zM163 12.6c-.1.1-.2.1-.3.2.3-.1.3-.2.3-.2zM130.2 12c.7-.4 1.6-.3 2.4-.5-.7.2-1.9-.3-2.4.5zM226.1 11.4l-.7.6.8-.4zM218.6 12c-.3-.1-1.7.3-1.3.6.4-.3.9-.5 1.3-.6zM189.6 11.4l-.3.6.7-.5z" />
-                            </svg>
-                            <span class="relative bg-gradient-to-r from-primary to-secondaryLight bg-clip-text text-transparent dark:from-primaryLight dark:to-secondaryLight md:px-2">Confidence</span>
-                        </span>
+            <div class="relative mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
+                <div class="relative text-center">
+                    <h1 class="text-center text-5xl font-black tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl" data-aos="fade-up">
+                        Verify Helpdesk Callers
                     </h1>
-                    <h2 class="mt-12 mb-6 text-center text-2xl font-bold sm:text-3xl lg:text-left">
-                        <span class="relative ml-2">
-                            <span class="bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent dark:from-orange-400 dark:via-pink-400 dark:to-purple-500">Secure Identities, Zero Friction</span>
-                        </span>
+                    <h2 class="mt-8 mb-3 text-center text-2xl font-bold text-gray-700 dark:text-gray-300 sm:text-3xl">
+                        Secure Identities, Zero Friction
                     </h2>
+                    
+                    <!-- Security Message -->
+                    <div class="mb-12 text-center" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-sm text-gray-600 dark:text-gray-400 sm:text-base">
+                            Still verifying with "last four of your social?" Upgrade to Fctr's Identity Portal
+                        </p>
+                    </div>
 
-                    <div class="relative items-center gap-12 lg:flex">
+                    <div class="relative items-start gap-12 lg:flex" data-aos="fade-up">
                         <div class="relative z-30 text-center sm:mx-auto sm:w-11/12 md:mt-12 md:w-4/5 lg:mt-0 lg:mr-auto lg:w-6/12 lg:text-left">
-                            <div class="mx-auto mt-8 flex max-w-xs flex-col items-start gap-4 sm:max-w-sm md:max-w-md">
-                                <div class="group relative flex w-full items-start justify-start gap-2">
-                                    <svg class="mt-0.5 h-6 w-6 flex-shrink-0" viewBox="0 0 24 24">
+                            <div class="mt-8 flex flex-col items-center gap-4 lg:items-start lg:pl-0">
+                                <div class="group relative flex w-full items-start justify-center gap-2 lg:justify-start">
+                                    <svg class="mt-0.5 h-6 w-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="stroke: url(#gradient1)">
                                         <defs>
-                                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" style="stop-color: #f97316" />
-                                                <stop offset="50%" style="stop-color: #ec4899" />
-                                                <stop offset="100%" style="stop-color: #9333ea" />
+                                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+                                                <stop offset="50%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
                                             </linearGradient>
                                         </defs>
-                                        <path stroke="url(#grad1)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    <span class="text-base font-semibold text-gray-700 dark:text-gray-300 sm:text-lg lg:text-xl">Reduce support call times by 70%</span>
+                                    <span class="text-base font-semibold text-purple-600 dark:text-purple-300 sm:text-lg">Supports Entra ID and Okta platforms</span>
                                 </div>
 
-                                <div class="group relative flex w-full items-start justify-start gap-2">
-                                    <svg class="mt-0.5 h-6 w-6 flex-shrink-0" viewBox="0 0 24 24">
+                                <div class="group relative flex w-full items-start justify-center gap-2 lg:justify-start">
+                                    <svg class="mt-0.5 h-6 w-6 flex-shrink-0 text-transparent" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="stroke: url(#gradient2)">
                                         <defs>
-                                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" style="stop-color: #f97316" />
-                                                <stop offset="50%" style="stop-color: #ec4899" />
-                                                <stop offset="100%" style="stop-color: #9333ea" />
+                                            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+                                                <stop offset="50%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
                                             </linearGradient>
                                         </defs>
-                                        <path stroke="url(#grad2)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    <span class="text-base font-semibold text-gray-700 dark:text-gray-300 sm:text-lg lg:text-xl">Okta based verification for helpdesk</span>
+                                    <span class="text-base font-semibold text-purple-600 dark:text-purple-300 sm:text-lg">Reduce support call times by 70%</span>
                                 </div>
 
-                                <div class="group relative flex w-full items-start justify-start gap-2">
-                                    <svg class="mt-0.5 h-6 w-6 flex-shrink-0" viewBox="0 0 24 24">
+                                <div class="group relative flex w-full items-start justify-center gap-2 lg:justify-start">
+                                    <svg class="mt-0.5 h-6 w-6 flex-shrink-0 text-transparent" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="stroke: url(#gradient3)">
                                         <defs>
-                                            <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" style="stop-color: #f97316" />
-                                                <stop offset="50%" style="stop-color: #ec4899" />
-                                                <stop offset="100%" style="stop-color: #9333ea" />
+                                            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+                                                <stop offset="50%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
                                             </linearGradient>
                                         </defs>
-                                        <path stroke="url(#grad3)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                     </svg>
-                                    <span class="text-base font-semibold text-gray-700 dark:text-gray-300 sm:text-lg lg:text-xl">Deploy Fctr in hours, not days</span>
-                                </div>
-
-                                <div class="group relative flex w-full items-start justify-start gap-2">
-                                    <svg class="mt-0.5 h-6 w-6 flex-shrink-0" viewBox="0 0 24 24">
-                                        <defs>
-                                            <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" style="stop-color: #f97316" />
-                                                <stop offset="50%" style="stop-color: #ec4899" />
-                                                <stop offset="100%" style="stop-color: #9333ea" />
-                                            </linearGradient>
-                                        </defs>
-                                        <path stroke="url(#grad4)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                    </svg>
-                                    <span class="text-base font-semibold text-gray-700 dark:text-gray-300 sm:text-lg lg:text-xl">Block Scattered Spider voice phishing attacks</span>
+                                    <span class="text-base font-semibold text-purple-600 dark:text-purple-300 sm:text-lg">Block social engineering attempts</span>
                                 </div>
                             </div>
                             <a href="https://www.Okta.com/integrations/Fctr-identity-support-portal-api-integration/" class="group relative z-30 mt-8 inline-flex items-center gap-2 rounded-lg border-2 border-[#10B981] bg-[#10B981]/10 px-6 py-3 shadow-md transition-all hover:bg-[#10B981]/20 hover:shadow-lg dark:border-[#10B981]/70 dark:bg-[#10B981]/20" onclick="window.open(this.href, '_blank'); return false;" onkeypress="if(event.key === 'Enter') { window.open(this.href, '_blank'); return false; }">
@@ -459,16 +447,129 @@
                             
                             <div id="thankYouMessage1" class="slide-in-bottom mt-12 hidden text-center text-lg text-green-600 dark:text-green-400">Thank you for signing up! We will get in touch with you soon.</div>
                         </div>
-                        <div class="z-20 mt-8 w-full sm:-mt-60 lg:-mt-80 lg:w-7/12">
-                            <!-- Image with no rounded corners or shadows -->
-                            <img src="./images/hero_2fa.svg" alt="Fctr Identity Portal 2FA Verification" class="up-down h-auto w-full" loading="lazy" width="1000" height="800" />
+                        <div class="z-20 mt-12 w-full lg:mt-8 lg:w-7/12" data-aos="fade-left" data-aos-delay="200">
+                            <!-- Authentication Factors Table -->
+                            <div class="mx-auto max-w-2xl">
+                                <div class="overflow-hidden rounded-2xl bg-gradient-to-br from-white/95 via-purple-50/40 to-blue-50/40 backdrop-blur-xl shadow-2xl dark:from-gray-900/95 dark:via-purple-950/40 dark:to-blue-950/40">
+                                    <!-- Table Header -->
+                                    <div class="grid grid-cols-3 bg-gradient-to-r from-purple-100/60 via-indigo-100/60 to-blue-100/60 backdrop-blur-sm dark:from-purple-900/50 dark:via-indigo-900/50 dark:to-blue-900/50">
+                                        <div class="px-6 py-3">
+                                            <h4 class="text-sm font-black uppercase tracking-wide bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 bg-clip-text text-transparent dark:from-gray-100 dark:via-gray-300 dark:to-gray-200">Supported Factors</h4>
+                                        </div>
+                                        <div class="px-6 py-3 text-center">
+                                            <h4 class="text-sm font-black uppercase tracking-wide bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-blue-300 dark:to-cyan-300">Okta</h4>
+                                        </div>
+                                        <div class="px-6 py-3 text-center">
+                                            <h4 class="text-sm font-black uppercase tracking-wide bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">Entra ID</h4>
+                                        </div>
+                                    </div>
+
+                                    <!-- Table Body -->
+                                    <div class="divide-y divide-purple-200/20 dark:divide-purple-700/20">
+                                        <!-- PUSH -->
+                                        <div class="group grid grid-cols-3 transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-100/60 hover:via-indigo-100/40 hover:to-blue-100/60 dark:hover:from-purple-900/40 dark:hover:via-indigo-900/30 dark:hover:to-blue-900/40">
+                                            <div class="px-6 py-3">
+                                                <p class="text-sm font-semibold text-gray-900 dark:text-white">PUSH Notifications</p>
+                                                <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">Mobile app approval</p>
+                                            </div>
+                                            <div class="flex items-center justify-center">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-center">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- TOTP -->
+                                        <div class="group grid grid-cols-3 transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-100/60 hover:via-indigo-100/40 hover:to-blue-100/60 dark:hover:from-purple-900/40 dark:hover:via-indigo-900/30 dark:hover:to-blue-900/40">
+                                            <div class="px-6 py-3">
+                                                <p class="text-sm font-semibold text-gray-900 dark:text-white">TOTP</p>
+                                                <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">Time-based codes</p>
+                                            </div>
+                                            <div class="flex items-center justify-center ">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-center ">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SMS/Email -->
+                                        <div class="group grid grid-cols-3 transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-100/60 hover:via-indigo-100/40 hover:to-blue-100/60 dark:hover:from-purple-900/40 dark:hover:via-indigo-900/30 dark:hover:to-blue-900/40">
+                                            <div class="px-6 py-3">
+                                                <p class="text-sm font-semibold text-gray-900 dark:text-white">SMS / Email OTP</p>
+                                                <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">One-time passcodes</p>
+                                            </div>
+                                            <div class="flex items-center justify-center ">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-center ">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- TAC/TAP -->
+                                        <div class="group grid grid-cols-3 transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-100/60 hover:via-indigo-100/40 hover:to-blue-100/60 dark:hover:from-purple-900/40 dark:hover:via-indigo-900/30 dark:hover:to-blue-900/40">
+                                            <div class="px-6 py-3">
+                                                <p class="text-sm font-semibold text-gray-900 dark:text-white">TAC / TAP</p>
+                                                <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">Temporary access codes</p>
+                                            </div>
+                                            <div class="flex items-center justify-center ">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-center ">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Footer Note -->
+                                    <div class="border-t border-gray-200 px-6 py-4 dark:border-gray-700">
+                                        <p class="text-center text-sm font-semibold text-gray-800 dark:text-gray-200">
+                                            <span class="text-gray-700 dark:text-gray-300">✓ Microsoft Authenticator Supported</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="problem-statement" class="pt-32">
+        <section id="problem-statement" class="relative bg-white py-24 dark:bg-gray-900/50">
             <div aria-hidden="true" class="absolute inset-0 top-20 right-0 grid grid-cols-2 -space-x-40 opacity-30 dark:opacity-20">
                 <div class="h-40 bg-gradient-to-bl from-secondary to-cyan-400 blur-[90px] dark:from-secondary/70"></div>
                 <div class="h-60 bg-gradient-to-r from-blue-300 to-primary blur-[110px] dark:to-primary/70"></div>
@@ -479,12 +580,11 @@
                         <div class="space-y-8 text-center">
                             <!-- Enhanced main heading with clearer value proposition -->
                             <div class="space-y-4">
-                                <h2 class="mx-auto max-w-4xl text-center">
-                                    <span class="mb-2 block text-xl font-bold text-red-600 dark:text-red-400">Scattered Spider: The Help Desk Nightmare</span>
+                                <h2 class="mx-auto max-w-4xl text-center" data-aos="fade-up">                                 <span class="mb-2 block text-xl font-bold text-red-600 dark:text-red-400">Scattered Spider: The Help Desk Nightmare</span>
                                     <span class="text-xl font-semibold text-gray-700 dark:text-gray-300 md:text-2xl lg:text-3xl">Cybercriminals are "ninjas with identity" targeting your help desk</span>
                                 </h2>
 
-                                <p class="mx-auto mt-6 max-w-3xl text-gray-600 dark:text-gray-400"> MFA. Fctr’s Identity Portal seamlessly integrates with Okta, eliminating outdated KBAs and enhancing security through MFA.</p>
+                                <p class="mx-auto mt-6 max-w-3xl text-gray-600 dark:text-gray-400"> Fctr’s Identity Portal seamlessly integrates with Okta or Entra ID, eliminating outdated KBAs and enhancing security through MFA.</p>
 
                                 <!-- Updated statistics section aligned with product benefits -->
                                 <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
@@ -509,22 +609,22 @@
             </div>
         </section>
 
-        <section id="features" class="relative mb-10 pt-32">
+        <section id="features" class="relative mb-10 bg-gray-50/70 py-24 dark:bg-gray-800/30">
             <div aria-hidden="true" class="absolute inset-0 top-60 grid grid-cols-2 -space-x-52 opacity-50 dark:opacity-30">
                 <div class="h-60 bg-gradient-to-br from-primary to-purple-400 blur-[106px] dark:from-blue-700"></div>
                 <div class="h-40 bg-gradient-to-r from-cyan-400 to-sky-300 blur-[106px] dark:to-indigo-600"></div>
             </div>
             <div class="relative mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <div class="text-center">
-                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight">COMPARISON</span>
-                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-2xl font-bold text-gray-800 text-transparent dark:from-white dark:via-gray-100 dark:to-white dark:text-white xl:text-3xl">Transform Your Support Experience</h2>
-                    <p class="mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5">See how Fctr Identity Portal revolutionizes your helpdesk operations, enhancing security while dramatically reducing call times.</p>
+                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight" data-aos="fade-up">COMPARISON</span>
+                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-2xl font-bold text-gray-800 text-transparent dark:from-white dark:via-gray-100 dark:to-white dark:text-white xl:text-3xl" data-aos="fade-up" data-aos-delay="100">Transform Your Support Experience</h2>
+                    <p class="mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5" data-aos="fade-up" data-aos-delay="200">See how Fctr Identity Portal revolutionizes your helpdesk operations, enhancing security while dramatically reducing call times.</p>
                 </div>
 
                 <!-- Comparison Section -->
                 <div class="mt-16 grid gap-12 md:grid-cols-2">
                     <!-- Before column -->
-                    <div class="relative overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-red-50 to-white p-6 pt-8 shadow-xl transition-transform duration-300 hover:-translate-y-1 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900">
+                    <div class="relative overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-red-50 to-white p-6 pt-8 shadow-xl transition-transform duration-300 hover:-translate-y-1 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900" data-aos="fade-right">
                         <div class="absolute top-4 left-6 z-10 rounded-full bg-gradient-to-r from-red-500 to-rose-600 px-4 py-1 text-sm font-bold text-white">Before Fctr</div>
                         <div class="mb-8 text-center">
                             <div class="mx-auto inline-flex h-20 w-20 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
@@ -552,7 +652,7 @@
                                 </div>
                                 <div>
                                     <span class="block font-medium text-gray-900 dark:text-white">Vulnerable to Scattered Spider Attacks</span>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Voice phishing calls can bypass traditional verification methods</p>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Social engineering attacks can bypass traditional verification methods</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -563,14 +663,14 @@
                                 </div>
                                 <div>
                                     <span class="block font-medium text-gray-900 dark:text-white">Multiple Systems & Screens</span>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Agents switch between various Okta and other tool interfaces</p>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Agents switch between various IDP and other tool interfaces</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- After column -->
-                    <div class="relative overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-emerald-50 to-white p-6 pt-8 shadow-xl transition-transform duration-300 hover:-translate-y-1 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900">
+                    <div class="relative overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-emerald-50 to-white p-6 pt-8 shadow-xl transition-transform duration-300 hover:-translate-y-1 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900" data-aos="fade-left">
                         <div class="absolute top-4 left-6 z-10 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 px-4 py-1 text-sm font-bold text-white">With Fctr</div>
                         <div class="mb-8 text-center">
                             <div class="mx-auto inline-flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30">
@@ -587,7 +687,7 @@
                                 </div>
                                 <div>
                                     <span class="block font-medium text-gray-900 dark:text-white">Instant Verification</span>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Reduce verification to seconds using Okta MFA</p>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Reduce verification to seconds using IDP MFA</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -597,8 +697,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <span class="block font-medium text-gray-900 dark:text-white">Blocks Scattered Spider Voice Attacks</span>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Okta-based verification stops impersonation attempts cold</p>
+                                    <span class="block font-medium text-gray-900 dark:text-white">Blocks Scattered Spider Social Engineering</span>
+                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">MFA-based verification stops impersonation attempts cold</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -628,7 +728,7 @@
                         </div>
                         <div class="md:w-3/4">
                             <h3 class="mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-xl font-bold text-transparent dark:from-primaryLight dark:to-secondaryLight">Measurable Business Impact</h3>
-                            <p class="mb-5 text-gray-700 dark:text-gray-300">By reducing verification time by 5-8 minutes per call, Fctr Identity Portal delivers immediate ROI for busy support teams while strengthening security against voice phishing attacks like Scattered Spider — which can compromise systems in under 24 hours.</p>
+                            <p class="mb-5 text-gray-700 dark:text-gray-300">By reducing verification time by 5-8 minutes per call, Fctr Identity Portal delivers immediate ROI for busy support teams while strengthening security against social engineering attacks like Scattered Spider — which can compromise systems in under 24 hours.</p>
                             <div class="grid gap-4 text-center md:grid-cols-3">
                                 <div class="rounded-lg border border-indigo-100 bg-white p-4 shadow-md transition-transform duration-300 hover:-translate-y-1 dark:border-gray-700 dark:bg-gray-800">
                                     <span class="block text-2xl font-bold text-primary dark:text-primaryLight">60+</span>
@@ -660,8 +760,8 @@
             <div class="relative mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <!-- Section heading with badge -->
                 <div class="mb-12 text-center">
-                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight">FEATURES</span>
-                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-2xl font-bold text-gray-800 text-transparent dark:from-white dark:via-gray-100 dark:to-white dark:text-white xl:text-3xl">Product Features</h2>
+                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight" data-aos="fade-up">FEATURES</span>
+                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-2xl font-bold text-gray-800 text-transparent dark:from-white dark:via-gray-100 dark:to-white dark:text-white xl:text-3xl" data-aos="fade-up" data-aos-delay="100">Product Features</h2>
                 </div>
                 <div class="text-center">
                     <div role="tablist" aria-label="tabs" class="relative mx-auto mt-12 grid h-auto w-auto grid-cols-1 items-center gap-y-2 gap-x-1 overflow-hidden rounded-full border border-gray-200 bg-gray-100 px-[3px] text-gray-600 dark:border-gray-700 dark:border-opacity-60 dark:bg-darker dark:text-gray-300 dark:shadow-none sm:w-max sm:grid-cols-3 sm:gap-y-0">
@@ -683,7 +783,7 @@
                             <div class="panel visible inset-0 flex scale-100 flex-col justify-center opacity-100 transition duration-500 md:absolute" id="panel-0">
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">Seamless Identity Verification</h3>
-                                    <p class="mt-8 text-gray-600 dark:text-gray-300">Authenticate users calling into support centers using their Okta-enrolled factors like SMS, Email, or Okta Verify. Eliminate knowledge-based questions and strengthen security posture with MFA verification.</p>
+                                    <p class="mt-8 text-gray-600 dark:text-gray-300">Authenticate users calling into support centers using their IDP-enrolled factors like SMS, Email, or Microsoft/Okta Authenticator. Eliminate knowledge-based questions and strengthen security posture with MFA verification.</p>
                                     <div class="mt-12 space-y-6">
                                         <div class="flex items-center gap-6">
                                             <div class="flex h-20 w-20 rounded-3xl border border-gray-200 bg-white p-4 dark:border-gray-600/60 dark:bg-gray-900/40">
@@ -691,7 +791,7 @@
                                             </div>
                                             <div class="w-[calc(100%-7.5rem)]">
                                                 <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Secure Verification</h4>
-                                                <p class="mt-1 text-gray-600 dark:text-gray-400">Verify your users using Okta-enrolled factors like SMS, Email, or Okta Verify.</p>
+                                                <p class="mt-1 text-gray-600 dark:text-gray-400">Verify your users using IDP-enrolled factors like SMS, Email, or Microsoft/Okta Authenticator.</p>
                                             </div>
                                         </div>
 
@@ -729,7 +829,7 @@
                                             </div>
                                             <div class="w-[calc(100%-7.5rem)]">
                                                 <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Streamlined Support</h4>
-                                                <p class="mt-1 text-gray-600 dark:text-gray-400">HelpDesk teams and Okta admins can perform various user-related actions seamlessly, without the need to switch between multiple Okta screens.</p>
+                                                <p class="mt-1 text-gray-600 dark:text-gray-400">HelpDesk teams and IDP admins can perform various user-related actions seamlessly, without the need to switch between multiple screens.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -746,7 +846,7 @@
                                             </div>
                                             <div class="w-[calc(100%-7.5rem)]">
                                                 <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Controlled Access</h4>
-                                                <p class="mt-1 text-gray-600 dark:text-gray-400">Restrict support team privileges within Okta and exclude accounts that are not serviceable by the Fctr portal.</p>
+                                                <p class="mt-1 text-gray-600 dark:text-gray-400">Restrict support team privileges within your IDP and exclude accounts that are not serviceable by the Fctr portal.</p>
                                             </div>
                                         </div>
 
@@ -783,7 +883,7 @@
             </div>
         </section>
 
-        <section id="ROI" class="relative py-16">
+        <section id="ROI" class="relative bg-white py-20 dark:bg-gray-900/50">
             <!-- Background elements -->
             <div aria-hidden="true" class="absolute inset-0 top-10 grid grid-cols-2 -space-x-52 opacity-30 dark:opacity-20">
                 <div class="h-40 bg-gradient-to-br from-primary/20 to-purple-400/20 blur-[106px] dark:from-blue-700/30"></div>
@@ -792,17 +892,13 @@
 
             <div class="relative mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <div class="mb-12 text-center">
-                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight">ROI CALCULATOR</span>
-                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-3xl font-bold text-transparent dark:from-white dark:via-gray-100 dark:to-white">Calculate Your Savings</h2>
-                    <p class="mt-4 text-gray-700 dark:text-gray-300">See how much time and money Fctr Identity Portal can save your organization</p>
+                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight" data-aos="fade-up">ROI CALCULATOR</span>
+                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-3xl font-bold text-transparent dark:from-white dark:via-gray-100 dark:to-white" data-aos="fade-up" data-aos-delay="100">Calculate Your Savings</h2>
+                    <p class="mt-4 text-gray-700 dark:text-gray-300" data-aos="fade-up" data-aos-delay="200">See how much time and money Fctr Identity Portal can save your organization</p>
                 </div>
 
-                <!-- Full-width container instead of max-w-4xl -->
-                <div class="relative overflow-hidden rounded-xl border border-indigo-100 bg-gradient-to-br from-indigo-50/50 via-white to-blue-50/50 p-8 shadow-xl dark:border-gray-700 dark:from-gray-800 dark:via-gray-900/80 dark:to-gray-800/90">
-                    <!-- Decorative element -->
-                    <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/5 dark:bg-primary/10"></div>
-                    <div class="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-secondary/5 dark:bg-secondary/10"></div>
-
+                <!-- Full-width container - flat design -->
+                <div class="relative">
                     <div class="relative z-10 grid gap-12 md:grid-cols-2">
                         <div class="rounded-xl border border-gray-100 bg-white p-6 shadow-lg dark:border-gray-700 dark:bg-gray-800">
                             <h3 class="mb-6 flex items-center text-xl font-semibold text-gray-900 dark:text-white">
@@ -885,7 +981,7 @@
         </section>
 
         <!-- Tako AI Agent Cross-Promotion Section -->
-        <section class="relative bg-white py-20 dark:bg-gray-800/30 lg:py-28">
+        <section class="relative bg-white dark:bg-gray-900/50 py-20 lg:py-28">
             <div class="mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-7xl">
                 <div class="mx-auto max-w-4xl text-center">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl" data-aos="fade-up">
@@ -905,7 +1001,7 @@
             </div>
         </section>
 
-        <section id="privacy" class="relative py-16">
+        <section id="privacy" class="relative bg-white py-20 dark:bg-gray-900/50">
             <!-- Background elements -->
             <div aria-hidden="true" class="absolute inset-0 top-10 grid grid-cols-2 -space-x-52 opacity-30 dark:opacity-20">
                 <div class="h-40 bg-gradient-to-br from-primary/20 to-purple-400/20 blur-[106px] dark:from-blue-700/30"></div>
@@ -920,16 +1016,14 @@
                     <p class="mx-auto mt-4 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5">Industry-leading security protects your data while enabling seamless user experiences</p>
                 </div>
 
-                <!-- Content container -->
-                <div class="rounded-2xl border border-gray-100 bg-gradient-to-br from-white to-indigo-50/30 p-6 shadow-xl dark:border-gray-700 dark:from-gray-800 dark:to-gray-900 md:p-8">
-                    <div class="items-center justify-center space-y-8 md:flex md:gap-12 md:space-y-0">
+                <!-- Content container - flat design -->
+                <div class="items-center justify-center space-y-8 md:flex md:gap-12 md:space-y-0">
                         <!-- Image container with decorative elements -->
                         <div class="relative md:w-1/2 lg:w-5/12">
                             <!-- Decorative rings -->
 
                             <!-- Image with enhanced container -->
-                            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                                <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-70 dark:from-primary/20"></div>
+                            <div class="relative overflow-hidden rounded-2xl shadow-lg">
                                 <img class="h-full w-full object-cover" src="./images/security-privacy.svg" alt="Fctr Data Privacy" loading="lazy" width="450" />
                             </div>
                         </div>
@@ -994,7 +1088,7 @@
             </div>
         </section>
 
-        <section id="cta" class="relative py-16">
+        <section id="cta" class="relative bg-gray-50/70 py-20 dark:bg-gray-800/30">
             <!-- Background elements -->
             <div aria-hidden="true" class="absolute inset-0 top-10 grid grid-cols-2 -space-x-52 opacity-30 dark:opacity-20">
                 <div class="h-40 bg-gradient-to-br from-primary/20 to-purple-400/20 blur-[106px] dark:from-blue-700/30"></div>
@@ -1004,13 +1098,12 @@
             <div class="relative mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <!-- Section header -->
                 <div class="mb-8 text-center">
-                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight">REQUEST DEMO</span>
-                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-2xl font-bold text-transparent dark:from-white dark:via-gray-100 dark:to-white xl:text-3xl">See Fctr Identity Portal in Action</h2>
+                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight" data-aos="fade-up">REQUEST DEMO</span>
+                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-2xl font-bold text-transparent dark:from-white dark:via-gray-100 dark:to-white xl:text-3xl" data-aos="fade-up" data-aos-delay="100">See Fctr Identity Portal in Action</h2>
                 </div>
 
-                <!-- CTA Content with improved padding -->
-                <div class="overflow-hidden rounded-2xl border border-gray-100 bg-gradient-to-br from-indigo-50 via-white to-blue-50 p-4 shadow-xl dark:border-gray-700 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 md:p-8">
-                    <div class="mx-auto">
+                <!-- CTA Content - flat design -->
+                <div class="mx-auto">
                         <div class="items-end justify-between gap-8 md:flex">
                             <div class="h-max py-8 px-4 md:w-6/12 xl:w-5/12">
                                 <div class="text-center md:text-left">
@@ -1083,8 +1176,6 @@
                             </div>
 
                             <div class="relative p-4 md:w-[42%] lg:w-1/2">
-                                <!-- Added decorative element -->
-                                <div class="absolute -top-16 right-16 h-32 w-32 rounded-full bg-primary/10 blur-2xl dark:bg-primary/20"></div>
                                 <img src="./images/cta-cards.svg" alt="Fctr Identity Portal" loading="lazy" width="1299" height="678" class="relative z-10" />
                             </div>
                         </div>
@@ -1207,7 +1298,7 @@
             </div>
         </section> -->
 
-        <section id="pricing" class="relative py-16">
+        <section id="pricing" class="relative bg-white py-20 dark:bg-gray-900/50">
             <div aria-hidden="true" class="top-30 opacity-35 absolute inset-0 grid grid-cols-2 -space-x-52 dark:opacity-20">
                 <div class="h-70 bg-gradient-to-tr from-indigo-500 to-blue-400 blur-[130px] dark:from-indigo-700"></div>
                 <div class="h-50 bg-gradient-to-bl from-cyan-300 to-teal-400 blur-[100px] dark:to-cyan-600"></div>
@@ -1221,9 +1312,9 @@
             <div class="relative mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
                 <!-- Section header remains the same -->
                 <div class="text-center">
-                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight">PRICING</span>
-                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-2xl font-bold text-transparent dark:from-white dark:via-gray-100 dark:to-white xl:text-3xl">Simple, Transparent Pricing</h2>
-                    <p class="mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5">Choose the plan that's right for your business</p>
+                    <span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary dark:bg-primary/20 dark:text-primaryLight" data-aos="fade-up">PRICING</span>
+                    <h2 class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-2xl font-bold text-transparent dark:from-white dark:via-gray-100 dark:to-white xl:text-3xl" data-aos="fade-up" data-aos-delay="100">Simple, Transparent Pricing</h2>
+                    <p class="mx-auto mt-6 text-gray-700 dark:text-gray-300 md:w-3/4 lg:w-3/5" data-aos="fade-up" data-aos-delay="200">Choose the plan that's right for your business</p>
                 </div>
 
                 <!-- Pricing cards container with better alignment -->
@@ -1364,7 +1455,7 @@
             </div>
         </section>
 
-        <section id="faqs" class="relative py-16">
+        <section id="faqs" class="relative bg-gray-50/70 py-20 dark:bg-gray-800/30">
             <div aria-hidden="true" class="top-50 dark:opacity-15 absolute inset-0 right-10 grid grid-cols-2 opacity-30">
                 <div class="h-80 bg-gradient-to-br from-yellow-300 to-orange-400 blur-[120px] dark:from-yellow-600"></div>
                 <div class="h-60 bg-gradient-to-tr from-primary/40 to-secondary/40 blur-[150px] dark:to-secondary/50"></div>
@@ -1424,7 +1515,7 @@
                             </button>
                             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="faq-0">
                                 <div class="p-6 pt-0">
-                                    <p class="text-gray-600 dark:text-gray-300">The Fctr Identity Portal is a secure, all-in-one solution designed for organizations using Okta. It simplifies user management, verification processes, and support operations without requiring direct admin access to your Okta environment.</p>
+                                    <p class="text-gray-600 dark:text-gray-300">The Fctr Identity Portal is a secure, all-in-one solution designed for organizations using Okta or Entra ID. It simplifies user management, verification processes, and support operations without requiring direct admin access to your IDP environment.</p>
                                 </div>
                             </div>
                         </div>
@@ -1446,7 +1537,7 @@
                             </button>
                             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="faq-1">
                                 <div class="p-6 pt-0">
-                                    <p class="text-gray-600 dark:text-gray-300">Fctr is ideal for IT helpdesk teams, support staff, and security-conscious organizations using Okta. It enables tier-1 support teams to efficiently handle user verification and identity management tasks without needing extensive Okta admin privileges, improving both operational efficiency and security.</p>
+                                    <p class="text-gray-600 dark:text-gray-300">Fctr is ideal for IT helpdesk teams, support staff, and security-conscious organizations using Okta or Entra ID. It enables tier-1 support teams to efficiently handle user verification and identity management tasks without needing extensive IDP admin privileges, improving both operational efficiency and security.</p>
                                 </div>
                             </div>
                         </div>
@@ -1570,7 +1661,7 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                                         </svg>
                                     </div>
-                                    <span class="font-medium text-gray-900 dark:text-white">How is Fctr different from built-in Okta admin tools?</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">How is Fctr different from built-in IDP admin tools?</span>
                                 </div>
                                 <svg class="arrow-down h-6 w-6 rotate-0 transform text-gray-400 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -1578,12 +1669,12 @@
                             </button>
                             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="faq-6">
                                 <div class="p-6 pt-0">
-                                    <p class="text-gray-600 dark:text-gray-300">While Okta's admin console is designed for administrators managing the entire identity infrastructure, Fctr is purpose-built for support teams with a focus on daily operational tasks. Key differences include:</p>
+                                    <p class="text-gray-600 dark:text-gray-300">While IDP admin consoles is designed for administrators managing the entire identity infrastructure, Fctr is purpose-built for support teams with a focus on daily operational tasks. Key differences include:</p>
                                     <ul class="mt-2 list-disc pl-5 text-gray-600 dark:text-gray-300">
                                         <li>Simplified interface designed specifically for support workflows</li>
                                         <li>Enhanced security with data masking and limited permissions</li>
                                         <li>Modern user verification methods that don't rely on security questions</li>
-                                        <li>No need for support staff to have Okta admin privileges</li>
+                                        <li>No need for support staff to have IDP admin privileges</li>
                                         <li>Integration with ticketing systems and support platforms</li>
                                     </ul>
                                 </div>
@@ -1607,9 +1698,9 @@
                             </button>
                             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="faq-7">
                                 <div class="p-6 pt-0">
-                                    <p class="text-gray-600 dark:text-gray-300">Fctr is designed for seamless integration with your Okta environment. Deployment options include:</p>
+                                    <p class="text-gray-600 dark:text-gray-300">Fctr is designed for seamless integration with your IDP environment. Deployment options include:</p>
                                     <ul class="mt-2 list-disc pl-5 text-gray-600 dark:text-gray-300">
-                                        <li>Cloud-hosted SaaS solution with secure API connections to your Okta tenant</li>
+                                        <li>Cloud-hosted SaaS solution with secure API connections to your IDP tenant</li>
                                         <li>On-premises deployment for organizations with strict data locality requirements</li>
                                         <li>Hybrid deployments that balance security and accessibility needs</li>
                                     </ul>
@@ -1748,5 +1839,18 @@
 
 
 
+
+<!-- AOS Animation Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+</script>
     </body>
 </html>
+
+
