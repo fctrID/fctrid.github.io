@@ -58,8 +58,8 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         
         
-      <script type="module" crossorigin src="./assets/faqs.b3f2d38f.js"></script>
-      <link rel="stylesheet" href="./assets/faqs.a9f52f1e.css">
+      <script type="module" crossorigin src="./assets/faqs.f2bd8cb4.js"></script>
+      <link rel="stylesheet" href="./assets/faqs.f7674dd5.css">
     </head>
     <body class="min-h-screen scroll-smooth bg-white selection:bg-primary/10 selection:text-primary dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
     <div id="ai-agent-modal" role="dialog" aria-modal="true" aria-labelledby="tako-modal-title" tabindex="-1" class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
@@ -398,6 +398,20 @@
                                     </svg>
                                     <span class="text-base font-semibold text-purple-600 dark:text-purple-300 sm:text-lg">Block social engineering attempts</span>
                                 </div>
+
+                                <div class="group relative flex w-full items-start justify-center gap-2 lg:justify-start">
+                                    <svg class="mt-0.5 h-6 w-6 flex-shrink-0 text-transparent" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="stroke: url(#gradient4)">
+                                        <defs>
+                                            <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+                                                <stop offset="50%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                                <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                    <span class="text-base font-semibold text-purple-600 dark:text-purple-300 sm:text-lg">Deploy Fctr in hours not days</span>
+                                </div>
                             </div>
                             <a href="https://www.Okta.com/integrations/Fctr-identity-support-portal-api-integration/" class="group relative z-30 mt-8 inline-flex items-center gap-2 rounded-lg border-2 border-[#10B981] bg-[#10B981]/10 px-6 py-3 shadow-md transition-all hover:bg-[#10B981]/20 hover:shadow-lg dark:border-[#10B981]/70 dark:bg-[#10B981]/20" onclick="window.open(this.href, '_blank'); return false;" onkeypress="if(event.key === 'Enter') { window.open(this.href, '_blank'); return false; }">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#10B981] dark:text-[#34D399]" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -420,6 +434,8 @@
                                         </div>
                                         <div class="relative w-full">
                                             <input id="work-email-1" aria-label="your work email" autocomplete="email" placeholder="Enter your work email for a demo" class="peer w-full cursor-text rounded-full bg-transparent p-4 placeholder-gray-600 outline-none invalid:border-red-500 dark:text-white dark:placeholder-gray-300" type="email" name="email" required />
+                                            <!-- Honeypot field - hidden from users, attracts bots -->
+                                            <input type="text" name="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;" aria-hidden="true" />
                                             <span id="email-error-1" class="text-md absolute -bottom-9 left-4 hidden text-red-500"></span>
                                         </div>
                                         <div class="md:pr-1.5 lg:pr-0">
@@ -447,14 +463,14 @@
                             
                             <div id="thankYouMessage1" class="slide-in-bottom mt-12 hidden text-center text-lg text-green-600 dark:text-green-400">Thank you for signing up! We will get in touch with you soon.</div>
                         </div>
-                        <div class="z-20 mt-12 w-full lg:mt-8 lg:w-7/12" data-aos="fade-left" data-aos-delay="200">
+                        <div class="z-20 mt-12 w-full lg:mt-4 lg:w-7/12" data-aos="fade-left" data-aos-delay="200">
                             <!-- Authentication Factors Table -->
                             <div class="mx-auto max-w-2xl">
                                 <div class="overflow-hidden rounded-2xl bg-gradient-to-br from-white/95 via-purple-50/40 to-blue-50/40 backdrop-blur-xl shadow-2xl dark:from-gray-900/95 dark:via-purple-950/40 dark:to-blue-950/40">
                                     <!-- Table Header -->
                                     <div class="grid grid-cols-3 bg-gradient-to-r from-purple-100/60 via-indigo-100/60 to-blue-100/60 backdrop-blur-sm dark:from-purple-900/50 dark:via-indigo-900/50 dark:to-blue-900/50">
                                         <div class="px-6 py-3">
-                                            <h4 class="text-sm font-black uppercase tracking-wide bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 bg-clip-text text-transparent dark:from-gray-100 dark:via-gray-300 dark:to-gray-200">Supported Factors</h4>
+                                            <h4 class="text-sm font-black uppercase tracking-wide bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 bg-clip-text text-transparent dark:from-gray-100 dark:via-gray-300 dark:to-gray-200">Factor Support</h4>
                                         </div>
                                         <div class="px-6 py-3 text-center">
                                             <h4 class="text-sm font-black uppercase tracking-wide bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-blue-300 dark:to-cyan-300">Okta</h4>
@@ -510,11 +526,33 @@
                                             </div>
                                         </div>
 
-                                        <!-- SMS/Email -->
+                                        <!-- SMS -->
                                         <div class="group grid grid-cols-3 transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-100/60 hover:via-indigo-100/40 hover:to-blue-100/60 dark:hover:from-purple-900/40 dark:hover:via-indigo-900/30 dark:hover:to-blue-900/40">
                                             <div class="px-6 py-3">
-                                                <p class="text-sm font-semibold text-gray-900 dark:text-white">SMS / Email OTP</p>
-                                                <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">One-time passcodes</p>
+                                                <p class="text-sm font-semibold text-gray-900 dark:text-white">SMS OTP</p>
+                                                <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">Text message codes</p>
+                                            </div>
+                                            <div class="flex items-center justify-center ">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-center ">
+                                                <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
+                                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="group grid grid-cols-3 transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-100/60 hover:via-indigo-100/40 hover:to-blue-100/60 dark:hover:from-purple-900/40 dark:hover:via-indigo-900/30 dark:hover:to-blue-900/40">
+                                            <div class="px-6 py-3">
+                                                <p class="text-sm font-semibold text-gray-900 dark:text-white">Email OTP</p>
+                                                <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">Email passcodes</p>
                                             </div>
                                             <div class="flex items-center justify-center ">
                                                 <div class="rounded-full bg-green-100/80 p-1.5 ring-2 ring-green-500/20 transition-all duration-300 group-hover:scale-110 group-hover:ring-green-500/40 dark:bg-green-900/40 dark:ring-green-400/20 dark:group-hover:ring-green-400/40">
@@ -1117,6 +1155,8 @@
                                     <form id="contactForm2" class="mt-8">
                                         <div class="relative flex flex-col items-center gap-4 rounded-full border border-primary/30 bg-white p-1 px-3 shadow-lg focus-within:ring-2 focus-within:ring-primary/30 dark:border-white/10 dark:bg-gray-800 sm:flex-row md:p-2 lg:pr-3">
                                             <input type="email" id="work-email-2" name="email" placeholder="Enter your work email" class="w-full flex-1 cursor-text border-none bg-transparent p-3 text-gray-800 outline-none dark:text-white" required />
+                                            <!-- Honeypot field - hidden from users, attracts bots -->
+                                            <input type="text" name="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;" aria-hidden="true" />
                                             <p id="email-error-2" class="absolute -bottom-6 left-4 hidden text-sm text-red-500"></p>
                                             <button type="submit" class="to-primary-dark relative flex h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-primary px-6 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none dark:from-primaryLight dark:to-primaryLight/80 dark:text-gray-900 sm:w-max">
                                                 <span>Get a Demo</span>
