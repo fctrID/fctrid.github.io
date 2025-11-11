@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon.5703e038.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Primary Meta Tags -->
+        <title>Fctr Identity Portal | Stop Social Engineering At The Helpdesk</title>
+        <meta name="description" content="Walk through the exact call flow Scattered Spider uses and watch how Fctr forces MFA before your agents touch a reset." />
+        <meta name="keywords" content="identity verification, Okta integration, Entra ID integration, Microsoft Entra ID, Microsoft Authenticator, helpdesk security, multi-factor authentication, MFA, authenticators, TOTP, push notifications, customer support security, okta helpdesk, entra id helpdesk, verification, RockStar plugin, identity proofing, ID proofing, user verification, Okta administration, Entra ID administration, support efficiency, secure authentication, identity management, social engineering prevention, Scattered Spider protection, helpdesk caller verification, zero trust, passwordless authentication, caller verify, caller verify alternative, caller authentication, phone verification" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fctr.io/" />
+        <meta property="og:title" content="Fctr Identity Portal | Secure Identity Verification" />
+        <meta property="og:description" content="Enhance helpdesk security with Fctr Identity Portal. Seamless Okta/Entra ID integration for secure user verification. Okta Helpdesk verification" />
+        <meta property="og:image" content="https://fctr.io/images/fctr_og_image.png" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://fctr.io/" />
+        <meta property="twitter:title" content="Fctr Identity Portal | Secure Identity Verification" />
+        <meta property="twitter:description" content="Enhance helpdesk security with Fctr Identity Portal. Seamless Okta/Entra ID integration for secure user verification. okta helpdesk verification portal" />
+        <meta property="twitter:image" content="https://fctr.io/images/fctr_og_image.png" />
+
+        <!-- Schema.org markup -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Fctr Identity Portal",
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": "Web-based",
+                "description": "Secure identity verification portal integrated with Okta and Microsoft Entra ID for enhanced helpdesk authentication. Alternative to caller verify solutions with support for Microsoft Authenticator, multi-factor authentication, and identity proofing to prevent social engineering attacks.",
+                "featureList": ["Multi-factor authentication", "Okta integration", "Microsoft Entra ID integration", "Entra ID support", "Microsoft Authenticator support", "Secure user verification", "Identity verification", "Simplified identity management", "Helpdesk support tools", "RockStar Plugin", "Identity Proofing", "ID proofing", "Social engineering prevention", "Scattered Spider protection", "Push notification authentication", "TOTP authentication", "SMS authentication", "Email authentication", "Voice authentication", "Passwordless authentication", "Helpdesk caller verification", "Zero trust security", "Caller authentication", "Phone verification"],
+                "offers": {
+                    "@type": "Offer",
+                    "category": "Enterprise Solution"
+                },
+                "applicationSubCategory": "Identity Verification",
+                "url": "https://fctr.io/"
+            }
+        </script>
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://fctr.io/" />
+
+        <!-- Additional helpful meta tags -->
+        <meta name="author" content="Fctr" />
+        <meta name="robots" content="index, follow" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+        
+        <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
+      <script type="module" crossorigin src="./assets/index2.cfc7d706.js"></script>
+      <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill.c7c6310f.js">
+      <link rel="stylesheet" href="./assets/index2.b8cc55bd.css">
+    </head>
+    <body data-theme="light">
+
+        <header>
+            <div class="wrap">
+                <div class="nav">
+                    <a class="brand" href="#home">
+                        <img src="./images/logo.svg" alt="Fctr Identity Portal" class="brand__logo brand__logo--light" />
+                        <img src="./images/logo_dark.svg" alt="Fctr Identity Portal" class="brand__logo brand__logo--dark" />
+                    </a>
+                    <div class="nav-menu" id="site-navigation" aria-hidden="false">
+                        <nav class="nav-links" aria-label="Primary">
+                            <a href="#home">Intro</a>
+                            <a href="#portal">Portal</a>
+                            <a href="#factors">Coverage</a>
+                            <a href="#workflow">Workflow</a>
+                            <a href="#roi">ROI</a>
+                            <a href="mailto:demo@fctr.io">Contact</a>
+                        </nav>
+                    </div>
+                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-navigation" aria-label="Toggle navigation" hidden>
+                        <span class="nav-toggle__icon" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <span class="nav-toggle__label">Menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home">
+                <div class="wrap hero">
+                    <div class="hero__intro" data-aos="fade-right">
+                        <span class="badge badge--hero">🛡 Proof-first identity operations</span>
+                        <h1 class="hero__title">Verify Helpdesk Callers with Real Authentication</h1>
+                        <p class="hero__subtitle">Stop relying on "last four of your social" and outdated security questions. Fctr Identity Portal integrates with Okta and Entra ID to authenticate callers using their enrolled MFA factors—reducing call times by 70% while blocking social engineering attacks.</p>
+
+                        <div class="hero__idp-support">
+                            <span class="hero__idp-label">Works with</span>
+                            <div class="hero__idp-list">
+                                <span class="idp-marker idp-marker--okta">Okta</span>
+                                <span class="idp-marker idp-marker--entra">Entra ID</span>
+                            </div>
+                        </div>
+
+                        <div class="hero__integration-cta">
+                            <a class="button button--oin" href="https://www.okta.com/integrations/Fctr-identity-support-portal-api-integration/" target="_blank" rel="noopener">Available on Okta Integration Network</a>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <form id="hero-contact-form" class="hero__form">
+                            <div class="hero-cta">
+                                <div class="hero-cta__border">
+                                    <div class="hero-cta__inner">
+                                        <div class="hero-cta__field">
+                                            <label class="hero-cta__label" for="hero-email">Work email</label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                id="hero-email"
+                                                class="hero-cta__input"
+                                                placeholder="you@company.com"
+                                                required
+                                                autocomplete="email"
+                                            />
+                                        </div>
+                                        <button type="submit" class="cta__submit hero-cta__submit">
+                                            <span class="submit-text">Get Demo</span>
+                                            <span class="submit-spinner" style="display: none;">
+                                                <svg class="spinner" viewBox="0 0 50 50">
+                                                    <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="4"></circle>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Honeypot field -->
+                            <input type="text" name="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;" aria-hidden="true" />
+                            <div class="form-message form-message--success" style="display: none;">
+                                ✓ Thanks! We'll reach out shortly.
+                            </div>
+                            <div class="form-message form-message--error" style="display: none;">
+                                Something went wrong. Email us at <a href="mailto:demo@fctr.io">demo@fctr.io</a>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <aside class="hero__panel" data-aos="fade-left" data-aos-delay="100">
+                        <h3>Identity Verification</h3>
+                        <div class="hero__stats">
+                            <div class="stat">
+                                <h3>Time saved</h3>
+                                <strong>5 minutes</strong>
+                                <small>Per call by eliminating knowledge-based scripts.</small>
+                            </div>
+                            <div class="stat">
+                                <h3>Scattered Spider</h3>
+                                <strong>&lt; 24 hours</strong>
+                                <small>From trivia-based reset to ransomware deployment.</small>
+                            </div>
+                            <div class="stat">
+                                <h3>MFA enforcement</h3>
+                                <strong>100%</strong>
+                                <small>All resets and unlocks require MFA. No exceptions.</small>
+                            </div>
+                            <div class="stat">
+                                <h3>SLA improvement</h3>
+                                <strong>70%</strong>
+                                <small>Call time reduction with instant MFA verification.</small>
+                            </div>
+                        </div>
+                        <div class="hero__panel-factors">
+                            <span class="hero__panel-factors-label">Supported factors</span>
+                            <ul class="hero__panel-factors-list">
+                                <li class="hero__panel-factor">Okta Verify push</li>
+                                <li class="hero__panel-factor">Microsoft Authenticator push</li>
+                                <li class="hero__panel-factor">Temporary Access Pass</li>
+                                <li class="hero__panel-factor">TOTP authenticators</li>
+                                <li class="hero__panel-factor">SMS codes</li>
+                                <li class="hero__panel-factor">Email verification</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="breach-spotlight" data-aos="fade-up">
+                <p class="breach-spotlight__message"><em>Scattered Spider</em> uses social engineering to bypass helpdesks in under 24 hours.</p>
+                <nav class="breach-spotlight__actions" aria-label="Related links">
+                    <a href="https://arstechnica.com/security/2025/07/how-do-hackers-get-passwords-sometimes-they-just-ask/" target="_blank" rel="noopener">How hackers get passwords</a>
+                    <a href="https://www.axios.com/newsletters/axios-future-of-cybersecurity-fab0c0d0-5760-11f0-8c09-e72f7ef7d797.html?stream=top" target="_blank" rel="noopener">Scattered Spider playbook</a>
+                    <a href="mailto:demo@fctr.io">Talk to an engineer</a>
+                </nav>
+            </section>
+
+            <section id="portal">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <span>The Solution</span>
+                        <h2>Identity Verification Portal</h2>
+                        <p>Six core capabilities that block social engineering by enforcing MFA verification before any helpdesk action—without exposing PII or credentials.</p>
+                    </div>
+
+                    <div class="feature-grid">
+                        <article class="feature-card" data-aos="fade-right" data-aos-delay="0">
+                            <span class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L30 10V18C30 24 25.8 30.2 20 32C14.2 30.2 10 24 10 18V10L20 6Z" stroke="currentColor" stroke-width="2" fill="none"></path>
+                                    <path d="M16 19L19.2 22.2L24 17" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <h3 class="feature-card__heading">Secure Verification</h3>
+                            <p class="feature-card__text">Real-time factor verification for password resets and account unlocks. No trivia questions, no social engineering—only enrolled device confirmation.</p>
+                        </article>
+                        <article class="feature-card" data-aos="fade-up" data-aos-delay="80">
+                            <span class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2" fill="none"></circle>
+                                    <path d="M18 22V18C18 16.343 19.343 15 21 15C22.657 15 24 16.343 24 18V22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path>
+                                    <rect x="16" y="22" width="10" height="8" rx="2" stroke="currentColor" stroke-width="2" fill="none"></rect>
+                                </svg>
+                            </span>
+                            <h3 class="feature-card__heading">PII Shielding</h3>
+                            <p class="feature-card__text">Agents cannot view sensitive user data. Portal displays only verification status and enrolled factors—personal information stays hidden.</p>
+                        </article>
+                        <article class="feature-card" data-aos="fade-left" data-aos-delay="160">
+                            <span class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"></rect>
+                                    <line x1="12" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                                    <line x1="12" y1="20" x2="24" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                                    <line x1="12" y1="26" x2="20" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                                </svg>
+                            </span>
+                            <h3 class="feature-card__heading">Audit Log Stream</h3>
+                            <p class="feature-card__text">Every portal action generates tamper-proof audit records. Export logs for compliance reviews, SIEM ingestion, or SOC investigations.</p>
+                        </article>
+                        <article class="feature-card" data-aos="fade-right" data-aos-delay="240">
+                            <span class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="6" y="8" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2" fill="none"></rect>
+                                    <line x1="6" y1="18" x2="34" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                                    <line x1="20" y1="8" x2="20" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                                </svg>
+                            </span>
+                            <h3 class="feature-card__heading">Single Pane of Glass</h3>
+                            <p class="feature-card__text">Helpdesk agents stay in one interface for all identity operations. No more toggling between Okta admin, Entra ID portal, and ticketing systems.</p>
+                        </article>
+                        <article class="feature-card" data-aos="fade-up" data-aos-delay="320">
+                            <span class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"></circle>
+                                    <circle cx="28" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"></circle>
+                                    <circle cx="12" cy="28" r="6" stroke="currentColor" stroke-width="2" fill="none"></circle>
+                                    <path d="M17 15L23 15M17 25L23 28M23 10L17 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <h3 class="feature-card__heading">Role-Based Access</h3>
+                            <p class="feature-card__text">Customizable permission tiers control what each helpdesk agent can see and do. Tier-1 verifies, Tier-2 resets, admins audit—all configurable per customer.</p>
+                        </article>
+                        <article class="feature-card" data-aos="fade-left" data-aos-delay="400">
+                            <span class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="20" r="9" stroke="currentColor" stroke-width="2" fill="none"></circle>
+                                    <circle cx="24" cy="20" r="9" stroke="currentColor" stroke-width="2" fill="none"></circle>
+                                    <path d="M16 20H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <h3 class="feature-card__heading">Okta or Entra ID</h3>
+                            <p class="feature-card__text">Deploy for Okta or Entra ID identity providers. One license, unified audit trail, consistent verification workflow across your organization.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="factors">
+                <div class="wrap factor-suite">
+                    <div class="section-heading">
+                        <span>IDP Coverage</span>
+                        <h2>Works with Okta or Entra ID—deploy in either environment</h2>
+                        <p>Fctr enforces MFA using factors your users already have registered. No new enrollments, no app downloads—agents verify through Okta or Entra ID while your existing identity stack does the heavy lifting.</p>
+                    </div>
+
+                    <div class="factor-matrix" data-aos="fade-up" data-aos-delay="60">
+                        <div class="factor-matrix__body">
+                            <div class="factor-matrix__column factor-matrix__column--entra">
+                                <span class="factor-matrix__title">Microsoft Entra ID</span>
+                                <ul class="factor-matrix__list">
+                                    <li class="factor-matrix__item">
+                                        <strong>Microsoft Authenticator</strong>
+                                        <span>Push with number match or TOTP—no re-enrollment, still governed by Conditional Access.</span>
+                                    </li>
+                                    <li class="factor-matrix__item">
+                                        <strong>Temporary Access Pass</strong>
+                                        <span>Time-boxed TAP with dual approval, every escalation captured for audit.</span>
+                                    </li>
+                                    <li class="factor-matrix__item">
+                                        <strong>SMS · Email · TOTP</strong>
+                                        <span>Fallback channels for travelers or contractors, still enforced by Entra MFA.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="factor-matrix__column factor-matrix__column--okta">
+                                <span class="factor-matrix__title">Okta Identity Cloud</span>
+                                <ul class="factor-matrix__list">
+                                    <li class="factor-matrix__item">
+                                        <strong>Okta Verify</strong>
+                                        <span>Push, FastPass, or OTP without leaving the Fctr workflow.</span>
+                                    </li>
+                                    <li class="factor-matrix__item">
+                                        <strong>Temporary Access Code</strong>
+                                        <span>Short-lived TACs that require manager sign-off and generate receipts.</span>
+                                    </li>
+                                    <li class="factor-matrix__item">
+                                        <strong>SMS · Email · Google Authenticator</strong>
+                                        <span>Legacy options remain, but every reset still demands Okta MFA success.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="workflow">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <span>Comparison</span>
+                        <h2>Transform Your Support Experience</h2>
+                        <p>See how Fctr Identity Portal transforms helpdesk operations, enhancing security while dramatically reducing call times.</p>
+                    </div>
+
+                    <div class="comparison-matrix">
+                        <div class="comparison-matrix__header" data-aos="fade-up">
+                            <span>Traditional Helpdesk</span>
+                            <span>Fctr Identity Portal</span>
+                        </div>
+
+                        <div class="comparison-row" data-aos="fade-up" data-aos-delay="60">
+                            <div class="comparison-cell comparison-cell--before">
+                                <span class="comparison-cell__tag">Before Fctr</span>
+                                <h3 class="comparison-cell__title">Multiple screens and spreadsheets</h3>
+                                <p class="comparison-cell__description">Agents juggle Excel sheets, Okta Admin console, Entra portal, Active Directory, and ticketing systems—switching between 5+ tools per call, increasing verification time and error rates.</p>
+                            </div>
+                            <div class="comparison-cell comparison-cell--after">
+                                <span class="comparison-cell__tag">With Fctr</span>
+                                <h3 class="comparison-cell__title">One unified screen</h3>
+                                <p class="comparison-cell__description">All user lookup, MFA verification, factor management, and audit logs consolidated into a single purpose-built interface—no console switching required.</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-row" data-aos="fade-up" data-aos-delay="120">
+                            <div class="comparison-cell comparison-cell--before">
+                                <span class="comparison-cell__tag">Before Fctr</span>
+                                <h3 class="comparison-cell__title">No audit trail</h3>
+                                <p class="comparison-cell__description">Knowledge-based questions ("What's your street name?") leave zero proof of verification. No record of who verified whom, when, or how—creating compliance gaps and investigation blind spots.</p>
+                            </div>
+                            <div class="comparison-cell comparison-cell--after">
+                                <span class="comparison-cell__tag">With Fctr</span>
+                                <h3 class="comparison-cell__title">Complete MFA receipts</h3>
+                                <p class="comparison-cell__description">Every verification logged with timestamp, agent ID, MFA factor used, and approval status. Full forensic trail for security reviews and compliance audits.</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-row" data-aos="fade-up" data-aos-delay="180">
+                            <div class="comparison-cell comparison-cell--before">
+                                <span class="comparison-cell__tag">Before Fctr</span>
+                                <h3 class="comparison-cell__title">Cannot enforce MFA verification</h3>
+                                <p class="comparison-cell__description">Agents rely on manually asking security questions or checking caller ID. No technical control prevents them from bypassing verification steps or resetting credentials without proper authentication.</p>
+                            </div>
+                            <div class="comparison-cell comparison-cell--after">
+                                <span class="comparison-cell__tag">With Fctr</span>
+                                <h3 class="comparison-cell__title">Policy-enforced MFA gates</h3>
+                                <p class="comparison-cell__description">System blocks all password resets, factor changes, and account unlocks until user completes MFA challenge. Agents cannot override or skip verification—policy is technically enforced, not procedural.</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-row" data-aos="fade-up" data-aos-delay="240">
+                            <div class="comparison-cell comparison-cell--before">
+                                <span class="comparison-cell__tag">Before Fctr</span>
+                                <h3 class="comparison-cell__title">PII exposed to helpdesk agents</h3>
+                                <p class="comparison-cell__description">Admin consoles display full social security numbers, birth dates, home addresses, and personal identifiers. Helpdesk agents see sensitive data they don't need, creating insider risk and compliance exposure.</p>
+                            </div>
+                            <div class="comparison-cell comparison-cell--after">
+                                <span class="comparison-cell__tag">With Fctr</span>
+                                <h3 class="comparison-cell__title">Zero PII visibility</h3>
+                                <p class="comparison-cell__description">Agents see only username, email domain, and MFA approval status. No access to personal identifiers, employment details, or user attributes—reducing insider threat surface and GDPR/CCPA risk.</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-row" data-aos="fade-up" data-aos-delay="300">
+                            <div class="comparison-cell comparison-cell--before">
+                                <span class="comparison-cell__tag">Before Fctr</span>
+                                <h3 class="comparison-cell__title">Social engineering succeeds</h3>
+                                <p class="comparison-cell__description">Scattered Spider attackers research targets on LinkedIn, answer security questions from data breaches, and successfully impersonate employees over the phone—bypassing knowledge-based authentication in under 15 minutes.</p>
+                            </div>
+                            <div class="comparison-cell comparison-cell--after">
+                                <span class="comparison-cell__tag">With Fctr</span>
+                                <h3 class="comparison-cell__title">Attacker calls fail at MFA</h3>
+                                <p class="comparison-cell__description">Fctr forces real-time MFA push to the victim's enrolled device. Attackers cannot proceed without possessing the user's phone or hardware token—blocking impersonation regardless of social engineering skill.</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-row" data-aos="fade-up" data-aos-delay="360">
+                            <div class="comparison-cell comparison-cell--before">
+                                <span class="comparison-cell__tag">Before Fctr</span>
+                                <h3 class="comparison-cell__title">Helpdesk agents need IDP admin roles</h3>
+                                <p class="comparison-cell__description">Tier-1 support requires elevated Okta or Entra ID permissions to reset passwords and unlock accounts—granting broad access to user directories, group memberships, and application assignments. Creates insider risk and violates least-privilege security.</p>
+                            </div>
+                            <div class="comparison-cell comparison-cell--after">
+                                <span class="comparison-cell__tag">With Fctr</span>
+                                <h3 class="comparison-cell__title">Zero standing IDP permissions</h3>
+                                <p class="comparison-cell__description">Fctr operates via delegated OAuth scopes—agents perform resets without any admin console access. Your IdP handles authentication; Fctr executes narrow API calls. Eliminates helpdesk over-privilege and shrinks attack surface.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="breach-spotlight" data-aos="fade-up">
+                <p class="breach-spotlight__message">Enterprises requested this feature from <em>Okta</em> and <em>Microsoft</em>. They said not on roadmap. Fctr protects today.</p>
+                <nav class="breach-spotlight__actions" aria-label="Related links">
+                    <a href="#impact">Read the outcomes</a>
+                    <a href="#roi">Calculate ROI</a>
+                    <a href="https://www.okta.com/integrations/Fctr-identity-support-portal-api-integration/" target="_blank" rel="noopener">Okta Integration Network</a>
+                </nav>
+            </section>
+
+            <section id="privacy">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <span>Security &amp; Privacy</span>
+                        <h2>Zero Standing Access Architecture</h2>
+                        <p>No admin credentials stored. Your SSO authenticates every Fctr session. We never touch user attributes, factors, or authentication events.</p>
+                    </div>
+
+                    <div class="privacy-grid">
+                        <article class="privacy-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="privacy-card__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3>Audit trail only</h3>
+                            <p>Admin and end-user login IDs stored temporarily for audit purposes. Retained for 90 days, then automatically purged.</p>
+                        </article>
+                        <article class="privacy-card" data-aos="fade-up" data-aos-delay="80">
+                            <div class="privacy-card__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3>No credentials stored</h3>
+                            <p>Zero passwords, API keys, or admin credentials in our database. Your IDP authenticates every session in real time.</p>
+                        </article>
+                        <article class="privacy-card" data-aos="fade-up" data-aos-delay="160">
+                            <div class="privacy-card__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <h3>API-only access</h3>
+                            <p>We read user data via API during active sessions only. No user attributes, MFA factors, or personal information ever logged.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="roi">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <span>ROI Calculator</span>
+                        <h2>Calculate your savings</h2>
+                        <p>See how much time and money Fctr saves your organization when verification time drops from 6-8 minutes to under 60 seconds.</p>
+                    </div>
+
+                    <div class="roi-container">
+                        <article class="roi-inputs" data-aos="fade-right">
+                            <h3>Your Organization</h3>
+                            <div class="roi-field">
+                                <label for="daily-calls">Daily support calls</label>
+                                <div class="roi-input-wrapper">
+                                    <input type="number" id="daily-calls" value="100" min="1" />
+                                    <span class="roi-suffix">calls</span>
+                                </div>
+                            </div>
+                            <div class="roi-field">
+                                <label for="hourly-cost">Average agent hourly cost</label>
+                                <div class="roi-input-wrapper">
+                                    <span class="roi-prefix">$</span>
+                                    <input type="number" id="hourly-cost" value="25" min="1" />
+                                    <span class="roi-suffix">/hr</span>
+                                </div>
+                            </div>
+                            <div class="roi-field">
+                                <label for="minutes-saved">Minutes saved per call</label>
+                                <div class="roi-input-wrapper">
+                                    <input type="number" id="minutes-saved" value="5" min="1" max="10" />
+                                    <span class="roi-suffix">min</span>
+                                </div>
+                            </div>
+                            <button type="button" class="button button--primary roi-calculate-btn" id="calculate-savings">Calculate Savings</button>
+                            <p class="roi-note">Calculations based on 250 working days per year</p>
+                        </article>
+
+                        <article class="roi-output" data-aos="fade-left">
+                            <div class="roi-result">
+                                <h4>Estimated Annual Savings</h4>
+                                <p id="annual-savings" class="roi-value">$108,333</p>
+                            </div>
+                            <div class="roi-breakdown">
+                                <div class="roi-stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    <span id="hours-saved">416 hours saved annually</span>
+                                </div>
+                                <div class="roi-stat">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                        <line x1="16" y1="2" x2="16" y2="6" />
+                                        <line x1="8" y1="2" x2="8" y2="6" />
+                                        <line x1="3" y1="10" x2="21" y2="10" />
+                                    </svg>
+                                    <span id="monthly-hours">35 hours monthly</span>
+                                </div>
+                            </div>
+                            <p class="roi-disclaimer">* Social engineering attacks account for 70% of all account takeovers, with the average cost of an account compromise reaching $12,000 per incident and recovery taking 115+ hours according to the 2023 Verizon DBIR.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="impact">
+                <div class="wrap">
+                    <div class="section-heading impact-heading" data-aos="fade-up">
+                        <span>Impact</span>
+                        <h2>Security teams get proof, operations get speed</h2>
+                        <p>The first week of telemetry shows why customers keep Fctr on the board—risk collapses while the queue gets faster.</p>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <article class="metric-card">
+                            <div class="metric-card__value">60 s</div>
+                            <h3>Verification cycle</h3>
+                            <p>Median time from lookup to MFA approval in production environments.</p>
+                        </article>
+                        <article class="metric-card">
+                            <div class="metric-card__value">5-8 min</div>
+                            <h3>Saved per call</h3>
+                            <p>Once agents abandon knowledge-based scripts and enforce MFA instead.</p>
+                        </article>
+                        <article class="metric-card">
+                            <div class="metric-card__value">100%</div>
+                            <h3>MFA enforcement</h3>
+                            <p>Resets, unlocks, and factor updates demand successful MFA. No exceptions, no debates.</p>
+                        </article>
+                        <article class="metric-card">
+                            <div class="metric-card__value">0</div>
+                            <h3>Manual overrides</h3>
+                            <p>Policy guardrails eliminate ad-hoc exceptions that create security breaches.</p>
+                        </article>
+                    </div>
+
+                    <div class="cta">
+                        <h3 class="cta__title">Let’s block the next social engineering call together</h3>
+                        <p class="cta__description">Share the attack your team worries about most. We will run it in front of you with Fctr enforcing MFA every step.</p>
+
+                        <!-- Contact Form -->
+                        <form id="cta-contact-form" class="cta__form">
+                            <div class="cta__field">
+                                <label class="cta__label" for="cta-email">Work email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="cta-email"
+                                    class="cta__input"
+                                    placeholder="security.team@company.com"
+                                    required
+                                    autocomplete="email"
+                                    aria-describedby="cta-form-hint"
+                                />
+                            </div>
+                            <button type="submit" class="cta__submit">
+                                <span class="submit-text">Schedule Demo</span>
+                                <span class="submit-spinner" style="display: none;">
+                                    <svg class="spinner" viewBox="0 0 50 50">
+                                        <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="4"></circle>
+                                    </svg>
+                                </span>
+                            </button>
+                            <p class="cta__hint" id="cta-form-hint">Share the attack you worry about most—we’ll replay it with enforced MFA.</p>
+                            <!-- Honeypot field -->
+                            <input type="text" name="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;" aria-hidden="true" />
+                            <div class="form-message form-message--success" style="display: none;">
+                                ✓ Thanks! We'll reach out shortly.
+                            </div>
+                            <div class="form-message form-message--error" style="display: none;">
+                                Something went wrong. Email us at <a href="mailto:demo@fctr.io">demo@fctr.io</a>
+                            </div>
+                        </form>
+
+                        <p class="cta__note">Prefer email? <a href="mailto:demo@fctr.io">demo@fctr.io</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faqs">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <span>FAQ</span>
+                        <h2>Answers security and operations teams ask first</h2>
+                        <p>We collect the most common questions from joint Okta and Entra deployments so you can move fast.</p>
+                    </div>
+
+                    <div class="faqs">
+                        <div class="faq-accordion" data-aos="fade-up">
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+                                    <span>What does Fctr stand for?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-1" hidden>
+                                    <p>Fctr (pronounced "factor") is a creative twist on the word "factor," emphasizing how key elements combine to drive secure identity verification.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                                    <span>What is the Fctr Identity Portal?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-2" hidden>
+                                    <p>The Fctr Identity Portal is a secure, all-in-one solution designed for organizations using Okta or Entra ID. It simplifies user management, verification processes, and support operations without requiring direct admin access to your IDP environment.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                                    <span>Who benefits most from using Fctr?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-3" hidden>
+                                    <p>Fctr is ideal for IT helpdesk teams, support staff, and security-conscious organizations using Okta or Entra ID. It enables tier-1 support teams to efficiently handle user verification and identity management tasks without needing extensive IDP admin privileges, improving both operational efficiency and security.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+                                    <span>How does Fctr increase operational efficiency?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-4" hidden>
+                                    <p>Fctr streamlines operations by providing a unified dashboard for support teams. It consolidates user information, verification processes, and common identity management tasks into a single interface, reducing the average support call time by up to 60%. Support agents can quickly verify users, troubleshoot access issues, and resolve identity problems without toggling between multiple systems.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+                                    <span>How does Fctr enhance security?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-5" hidden>
+                                    <p>Fctr enhances security in multiple ways: Replaces insecure knowledge-based questions with modern MFA verification, masks sensitive user data like email addresses and IP locations, prevents unauthorized data exports and information exfiltration, enables granular permission controls for support staff, and maintains comprehensive audit logs of all actions.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6">
+                                    <span>Can I customize Fctr to my organization's needs?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-6" hidden>
+                                    <p>Yes, Fctr offers extensive customization options. You can configure which user attributes are visible to support teams, customize verification workflows and requirements, set up role-based access controls for different support tiers, configure automated actions for common support scenarios, and integrate with your existing ticketing systems.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-7">
+                                    <span>What reporting capabilities does Fctr include?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-7" hidden>
+                                    <p>Fctr includes comprehensive reporting features that provide insights into support operations and user activity. The reporting module offers support efficiency metrics (resolution times, common issues), user verification activity and statistics, audit trails of all actions taken within the portal, customizable dashboards for different stakeholders, and export capabilities for compliance reporting.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-8">
+                                    <span>How is Fctr different from built-in IDP admin tools?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-8" hidden>
+                                    <p>While IDP admin consoles is designed for administrators managing the entire identity infrastructure, Fctr is purpose-built for support teams with a focus on daily operational tasks. Key differences include: simplified interface designed specifically for support workflows, enhanced security with data masking and limited permissions, modern user verification methods that don't rely on security questions, no need for support staff to have IDP admin privileges, and integration with ticketing systems and support platforms.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-9">
+                                    <span>How is Fctr deployed and integrated?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-9" hidden>
+                                    <p>Fctr is designed for seamless integration with your IDP environment. Deployment options include: cloud-hosted SaaS solution with secure API connections to your IDP tenant, on-premises deployment for organizations with strict data locality requirements, and hybrid deployments that balance security and accessibility needs. Our implementation team handles the entire integration process, typically completed within 2-4 weeks depending on your organization's requirements.</p>
+                                </div>
+                            </article>
+                            <article class="faq-item">
+                                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-10">
+                                    <span>What is the pricing structure for Fctr?</span>
+                                    <svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M2 2l8 8 8-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="faq-answer" id="faq-answer-10" hidden>
+                                    <p>Fctr offers flexible pricing models to accommodate organizations of all sizes: user-based pricing for organizations with predictable user counts, support agent-based pricing for help desk teams of varying sizes, and enterprise plans with custom features and unlimited usage. All plans include a 60-day free trial with full features. Contact us for a personalized quote based on your specific requirements.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap footer__content">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="#home" class="footer__logo">
+                            <img src="./images/logo.svg" alt="Fctr Identity Portal" class="footer__logo-img footer__logo-img--light" />
+                            <img src="./images/logo_dark.svg" alt="Fctr Identity Portal" class="footer__logo-img footer__logo-img--dark" />
+                        </a>
+                        <p class="footer__description">Secure identity verification portal integrated with Okta and Entra ID for enhanced helpdesk authentication.</p>
+                        <a href="mailto:demo@fctr.io" class="footer__contact">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <path d="M22 6l-10 7L2 6"></path>
+                            </svg>
+                            demo@fctr.io
+                        </a>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Product</h3>
+                        <ul class="footer__links">
+                            <li><a href="#portal">Portal</a></li>
+                            <li><a href="#factors">Coverage</a></li>
+                            <li><a href="#workflow">Workflow</a></li>
+                            <li><a href="#roi">ROI Calculator</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Resources</h3>
+                        <ul class="footer__links">
+                            <li><a href="https://www.okta.com/integrations/Fctr-identity-support-portal-api-integration/" target="_blank" rel="noopener">Okta Integration</a></li>
+                            <li><a href="/pages/instructions.html">Setup Guide</a></li>
+                            <li><a href="mailto:demo@fctr.io">Contact Sales</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Legal</h3>
+                        <ul class="footer__links">
+                            <li><a href="/pages/terms.html">Terms of Service</a></li>
+                            <li><a href="/pages/privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__meta">
+                    <p>&copy; 2025 Fctr. All rights reserved.</p>
+                    <div class="footer__meta-links">
+                        <a href="/pages/terms.html">Terms</a>
+                        <a href="/pages/privacy.html">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                once: true,
+                duration: 650,
+                offset: 80,
+                easing: 'ease-out-cubic',
+                disable: function () {
+                    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                }
+            });
+
+            (function () {
+                var nav = document.querySelector('.nav');
+                if (!nav) {
+                    return;
+                }
+
+                var toggle = nav.querySelector('.nav-toggle');
+                var menu = nav.querySelector('.nav-menu');
+                if (!toggle || !menu) {
+                    return;
+                }
+
+                var mq = window.matchMedia('(max-width: 920px)');
+                var links = nav.querySelectorAll('a');
+
+                function setMenuAriaHidden(isHidden) {
+                    menu.setAttribute('aria-hidden', isHidden ? 'true' : 'false');
+                }
+
+                function handleKeydown(event) {
+                    if (event.key === 'Escape') {
+                        closeMenu();
+                        toggle.focus();
+                    }
+                }
+
+                function openMenu() {
+                    nav.classList.add('is-open');
+                    toggle.setAttribute('aria-expanded', 'true');
+                    setMenuAriaHidden(false);
+                    document.body.classList.add('nav-is-locked');
+                    document.addEventListener('keydown', handleKeydown);
+                }
+
+                function closeMenu() {
+                    nav.classList.remove('is-open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('nav-is-locked');
+                    setMenuAriaHidden(mq.matches);
+                    document.removeEventListener('keydown', handleKeydown);
+                }
+
+                function syncState() {
+                    if (mq.matches) {
+                        toggle.removeAttribute('hidden');
+                        setMenuAriaHidden(nav.classList.contains('is-open') ? false : true);
+                    } else {
+                        toggle.setAttribute('hidden', '');
+                        nav.classList.remove('is-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                        document.body.classList.remove('nav-is-locked');
+                        setMenuAriaHidden(false);
+                        document.removeEventListener('keydown', handleKeydown);
+                    }
+                }
+
+                var handleChange = function () {
+                    syncState();
+                };
+
+                if (typeof mq.addEventListener === 'function') {
+                    mq.addEventListener('change', handleChange);
+                } else if (typeof mq.addListener === 'function') {
+                    mq.addListener(handleChange);
+                }
+
+                toggle.addEventListener('click', function () {
+                    if (nav.classList.contains('is-open')) {
+                        closeMenu();
+                    } else {
+                        openMenu();
+                    }
+                });
+
+                links.forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        if (nav.classList.contains('is-open')) {
+                            closeMenu();
+                        }
+                    });
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!nav.classList.contains('is-open')) {
+                        return;
+                    }
+
+                    if (!nav.contains(event.target)) {
+                        closeMenu();
+                    }
+                });
+
+                syncState();
+            })();
+
+            (function () {
+                var portalTour = document.querySelector('#portal-tour');
+                if (!portalTour) {
+                    return;
+                }
+
+                var tabs = portalTour.querySelectorAll('.tour-tab');
+                var panels = portalTour.querySelectorAll('.tour-panel');
+
+                var activatePanel = function (targetId) {
+                    panels.forEach(function (panel) {
+                        if (panel.id === targetId) {
+                            panel.classList.add('is-visible');
+                            panel.removeAttribute('hidden');
+                        } else {
+                            panel.classList.remove('is-visible');
+                            panel.setAttribute('hidden', '');
+                        }
+                    });
+                };
+
+                tabs.forEach(function (tab) {
+                    tab.addEventListener('click', function () {
+                        var targetId = tab.getAttribute('data-target');
+                        if (!targetId || tab.classList.contains('is-active')) {
+                            return;
+                        }
+
+                        tabs.forEach(function (btn) {
+                            btn.classList.remove('is-active');
+                            btn.setAttribute('aria-selected', 'false');
+                        });
+
+                        tab.classList.add('is-active');
+                        tab.setAttribute('aria-selected', 'true');
+                        activatePanel(targetId);
+                    });
+                });
+            })();
+
+            (function () {
+                var faqItems = document.querySelectorAll('.faq-item');
+                if (!faqItems.length) {
+                    return;
+                }
+
+                faqItems.forEach(function (item) {
+                    var button = item.querySelector('.faq-question');
+                    var answer = item.querySelector('.faq-answer');
+                    if (!button || !answer) {
+                        return;
+                    }
+
+                    button.addEventListener('click', function () {
+                        var isOpen = item.classList.contains('is-open');
+
+                        faqItems.forEach(function (other) {
+                            if (other === item) {
+                                return;
+                            }
+
+                            other.classList.remove('is-open');
+                            var otherButton = other.querySelector('.faq-question');
+                            var otherAnswer = other.querySelector('.faq-answer');
+                            if (otherButton && otherAnswer) {
+                                otherButton.setAttribute('aria-expanded', 'false');
+                                otherAnswer.setAttribute('hidden', '');
+                            }
+                        });
+
+                        if (isOpen) {
+                            item.classList.remove('is-open');
+                            button.setAttribute('aria-expanded', 'false');
+                            answer.setAttribute('hidden', '');
+                        } else {
+                            item.classList.add('is-open');
+                            button.setAttribute('aria-expanded', 'true');
+                            answer.removeAttribute('hidden');
+                        }
+                    });
+                });
+            })();
+
+            // Hero Contact Form Handler
+            (function () {
+                var form = document.getElementById('hero-contact-form');
+                if (!form) return;
+
+                var emailInput = document.getElementById('hero-email');
+                var submitButton = form.querySelector('.cta__submit');
+                var submitText = form.querySelector('.submit-text');
+                var submitSpinner = form.querySelector('.submit-spinner');
+                var successMessage = form.querySelector('.form-message--success');
+                var errorMessage = form.querySelector('.form-message--error');
+
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+
+                    // Check honeypot
+                    var honeypot = form.querySelector('input[name="website"]');
+                    if (honeypot && honeypot.value) {
+                        console.log('Bot detected');
+                        return;
+                    }
+
+                    var email = emailInput.value.trim();
+                    if (!email || !isValidEmail(email)) {
+                        showError();
+                        return;
+                    }
+
+                    // Show loading state
+                    submitButton.disabled = true;
+                    if (submitText) submitText.style.display = 'none';
+                    if (submitSpinner) submitSpinner.style.display = 'flex';
+                    hideMessages();
+
+                    try {
+                        // Using Web3Forms (free service, no API key needed for basic use)
+                        // Replace with your own endpoint or service
+                        var response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with your key from web3forms.com
+                                subject: 'New Demo Request from Fctr.io',
+                                email: email,
+                                from_name: 'Fctr Website',
+                                to_email: 'demo@fctr.io'
+                            })
+                        });
+
+                        var result = await response.json();
+                        
+                        if (response.ok && result.success) {
+                            showSuccess();
+                            emailInput.value = '';
+                        } else {
+                            showError();
+                        }
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        showError();
+                    } finally {
+                        // Reset button state
+                        submitButton.disabled = false;
+                        if (submitText) submitText.style.display = '';
+                        if (submitSpinner) submitSpinner.style.display = 'none';
+                    }
+                });
+
+                function isValidEmail(email) {
+                    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                }
+
+                function showSuccess() {
+                    hideMessages();
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                        setTimeout(function() {
+                            successMessage.style.display = 'none';
+                        }, 5000);
+                    }
+                }
+
+                function showError() {
+                    hideMessages();
+                    if (errorMessage) {
+                        errorMessage.style.display = 'block';
+                    }
+                }
+
+                function hideMessages() {
+                    if (successMessage) successMessage.style.display = 'none';
+                    if (errorMessage) errorMessage.style.display = 'none';
+                }
+            })();
+
+            // CTA Contact Form Handler (bottom of page)
+            (function () {
+                var form = document.getElementById('cta-contact-form');
+                if (!form) return;
+
+                var emailInput = document.getElementById('cta-email');
+                var submitButton = form.querySelector('.cta__submit');
+                var submitText = form.querySelector('.submit-text');
+                var submitSpinner = form.querySelector('.submit-spinner');
+                var successMessage = form.querySelector('.form-message--success');
+                var errorMessage = form.querySelector('.form-message--error');
+
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+
+                    // Check honeypot
+                    var honeypot = form.querySelector('input[name="website"]');
+                    if (honeypot && honeypot.value) {
+                        console.log('Bot detected');
+                        return;
+                    }
+
+                    var email = emailInput.value.trim();
+                    if (!email || !isValidEmail(email)) {
+                        showError();
+                        return;
+                    }
+
+                    // Show loading state
+                    submitButton.disabled = true;
+                    if (submitText) submitText.style.display = 'none';
+                    if (submitSpinner) submitSpinner.style.display = 'flex';
+                    hideMessages();
+
+                    try {
+                        var response = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with your key from web3forms.com
+                                subject: 'New Demo Request from Fctr.io (CTA Form)',
+                                email: email,
+                                from_name: 'Fctr Website',
+                                to_email: 'demo@fctr.io'
+                            })
+                        });
+
+                        var result = await response.json();
+                        
+                        if (response.ok && result.success) {
+                            showSuccess();
+                            emailInput.value = '';
+                        } else {
+                            showError();
+                        }
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        showError();
+                    } finally {
+                        // Reset button state
+                        submitButton.disabled = false;
+                        if (submitText) submitText.style.display = '';
+                        if (submitSpinner) submitSpinner.style.display = 'none';
+                    }
+                });
+
+                function isValidEmail(email) {
+                    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                }
+
+                function showSuccess() {
+                    hideMessages();
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                        setTimeout(function() {
+                            successMessage.style.display = 'none';
+                        }, 5000);
+                    }
+                }
+
+                function showError() {
+                    hideMessages();
+                    if (errorMessage) {
+                        errorMessage.style.display = 'block';
+                    }
+                }
+
+                function hideMessages() {
+                    if (successMessage) successMessage.style.display = 'none';
+                    if (errorMessage) errorMessage.style.display = 'none';
+                }
+            })();
+
+            // ROI Calculator
+            (function () {
+                var dailyCallsInput = document.getElementById('daily-calls');
+                var hourlyCostInput = document.getElementById('hourly-cost');
+                var minutesSavedInput = document.getElementById('minutes-saved');
+                var calculateButton = document.getElementById('calculate-savings');
+                var annualSavingsOutput = document.getElementById('annual-savings');
+                var hoursSavedOutput = document.getElementById('hours-saved');
+                var monthlyHoursOutput = document.getElementById('monthly-hours');
+
+                if (!dailyCallsInput || !hourlyCostInput || !minutesSavedInput || !calculateButton) {
+                    return;
+                }
+
+                function calculateROI() {
+                    var dailyCalls = parseInt(dailyCallsInput.value) || 100;
+                    var hourlyCost = parseInt(hourlyCostInput.value) || 25;
+                    var minutesSaved = parseInt(minutesSavedInput.value) || 5;
+
+                    var workingDaysPerYear = 250;
+                    var minutesPerHour = 60;
+
+                    var totalMinutesSavedPerYear = dailyCalls * minutesSaved * workingDaysPerYear;
+                    var totalHoursSavedPerYear = totalMinutesSavedPerYear / minutesPerHour;
+                    var annualSavings = Math.round(totalHoursSavedPerYear * hourlyCost);
+                    var monthlyHours = Math.round(totalHoursSavedPerYear / 12);
+
+                    if (annualSavingsOutput) {
+                        annualSavingsOutput.textContent = '$' + annualSavings.toLocaleString();
+                    }
+                    if (hoursSavedOutput) {
+                        hoursSavedOutput.textContent = Math.round(totalHoursSavedPerYear) + ' hours saved annually';
+                    }
+                    if (monthlyHoursOutput) {
+                        monthlyHoursOutput.textContent = monthlyHours + ' hours monthly';
+                    }
+                }
+
+                calculateButton.addEventListener('click', calculateROI);
+
+                // Initial calculation on page load
+                calculateROI();
+            })();
+        </script>
+    
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        
+    </body>
+</html>
