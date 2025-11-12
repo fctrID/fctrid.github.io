@@ -57,7 +57,7 @@
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
       <script type="module" crossorigin src="./assets/main.1549ceae.js"></script>
       <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill.c7c6310f.js">
-      <link rel="stylesheet" href="./assets/index.f9608eec.css">
+      <link rel="stylesheet" href="./assets/index.1b00d337.css">
     </head>
     <body data-theme="light">
 
@@ -70,11 +70,10 @@
                     </a>
                     <div class="nav-menu" id="site-navigation" aria-hidden="false">
                         <nav class="nav-links" aria-label="Primary">
-                            <a href="#home">Intro</a>
-                            <a href="#portal">Portal</a>
-                            <a href="#factors">Coverage</a>
-                            <a href="#workflow">Workflow</a>
+                            <a href="#features">Features</a>
+                            <a href="#portal">Integrations</a>
                             <a href="#roi">ROI</a>
+                            <a href="#pricing">Pricing</a>
                             <a href="mailto:demo@fctr.io">Contact</a>
                         </nav>
                     </div>
@@ -128,7 +127,7 @@
                                             />
                                         </div>
                                         <button type="submit" class="cta__submit hero-cta__submit">
-                                            <span class="submit-text">Get Demo</span>
+                                            <span class="submit-text">Let's Talk</span>
                                             <span class="submit-spinner" style="display: none;">
                                                 <svg class="spinner" viewBox="0 0 50 50">
                                                     <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="4"></circle>
@@ -207,7 +206,7 @@
                     </div>
 
                     <div class="feature-grid">
-                        <article class="feature-card" data-aos="fade-right" data-aos-delay="0">
+                        <article class="feature-card" data-aos="fade-up" data-aos-delay="0">
                             <span class="feature-card__icon" aria-hidden="true">
                                 <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20 6L30 10V18C30 24 25.8 30.2 20 32C14.2 30.2 10 24 10 18V10L20 6Z" stroke="currentColor" stroke-width="2" fill="none"></path>
@@ -228,7 +227,7 @@
                             <h3 class="feature-card__heading">PII Shielding</h3>
                             <p class="feature-card__text">Agents cannot view sensitive user data. Portal displays only verification status and enrolled factors—personal information stays hidden.</p>
                         </article>
-                        <article class="feature-card" data-aos="fade-left" data-aos-delay="160">
+                        <article class="feature-card" data-aos="fade-up" data-aos-delay="160">
                             <span class="feature-card__icon" aria-hidden="true">
                                 <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"></rect>
@@ -240,7 +239,7 @@
                             <h3 class="feature-card__heading">Audit Log Stream</h3>
                             <p class="feature-card__text">Every portal action generates tamper-proof audit records. Export logs for compliance reviews, SIEM ingestion, or SOC investigations.</p>
                         </article>
-                        <article class="feature-card" data-aos="fade-right" data-aos-delay="240">
+                        <article class="feature-card" data-aos="fade-up" data-aos-delay="240">
                             <span class="feature-card__icon" aria-hidden="true">
                                 <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="6" y="8" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2" fill="none"></rect>
@@ -263,7 +262,7 @@
                             <h3 class="feature-card__heading">Role-Based Access</h3>
                             <p class="feature-card__text">Customizable permission tiers control what each helpdesk agent can see and do. Tier-1 verifies, Tier-2 resets, admins audit—all configurable per customer.</p>
                         </article>
-                        <article class="feature-card" data-aos="fade-left" data-aos-delay="400">
+                        <article class="feature-card" data-aos="fade-up" data-aos-delay="400">
                             <span class="feature-card__icon" aria-hidden="true">
                                 <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="16" cy="20" r="9" stroke="currentColor" stroke-width="2" fill="none"></circle>
@@ -460,6 +459,39 @@
                 </div>
             </section>
 
+            <section id="impact">
+                <div class="wrap">
+                    <div class="section-heading impact-heading" data-aos="fade-up">
+                        <span>Impact</span>
+                        <h2>Security teams get proof, operations get speed</h2>
+                        <p>The first week of telemetry shows why customers keep Fctr on the board—risk collapses while the queue gets faster.</p>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <article class="metric-card">
+                            <div class="metric-card__value">60 s</div>
+                            <h3>Verification cycle</h3>
+                            <p>Median time from lookup to MFA approval in production environments.</p>
+                        </article>
+                        <article class="metric-card">
+                            <div class="metric-card__value">5-8 min</div>
+                            <h3>Saved per call</h3>
+                            <p>Once agents abandon knowledge-based scripts and enforce MFA instead.</p>
+                        </article>
+                        <article class="metric-card">
+                            <div class="metric-card__value">100%</div>
+                            <h3>MFA enforcement</h3>
+                            <p>Resets, unlocks, and factor updates demand successful MFA. No exceptions, no debates.</p>
+                        </article>
+                        <article class="metric-card">
+                            <div class="metric-card__value">0</div>
+                            <h3>Manual overrides</h3>
+                            <p>Policy guardrails eliminate ad-hoc exceptions that create security breaches.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
             <section id="roi">
                 <div class="wrap">
                     <div class="section-heading">
@@ -526,40 +558,62 @@
                 </div>
             </section>
 
-            <section id="impact">
+            <section id="pricing">
                 <div class="wrap">
-                    <div class="section-heading impact-heading" data-aos="fade-up">
-                        <span>Impact</span>
-                        <h2>Security teams get proof, operations get speed</h2>
-                        <p>The first week of telemetry shows why customers keep Fctr on the board—risk collapses while the queue gets faster.</p>
+                    <div class="section-heading">
+                        <span>Pricing</span>
+                        <h2>Simple, transparent pricing</h2>
+                        <p>Select the approach that fits your helpdesk. Every plan includes full MFA enforcement and audit logging.</p>
                     </div>
 
-                    <div class="metrics-grid">
-                        <article class="metric-card">
-                            <div class="metric-card__value">60 s</div>
-                            <h3>Verification cycle</h3>
-                            <p>Median time from lookup to MFA approval in production environments.</p>
+                    <div class="pricing-grid">
+                        <article class="pricing-card pricing-card--trial" data-aos="fade-up">
+                            <div class="pricing-card__header">
+                                <span class="pricing-card__badge">60-day trial</span>
+                                <h3>Free Trial</h3>
+                                <p>Evaluate Fctr with your real support workflows—no credit card required.</p>
+                            </div>
+                            <div class="pricing-card__price">
+                                <span class="pricing-card__value">60</span>
+                                <div class="pricing-card__duration">
+                                    <span>Days</span>
+                                    <span>Full access</span>
+                                </div>
+                            </div>
+                            <ul class="pricing-card__features" role="list">
+                                <li>All verification workflows enabled</li>
+                                <li>Unlimited helpdesk seats</li>
+                                <li>Guided implementation session</li>
+                            </ul>
+                            <a class="pricing-card__cta button button--primary" href="mailto:info@fctr.io">Start free trial</a>
                         </article>
-                        <article class="metric-card">
-                            <div class="metric-card__value">5-8 min</div>
-                            <h3>Saved per call</h3>
-                            <p>Once agents abandon knowledge-based scripts and enforce MFA instead.</p>
+                        <article class="pricing-card pricing-card--highlight" data-aos="fade-up" data-aos-delay="120">
+                            <div class="pricing-card__header">
+                                <span class="pricing-card__badge">Most popular</span>
+                                <h3>Organizations</h3>
+                                <p>Custom pricing for enterprises that need layered controls and compliance coverage.</p>
+                            </div>
+                            <ul class="pricing-card__features" role="list">
+                                <li>Volume-based factor verification pricing</li>
+                                <li>Dedicated implementation engineer</li>
+                                <li>SSO and SCIM provisioning included</li>
+                                <li>SaaS or customer-hosted deployment options</li>
+                            </ul>
+                            <a class="pricing-card__cta button button--primary" href="mailto:info@fctr.io">Talk to sales</a>
                         </article>
-                        <article class="metric-card">
-                            <div class="metric-card__value">100%</div>
-                            <h3>MFA enforcement</h3>
-                            <p>Resets, unlocks, and factor updates demand successful MFA. No exceptions, no debates.</p>
-                        </article>
-                        <article class="metric-card">
-                            <div class="metric-card__value">0</div>
-                            <h3>Manual overrides</h3>
-                            <p>Policy guardrails eliminate ad-hoc exceptions that create security breaches.</p>
-                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cta">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <span>Get Started</span>
                     </div>
 
                     <div class="cta">
-                        <h3 class="cta__title">Join security-forward organizations protecting their helpdesks</h3>
-                        <p class="cta__description">See how security teams stop social engineering attacks at the helpdesk. Watch Fctr enforce MFA before any password reset or account unlock—no security questions, no bypasses.</p>
+                        <h3 class="cta__title">Stop social engineering at your helpdesk</h3>
+                        <p class="cta__description">Join security-forward organizations that enforce real MFA verification—no security questions, no bypasses.</p>
 
                         <!-- Contact Form -->
                         <form id="cta-contact-form" class="cta__form">
