@@ -55,9 +55,9 @@
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
         
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
-      <script type="module" crossorigin src="./assets/main.1549ceae.js"></script>
+      <script type="module" crossorigin src="./assets/main.d76ae256.js"></script>
       <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill.c7c6310f.js">
-      <link rel="stylesheet" href="./assets/index.fede1f92.css">
+      <link rel="stylesheet" href="./assets/index.f99cdabf.css">
     </head>
     <body data-theme="light">
 
@@ -68,12 +68,39 @@
                         <img src="./images/logo.svg" alt="Fctr Identity Portal" class="brand__logo brand__logo--light" />
                         <img src="./images/logo_dark.svg" alt="Fctr Identity Portal" class="brand__logo brand__logo--dark" />
                     </a>
+                    <!-- AI Products Dropdown (visible on mobile) -->
+                    <div class="nav-ai-dropdown">
+                        <button type="button" class="nav-ai-btn" aria-expanded="false" aria-haspopup="true">
+                            AI Products
+                            <svg class="nav-ai-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="nav-ai-menu" role="menu">
+                            <a href="./ai-agent.html" role="menuitem">Tako AI Agent</a>
+                            <a href="./okta-mcp-server.html" role="menuitem">Okta MCP Server</a>
+                        </div>
+                    </div>
+                    
                     <div class="nav-menu" id="site-navigation" aria-hidden="false">
                         <nav class="nav-links" aria-label="Primary">
                             <a href="#features">Features</a>
                             <a href="#portal">Integrations</a>
                             <a href="#roi">ROI</a>
                             <a href="#pricing">Pricing</a>
+                            <!-- AI Products dropdown for desktop (inside nav-links) -->
+                            <div class="nav-ai-dropdown nav-ai-dropdown--desktop">
+                                <button type="button" class="nav-ai-btn" aria-expanded="false" aria-haspopup="true">
+                                    AI Products
+                                    <svg class="nav-ai-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <div class="nav-ai-menu" role="menu">
+                                    <a href="./ai-agent.html" role="menuitem">Tako AI Agent</a>
+                                    <a href="./okta-mcp-server.html" role="menuitem">Okta MCP Server</a>
+                                </div>
+                            </div>
                             <a href="mailto:demo@fctr.io">Contact</a>
                         </nav>
                     </div>
@@ -639,6 +666,15 @@
                 </div>
             </section>
 
+            <!-- Tako AI Spotlight -->
+            <section class="breach-spotlight" data-aos="fade-up">
+                <p class="breach-spotlight__message">Looking for an <em>AI agent for Okta?</em> Meet Tako AI — the first autonomous agent with natural language queries and local LLM support.</p>
+                <nav class="breach-spotlight__actions" aria-label="Tako AI links">
+                    <a href="./ai-agent.html">Explore Tako AI</a>
+                    <a href="./okta-mcp-server.html">Okta MCP Server</a>
+                </nav>
+            </section>
+
             <section id="cta">
                 <div class="wrap">
                     <div class="section-heading">
@@ -870,6 +906,7 @@
             </div>
         </footer>
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        
         
     </body>
 </html>
