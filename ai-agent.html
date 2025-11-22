@@ -38,7 +38,6 @@
 
         <!-- Preload critical resources -->
         
-        <link rel="preload" href="./images/tako-v1.mp4" as="video" type="video/mp4" />
         <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
         
         <!-- Tako AI Agent Styles -->
@@ -93,7 +92,7 @@
                 "Multi-Agent Architecture", 
                 "Context Engineering",
                 "Local LLM Support",
-                "API & Database Integration",
+                "API & Datasource Integration",
                 "Enterprise Security & Sandboxing",
                 "Production-Ready Reliability",
                 "Web UI Dashboard",
@@ -148,15 +147,15 @@
       <script type="module" crossorigin src="./assets/ai_agent.cdc0d358.js"></script>
       <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill.c7c6310f.js">
       <link rel="modulepreload" crossorigin href="./assets/particle-network.41509aed.js">
-      <link rel="stylesheet" href="./assets/particle-network.cf2b624e.css">
-      <link rel="stylesheet" href="./assets/ai-agent.023b52ee.css">
+      <link rel="stylesheet" href="./assets/particle-network.d06bb5cd.css">
+      <link rel="stylesheet" href="./assets/ai-agent.05412777.css">
     </head>
     <body data-theme="light" class="min-h-screen scroll-smooth selection:bg-primary/10 selection:text-primary">
         <!-- Navigation Section -->
         <header>
             <div class="wrap">
                 <div class="nav" id="navbar">
-                    <a class="brand" href="#home" aria-label="Tako AI Home">
+                    <a class="brand" href="/index.html" aria-label="Fctr Home">
                         <img src="./images/logo.svg" alt="Fctr Logo" class="brand__logo brand__logo--light" />
                         <img src="./images/logo_dark.svg" alt="Fctr Logo" class="brand__logo brand__logo--dark" />
                     </a>
@@ -260,20 +259,27 @@
                         <div class="hero-grid">
                             <!-- Left Column: Main Content -->
                             <div class="hero-grid__main">
-                                <a href="https://iamse.blog/2025/09/17/tako-ai-v1-3-major-updates-just-in-time-for-oktane-25/" target="_blank" rel="noopener noreferrer" class="hero-release" data-aos="fade-down" data-aos-delay="80">
-                                    <span>Tako AI v1.3 · Observable AI for Okta</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
+                                <div class="flex flex-col gap-2 mb-4">
+                                    <a href="https://iamse.blog/2025/11/23/tako-ai-v1-5-your-new-okta-ai-sidekick/" target="_blank" rel="noopener noreferrer" class="hero-release" data-aos="fade-down" data-aos-delay="60">
+                                        <span class="font-semibold text-blue-600 dark:text-blue-400">New!</span>
+                                        <span>Tako AI v1.5 · Your New Okta AI Sidekick</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </a>
+                                </div>
 
                                 <h1 class="hero-heading" data-aos="fade-up">
                                     <span class="hero-heading__primary">Tako AI</span>
-                                    <span class="hero-heading__secondary">AI Agent for Okta Identity Operations</span>
+                                    <span class="hero-heading__secondary">The AI That Thinks Like an Engineer</span>
                                 </h1>
 
                                 <p class="hero-summary" data-aos="fade-up" data-aos-delay="120">
-                                    Ask questions about your Okta environment in plain English and watch Tako's multi-agent system transparently answer them. No scripts, no API docs, no complexity—just instant answers with OAuth 2.0 security and complete execution visibility.
+                                    An AI agent that thinks and executes like a senior engineer. Tako explores your datasources, writes test code with safety limits, inspects real responses, catches its own bugs, and ships validated scripts—all while documenting every decision.
+                                </p>
+
+                                <p class="hero-summary" data-aos="fade-up" data-aos-delay="140" style="margin-top: 1rem;">
+                                    <span class="hero-summary__accent">Think → Log → Act:</span> Think through the plan, Log every step, Act with validated code. That is Tako’s ritual—and you can watch every moment of it.
                                 </p>
 
                                 <div class="hero-highlight" data-aos="fade-up" data-aos-delay="160">
@@ -283,18 +289,18 @@
                                         </svg>
                                         <span class="hero-highlight__label">Try it yourself</span>
                                     </div>
-                                    <p id="rotating-question" class="hero-highlight__quote">"Can user john@company.com access the Salesforce app?"</p>
+                                    <p id="rotating-question" class="hero-highlight__quote">"Why can't user john.doe access the Salesforce app?"</p>
                                     <div class="hero-highlight__footer">
                                         <svg class="hero-highlight__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <p class="hero-highlight__note">Watch agents plan, execute, and answer in real-time</p>
+                                        <p class="hero-highlight__note">Watch Tako think: Checking user status... assignments... conclusion found.</p>
                                     </div>
                                 </div>
 
                                 <div class="hero-actions">
                                     <div class="hero-actions__buttons">
-                                        <a href="#demo" class="button button--primary relative group">
+                                        <a href="#modern-interface" class="button button--primary relative group">
                                             <span class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300" aria-hidden="true"></span>
                                             <span class="relative flex items-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -319,7 +325,7 @@
 
                             <!-- Right Column: Feature Highlights (hidden on mobile) -->
                             <aside class="hero-grid__panel" data-aos="fade-left" data-aos-delay="100">
-                                <h3 class="hero-panel__title">What Tako Does</h3>
+                                <h3 class="hero-panel__title">The Autonomous Advantage</h3>
                                 <div class="hero-panel__features">
                                     <div class="hero-panel-feature">
                                         <div class="hero-panel-feature__icon">
@@ -329,8 +335,8 @@
                                             </svg>
                                         </div>
                                         <div class="hero-panel-feature__content">
-                                            <h4>Observable AI</h4>
-                                            <p>Watch agents think—see every API call, decision, and data source in real-time execution UI</p>
+                                            <h4>Context Engineering</h4>
+                                            <p>Reads the manual (107+ endpoints) and schema first, so it never hallucinates parameters.</p>
                                         </div>
                                     </div>
                                     <div class="hero-panel-feature">
@@ -340,8 +346,8 @@
                                             </svg>
                                         </div>
                                         <div class="hero-panel-feature__content">
-                                            <h4>Instant Access Analysis</h4>
-                                            <p>"Can user X access app Y?"—the #1 helpdesk question answered in seconds with full reasoning</p>
+                                            <h4>Self-Healing Code</h4>
+                                            <p>Catches runtime errors, diagnoses the root cause, and rewrites the fix automatically.</p>
                                         </div>
                                     </div>
                                     <div class="hero-panel-feature">
@@ -351,8 +357,8 @@
                                             </svg>
                                         </div>
                                         <div class="hero-panel-feature__content">
-                                            <h4>Enterprise Security</h4>
-                                            <p>OAuth 2.0 Private Key JWT authentication—no API tokens stored, zero standing access</p>
+                                            <h4>Paranoid Sandbox</h4>
+                                            <p>Read-only by default. No code touches your system without passing the security shield.</p>
                                         </div>
                                     </div>
                                     <div class="hero-panel-feature">
@@ -362,8 +368,8 @@
                                             </svg>
                                         </div>
                                         <div class="hero-panel-feature__content">
-                                            <h4>Multi-Agent Architecture</h4>
-                                            <p>Planning, API, and Results agents achieve 95% consistency across complex queries</p>
+                                            <h4>Hybrid Execution</h4>
+                                            <p>Merges instant local SQL results with fresh live API data for the best of both worlds.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -387,11 +393,10 @@
                 </div>
             </section>
 
-            <!-- Web UI Preview Section - Changed color gradients to differentiate from AI Agent section -->
-            <section class="theme-section theme-section--alt relative overflow-hidden pt-10 pb-16 lg:pb-20 lg:pt-20">
+            <!-- Web UI Preview Section - Immediately after hero -->
+            <section id="modern-interface" class="theme-section theme-section--alt relative overflow-hidden pt-10 pb-16 lg:pb-20 lg:pt-20">
                 
                 <div aria-hidden="true" class="absolute inset-0 -z-10">
-                    <!-- Changed color gradients for Web UI section to be different from main hero section -->
                     <div class="absolute top-1/3 right-1/4 h-64 w-72 rounded-full bg-gradient-to-bl from-teal-300/15 to-emerald-300/10 blur-[100px] dark:from-teal-400/20 dark:to-emerald-400/15"></div>
                     <div class="absolute bottom-1/4 left-1/3 h-60 w-60 rounded-full bg-gradient-to-tr from-amber-200/15 to-yellow-300/10 blur-[90px] dark:from-amber-300/20 dark:to-yellow-400/15"></div>
                 </div>
@@ -410,7 +415,7 @@
                     <div class="video-container" data-aos="fade-up">
                         <div id="demo-video" class="video-wrapper">
                             <video id="demo-player" controls autoplay muted loop playsinline poster="./images/web-ui-placeholder.png">
-                                <source src="./images/tako-v1.mp4" type="video/mp4" />
+                                <source src="https://github.com/user-attachments/assets/e501a6ad-b05e-4735-9257-ffa50a4db2ad" type="video/mp4" />
                                 <track kind="captions" label="English" srclang="en" default />
                                 Your browser does not support HTML5 video.
                             </video>
@@ -419,7 +424,7 @@
                 </div>
             </section>
 
-            <!-- 3. MOVED UP: Demo Video Section - Moving up from later in the page to better match the "Watch Demo" CTA -->
+            <!-- 3. Demo Video Section (YouTube)
             <section id="demo" class="theme-section relative overflow-hidden py-20 lg:py-28" aria-labelledby="demo-title">
                 <div aria-hidden="true" class="absolute inset-0 -z-10">
                     <div class="absolute top-20 right-0 h-64 w-64 rounded-full bg-gradient-to-bl from-primary/10 to-purple-400/10 blur-[90px] dark:from-primary/20 dark:to-purple-400/20"></div>
@@ -427,17 +432,14 @@
                 </div>
 
                 <div class="section-shell">
-                    <!-- Section Header -->
                     <div class="section-heading" data-aos="fade-up">
                         <span>Demo</span>
                         <h2 id="demo-title">See Tako in Action</h2>
                         <p>Watch our step-by-step installation guide and feature demonstration.</p>
                     </div>
 
-                    <!-- Video Container -->
                     <div class="video-container" data-aos="zoom-in">
                         <div class="video-wrapper">
-                            <!-- Loading Animation -->
                             <div id="yt-placeholder" style="position: absolute; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center;">
                                 <div style="display: flex; flex-direction: column; align-items: center;">
                                     <svg style="height: 3rem; width: 3rem; animation: spin 1s linear infinite; color: #2563eb;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -448,12 +450,621 @@
                                 </div>
                             </div>
 
-                            <!-- YouTube Video -->
                             <iframe src="https://www.youtube.com/embed/PC8arYq5kZk?rel=0" title="Tako: Fctr AI Agent Demo" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onload="document.getElementById('yt-placeholder').style.display='none';"></iframe>
                         </div>
                     </div>
                 </div>
             </section>
+            -->
+
+            <!-- Modern Use Cases Section (Moved Up) -->
+            <section id="use-cases" class="theme-section theme-section--alt relative py-24 lg:py-32">
+                <div aria-hidden="true" class="absolute inset-0 -z-10">
+                    <div class="absolute top-20 left-0 h-64 w-64 rounded-full bg-gradient-to-tr from-indigo-400/10 to-purple-300/10 blur-[90px] dark:from-indigo-400/20 dark:to-purple-300/20"></div>
+                    <div class="absolute bottom-40 right-10 h-72 w-72 rounded-full bg-gradient-to-br from-cyan-400/10 to-teal-400/10 blur-[100px] dark:from-cyan-400/15 dark:to-teal-400/20"></div>
+                </div>
+
+                <div class="section-shell">
+                    <!-- Section Header -->
+                    <div class="section-heading" data-aos="fade-up">
+                        <span>Use Cases</span>
+                        <h2>Sample Questions Tako Handles Instantly</h2>
+                        <p>Ask Tako anything about your Okta environment—watch it reason through the answer step-by-step</p>
+                    </div>
+
+                    <!-- Compact Query Categories -->
+                    <div class="mx-auto max-w-5xl xl:max-w-6xl" data-aos="fade-up">
+                        <div class="glass-panel rounded-2xl p-6">
+                            <div class="grid gap-6 md:grid-cols-2">
+                                <!-- User Management -->
+                                <div class="space-y-3">
+                                    <h4 class="section-feature-title flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                        User Management
+                                    </h4>
+                                    <div class="space-y-2 section-feature-text">
+                                        <p>• "List all users along with their creation dates"</p>
+                                        <p>• "Show me all users in locked status"</p>
+                                        <p>• "How many users were created in the last month"</p>
+                                        <p>• "List all users and their MFA factors using live API calls"</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Security & MFA -->
+                                <div class="space-y-3">
+                                    <h4 class="section-feature-title flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                        Security & MFA
+                                    </h4>
+                                    <div class="space-y-2 section-feature-text">
+                                        <p>• "Show users with PUSH factor registered"</p>
+                                        <p>• "Find users with SMS factor with phone number ending in 2364"</p>
+                                        <p>• "Find the SAML certificate expiry date for all active SAML applications"</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Access Analysis -->
+                                <div class="space-y-3">
+                                    <h4 class="section-feature-title flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                        Access Analysis (Watch the 4-phase workflow)
+                                    </h4>
+                                    <div class="space-y-2 section-feature-text">
+                                        <p>• "Can john.smith@company.com access Salesforce?"</p>
+                                        <p>• "Why doesn't user X have access to application Y?"</p>
+                                        <p>• "Show me all users who can access the HR Portal app"</p>
+                                    </div>
+                                </div>
+
+                                <!-- Groups & Relationships -->
+                                <div class="space-y-3">
+                                    <h4 class="section-feature-title flex items-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                        Groups & Relationships
+                                    </h4>
+                                    <div class="space-y-2 section-feature-text">
+                                        <p>• "Find all users in Engineering group"</p>
+                                        <p>• "Find groups that user A is part of and user B is not"</p>
+                                        <p>• "Find groups with more than 50 members"</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
+                                <p class="section-feature-text">
+                                    And hundreds more possibilities—just ask in natural language and watch Tako reason through it
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Engineering Workflow: 4 Phases -->
+            <section id="thinking-ui" class="theme-section theme-section--alt relative py-20 lg:py-28">
+                <div class="section-shell">
+                    <div class="section-heading section-heading--compact" data-aos="fade-up">
+                        <span>The Autonomous Engineer Workflow</span>
+                        <h2>Context → ReAct → Heal → Result</h2>
+                        <p>Tako v1.5 collapses the agent committee into a single Autonomous Engineer that reads the manual, drafts code, and fixes its own bugs.</p>
+                    </div>
+
+                    <div class="reasoning-steps" data-aos="fade-up" data-aos-delay="80">
+                        <article class="reasoning-step">
+                            <span class="reasoning-step__badge">01</span>
+                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(37,99,235,0.1);color:#1d4ed8;margin-bottom:0.75rem;">Context</span>
+                            <h3>Phase 1: Context Engineering</h3>
+                            <p>Tako loads relevant Okta API docs (107+ endpoints) and local schema before writing a single line of code, ensuring it never hallucinates parameters.</p>
+                            <ul class="reasoning-step__list" style="margin-top:0.75rem;padding-left:1.25rem;list-style:disc;">
+                                <li>Loads API definitions & DB schema</li>
+                                <li>Validates parameters pre-draft</li>
+                            </ul>
+                        </article>
+                        <article class="reasoning-step">
+                            <span class="reasoning-step__badge">02</span>
+                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(37,99,235,0.1);color:#1d4ed8;margin-bottom:0.75rem;">Draft</span>
+                            <h3>Phase 2: The ReAct Loop</h3>
+                            <p>Acting as a senior engineer, Tako drafts a Python script and passes it through a deterministic security shield to block unsafe operations before execution.</p>
+                            <ul class="reasoning-step__list" style="margin-top:0.75rem;padding-left:1.25rem;list-style:disc;">
+                                <li>Drafts executable Python code</li>
+                                <li>Scans for dangerous ops (e.g. unrestricted deletes)</li>
+                            </ul>
+                        </article>
+                        <article class="reasoning-step">
+                            <span class="reasoning-step__badge">03</span>
+                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(14,165,233,0.15);color:#0369a1;margin-bottom:0.75rem;">Heal</span>
+                            <h3>Phase 3: Self-Healing Execution</h3>
+                            <p>Scripts run in a secure sandbox. If an error occurs, Tako diagnoses the stack trace, rewrites the fix, and re-runs the code—all in milliseconds.</p>
+                            <ul class="reasoning-step__list" style="margin-top:0.75rem;padding-left:1.25rem;list-style:disc;">
+                                <li>Catches & diagnoses runtime errors</li>
+                                <li>Rewrites & re-executes automatically</li>
+                            </ul>
+                        </article>
+                        <article class="reasoning-step">
+                            <span class="reasoning-step__badge">04</span>
+                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(34,197,94,0.15);color:#15803d;margin-bottom:0.75rem;">Result</span>
+                            <h3>Phase 4: Hybrid Data Retrieval</h3>
+                            <p>Tako intelligently merges instant local SQL cache results with fresh live API data, streaming a clean, structured JSON response to your dashboard.</p>
+                            <ul class="reasoning-step__list" style="margin-top:0.75rem;padding-left:1.25rem;list-style:disc;">
+                                <li>Merges SQL & API data seamlessly</li>
+                                <li>Streams structured results to UI</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Section: Autonomous Error Correction Timeline -->
+            <section class="theme-section autonomous-section">
+                <div class="section-shell">
+                    <div class="autonomous-heading" data-aos="fade-up">
+                        <span class="autonomous-heading__eyebrow">Under the Hood</span>
+                        <h2>Autonomous Error Correction</h2>
+                        <p>From API discovery to production-ready code—watch Tako hit a runtime error, diagnose the root cause, rewrite the fix, and deploy verified Python scripts. All without breaking stride or waiting for a developer to step in.</p>
+                    </div>
+
+                    <div class="autonomous-body" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-pane">
+                            <button class="timeline-step active" data-step="0">
+                                <div class="timeline-step__marker" aria-hidden="true"></div>
+                                <div class="timeline-step__label">Step 01</div>
+                                <h3>Semantic Discovery</h3>
+                                <p>Filters 107+ Okta endpoints down to the 5 needed operations.</p>
+                                <div class="inline-visual" data-visual="0"></div>
+                            </button>
+
+                            <button class="timeline-step" data-step="1">
+                                <div class="timeline-step__marker" aria-hidden="true"></div>
+                                <div class="timeline-step__label">Step 02</div>
+                                <h3>The "Oops" Moment</h3>
+                                <p>Probe run halts safely on a missing <code>group_id</code> argument.</p>
+                                <div class="inline-visual" data-visual="1"></div>
+                            </button>
+
+                            <button class="timeline-step" data-step="2">
+                                <div class="timeline-step__marker" aria-hidden="true"></div>
+                                <div class="timeline-step__label">Step 03</div>
+                                <h3>Automatic Self-Correction</h3>
+                                <p>Reasons over the stack trace, rewrites the function, and retests.</p>
+                                <div class="inline-visual" data-visual="2"></div>
+                            </button>
+
+                            <button class="timeline-step" data-step="3">
+                                <div class="timeline-step__marker" aria-hidden="true"></div>
+                                <div class="timeline-step__label">Step 04</div>
+                                <h3>Production Synthesis</h3>
+                                <p>Ships an 8,352 character script signed, verified, and ready.</p>
+                                <div class="inline-visual" data-visual="3"></div>
+                            </button>
+                        </div>
+
+                        <div class="visual-pane" aria-live="polite">
+                            <div id="stage-card" class="stage-card"></div>
+                            <p id="stage-caption" class="stage-caption"></p>
+                        </div>
+                    </div>
+
+                    <!-- Visual templates reused for desktop stage + mobile inline cards -->
+                    <template id="visual-template-0" class="visual-template" data-step="0" data-caption="107 endpoints → 5 ops that matter">
+                        <div class="visual-grid">
+                            <div class="grid-scan">
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="grid-funnel">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h18l-7 8v6l-4 4v-10L3 4z" />
+                                </svg>
+                            </div>
+                            <div class="grid-selection">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template id="visual-template-1" class="visual-template" data-step="1" data-caption="Probe halted · stack trace captured">
+                        <div class="visual-terminal">
+                            <p class="terminal-comment"># Probing group members</p>
+                            <p><span class="terminal-keyword">async def</span> list_members():</p>
+                            <p class="terminal-indent">response = client.get("/api/v1/groups/{}/users")</p>
+                            <p class="terminal-error">TypeError: missing argument 'group_id'</p>
+                        </div>
+                    </template>
+
+                    <template id="visual-template-2" class="visual-template" data-step="2" data-caption="Fix drafted → probe rerun passes (200)">
+                        <div class="visual-terminal visual-terminal--success">
+                            <p class="terminal-comment"># Rewrite with required arg</p>
+                            <p><span class="terminal-keyword">async def</span> list_members(<span class="terminal-arg">group_id</span>):</p>
+                            <p class="terminal-indent">response = client.get(f"/api/v1/groups/{group_id}/users")</p>
+                            <p class="terminal-indent"><span class="terminal-keyword">return</span> response.data</p>
+                            <p class="terminal-success">✔ Test passed — 200 OK</p>
+                        </div>
+                    </template>
+
+                    <template id="visual-template-3" class="visual-template" data-step="3" data-caption="8,352 characters · verified + signed">
+                        <div class="visual-hand">
+                            <div class="handoff-file">
+                                <span>.py</span>
+                            </div>
+                            <div class="handoff-meta">
+                                <div class="meta-line"></div>
+                                <div class="meta-line short"></div>
+                                <div class="handoff-tags">
+                                    <span>Verified</span>
+                                    <span>Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const timelineSteps = document.querySelectorAll('.timeline-step');
+                    const templates = {};
+                    const stageCard = document.getElementById('stage-card');
+                    const stageCaption = document.getElementById('stage-caption');
+
+                    document.querySelectorAll('.visual-template').forEach((tpl) => {
+                        templates[tpl.dataset.step] = tpl;
+                    });
+
+                    const renderTemplate = (target, step) => {
+                        const template = templates[step];
+                        if (!template || !target) return;
+                        target.innerHTML = '';
+                        target.appendChild(template.content.cloneNode(true));
+                    };
+
+                    document.querySelectorAll('.inline-visual').forEach((inline) => {
+                        renderTemplate(inline, inline.dataset.visual);
+                    });
+
+                    const activateStep = (step) => {
+                        timelineSteps.forEach((btn) => {
+                            btn.classList.toggle('active', btn.dataset.step === step);
+                        });
+                        renderTemplate(stageCard, step);
+                        if (stageCaption && templates[step]) {
+                            stageCaption.textContent = templates[step].dataset.caption || '';
+                        }
+                    };
+
+                    timelineSteps.forEach((btn) => {
+                        btn.addEventListener('click', () => activateStep(btn.dataset.step));
+                    });
+
+                    activateStep('0');
+                });
+            </script>
+
+            <style>
+                .autonomous-section {
+                    position: relative;
+                    padding: 6rem 0;
+                    background: radial-gradient(circle at top right, rgba(59,130,246,0.08), transparent 60%);
+                }
+
+                .autonomous-section::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: radial-gradient(circle at 20% 20%, rgba(15,118,110,0.08), transparent 45%);
+                    pointer-events: none;
+                }
+
+                .autonomous-section .section-shell {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .autonomous-heading {
+                    max-width: 720px;
+                    margin: 0 auto 3rem;
+                    text-align: center;
+                }
+
+                .autonomous-heading__eyebrow {
+                    display: inline-flex;
+                    padding: 0.35rem 0.85rem;
+                    border-radius: 999px;
+                    font-size: 0.75rem;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    background: rgba(99,102,241,0.08);
+                    color: #4338ca;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+
+                .autonomous-heading h2 {
+                    font-size: clamp(2rem, 3vw, 2.8rem);
+                    margin-bottom: 1rem;
+                }
+
+                .autonomous-heading p {
+                    font-size: 1.1rem;
+                    color: #475569;
+                }
+
+                .autonomous-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+
+                @media (min-width: 1024px) {
+                    .autonomous-body {
+                        flex-direction: row;
+                        gap: 3rem;
+                    }
+                }
+
+                .timeline-pane {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.25rem;
+                }
+
+                .timeline-step {
+                    position: relative;
+                    padding: 1.5rem 1.5rem 1.5rem 3.5rem;
+                    border-radius: 24px;
+                    text-align: left;
+                    border: 1px solid rgba(148,163,184,0.35);
+                    background: rgba(255,255,255,0.85);
+                    box-shadow: 0 15px 35px rgba(15,23,42,0.07);
+                    cursor: pointer;
+                    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+                }
+
+                .timeline-step:hover {
+                    border-color: rgba(59,130,246,0.4);
+                    transform: translateY(-2px);
+                }
+
+                .timeline-step.active {
+                    border-color: rgba(16,185,129,0.5);
+                    box-shadow: 0 20px 45px rgba(15,118,110,0.15);
+                }
+
+                .timeline-step__marker {
+                    position: absolute;
+                    left: 1.25rem;
+                    top: 1.8rem;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #3b82f6, #14b8a6);
+                    box-shadow: 0 0 0 6px rgba(59,130,246,0.12);
+                }
+
+                .timeline-step__label {
+                    font-size: 0.75rem;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: #0f172a;
+                    font-weight: 700;
+                    margin-bottom: 0.25rem;
+                }
+
+                .timeline-step h3 {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.35rem;
+                    color: #0f172a;
+                }
+
+                .timeline-step p {
+                    color: #475569;
+                    margin: 0;
+                    font-size: 0.95rem;
+                }
+
+                .timeline-step code {
+                    font-family: "Fira Code", "Courier New", monospace;
+                    background: rgba(15,23,42,0.08);
+                    padding: 0.1rem 0.35rem;
+                    border-radius: 6px;
+                    font-size: 0.85rem;
+                }
+
+                .inline-visual {
+                    margin-top: 1rem;
+                }
+
+                @media (min-width: 1024px) {
+                    .inline-visual {
+                        display: none;
+                    }
+                }
+
+                .visual-pane {
+                    flex: 1;
+                    background: rgba(255,255,255,0.9);
+                    border-radius: 32px;
+                    border: 1px solid rgba(148,163,184,0.25);
+                    padding: 2.5rem;
+                    box-shadow: 0 40px 80px rgba(15,23,42,0.18);
+                    display: none;
+                }
+
+                @media (min-width: 1024px) {
+                    .visual-pane {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.25rem;
+                        position: sticky;
+                        top: 120px;
+                    }
+                }
+
+                .stage-card {
+                    min-height: 320px;
+                    border-radius: 24px;
+                    background: linear-gradient(135deg, rgba(15,118,110,0.08), rgba(59,130,246,0.05));
+                    border: 1px solid rgba(148,163,184,0.35);
+                    padding: 1.75rem;
+                }
+
+                .stage-caption {
+                    margin: 0;
+                    font-size: 0.95rem;
+                    color: #334155;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                .visual-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    align-items: center;
+                }
+
+                .grid-scan {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    gap: 0.75rem;
+                }
+
+                .grid-scan span {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: rgba(59,130,246,0.4);
+                    box-shadow: 0 0 10px rgba(59,130,246,0.3);
+                }
+
+                .grid-funnel {
+                    width: 72px;
+                    height: 72px;
+                    border-radius: 20px;
+                    background: rgba(59,130,246,0.1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgba(59,130,246,0.3);
+                }
+
+                .grid-funnel svg {
+                    width: 36px;
+                    height: 36px;
+                    color: #2563eb;
+                }
+
+                .grid-selection {
+                    display: flex;
+                    gap: 0.5rem;
+                }
+
+                .grid-selection span {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background: #2563eb;
+                    box-shadow: 0 10px 20px rgba(37,99,235,0.4);
+                }
+
+                .visual-terminal {
+                    background: #0f172a;
+                    color: #e2e8f0;
+                    border-radius: 20px;
+                    padding: 1.5rem;
+                    font-family: "Fira Code", "Courier New", monospace;
+                    border: 1px solid rgba(148,163,184,0.35);
+                }
+
+                .visual-terminal--success {
+                    border-color: rgba(34,197,94,0.4);
+                    box-shadow: 0 15px 35px rgba(34,197,94,0.15);
+                }
+
+                .terminal-comment {
+                    color: #94a3b8;
+                    margin-bottom: 0.75rem;
+                }
+
+                .terminal-keyword {
+                    color: #a855f7;
+                }
+
+                .terminal-arg {
+                    color: #fbbf24;
+                }
+
+                .terminal-indent {
+                    padding-left: 1.5rem;
+                }
+
+                .terminal-error {
+                    margin-top: 1rem;
+                    padding: 0.75rem 1rem;
+                    border-radius: 12px;
+                    background: rgba(248,113,113,0.2);
+                    color: #fecaca;
+                    border-left: 3px solid #f87171;
+                }
+
+                .terminal-success {
+                    margin-top: 1rem;
+                    color: #4ade80;
+                    font-weight: 600;
+                }
+
+                .visual-hand {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.25rem;
+                }
+
+                .handoff-file {
+                    width: 72px;
+                    height: 90px;
+                    border-radius: 20px;
+                    border: 2px solid rgba(148,163,184,0.4);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 700;
+                    color: #475569;
+                    background: white;
+                    box-shadow: inset 0 0 30px rgba(15,23,42,0.05);
+                }
+
+                .handoff-meta {
+                    flex: 1;
+                }
+
+                .meta-line {
+                    height: 10px;
+                    border-radius: 999px;
+                    background: rgba(15,23,42,0.08);
+                    margin-bottom: 0.4rem;
+                }
+
+                .meta-line.short {
+                    width: 60%;
+                }
+
+                .handoff-tags {
+                    display: flex;
+                    gap: 0.5rem;
+                }
+
+                .handoff-tags span {
+                    font-size: 0.75rem;
+                    padding: 0.25rem 0.75rem;
+                    border-radius: 999px;
+                    background: rgba(59,130,246,0.15);
+                    color: #2563eb;
+                    font-weight: 600;
+                }
+            </style>
 
             <!-- Revolutionary Features Section - Modern 2025 Approach -->
             <section id="business-impact" class="theme-section theme-section--inset relative py-24 lg:py-32" aria-labelledby="business-impact-title">
@@ -465,16 +1076,16 @@
                 <div class="section-shell">
                     <!-- Section header -->
                     <div class="section-heading" data-aos="fade-up">
-                        <span>Advanced Technology Stack</span>
+                        <span>Transparent AI</span>
                         <h2>Built for Enterprise Scale</h2>
                         <p>
-                            Enterprise-grade AI agents that deliver measurable business impact while maintaining complete data sovereignty
+                            Smart datasource reasoning with safety guardrails and complete data sovereignty
                         </p>
                     </div>
 
                     <!-- Consolidated Enterprise Features - 3 comprehensive cards -->
                     <div class="grid gap-8 lg:grid-cols-3">
-                        <!-- Card 1: Observable Multi-Agent Intelligence -->
+                        <!-- Card 1: Smart Discovery -->
                         <article class="feature-card" data-aos="fade-up" data-aos-delay="0">
                             <span class="feature-card__icon" aria-hidden="true">
                                 <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -483,30 +1094,27 @@
                                     <circle cx="20" cy="20" r="4" fill="currentColor"></circle>
                                 </svg>
                             </span>
-                            <h3 class="feature-card__heading">Observable Multi-Agent AI</h3>
+                            <h3 class="feature-card__heading">Hybrid Query Engine</h3>
                             <p class="feature-card__text">
-                                Our 7-agent system includes specialized Planning, API, and Results agents. New "Thinking UI" shows you exactly 
-                                how each agent processes your request - from black box to crystal clear transparency with real-time progress tracking.
+                                Intelligently routes queries between local SQL cache and live Okta APIs. Reduces API costs, eliminates rate limit issues, and delivers sub-second response times.
                             </p>
                         </article>
 
-                        <!-- Card 2: Access Analysis Tool -->
+                        <!-- Card 2: Safety Validation -->
                         <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
                             <span class="feature-card__icon" aria-hidden="true">
                                 <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="20" cy="18" r="10" stroke="currentColor" stroke-width="2" fill="none"></circle>
-                                    <path d="M28 26l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                                    <circle cx="20" cy="18" r="5" stroke="currentColor" stroke-width="2" fill="none"></circle>
+                                    <path d="M20 4L6 10v8c0 8.8 6.1 17 14 19 7.9-2 14-10.2 14-19v-8L20 4z" stroke="currentColor" stroke-width="2" fill="none"></path>
+                                    <path d="M16 20l3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                             </span>
-                            <h3 class="feature-card__heading">Access Analysis Tool</h3>
+                            <h3 class="feature-card__heading">Built-in Safety Guards</h3>
                             <p class="feature-card__text">
-                                "Can user X access application Y?" - The most common help desk question, now answered instantly with comprehensive 
-                                access analysis across user status, policies, assignments, and conditional rules. Perfect for help desk teams and security audits.
+                                Enforces test-first execution with automatic row limits and sandbox validation. Prevents accidental bulk operations and ensures every query is verified before production use.
                             </p>
                         </article>
 
-                        <!-- Card 3: Complete API Coverage -->
+                        <!-- Card 3: Production Scripts -->
                         <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
                             <span class="feature-card__icon" aria-hidden="true">
                                 <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -514,15 +1122,16 @@
                                     <path d="M14 16l4 4-4 4M20 24h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                             </span>
-                            <h3 class="feature-card__heading">Complete API Coverage</h3>
+                            <h3 class="feature-card__heading">Production-Ready Code</h3>
                             <p class="feature-card__text">
-                                Access virtually every piece of your Okta data through automated code generation across 107+ GET endpoints. 
-                                No manual API scripting required - comprehensive coverage out of the box with automatic code generation.
+                                Generates fully documented Python scripts with error handling, progress tracking, and structured outputs. Every script is version-controlled and audit-ready from day one.
                             </p>
                         </article>
                     </div>
                 </div>
             </section>
+
+
 
             <!-- SIMPLIFIED ENTERPRISE FEATURES SECTION -->
             <section id="features" class="theme-section theme-section--alt relative py-24 lg:py-32">
@@ -538,7 +1147,7 @@
                         <span>What Makes Tako Revolutionary</span>
                         <h2>Multi-Agent Architecture Meets Enterprise Security</h2>
                         <p>
-                            Multiple specialized agents work together to plan, write deterministic Python code, and format results with real-time execution management
+                            Iterative reasoning with specialized components working together transparently
                         </p>
                     </div>
 
@@ -559,16 +1168,16 @@
                                     <div class="flex items-start gap-3">
                                         <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2"></div>
                                         <div>
-                                            <h4 class="section-feature-title">Database Mode</h4>
-                                            <p class="section-feature-text">Fast queries against local SQLite with users, groups, apps, devices, and factors</p>
+                                            <h4 class="section-feature-title">API-First Mode (Recommended)</h4>
+                                            <p class="section-feature-text">Real-time calls to Okta APIs with intelligent discovery—no sync required. The agent reasons through which endpoints to call and in what order.</p>
                                         </div>
                                     </div>
 
                                     <div class="flex items-start gap-3">
                                         <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2"></div>
                                         <div>
-                                            <h4 class="section-feature-title">API Mode</h4>
-                                            <p class="section-feature-text">Real-time calls to Okta APIs for latest data—no database sync required</p>
+                                            <h4 class="section-feature-title">Local Storage Mode</h4>
+                                            <p class="section-feature-text">Fast queries against local datasources with users, groups, apps, devices, and factors for analytical queries.</p>
                                         </div>
                                     </div>
 
@@ -576,15 +1185,15 @@
                                         <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2"></div>
                                         <div>
                                             <h4 class="section-feature-title">Hybrid Mode</h4>
-                                            <p class="section-feature-text">Automatically chooses the best data source for each query based on your needs</p>
+                                            <p class="section-feature-text">Automatically chooses the best data source based on query type—real-time for access analysis, local storage for historical trends.</p>
                                         </div>
                                     </div>
 
                                     <div class="flex items-start gap-3">
                                         <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2"></div>
                                         <div>
-                                            <h4 class="section-feature-title">Polars DataFrames</h4>
-                                            <p class="section-feature-text">Lightning-fast data processing with 99% token reduction through intelligent context filtering</p>
+                                            <h4 class="section-feature-title">Intelligent Context Filtering</h4>
+                                            <p class="section-feature-text">99% token reduction through smart data sampling. The agent only loads what it needs to reason through your specific question.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -599,7 +1208,7 @@
                                     <div class="mb-4">
                                         <h3 class="section-card-title">Enterprise-Grade Performance</h3>
                                     </div>
-                                    <p class="section-card-text">Multi-layered security with comprehensive validation and AI flexibility</p>
+                                    <p class="section-card-text">Iterative discovery with comprehensive validation and AI flexibility</p>
                                 </div>
                                 
                                 <div class="space-y-5">
@@ -607,7 +1216,7 @@
                                         <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2"></div>
                                         <div>
                                             <h4 class="section-feature-title">Zero Cloud Dependencies</h4>
-                                            <p class="section-feature-text">All Okta data stored locally on your infrastructure—never leaves your environment</p>
+                                            <p class="section-feature-text">All Okta data stored locally on your infrastructure—never leaves your environment. The reasoning agent runs entirely on your servers.</p>
                                         </div>
                                     </div>
 
@@ -615,15 +1224,15 @@
                                         <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2"></div>
                                         <div>
                                             <h4 class="section-feature-title">AI Provider Flexibility</h4>
-                                            <p class="section-feature-text">OpenAI, Anthropic, Google Vertex AI, Azure OpenAI, AWS Bedrock, or deploy Ollama locally for air-gapped environments</p>
+                                            <p class="section-feature-text">OpenAI, Anthropic (Claude), Google Vertex AI, Azure OpenAI, AWS Bedrock, or deploy Ollama locally for air-gapped environments.</p>
                                         </div>
                                     </div>
 
                                     <div class="flex items-start gap-3">
                                         <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2"></div>
                                         <div>
-                                            <h4 class="section-feature-title">Dual Model Architecture</h4>
-                                            <p class="section-feature-text">Separate models for reasoning and code generation—optimize cost while maintaining enterprise capabilities</p>
+                                            <h4 class="section-feature-title">Transparent Processing</h4>
+                                            <p class="section-feature-text">Watch token usage for each discovery step. See exactly how much each phase costs—planning, exploration, code generation, and synthesis.</p>
                                         </div>
                                     </div>
 
@@ -631,7 +1240,7 @@
                                         <div class="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2"></div>
                                         <div>
                                             <h4 class="section-feature-title">Complete API Coverage</h4>
-                                            <p class="section-feature-text">Automatic code generation across 107+ Okta GET endpoints with OAuth 2.0 Private Key JWT authentication</p>
+                                            <p class="section-feature-text">Automatic endpoint discovery across 107+ Okta GET endpoints with OAuth 2.0 Private Key JWT authentication.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -649,7 +1258,7 @@
                     <div class="section-heading" data-aos="fade-up">
                         <span>Security</span>
                         <h2>Privacy-First Architecture</h2>
-                        <p>Your data stays on your infrastructure. LLMs only see your queries and minimal context samples.</p>
+                        <p>Your data stays on your infrastructure. The reasoning agent only sees your queries and minimal context samples.</p>
                     </div>
 
                     <!-- Simple Security Points -->
@@ -662,7 +1271,7 @@
                                 </svg>
                             </div>
                             <h3 class="section-card-title mb-2">Local Docker Deploy</h3>
-                            <p class="section-card-text">Runs entirely on your infrastructure with local SQLite storage</p>
+                            <p class="section-card-text">Runs entirely on your infrastructure with local storage</p>
                         </div>
 
                         <!-- Minimal Data Sharing -->
@@ -674,7 +1283,7 @@
                                 </svg>
                             </div>
                             <h3 class="section-card-title mb-2">Minimal LLM Exposure</h3>
-                            <p class="section-card-text">LLMs only see your queries and small data samples for context</p>
+                            <p class="section-card-text">The agent only receives your query and small data samples for context—never your full dataset</p>
                         </div>
 
                         <!-- AI Provider Choice -->
@@ -691,147 +1300,9 @@
                 </div>
             </section>
 
-            <!-- CONSOLIDATED: How Tako Works - Simplified -->
-            <section id="how-it-works" class="theme-section relative py-20 lg:py-28">
-                <div class="section-shell">
-                    <!-- Section Header -->
-                    <div class="section-heading" data-aos="fade-up">
-                        <span>Technology</span>
-                        <h2>How Tako Works</h2>
-                        <p>Powerful technology that adapts to your needs.</p>
-                    </div>
-                    
-                    <!-- Introduction -->
-                    <div class="mt-16 max-w-4xl mx-auto text-center">
-                        <p class="section-card-text" style="font-size: 1.125rem;">
-                            Tako uses advanced multi-agent AI technology to automatically analyze your Okta environment. 
-                            Simply ask questions in natural language, and our intelligent agents work together to provide 
-                            instant insights from your identity data.
-                        </p>
-                    </div>
 
-                    <!-- 3 Consolidated Cards -->
-                    <div class="mt-16 grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
-                        <!-- Card 1: Intelligent Technology -->
-                        <div class="theme-card p-8" data-aos="fade-up">
-                            <div class="text-center mb-4">
-                                <h4 class="section-card-title">Intelligent Planning</h4>
-                            </div>
-                            <p class="section-card-text text-center">
-                                Tako breaks down complex questions into logical steps, creating a blueprint for solving your query. 
-                                Our AI agents intelligently choose between SQL database and real-time API data sources, with context 
-                                filtering that reduces costs by giving each agent only relevant information.
-                            </p>
-                        </div>
 
-                        <!-- Card 2: Secure Operations -->
-                        <div class="theme-card p-8" data-aos="fade-up" data-aos-delay="100">
-                            <div class="text-center mb-4">
-                                <h4 class="section-card-title">Security-First Operations</h4>
-                            </div>
-                            <p class="section-card-text text-center">
-                                Tako writes and executes Python code within strict security parameters. Built with multiple protection 
-                                layers including method whitelisting, AST-based code analysis, URL validation, and operation restrictions 
-                                to ensure your data stays secure.
-                            </p>
-                        </div>
 
-                        <!-- Card 3: Unified Experience -->
-                        <div class="theme-card p-8" data-aos="fade-up" data-aos-delay="200">
-                            <div class="text-center mb-4">
-                                <h4 class="section-card-title">Unified Interface</h4>
-                            </div>
-                            <p class="section-card-text text-center">
-                                No manual mode switching required. Our multi-agent system seamlessly handles both real-time API calls 
-                                and cached analytics, automatically selecting the optimal approach based on your query to deliver 
-                                instant insights from your identity data.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Modern Use Cases Section -->
-            <section id="use-cases" class="theme-section theme-section--alt relative py-24 lg:py-32">
-                <div aria-hidden="true" class="absolute inset-0 -z-10">
-                    <div class="absolute top-20 left-0 h-64 w-64 rounded-full bg-gradient-to-tr from-indigo-400/10 to-purple-300/10 blur-[90px] dark:from-indigo-400/20 dark:to-purple-300/20"></div>
-                    <div class="absolute bottom-40 right-10 h-72 w-72 rounded-full bg-gradient-to-br from-cyan-400/10 to-teal-400/10 blur-[100px] dark:from-cyan-400/15 dark:to-teal-400/20"></div>
-                </div>
-
-                <div class="section-shell">
-                    <!-- Section Header -->
-                    <div class="section-heading" data-aos="fade-up">
-                        <span>Use Cases</span>
-                        <h2>Sample Questions Tako Handles Instantly</h2>
-                        <p>Ask Tako anything about your Okta environment—here are popular prompts teams rely on today.</p>
-                    </div>
-
-                    <!-- Compact Query Categories -->
-                    <div class="mx-auto max-w-5xl xl:max-w-6xl" data-aos="fade-up">
-                        <div class="glass-panel rounded-2xl p-6">
-                            <div class="grid gap-6 md:grid-cols-2">
-                                <!-- User Management -->
-                                <div class="space-y-3">
-                                    <h4 class="section-feature-title flex items-center gap-2">
-                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                        User Management
-                                    </h4>
-                                    <div class="space-y-2 section-feature-text">
-                                        <p>• "List all users along with their creation dates"</p>
-                                        <p>• "Show me all users in locked status"</p>
-                                        <p>• "How many users were created in the last month"</p>
-                                        <p>• "List all users and factors using API calls only"</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Security & MFA -->
-                                <div class="space-y-3">
-                                    <h4 class="section-feature-title flex items-center gap-2">
-                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                        Security & MFA
-                                    </h4>
-                                    <div class="space-y-2 section-feature-text">
-                                        <p>• "Show users with PUSH factor registered"</p>
-                                        <p>• "Find users with SMS factor with phone number ending in 2364"</p>
-                                        <p>• "Find the SAML certificate expiry date for all the active SAML applications"</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Applications -->
-                                <div class="space-y-3">
-                                    <h4 class="section-feature-title flex items-center gap-2">
-                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                        Applications
-                                    </h4>
-                                    <div class="space-y-2 section-feature-text">
-                                        <p>• "Can john.smith@company.com access Salesforce?"</p>
-                                        <p>• "Find the SAML certificate expiry date for all active SAML applications"</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Groups -->
-                                <div class="space-y-3">
-                                    <h4 class="section-feature-title flex items-center gap-2">
-                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                        Groups
-                                    </h4>
-                                    <div class="space-y-2 section-feature-text">
-                                        <p>• "Find all users in Engineering group"</p>
-                                        <p>• "Find groups that user A is part of and user B is not"</p>
-                                        <p>• "Find groups with more than 50 members"</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
-                                <p class="section-feature-text">
-                                    And hundreds more possibilities - just ask in natural language
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- Modern Get Started Section -->
             <section id="get-started" class="theme-section theme-section--inset relative overflow-hidden py-24 lg:py-32">
@@ -861,7 +1332,7 @@
                             <p class="mt-2 flex-1 section-card-text">Clone the repository and follow our quick setup guide to deploy Tako AI in your environment.</p>
                             <a href="https://github.com/fctr-id/okta-ai-agent" target="_blank" rel="noopener noreferrer" class="button button--primary mt-6 self-start">
                                 <span class="github-text">GitHub Repository</span>
-                                <span class="ml-2 inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-2 py-1 text-xs font-medium text-gray-800 dark:border-gray-500 dark:bg-gray-600 dark:text-gray-200">v1.3</span>
+                                <span class="ml-2 inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-2 py-1 text-xs font-medium text-gray-800 dark:border-gray-500 dark:bg-gray-600 dark:text-gray-200">v1.5</span>
                                 <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -940,7 +1411,7 @@
                              <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                             </svg>
-                            <a href="https://github.com/fctr-id" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">GitHub</a>
+                                                       <a href="https://github.com/fctr-id" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">GitHub</a>
                         </div>
                     </div>
 
@@ -967,8 +1438,11 @@
                     </div>
                 </div>
                 <!-- Divider and copyright -->
-                <div class="mt-10 border-t border-gray-200 pt-6 dark:border-gray-700">
+                <div class="mt-10 border-t border-gray-200 pt-6 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p class="text-center text-sm text-gray-600 dark:text-gray-400">&copy; Fctr 2025. All rights reserved.</p>
+                    <div class="flex items-center gap-2">
+                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:ring-blue-400/30">v1.5.0-beta</span>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -1096,30 +1570,6 @@
                 text-shadow: 0 1px 3px rgba(255,255,255,0.1);
             }
             
-            /* Add twinkling stars effect */
-            @keyframes twinkle {
-                0%, 100% { opacity: 0.2; }
-                50% { opacity: 0.8; }
-            }
-            
-            .star {
-                position: absolute;
-                width: 2px;
-                height: 2px;
-                border-radius: 50%;
-                background-color: white;
-                opacity: 0.2;
-                animation: twinkle 4s infinite ease-in-out;
-                pointer-events: none;
-            }
-            
-            /* Generate stars with different animation delays */
-            .star:nth-child(3n) { animation-delay: 0.5s; }
-            .star:nth-child(3n+1) { animation-delay: 1s; }
-            .star:nth-child(3n+2) { animation-delay: 1.5s; }
-            
-            /* Random star positions will be added via JS */
-            
             /* FIX: Only apply pointer-events:none to background decorative elements, not navigation */
             [aria-hidden="true"] {
                 pointer-events: none;
@@ -1170,34 +1620,12 @@
                 });
             }
 
-            // Create twinkling stars
-            function createStars() {
-                const heroSection = document.getElementById('home');
-                const starsContainer = document.createElement('div');
-                starsContainer.className = 'absolute inset-0 -z-5 overflow-hidden pointer-events-none';
-                
-                // Add 100 stars with random positions
-                for (let i = 0; i < 100; i++) {
-                    const star = document.createElement('div');
-                    star.className = 'star';
-                    star.style.top = `${Math.random() * 100}%`;
-                    star.style.left = `${Math.random() * 100}%`;
-                    star.style.animationDuration = `${3 + Math.random() * 3}s`;
-                    starsContainer.appendChild(star);
-                }
-                
-                heroSection.appendChild(starsContainer);
-            }
-            
             document.addEventListener('DOMContentLoaded', function() {
                 // Initialize AOS
                 AOS.init({
                     duration: 800,
                     once: true
                 });
-                
-                // Create stars effect for the hero section
-                createStars();
                 
                 // Fetch GitHub stars
                 fetchGitHubStars();
