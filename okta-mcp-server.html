@@ -33,8 +33,8 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <script type="module" crossorigin src="./assets/modulepreload-polyfill.c7c6310f.js"></script>
       <script type="module" crossorigin src="./assets/particle-network.41509aed.js"></script>
-      <link rel="stylesheet" href="./assets/particle-network.8776d3b7.css">
-      <link rel="stylesheet" href="./assets/ai-agent.f32bb3b6.css">
+      <link rel="stylesheet" href="./assets/particle-network.95845b08.css">
+      <link rel="stylesheet" href="./assets/ai-agent.026fbbce.css">
     </head>
     <body data-theme="light" class="min-h-screen scroll-smooth">
         <!-- Navigation -->
@@ -139,11 +139,11 @@
                                     <div class="hero-actions__buttons">
                                         <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener noreferrer" class="button button--primary relative group">
                                             <span class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300" aria-hidden="true"></span>
-                                            <span class="relative flex items-center">
+                                            <span class="relative flex items-center gap-2">
                                                 <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                                                     <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                                                 </svg>
-                                                <span>Get Started Free</span>
+                                                <span>Get Started</span>
                                             </span>
                                         </a>
 
@@ -344,7 +344,7 @@
                                         <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                                     </div>
                                     <div>
-                                        <p class="font-bold text-slate-900">Basic MCP</p>
+                                        <p class="font-bold text-slate-900">Default MCP Mode</p>
                                         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700">Default</span>
                                     </div>
                                 </div>
@@ -573,14 +573,14 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-10 border-t border-gray-200/60 max-w-6xl mx-auto" data-aos="fade-up">
                         <!-- Enterprise Security -->
                         <div class="theme-card p-8">
-                            <div class="flex items-start gap-4 mb-4">
+                            <div class="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4 mb-4">
                                 <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-100 to-orange-50 flex items-center justify-center flex-shrink-0">
                                     <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-slate-900 mb-2 font-display">Enterprise Security</h3>
                                     <p class="text-slate-600 mb-4">AST-based sandbox with multi-layer protection</p>
-                                    <ul class="space-y-2 text-sm text-slate-600">
+                                    <ul class="space-y-2 text-sm text-slate-600 text-left">
                                         <li class="flex items-start gap-2">
                                             <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                             <span><strong>Pattern Blocking:</strong> Dangerous operations blocked at AST level</span>
@@ -604,27 +604,27 @@
 
                         <!-- Open Source & Standards -->
                         <div class="theme-card p-8">
-                            <div class="flex items-start gap-4 mb-4">
+                            <div class="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4 mb-4">
                                 <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-50 flex items-center justify-center flex-shrink-0">
                                     <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-slate-900 mb-2 font-display">Open Source & Standards Compliant</h3>
                                     <p class="text-slate-600 mb-4">Built on proven standards and open-source principles</p>
-                                    <div class="grid grid-cols-2 gap-3">
-                                        <div class="flex items-center gap-2 text-slate-700">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-700">
                                             <span class="text-xl">🌟</span>
                                             <span class="text-sm font-medium">Elastic License 2.0</span>
                                         </div>
-                                        <div class="flex items-center gap-2 text-slate-700">
+                                        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-700">
                                             <span class="text-xl">📐</span>
                                             <span class="text-sm font-medium">MCP Specification</span>
                                         </div>
-                                        <div class="flex items-center gap-2 text-slate-700">
+                                        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-700">
                                             <span class="text-xl">🏗️</span>
                                             <span class="text-sm font-medium">Production Ready</span>
                                         </div>
-                                        <div class="flex items-center gap-2 text-slate-700">
+                                        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-700">
                                             <span class="text-xl">🔐</span>
                                             <span class="text-sm font-medium">OAuth2 RFC 7523</span>
                                         </div>
