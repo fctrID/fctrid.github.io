@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="./assets/favicon.8d2a063c.svg" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon.2e1c81a2.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,8 +33,8 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <script type="module" crossorigin src="./assets/modulepreload-polyfill.c7c6310f.js"></script>
       <script type="module" crossorigin src="./assets/particle-network.41509aed.js"></script>
-      <link rel="stylesheet" href="./assets/particle-network.95845b08.css">
-      <link rel="stylesheet" href="./assets/ai-agent.c25eb6fc.css">
+      <link rel="stylesheet" href="./assets/particle-network.d61416c5.css">
+      <link rel="stylesheet" href="./assets/ai-agent.ab188a4b.css">
     </head>
     <body data-theme="light" class="min-h-screen scroll-smooth">
         <!-- Navigation -->
@@ -637,66 +637,57 @@
             </section>
 
             <!-- Pricing Section -->
-            <section id="pricing" class="theme-section py-16 md:py-20">
-                <div class="section-shell">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <span class="hero-eyebrow mb-4">Pricing</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 font-display">Simple, transparent pricing</h2>
-                        <p class="text-lg text-slate-600 mt-4 max-w-2xl mx-auto">Start free with full read access. Upgrade when you need write operations and enterprise controls.</p>
+            <section id="pricing">
+                <div class="wrap">
+                    <div class="section-heading" data-aos="fade-up">
+                        <span>Pricing</span>
+                        <h2>Simple, transparent pricing</h2>
+                        <p>Start free with full read access. Upgrade when you need write operations and enterprise controls.</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-                        <!-- Community Plan -->
-                        <div class="theme-card p-8 border-2 border-slate-200" data-aos="fade-up" data-aos-delay="50">
-                            <div class="mb-6">
-                                <h3 class="text-2xl font-bold text-slate-900 font-display">Community</h3>
-                                <p class="text-slate-500 mt-1">For individuals & small teams</p>
-                            </div>
-                            <div class="mb-6">
-                                <span class="text-5xl font-bold text-slate-900">$0</span>
-                                <span class="text-slate-500">/forever</span>
-                            </div>
-                            <ul class="space-y-4 mb-8">
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-600">Full read access to Okta APIs</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-600">Users, Groups, Apps, Policies, Logs</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-600">Basic MCP & Agent Mode</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-600">CSV export & OAuth2 auth</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-600">STDIO & HTTP transports</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-600">Docker & self-hosted</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-600">Community support</span></li>
-                            </ul>
-                            <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener noreferrer" class="button button--outline w-full justify-center">
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
-                                <span>Get Started Free</span>
-                            </a>
-                        </div>
 
-                        <!-- Enterprise Plan -->
-                        <div class="theme-card p-8 border-2 border-purple-300 bg-gradient-to-br from-purple-50/50 to-blue-50/50 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                            <div class="absolute top-4 right-4">
-                                <span class="px-3 py-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold">Coming Soon</span>
+                    <div class="pricing-grid">
+                        <article class="pricing-card pricing-card--trial" data-aos="fade-up">
+                            <div class="pricing-card__header">
+                                <span class="pricing-card__badge">Open Source</span>
+                                <h3>Community</h3>
+                                <p>For individuals & small teams exploring Okta automation.</p>
                             </div>
-                            <div class="mb-6">
-                                <h3 class="text-2xl font-bold text-slate-900 font-display">Enterprise</h3>
-                                <p class="text-slate-500 mt-1">For organizations at scale</p>
+                            <div class="pricing-card__price">
+                                <span class="pricing-card__value">$0</span>
+                                <div class="pricing-card__duration">
+                                    <span>Forever</span>
+                                    <span>Full read access</span>
+                                </div>
                             </div>
-                            <div class="mb-6">
-                                <span class="text-5xl font-bold text-slate-900">Custom</span>
-                            </div>
-                            <p class="text-slate-600 mb-6">Everything in Community, plus:</p>
-                            <ul class="space-y-4 mb-8">
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 font-medium">Write operations</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 font-medium">Multi-tenant support</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 font-medium">Role-based access control</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 font-medium">Approval workflows</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 font-medium">Custom tool builder</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 font-medium">SSO & audit log streaming</span></li>
-                                <li class="flex items-start gap-3"><svg class="w-5 h-5 text-purple-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-slate-700 font-medium">Priority support & SLA</span></li>
+                            <ul class="pricing-card__features" role="list">
+                                <li>Full read access to Okta APIs</li>
+                                <li>Users, Groups, Apps, Policies, Logs</li>
+                                <li>Basic MCP & Agent Mode</li>
+                                <li>CSV export & OAuth2 auth</li>
+                                <li>STDIO & HTTP transports</li>
+                                <li>Docker & self-hosted</li>
+                                <li>Community support</li>
                             </ul>
-                            <a href="mailto:enterprise@fctr.io?subject=Enterprise%20Edition%20Inquiry" class="button button--primary w-full justify-center">
-                                <span>Email Us For Details</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
+                            <a class="pricing-card__cta button button--primary" href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener noreferrer">Get Started Free</a>
+                        </article>
+                        <article class="pricing-card pricing-card--highlight" data-aos="fade-up" data-aos-delay="120">
+                            <div class="pricing-card__header">
+                                <span class="pricing-card__badge">Coming Soon</span>
+                                <h3>Enterprise</h3>
+                                <p>For organizations at scale needing write operations and advanced controls.</p>
+                            </div>
+                            <ul class="pricing-card__features" role="list">
+                                <li>Everything in Community, plus:</li>
+                                <li>Write operations</li>
+                                <li>Multi-tenant support</li>
+                                <li>Role-based access control</li>
+                                <li>Approval workflows</li>
+                                <li>Custom tool builder</li>
+                                <li>SSO & audit log streaming</li>
+                                <li>Priority support & SLA</li>
+                            </ul>
+                            <a class="pricing-card__cta button button--primary" href="mailto:enterprise@fctr.io?subject=Enterprise%20Edition%20Inquiry">Contact Sales</a>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -761,6 +752,37 @@
                 </div>
             </section>
 
+            <!-- CTA Section -->
+            <section id="cta">
+                <div class="wrap">
+                    <div class="section-heading" data-aos="fade-up">
+                        <span>Get Started</span>
+                    </div>
+
+                    <div class="cta" data-aos="fade-up">
+                        <h3 class="cta__title">Start querying Okta with AI</h3>
+                        <p class="cta__description">Free, open source, self-hosted. Ready to run in 5 minutes.</p>
+
+                        <div class="cta__actions">
+                            <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener noreferrer" class="button button--primary">
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Get Started Free</span>
+                            </a>
+                            <a href="https://github.com/fctr-id/fctr-okta-mcp-server#readme" target="_blank" rel="noopener noreferrer" class="button button--outline">
+                                <span>Documentation</span>
+                            </a>
+                            <a href="mailto:enterprise@fctr.io" class="button button--outline">
+                                <span>Enterprise</span>
+                            </a>
+                        </div>
+
+                        <p class="cta__note">Prefer email? <a href="mailto:enterprise@fctr.io">enterprise@fctr.io</a></p>
+                    </div>
+                </div>
+            </section>
+
             <!-- FAQ Section -->
             <section id="faq" class="theme-section py-16 md:py-20">
                 <div class="section-shell">
@@ -806,24 +828,24 @@
                         </details>
                         <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
                             <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-semibold text-slate-900">What is MCP and how does Tako work?</h4>
+                                <h4 class="font-semibold text-slate-900">What is MCP and how does Tako MCP Server work?</h4>
                                 <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
-                            <div class="px-5 pb-5 text-slate-600">Model Context Protocol (MCP) is an open standard that connects AI assistants to external tools and data sources. Tako implements Anthropic's Code Execution with MCP pattern, allowing your AI to discover Okta APIs and generate Python code for querying your environment.</div>
+                            <div class="px-5 pb-5 text-slate-600">Model Context Protocol (MCP) is an open standard that connects AI assistants to external tools and data sources. Tako MCP Server implements Anthropic's Code Execution with MCP pattern, allowing your AI to discover Okta APIs and generate Python code for querying your environment.</div>
                         </details>
                         <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
                             <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
                                 <h4 class="font-semibold text-slate-900">What authentication methods are supported?</h4>
                                 <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
-                            <div class="px-5 pb-5 text-slate-600">Tako supports both API Token (simple setup) and OAuth2 with Private Key JWT (recommended for production). OAuth2 provides scoped permissions and better security for enterprise deployments.</div>
+                            <div class="px-5 pb-5 text-slate-600">Tako MCP Server supports both API Token (simple setup) and OAuth2 with Private Key JWT (recommended for production). OAuth2 provides scoped permissions and better security for enterprise deployments.</div>
                         </details>
                         <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
                             <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-semibold text-slate-900">Do I need Docker to run Tako?</h4>
+                                <h4 class="font-semibold text-slate-900">Do I need Docker to run Tako MCP Server?</h4>
                                 <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
-                            <div class="px-5 pb-5 text-slate-600">No, Docker is optional. You can run Tako locally with Python (we recommend uv for package management), but Docker provides the fastest setup without managing dependencies.</div>
+                            <div class="px-5 pb-5 text-slate-600">No, Docker is optional. You can run Tako MCP Server locally with Python (we recommend uv for package management), but Docker provides the fastest setup without managing dependencies.</div>
                         </details>
                         <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
                             <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
@@ -834,14 +856,14 @@
                         </details>
                         <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
                             <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-semibold text-slate-900">How does Tako handle rate limits?</h4>
+                                <h4 class="font-semibold text-slate-900">How does Tako MCP Server handle rate limits?</h4>
                                 <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
-                            <div class="px-5 pb-5 text-slate-600">Tako includes configurable concurrent request limits based on your Okta plan (Integrator, One App, Enterprise, or Workforce Identity). The server monitors rate limits and provides warnings if limits are exceeded.</div>
+                            <div class="px-5 pb-5 text-slate-600">Tako MCP Server includes configurable concurrent request limits based on your Okta plan (Integrator, One App, Enterprise, or Workforce Identity). The server monitors rate limits and provides warnings if limits are exceeded.</div>
                         </details>
                         <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
                             <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-semibold text-slate-900">Can Tako modify my Okta data?</h4>
+                                <h4 class="font-semibold text-slate-900">Can Tako MCP Server modify my Okta data?</h4>
                                 <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
                             <div class="px-5 pb-5 text-slate-600">The open-source community edition is read-only by design. Write operations, approval workflows, and role-based access control are available in the upcoming Enterprise Edition.</div>
@@ -849,82 +871,62 @@
                     </div>
                 </div>
             </section>
-
-            <!-- CTA Section -->
-            <section class="theme-section theme-section--alt py-16 md:py-20">
-                <div class="section-shell">
-                    <div class="text-center py-12 px-8 rounded-2xl relative overflow-hidden" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.95) 0%, rgba(6, 182, 212, 0.85) 100%);" data-aos="fade-up">
-                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-display">Start querying Okta with AI</h2>
-                        <p class="text-lg text-slate-300 mb-8">Free, open source, self-hosted. Ready to run in 5 minutes.</p>
-                        <div class="flex flex-wrap justify-center gap-4">
-                            <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener noreferrer" class="button button--primary">
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-                                </svg>
-                                <span>Get Started Free</span>
-                            </a>
-                            <a href="https://github.com/fctr-id/fctr-okta-mcp-server#readme" target="_blank" rel="noopener noreferrer" class="button button--outline border-white/30 text-white hover:bg-white/10">
-                                <span>Documentation</span>
-                            </a>
-                            <a href="mailto:enterprise@fctr.io" class="button button--ghost text-white/80 hover:text-white">
-                                <span>Enterprise</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
 
-        <footer class="relative border-t border-gray-200 bg-white pt-12 pb-8 dark:border-gray-700 dark:bg-gray-900">
-            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                    <!-- Column 1: Logo and info -->
-                    <div class="flex flex-col space-y-4">
-                        <a href="/index.html" class="flex items-center" aria-label="Fctr Home">
-                            <img src="./assets/fctr-logo-wide-gap.655954ba.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
-                            <img src="./assets/fctr-logo-wide-gap.655954ba.svg" alt="Fctr Logo" class="-ml-5 hidden h-7 w-auto max-w-[140px] dark:block" />
+        <!-- Footer -->
+        <footer>
+            <div class="wrap footer__content">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="/index.html" class="footer__logo">
+                            <img src="./assets/fctr-logo-wide-gap.b2a67e5a.svg" alt="Fctr" class="footer__logo-img footer__logo-img--light" />
+                            <img src="./assets/fctr-logo-wide-gap.b2a67e5a.svg" alt="Fctr" class="footer__logo-img footer__logo-img--dark" />
                         </a>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">Open-source AI tools for modern identity management.</p>
-                        <div class="flex items-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primaryLight" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        <p class="footer__description">Open-source AI tools for modern identity management.</p>
+                        <a href="mailto:info@fctr.io" class="footer__contact">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <path d="M22 6l-10 7L2 6"></path>
                             </svg>
-                            <a href="mailto:info@fctr.io" class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">info@fctr.io</a>
-                        </div>
-                         <div class="flex items-center space-x-2">
-                             <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-                            </svg>
-                            <a href="https://github.com/fctr-id" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">GitHub</a>
-                        </div>
+                            info@fctr.io
+                        </a>
                     </div>
 
-                    <!-- Column 2: Quick Links -->
-                    <div class="flex flex-col space-y-4">
-                        <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Quick Links</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="#features" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Features</a></li>
-                            <li><a href="#demo" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Demo</a></li>
-                            <li><a href="#use-cases" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Use Cases</a></li>
-                            <li><a href="#pricing" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Pricing</a></li>
-                            <li><a href="#faq" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">FAQ</a></li>
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Product</h3>
+                        <ul class="footer__links">
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                            <li><a href="#use-cases">Use Cases</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
                         </ul>
                     </div>
 
-                    <!-- Column 3: Legal -->
-                    <div class="flex flex-col space-y-4">
-                        <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Legal</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="/pages/terms.html" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Terms of Service</a></li>
-                            <li><a href="/pages/privacy.html" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Privacy Policy</a></li>
-                            <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">License (Elastic 2.0)</a></li>
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Resources</h3>
+                        <ul class="footer__links">
+                            <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener">GitHub Repository</a></li>
+                            <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server/blob/main/README.md" target="_blank" rel="noopener">Documentation</a></li>
+                            <li><a href="mailto:info@fctr.io">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Legal</h3>
+                        <ul class="footer__links">
+                            <li><a href="/pages/terms.html">Terms of Service</a></li>
+                            <li><a href="/pages/privacy.html">Privacy Policy</a></li>
+                            <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server/blob/main/LICENSE" target="_blank" rel="noopener">License (Elastic 2.0)</a></li>
                         </ul>
                     </div>
                 </div>
-                <!-- Divider and copyright -->
-                <div class="mt-10 border-t border-gray-200 pt-6 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-center text-sm text-gray-600 dark:text-gray-400">&copy; Fctr 2025. Made with ❤️ for the Okta and AI communities. Not affiliated with Okta, Inc.</p>
+
+                <div class="footer__meta">
+                    <p>&copy; 2025 Fctr. All rights reserved.</p>
+                    <div class="footer__meta-links">
+                        <a href="/pages/terms.html">Terms</a>
+                        <a href="/pages/privacy.html">Privacy</a>
+                    </div>
                 </div>
             </div>
         </footer>

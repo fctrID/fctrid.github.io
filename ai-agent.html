@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="./assets/favicon.8d2a063c.svg" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon.2e1c81a2.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -147,8 +147,8 @@
       <script type="module" crossorigin src="./assets/ai_agent.c0b2e085.js"></script>
       <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill.c7c6310f.js">
       <link rel="modulepreload" crossorigin href="./assets/particle-network.41509aed.js">
-      <link rel="stylesheet" href="./assets/particle-network.95845b08.css">
-      <link rel="stylesheet" href="./assets/ai-agent.c25eb6fc.css">
+      <link rel="stylesheet" href="./assets/particle-network.d61416c5.css">
+      <link rel="stylesheet" href="./assets/ai-agent.ab188a4b.css">
     </head>
     <body data-theme="light" class="min-h-screen scroll-smooth selection:bg-primary/10 selection:text-primary">
         <!-- Navigation Section -->
@@ -1395,87 +1395,88 @@
                 </div>
             </section>
 
-            <!-- Support & CTA Section - With alternating background -->
-            <section class="theme-section relative py-16 sm:py-24">
-                <div aria-hidden="true" class="absolute inset-0 -z-10">
-                    <div class="absolute top-0 right-0 h-48 w-48 rounded-full bg-gradient-to-bl from-red-200/20 to-primary/10 blur-[70px] dark:from-red-300/10 dark:to-primary/20"></div>
-                    <div class="absolute bottom-0 left-1/3 h-60 w-60 rounded-full bg-gradient-to-tr from-green-200/10 to-secondary/10 blur-[90px] dark:from-green-300/20 dark:to-secondary/20"></div>
-                </div>
-
-                <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <!-- Support & CTA Section -->
+            <section id="cta">
+                <div class="wrap">
                     <div class="section-heading" data-aos="fade-up">
                         <span>Support</span>
-                        <h2>Need Help or Have Ideas?</h2>
-                        <p>Check your setup first, then open an issue on GitHub or email us. We value your feedback for improving Tako.</p>
                     </div>
-                    <div class="mt-10 flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                        <a href="https://github.com/fctr-id/okta-ai-agent/issues/new?labels=bug" target="_blank" rel="noopener noreferrer" class="button button--primary">
-                            Report a Bug
-                        </a>
-                        <a href="https://github.com/fctr-id/okta-ai-agent/issues/new?labels=enhancement" target="_blank" rel="noopener noreferrer" class="button button--outline">
-                            Request a Feature
-                        </a>
-                        <a href="mailto:support@fctr.io" class="button button--ghost">
-                            Email Support
-                        </a>
+
+                    <div class="cta" data-aos="fade-up">
+                        <h3 class="cta__title">Need Help or Have Ideas?</h3>
+                        <p class="cta__description">Check your setup first, then open an issue on GitHub or email us. We value your feedback for improving Tako.</p>
+
+                        <div class="cta__actions">
+                            <a href="https://github.com/fctr-id/okta-ai-agent/issues/new?labels=bug" target="_blank" rel="noopener noreferrer" class="button button--primary">
+                                Report a Bug
+                            </a>
+                            <a href="https://github.com/fctr-id/okta-ai-agent/issues/new?labels=enhancement" target="_blank" rel="noopener noreferrer" class="button button--outline">
+                                Request a Feature
+                            </a>
+                            <a href="mailto:support@fctr.io" class="button button--outline">
+                                Email Support
+                            </a>
+                        </div>
+
+                        <p class="cta__note">Prefer email? <a href="mailto:support@fctr.io">support@fctr.io</a></p>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer with more transparency -->
-        <footer class="relative border-t border-gray-200 bg-white pt-12 pb-8 dark:border-gray-700 dark:bg-gray-900">
-            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                    <!-- Column 1: Logo and info -->
-                    <div class="flex flex-col space-y-4">
-                        <a href="/index.html" class="flex items-center" aria-label="Fctr Home">
-                            <img src="./assets/fctr-logo-wide-gap.655954ba.svg" alt="Fctr Logo" class="h-8 w-auto dark:hidden" />
-                            <img src="./assets/fctr-logo-wide-gap.655954ba.svg" alt="Fctr Logo" class="-ml-5 hidden h-7 w-auto max-w-[140px] dark:block" />
+        <!-- Footer -->
+        <footer>
+            <div class="wrap footer__content">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="/index.html" class="footer__logo">
+                            <img src="./assets/fctr-logo-wide-gap.b2a67e5a.svg" alt="Fctr" class="footer__logo-img footer__logo-img--light" />
+                            <img src="./assets/fctr-logo-wide-gap.b2a67e5a.svg" alt="Fctr" class="footer__logo-img footer__logo-img--dark" />
                         </a>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">Open-source AI tools for modern identity management.</p>
-                        <div class="flex items-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-primaryLight" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        <p class="footer__description">Open-source AI tools for modern identity management.</p>
+                        <a href="mailto:info@fctr.io" class="footer__contact">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <path d="M22 6l-10 7L2 6"></path>
                             </svg>
-                            <a href="mailto:info@fctr.io" class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">info@fctr.io</a>
-                        </div>
-                         <div class="flex items-center space-x-2">
-                             <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-                            </svg>
-                                                       <a href="https://github.com/fctr-id" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">GitHub</a>
-                        </div>
+                            info@fctr.io
+                        </a>
                     </div>
 
-                    <!-- Column 2: Quick Links -->
-                    <div class="flex flex-col space-y-4">
-                        <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Quick Links</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="#features" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Features</a></li>
-                            <li><a href="#demo" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Demo</a></li>
-                             <li><a href="#security" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Security</a></li>
-                            <li><a href="#get-started" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Get Started</a></li>
-                            <li><a href="#use-cases" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Use Cases</a></li>
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Product</h3>
+                        <ul class="footer__links">
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                            <li><a href="#security">Security</a></li>
+                            <li><a href="#get-started">Get Started</a></li>
                         </ul>
                     </div>
 
-                    <!-- Column 3: Legal -->
-                    <div class="flex flex-col space-y-4">
-                        <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Legal</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="/pages/terms.html" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Terms of Service</a></li>
-                            <li><a href="/pages/privacy.html" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">Privacy Policy</a></li>
-                            <li><a href="https://github.com/fctr-id/okta-ai-agent/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-gray-600 transition-colors duration-200 hover:text-primary dark:text-gray-400 dark:hover:text-primaryLight">License (MIT)</a></li>
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Resources</h3>
+                        <ul class="footer__links">
+                            <li><a href="https://github.com/fctr-id/okta-ai-agent" target="_blank" rel="noopener">GitHub Repository</a></li>
+                            <li><a href="https://github.com/fctr-id/okta-ai-agent/blob/main/README.md" target="_blank" rel="noopener">Documentation</a></li>
+                            <li><a href="mailto:info@fctr.io">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__heading">Legal</h3>
+                        <ul class="footer__links">
+                            <li><a href="/pages/terms.html">Terms of Service</a></li>
+                            <li><a href="/pages/privacy.html">Privacy Policy</a></li>
+                            <li><a href="https://github.com/fctr-id/okta-ai-agent/blob/main/LICENSE" target="_blank" rel="noopener">License (MIT)</a></li>
                         </ul>
                     </div>
                 </div>
-                <!-- Divider and copyright -->
-                <div class="mt-10 border-t border-gray-200 pt-6 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-center text-sm text-gray-600 dark:text-gray-400">&copy; Fctr 2025. All rights reserved.</p>
-                    <div class="flex items-center gap-2">
-                        <span class="inline-flex items-center rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-400 dark:ring-blue-400/30">v1.5.0-beta</span>
+
+                <div class="footer__meta">
+                    <p>&copy; 2025 Fctr. All rights reserved.</p>
+                    <div class="footer__meta-links">
+                        <a href="/pages/terms.html">Terms</a>
+                        <a href="/pages/privacy.html">Privacy</a>
                     </div>
                 </div>
             </div>
