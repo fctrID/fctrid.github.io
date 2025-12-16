@@ -15,27 +15,15 @@
     </url>
 
 
-    <!-- Tako AI Agent -->
+    <!-- Features -->
     <url>
-        <loc>https://fctr.io/ai-agent.html</loc>
-        <lastmod>2024-12-12</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://fctr.io/features</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
-            <image:loc>https://fctr.io/images/ai_agent-og-image.png</image:loc>
-            <image:title>Tako AI Agent</image:title>
-        </image:image>
-    </url>
-
-    <!-- Tako MCP Server -->
-    <url>
-        <loc>https://fctr.io/okta-mcp-server.html</loc>
-        <lastmod>2024-12-12</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <image:image>
-            <image:loc>https://fctr.io/images/ai_agent-og-image.png</image:loc>
-            <image:title>Tako MCP Server</image:title>
+            <image:loc>https://fctr.io/images/screenshots/identity-verification.svg</image:loc>
+            <image:title>Identity Verification Screenshot</image:title>
         </image:image>
     </url>
     
