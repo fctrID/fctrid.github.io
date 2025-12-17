@@ -24,7 +24,7 @@
   <!-- ===================== -->
   <!-- WORDMARK: FCTR with LIGHTER COLOR for dark backgrounds -->
   <!-- ===================== -->
-  <g id="wordmark" fill="#cbd5e1">
+  <g id="wordmark" fill="#94a3b8">
     <!-- F - clean geometric -->
     <path d="M130 17 L170 17 L170 29 L145 29 L145 37 L165 37 L165 49 L145 49 L145 69 L130 69 Z"/>
     
