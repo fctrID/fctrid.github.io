@@ -148,10 +148,10 @@
       <script type="module" crossorigin src="./assets/ai_agent.61595a44.js"></script>
       <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill.c7c6310f.js">
       <link rel="modulepreload" crossorigin href="./assets/particle-network.51d826d7.js">
-      <link rel="stylesheet" href="./assets/particle-network.b6af6644.css">
-      <link rel="stylesheet" href="./assets/ai-agent.346b23bb.css">
+      <link rel="stylesheet" href="./assets/particle-network.56e84862.css">
+      <link rel="stylesheet" href="./assets/ai-agent.8bb5c9b9.css">
     </head>
-    <body data-theme="light" class="min-h-screen scroll-smooth selection:bg-primary/10 selection:text-primary">
+    <body data-theme="dark" style="background: linear-gradient(180deg, #374151 0%, #1f2937 50%, #111827 100%); background-attachment: fixed;">
         <!-- Navigation Section -->
         <header>
             <div class="wrap">
@@ -224,6 +224,37 @@
         </section>
 
         <main role="main">
+            <!-- Animated streak lines -->
+            <div class="hero-grid-container">
+                <!-- Vertical pulses (up/down) -->
+                <div class="hero-grid-pulse" aria-hidden="true"></div>
+                <div class="hero-grid-pulse pink" aria-hidden="true"></div>
+                <div class="hero-grid-pulse" aria-hidden="true"></div>
+                <div class="hero-grid-pulse pink" aria-hidden="true"></div>
+                <div class="hero-grid-pulse" aria-hidden="true"></div>
+                <div class="hero-grid-pulse pink" aria-hidden="true"></div>
+                <!-- Horizontal pulses (left/right) -->
+                <div class="hero-grid-pulse-h" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h pink" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h pink" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h pink" aria-hidden="true"></div>
+                <!-- More vertical pulses -->
+                <div class="hero-grid-pulse" aria-hidden="true"></div>
+                <div class="hero-grid-pulse pink" aria-hidden="true"></div>
+                <div class="hero-grid-pulse" aria-hidden="true"></div>
+                <div class="hero-grid-pulse pink" aria-hidden="true"></div>
+                <div class="hero-grid-pulse" aria-hidden="true"></div>
+                <div class="hero-grid-pulse pink" aria-hidden="true"></div>
+                <!-- More horizontal pulses -->
+                <div class="hero-grid-pulse-h" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h pink" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h pink" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h" aria-hidden="true"></div>
+                <div class="hero-grid-pulse-h pink" aria-hidden="true"></div>
+            </div>
             <!-- Hero Section with cosmic universe effect - lighter background to blend with rest of site -->
             <section id="home" class="theme-section theme-section--hero relative overflow-hidden pt-2 pb-20 md:pt-2 md:pb-24 lg:pt-6 lg:pb-28" role="banner">
                 <div class="hero-ambient" aria-hidden="true">
@@ -285,8 +316,8 @@
                         <span class="absolute -left-2.5 top-1 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 text-white shadow-md shadow-purple-500/25">
                             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                         </span>
-                        <p class="text-xs uppercase tracking-[0.15em] text-purple-800 dark:text-purple-400 font-semibold">ReAct Pattern + Small LLMs</p>
-                        <p class="text-base text-slate-700 dark:text-slate-300 mt-0.5">Works with Gemini Flash, Haiku & more</p>
+                        <p class="hero-feature__eyebrow">ReAct Pattern + Small LLMs</p>
+                        <p class="hero-feature__text">Works with Gemini Flash, Haiku & more</p>
                     </div>
 
                     <!-- Feature 2 -->
@@ -294,8 +325,8 @@
                         <span class="absolute -left-2.5 top-1 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-md shadow-blue-500/25">
                             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
                         </span>
-                        <p class="text-xs uppercase tracking-[0.15em] text-purple-800 dark:text-purple-400 font-semibold">Local Execution</p>
-                        <p class="text-base text-slate-700 dark:text-slate-300 mt-0.5">Docker deployment with any LLM</p>
+                        <p class="hero-feature__eyebrow">Local Execution</p>
+                        <p class="hero-feature__text">Docker deployment with any LLM</p>
                     </div>
 
                     <!-- Feature 3 -->
@@ -303,8 +334,8 @@
                         <span class="absolute -left-2.5 top-1 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-cyan-500 to-teal-500 text-white shadow-md shadow-cyan-500/25">
                             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
                         </span>
-                        <p class="text-xs uppercase tracking-[0.15em] text-purple-800 dark:text-purple-400 font-semibold">Full Okta API Coverage</p>
-                        <p class="text-base text-slate-700 dark:text-slate-300 mt-0.5">All GET endpoints (more coming soon)</p>
+                        <p class="hero-feature__eyebrow">Full Okta API Coverage</p>
+                        <p class="hero-feature__text">All GET endpoints (more coming soon)</p>
                     </div>
 
                     <!-- Feature 4 -->
@@ -312,8 +343,8 @@
                         <span class="absolute -left-2.5 top-1 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-emerald-500 to-lime-500 text-white shadow-md shadow-emerald-500/25">
                             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         </span>
-                        <p class="text-xs uppercase tracking-[0.15em] text-purple-800 dark:text-purple-400 font-semibold">CSV & Script Outputs</p>
-                        <p class="text-base text-slate-700 dark:text-slate-300 mt-0.5">Python scripts + CSV result exports</p>
+                        <p class="hero-feature__eyebrow">CSV & Script Outputs</p>
+                        <p class="hero-feature__text">Python scripts + CSV result exports</p>
                     </div>
                 </div>
 
@@ -587,7 +618,7 @@
                     <div class="reasoning-steps" data-aos="fade-up" data-aos-delay="80">
                         <article class="reasoning-step">
                             <span class="reasoning-step__badge">01</span>
-                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(37,99,235,0.1);color:#1d4ed8;margin-bottom:0.75rem;">Context</span>
+                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(129,140,248,0.15);color:#a5b4fc;margin-bottom:0.75rem;">Context</span>
                             <h3>Phase 1: Context Engineering</h3>
                             <p>Tako loads relevant Okta API documentation (107+ endpoints) and local schema before writing any code, eliminating parameter hallucinations entirely.</p>
                             <ul class="reasoning-step__list" style="margin-top:0.75rem;padding-left:1.25rem;list-style:disc;">
@@ -597,7 +628,7 @@
                         </article>
                         <article class="reasoning-step">
                             <span class="reasoning-step__badge">02</span>
-                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(37,99,235,0.1);color:#1d4ed8;margin-bottom:0.75rem;">Draft</span>
+                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(129,140,248,0.15);color:#a5b4fc;margin-bottom:0.75rem;">Draft</span>
                             <h3>Phase 2: The ReAct Loop</h3>
                             <p>Acting as a senior engineer, Tako drafts production-ready Python code and passes it through deterministic security validation to block unsafe operations before execution.</p>
                             <ul class="reasoning-step__list" style="margin-top:0.75rem;padding-left:1.25rem;list-style:disc;">
@@ -607,7 +638,7 @@
                         </article>
                         <article class="reasoning-step">
                             <span class="reasoning-step__badge">03</span>
-                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(14,165,233,0.15);color:#0369a1;margin-bottom:0.75rem;">Heal</span>
+                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(125,211,252,0.15);color:#7dd3fc;margin-bottom:0.75rem;">Heal</span>
                             <h3>Phase 3: Self-Healing Execution</h3>
                             <p>Scripts run in a secure sandbox. If an error occurs, Tako diagnoses the stack trace, rewrites the fix, and re-runs the code—all in milliseconds.</p>
                             <ul class="reasoning-step__list" style="margin-top:0.75rem;padding-left:1.25rem;list-style:disc;">
@@ -617,7 +648,7 @@
                         </article>
                         <article class="reasoning-step">
                             <span class="reasoning-step__badge">04</span>
-                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(34,197,94,0.15);color:#15803d;margin-bottom:0.75rem;">Result</span>
+                            <span class="reasoning-step__tag" style="display:inline-flex;align-items:center;padding:0.15rem 0.65rem;border-radius:9999px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;margin-bottom:0.75rem;">Result</span>
                             <h3>Phase 4: Hybrid Data Retrieval</h3>
                             <p>Tako intelligently merges instant local SQL cache results with fresh live API data, streaming a clean, structured JSON response to your dashboard.</p>
                             <ul class="reasoning-step__list" style="margin-top:0.75rem;padding-left:1.25rem;list-style:disc;">
