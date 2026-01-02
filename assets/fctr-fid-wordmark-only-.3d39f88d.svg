@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 44" xmlns="http://www.w3.org/2000/svg">
+  <!-- FCTR WORDMARK ONLY -->
+  <!-- Set fill="#0f172a" for Light Mode, fill="#ffffff" for Dark Mode -->
+  
+  <g fill="#0f172a">
+    <path d="M 0,0 H 36 V 10 H 13 V 16 H 32 V 26 H 13 V 40 H 0 V 0 Z" />
+    <path d="M 85.5,14 A 20,20 0 1 0 85.5,26 H 71.5 A 7,9 0 1 1 71.5,14 Z" />
+    <path d="M 94,0 H 134 V 10 H 120.5 V 40 H 107.5 V 10 H 94 V 0 Z" />
+    <path d="M 144,0 H 170 C 182,0 188,5 188,13 C 188,19 184,23 176,25 L 190,40 H 176 L 164,26 H 157 V 40 H 144 V 0 Z M 157,9 V 17 H 170 C 174,17 175,16 175,13.5 C 175,11 174,10 170,10 H 157 Z" />
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg viewBox="-1 -1 122 122" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+  <!-- 
+    FCTR IDENTITY - "THE TOKEN" (Production Master)
+    Usage: Favicon, App Icon.
+    
+    TECH NOTE: ViewBox includes 1px padding to prevent the 
+    bezel stroke from being clipped by the renderer.
+  -->
+
+  <defs>
+    <!-- PREMIUM SURFACE: Deep Tech Slate -->
+    <linearGradient id="boxSurface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#0f172a" />
+      <stop offset="100%" style="stop-color:#020617" />
+    </linearGradient>
+
+    <!-- GLASS BEZEL: High-precision edge -->
+    <linearGradient id="bezelTrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#ffffff; stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#000000; stop-opacity:0.3" />
+    </linearGradient>
+
+    <!-- RIDGE COLOR: Professional Identity Blue -->
+    <linearGradient id="ridgeColor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#38bdf8" />
+      <stop offset="100%" style="stop-color:#1e40af" />
+    </linearGradient>
+
+    <!-- ROBUST GLOW -->
+    <filter id="crispGlow" x="-200%" y="-200%" width="500%" height="500%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- 1. CONTAINER -->
+  <path d="M 0,60 C 0,10 10,0 60,0 C 110,0 120,10 120,60 C 120,110 110,120 60,120 C 10,120 0,110 0,60 Z" 
+        fill="url(#boxSurface)" />
+
+  <!-- 2. BEZEL -->
+  <path d="M 1,60 C 1,11 11,1 60,1 C 109,1 119,11 119,60 C 119,109 109,119 60,119 C 11,119 1,109 1,60 Z" 
+        fill="none" stroke="url(#bezelTrim)" stroke-width="1.2" />
+
+  <!-- 3. FINGERPRINT PATTERN -->
+  <g transform="translate(10, 10)" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Outer Ridge -->
+    <path d="M 14,98 V 44 A 36,36 0 0 1 86,44 V 58" 
+          stroke="url(#ridgeColor)" 
+          stroke-opacity="0.8" />
+    
+    <!-- Middle Ridge -->
+    <path d="M 22,92 V 44 A 24,24 0 0 1 78,44 V 66" 
+          stroke="url(#ridgeColor)" 
+          stroke-opacity="0.4" />
+             
+    <!-- Inner Ridge -->
+    <path d="M 38,44 A 12,12 0 0 1 62,44 V 74 A 12,12 0 0 1 38,74 V 70" 
+          stroke="url(#ridgeColor)" />
+    
+    <!-- Core Pill -->
+    <path d="M 50,52 V 66" stroke="#ffffff" stroke-width="7.5" />
+  </g>
+
+  <!-- 5. STATUS DOT -->
+  <circle cx="24" cy="108" r="2.8" fill="#00f5ff" />
+</svg>
