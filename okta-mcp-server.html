@@ -1,953 +1,842 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="./assets/favicon.6f583498.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.0d58dab0.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Tako MCP | Enterprise MCP Server for Okta | Fctr</title>
+    <meta name="description" content="The first production-ready Model Context Protocol (MCP) server for Okta. Query users, groups, and logs using Claude, Cursor, or VS Code." />
+    <link rel="canonical" href="https://fctr.io/okta-mcp-server.html" />
+    <meta name="keywords" content="Okta MCP, AI for Okta, Claude Desktop Okta, Okta Administration, Identity Automation, Model Context Protocol" />
 
-        <title>Tako MCP | MCP Server for Okta | Fctr</title>
-        <meta name="description" content="The first production-ready Model Context Protocol (MCP) server for Okta. Query users, groups, and logs using Claude, Cursor, or VS Code. Secure, read-only, and open source." />
-        <meta name="keywords" content="Okta MCP, AI for Okta, Claude Desktop Okta, Okta Administration, Identity Automation, Model Context Protocol" />
-        <meta name="author" content="Fctr Identity" />
-        <link rel="canonical" href="https://fctr.io/okta-mcp-server.html" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fctr.io/okta-mcp-server.html" />
+    <meta property="og:title" content="Tako MCP | Enterprise MCP Server for Okta" />
+    <meta property="og:description" content="Query Okta with natural language. Works with Claude Desktop, Cursor, VS Code." />
+    <meta property="og:image" content="https://fctr.io/images/mcp-og-image.png" />
+    <meta property="og:logo" content="https://fctr.io/images/logos/fctr-icon.png" />
+    <meta property="og:site_name" content="Fctr Identity" />
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://fctr.io/okta-mcp-server.html" />
-        <meta property="og:title" content="Tako MCP | MCP Server for Okta" />
-        <meta property="og:description" content="The first production-ready MCP server for Okta. Query users, groups, and logs using natural language." />
-        <meta property="og:image" content="https://fctr.io/images/mcp-og-image.png" />
-        <meta property="og:logo" content="https://fctr.io/images/logos/fctr-icon.png" />
-        <meta property="og:site_name" content="Fctr Identity" />
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Tako Okta MCP Server",
+            "applicationCategory": "SecurityApplication",
+            "operatingSystem": "Cross-platform",
+            "description": "Enterprise Model Context Protocol (MCP) server for Okta. Enables AI assistants to query identity data using natural language while maintaining security through a sandboxed environment.",
+            "featureList": [
+                "Model Context Protocol (MCP) Support",
+                "Deferred Tool Discovery",
+                "AST-Based Python Sandbox",
+                "Okta API Integration",
+                "OAuth2 & API Token Auth",
+                "CSV Export Architecture"
+            ],
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "category": "Open Source"
+            },
+            "url": "https://fctr.io/okta-mcp-server.html"
+        }
+    </script>
 
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://fctr.io/okta-mcp-server.html" />
-        <meta property="twitter:title" content="Tako MCP | MCP Server for Okta" />
-        <meta property="twitter:description" content="Query Okta with natural language. Works with Claude Desktop, Cursor, VS Code." />
-        <meta property="twitter:image" content="https://fctr.io/images/mcp-og-image.png" />
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
+  <script type="module" crossorigin src="./assets/modulepreload-polyfill.c7c6310f.js"></script>
+  <script type="module" crossorigin src="./assets/ai-dropdown.df15b6bc.js"></script>
+  <script type="module" crossorigin src="./assets/faqs.b7298285.js"></script>
+  <link rel="stylesheet" href="./assets/ai-dropdown.45ce96dd.css">
+  <link rel="stylesheet" href="./assets/okta-mcp-server.80cec6e2.css">
+</head>
+<body>
+    
+    <div class="portal-spotlight"></div>
+    <div class="ambient-aurora-container">
+        <div class="aurora-mist one"></div>
+        <div class="aurora-mist two"></div>
+        <div class="aurora-mist three"></div>
+    </div>
 
-        <meta name="robots" content="index, follow" />
-        <script defer data-domain="fctr.io" src="https://plausible.io/js/script.js"></script>
-        
-        
-        <!-- AOS Animation Library -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <script type="module" crossorigin src="./assets/faqs.6ac595e9.js"></script>
-      <script type="module" crossorigin src="./assets/particle-network.94bd753f.js"></script>
-      <link rel="stylesheet" href="./assets/particle-network.b5474b88.css">
-      <link rel="stylesheet" href="./assets/ai-agent.69e32814.css">
-    </head>
-    <body data-theme="dark" style="background: linear-gradient(180deg, #374151 0%, #1f2937 50%, #111827 100%); background-attachment: fixed;">
-        <!-- Navigation -->
-        <header>
-            <div class="wrap">
-                <div class="nav" id="navbar">
-                    <a class="brand" href="/index.html" aria-label="Fctr Home">
-                        <img src="./assets/fctr-fid-logo-wordmark-light-mode.0f478575.svg" alt="Fctr Logo" class="brand__logo brand__logo--light" />
-                        <img src="./assets/fctr-fid-logo-wordmark-dark-mode.8d707023.svg" alt="Fctr Logo" class="brand__logo brand__logo--dark" />
-                    </a>
-                    <div class="nav-menu" id="site-navigation" aria-hidden="false">
-                        <nav class="nav-links" aria-label="Primary">
-                            <a href="#features">Features</a>
-                            <a href="#clients">Integrations</a>
-                            <a href="#pricing">Pricing</a>
-                            <a href="#faq">FAQ</a>
-                            <a href="#get-started">Get Started</a>
-                        </nav>
-                    </div>
-                    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-navigation" aria-label="Toggle navigation">
-                        <span class="nav-toggle__icon" aria-hidden="true">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                        <span class="nav-toggle__label">Menu</span>
+    <header>
+        <div class="header-island">
+            <a class="brand" href="index.html">
+                <img src="./assets/fctr-fid-logo-wordmark-dark-mode.11ad21f4.svg" alt="Fctr Identity Portal Logo" />
+            </a>
+            
+            <nav class="header-nav" id="main-nav">
+                <a href="#capabilities" class="nav-link">Features</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#integrations" class="nav-link">Integrations</a>
+                <div class="nav-ai-dropdown">
+                    <button class="nav-ai-btn nav-link">
+                        AI Products
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </button>
+                    <div class="nav-ai-menu">
+                        <a href="ai-agent.html">Tako AI Agent</a>
+                        <a href="okta-mcp-server.html">Okta MCP Server</a>
+                    </div>
                 </div>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" class="btn-header-cta">GitHub</a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-toggle" aria-label="Toggle Navigation">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <main role="main">
-            <!-- Hero Section -->
-            <section id="home" class="theme-section theme-section--hero relative overflow-hidden pt-2 pb-20 md:pt-2 md:pb-24 lg:pt-6 lg:pb-28">
-                <div class="hero-ambient" aria-hidden="true">
-                    <span class="hero-ambient__blob hero-ambient__blob--one"></span>
-                    <span class="hero-ambient__blob hero-ambient__blob--two"></span>
-                    <span class="hero-ambient__blob hero-ambient__blob--three"></span>
-                </div>
-                <div class="hero-abstract" aria-hidden="true">
-                    <span class="hero-abstract__shape hero-abstract__shape--orb-secondary"></span>
-                    <span class="hero-abstract__accent hero-abstract__accent--one"></span>
-                    <span class="hero-abstract__accent hero-abstract__accent--two"></span>
-                </div>
-                <div class="section-shell">
-                    <div class="relative z-40">
-                        <!-- Breadcrumb -->
-                        <nav class="flex pt-4 pb-2" aria-label="Breadcrumb">
-                            <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                                <li class="inline-flex items-center">
-                                    <a href="/index.html" class="inline-flex items-center text-xs font-normal text-gray-500 hover:text-primary">
-                                        <svg class="w-3 h-3 mr-2.5" fill="currentColor" viewBox="0 0 20 20"><path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/></svg>
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="flex items-center">
-                                        <svg class="w-3 h-3 text-gray-400 mx-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                                        <span class="ml-1 text-xs font-normal text-gray-500">Tako MCP</span>
-                                    </div>
-                                </li>
-                            </ol>
-                        </nav>
+    <main>
+        <!-- High-Impact Tako MCP Hero -->
+        <section id="home">
+            <div class="wrap">
+                <div class="hero-vertical-stack">
+                    
+                    <!-- 1. The Authority Banner -->
+                    <div data-aos="fade-up">
+                        <div class="hero-release-chip" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(45, 212, 191, 0.05); border: 1px solid rgba(45, 212, 191, 0.2); border-radius: 4px; margin-bottom: 24px;">
+                            <span style="color: var(--accent-color); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;">v1.5.0-beta</span>
+                            <span style="color: var(--text-secondary); font-size: 0.85rem;">Enterprise MCP Server for Okta</span>
+                        </div>
+                        <h1 class="hero-main-banner">
+                            <span style="display: block; margin-bottom: 8px;"><span class="text-gradient-cyan" style="background: linear-gradient(135deg, #2dd4bf, #14b8a6, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">TAKO MCP</span></span>
+                            <span style="display: block; font-size: 0.55em; color: rgba(255,255,255,0.8); letter-spacing: normal; font-weight: 600;">Autonomous Identity Context for LLMs.</span>
+                        </h1>
+                    </div>
 
-                        <div class="hero-grid">
-                            <div class="hero-grid__main">
-                                <div class="flex flex-col gap-2 mb-4">
-                                    <a href="https://www.anthropic.com/engineering/code-execution-with-mcp" target="_blank" rel="noopener noreferrer" class="hero-release">
-                                        <span>Built on Anthropic's Code Execution MCP Pattern</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-
-                                <h1 class="hero-heading">
-                                    <span class="hero-heading__primary">Tako MCP</span>
-                                    <span class="hero-heading__secondary">Enterprise MCP Server for Okta</span>
-                                </h1>
-
-                                <p class="text-lg md:text-xl text-slate-700 mb-6 leading-relaxed text-center md:text-left">
-                                    Query users, groups, apps, and policies using natural language. Unlike typical MCP servers limited to 50 results, our server processes <strong>thousands of entities</strong> without filling your context window.
+                    <!-- 2. The Narrative & Metrics Split -->
+                    <div class="hero-split-grid">
+                        <div class="hero-left-column" data-aos="fade-up" data-aos-delay="100" style="gap: 24px;">
+                            <!-- Narrative Block -->
+                            <div class="hero-narrative-block">
+                                <p>
+                                    <em class="accent-text" style="display: block; margin-bottom: 8px; font-weight: 600;">Built on Anthropic's Code Execution Pattern</em>
+                                    Stop filling your context window with raw JSON. Tako MCP autonomously reasons through your Okta environment and executes server-side code to deliver only the results that matter.
                                 </p>
-
-                                <!-- Feature chips -->
-                                <div class="hero-chips">
-                                    <span class="hero-chip hero-chip--purple">
-                                        <svg class="hero-chip__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                        <span>Dual-Mode</span>
-                                    </span>
-                                    <span class="hero-chip hero-chip--blue">
-                                        <svg class="hero-chip__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
-                                        <span>STDIO & HTTP</span>
-                                    </span>
-                                    <span class="hero-chip hero-chip--pink">
-                                        <svg class="hero-chip__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                                        <span>Sandboxed</span>
-                                    </span>
-                                </div>
-
-                                <div class="hero-actions">
-                                    <div class="hero-actions__buttons">
-                                        <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener noreferrer" class="button button--primary relative group">
-                                            <span class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300" aria-hidden="true"></span>
-                                            <span class="relative flex items-center gap-2">
-                                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-                                                </svg>
-                                                <span>Get Started</span>
-                                            </span>
-                                        </a>
-
-                                        <a href="#get-started" class="button button--outline">
-                                            <span>Quick Start</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                    <span class="hero-action-note text-center">Works with Claude Desktop, Cursor, VS Code, Zed & more</span>
-                                </div>
-                            </div>
-
-                            <!-- Right column: Demo video -->
-                            <div class="hero-grid__aside" data-aos="fade-left" data-aos-delay="150">
-                                <div class="hero-demo">
-                                    <div class="hero-demo__badge">
-                                        <span class="hero-demo__badge-dot"></span>
-                                        <span>Demo</span>
-                                    </div>
-                                    <video class="hero-demo__video" controls muted playsinline loop>
-                                        <source src="./images/tako-mcp-server.mp4" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <div class="hero-demo__caption">
-                                        <div>
-                                            <p class="hero-demo__title">Tako MCP inside Claude Desktop</p>
-                                            <p class="hero-demo__text">Watch the agent request Okta data, generate code, and export results without leaving the IDE.</p>
+                                <ul class="mcp-feature-list">
+                                    <li class="mcp-feature-item">
+                                        <div class="mcp-icon-lit">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                        <div class="hero-demo__meta">
-                                            <span>1:04 runtime</span>
-                                            <span class="hero-demo__divider"></span>
-                                            <span>Agent + Basic MCP</span>
+                                        <span>Dual-Mode: STDIO & HTTP Transports</span>
+                                    </li>
+                                    <li class="mcp-feature-item">
+                                        <div class="mcp-icon-lit">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- How is this different Section -->
-            <section class="theme-section py-16 md:py-20 border-b border-gray-200/50">
-                <div class="section-shell">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <span class="hero-eyebrow mb-4">Architecture Upgrade</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Built on Anthropic's Code Execution Pattern</h2>
-                        <p class="text-lg text-slate-600 max-w-3xl mx-auto">Process your entire Okta tenant—every user, group, and log—without context restrictions. Uses <strong>deferred tool discovery</strong> (code execution with MCP) to save context by executing server-side code instead of streaming all tool data to the LLM.</p>
-                    </div>
-
-                    <!-- Architecture Comparison -->
-                    <div class="mb-12 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="50">
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <!-- Traditional Flow -->
-                            <div class="theme-card theme-card--plain overflow-hidden">
-                                <div class="px-6 py-4 border-b border-slate-200">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
-                                            <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                                        <span>90% Token Reduction via Code Execution</span>
+                                    </li>
+                                    <li class="mcp-feature-item">
+                                        <div class="mcp-icon-lit">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                        <div>
-                                            <p class="text-xs font-semibold text-red-500 uppercase tracking-wider">Traditional MCP</p>
-                                            <h3 class="text-lg font-bold text-slate-900">Raw data → LLM</h3>
+                                        <span>Zero Result Limits for Thousands of Entities</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 3. The Action Block -->
+                            <div id="hero-cta" class="hero-action-block" style="align-items: flex-start; margin-top: 8px;">
+                                <div class="hero-actions" style="display: flex; align-items: center; gap: 32px; width: 100%;">
+                                    <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" class="btn-command-submit" style="padding: 14px 32px; text-decoration: none; display: flex; align-items: center; justify-content: center; background: var(--accent-color);">
+                                        <span style="color: #030712;">Deploy from GitHub</span>
+                                    </a>
+                                    <a href="#architecture" class="oin-hero-card">
+                                        <div class="oin-card-content">
+                                            <span class="oin-card-value">Explore Architecture</span>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <ol class="architecture-list architecture-list--negative">
-                                        <li class="architecture-step">
-                                            <div class="architecture-step__badge">1</div>
-                                            <div class="architecture-step__body">
-                                                <p class="architecture-step__title">User asks "Find users without MFA"</p>
-                                                <p class="architecture-step__copy">Natural language flows straight into the server</p>
-                                            </div>
-                                        </li>
-                                        <li class="architecture-step">
-                                            <div class="architecture-step__badge">2</div>
-                                            <div class="architecture-step__body">
-                                                <p class="architecture-step__title">Server streams raw API payloads</p>
-                                                <p class="architecture-step__copy">5,000 users sent token-by-token into the LLM</p>
-                                            </div>
-                                        </li>
-                                        <li class="architecture-step">
-                                            <div class="architecture-step__badge">3</div>
-                                            <div class="architecture-step__body">
-                                                <p class="architecture-step__title">Context window blows up</p>
-                                                <p class="architecture-step__copy">LLM truncates at ~50 rows; answer is incomplete</p>
-                                            </div>
-                                        </li>
-                                    </ol>
-                                    <div class="architecture-alert architecture-alert--negative" role="status">
-                                        <span class="architecture-alert__icon" aria-hidden="true">💥</span>
-                                        <p class="architecture-alert__text">"Can't return full list. Try narrowing your query."</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Fctr Flow -->
-                            <div class="theme-card theme-card--plain overflow-hidden ring-2 ring-blue-200/60">
-                                <div class="px-6 py-4 border-b border-slate-200">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
-                                            <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                                        </div>
-                                        <div class="flex-1">
-                                            <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">Fctr's Approach</p>
-                                            <h3 class="text-lg font-bold text-slate-900">Sample → Code → Sandbox</h3>
-                                        </div>
-                                        <span class="hidden sm:inline-flex px-2.5 py-1 rounded-full bg-blue-100 text-[10px] font-bold text-blue-700 uppercase tracking-wide">Deferred Discovery</span>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <ol class="architecture-list architecture-list--positive">
-                                        <li class="architecture-step">
-                                            <div class="architecture-step__badge">1</div>
-                                            <div class="architecture-step__body">
-                                                <p class="architecture-step__title">Intent only, tiny payload</p>
-                                                <p class="architecture-step__copy">LLM gets question + tool metadata, not dataset</p>
-                                            </div>
-                                        </li>
-                                        <li class="architecture-step">
-                                            <div class="architecture-step__badge">2</div>
-                                            <div class="architecture-step__body">
-                                                <p class="architecture-step__title">3 sample rows only</p>
-                                                <p class="architecture-step__copy">Enough schema to reason; avoids token bloat</p>
-                                            </div>
-                                        </li>
-                                        <li class="architecture-step">
-                                            <div class="architecture-step__badge">3</div>
-                                            <div class="architecture-step__body">
-                                                <p class="architecture-step__title">LLM writes Python</p>
-                                                <p class="architecture-step__copy">AST sandbox whitelists safe functions</p>
-                                            </div>
-                                        </li>
-                                        <li class="architecture-step">
-                                            <div class="architecture-step__badge">4</div>
-                                            <div class="architecture-step__body">
-                                                <p class="architecture-step__title">Sandbox executes at full scale</p>
-                                                <p class="architecture-step__copy">5,000 users processed server-side → CSV</p>
-                                            </div>
-                                        </li>
-                                    </ol>
-                                    <div class="architecture-alert architecture-alert--positive" role="status">
-                                        <span class="architecture-alert__icon" aria-hidden="true">✓</span>
-                                        <p class="architecture-alert__text">"Found 142 users without MFA. Download: users_no_mfa.csv"</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Key Benefits Cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                        <div class="theme-card p-6 text-center">
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">90% Less Tokens</h4>
-                            <p class="text-sm text-slate-600">Only sample data + code goes to LLM, not raw API responses</p>
-                        </div>
-                        <div class="theme-card p-6 text-center">
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-100 to-violet-100 flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">No Result Limits</h4>
-                            <p class="text-sm text-slate-600">Query thousands of users, groups, or logs in a single request</p>
-                        </div>
-                        <div class="theme-card p-6 text-center">
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">Secure Sandbox</h4>
-                            <p class="text-sm text-slate-600">Generated code validated and executed in isolated environment</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Two Operating Modes Section -->
-            <section id="demo" class="theme-section theme-section--alt py-16 md:py-20">
-                <div class="section-shell">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <span class="hero-eyebrow mb-4">Two Powerful Modes</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 font-display">Choose how your AI interacts</h2>
-                        <p class="text-lg text-slate-600 mt-4 max-w-2xl mx-auto">Configure your server for direct tool access or autonomous agent workflows.</p>
-                    </div>
-                    
-                    <!-- Comparison Table -->
-                    <div class="theme-card overflow-hidden max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                        <!-- Table Header -->
-                        <div class="grid grid-cols-3">
-                            <div class="p-5 bg-slate-800/50"></div>
-                            <div class="p-5 text-center bg-gradient-to-b from-blue-900/20 to-slate-800/50 border-l border-slate-700">
-                                <div class="flex flex-col items-center gap-2">
-                                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-900/40 to-blue-800/20 flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-slate-100">Default MCP Mode</p>
-                                        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-900/30 text-blue-300">Default</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-5 text-center bg-gradient-to-b from-purple-900/20 to-slate-800/50 border-l border-slate-700">
-                                <div class="flex flex-col items-center gap-2">
-                                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-900/40 to-purple-800/20 flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-slate-100">Agent Mode</p>
-                                        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-purple-900/30 text-purple-300">Autonomous</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Table Rows -->
-                        <div class="grid grid-cols-3 border-t border-slate-700 hover:bg-slate-800/30 transition-colors">
-                            <div class="p-4 flex items-center justify-center">
-                                <span class="font-medium text-slate-300">Context Size</span>
-                            </div>
-                            <div class="p-4 text-center border-l border-slate-700 text-sm text-slate-400 flex items-center justify-center">Higher – all tools loaded</div>
-                            <div class="p-4 text-center border-l border-slate-700 text-sm flex items-center justify-center">
-                                <span class="inline-flex items-center gap-1 text-emerald-400 font-medium">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Lower – progressive
-                                </span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 border-t border-slate-700 hover:bg-slate-800/30 transition-colors">
-                            <div class="p-4 flex items-center justify-center">
-                                <span class="font-medium text-slate-300">Token Cost</span>
-                            </div>
-                            <div class="p-4 text-center border-l border-slate-700 text-sm text-slate-400 flex items-center justify-center">Higher initial cost</div>
-                            <div class="p-4 text-center border-l border-slate-700 text-sm flex items-center justify-center">
-                                <span class="inline-flex items-center gap-1 text-emerald-400 font-medium">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    Lower per query
-                                </span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 border-t border-slate-700 hover:bg-slate-800/30 transition-colors">
-                            <div class="p-4 flex items-center justify-center">
-                                <span class="font-medium text-slate-300">Data Fetching</span>
-                            </div>
-                            <div class="p-4 text-center border-l border-slate-700 text-sm text-slate-400 flex items-center justify-center">Sample data + metadata</div>
-                            <div class="p-4 text-center border-l border-slate-700 text-sm text-slate-400 flex items-center justify-center">Full results via code</div>
-                        </div>
-                        <div class="grid grid-cols-3 border-t border-slate-700 hover:bg-slate-800/30 transition-colors">
-                            <div class="p-4 flex items-center justify-center">
-                                <span class="font-medium text-slate-300">Available Tools</span>
-                            </div>
-                            <div class="p-4 text-center border-l border-slate-100 text-sm text-slate-600 flex items-center justify-center">20+ Okta tools</div>
-                            <div class="p-4 text-center border-l border-slate-100 text-sm text-slate-600 flex items-center justify-center">4 meta-tools</div>
-                        </div>
-                        <div class="grid grid-cols-3 border-t border-slate-100 hover:bg-slate-50/50 transition-colors">
-                            <div class="p-4 pb-6 flex items-center justify-center">
-                                <span class="font-medium text-slate-700">Best For</span>
-                            </div>
-                            <div class="p-4 pb-6 text-center border-l border-slate-100 text-sm text-slate-600 flex items-center justify-center">Claude, Cursor, VS Code</div>
-                            <div class="p-4 pb-6 text-center border-l border-slate-100 text-sm text-slate-600 flex items-center justify-center">LangGraph, LlamaIndex</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Clients Section -->
-            <section id="clients" class="theme-section py-16 md:py-20">
-                <div class="section-shell">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <span class="hero-eyebrow mb-4">Integrations</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 font-display">Works everywhere</h2>
-                        <p class="text-lg text-slate-600 mt-4">STDIO for desktop apps, HTTP for remote deployments</p>
-                    </div>
-                    
-                    <!-- Integration Category Cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <!-- Desktop & IDEs Card -->
-                        <div class="theme-card p-6" data-aos="fade-up" data-aos-delay="50">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-slate-900">Desktop & IDEs</h3>
-                                    <p class="text-xs text-blue-600 font-medium">STDIO Transport</p>
-                                </div>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-4">Native integration with popular AI coding assistants and desktop applications.</p>
-                            <div class="space-y-2">
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 1.5c-5.798 0-10.5 4.702-10.5 10.5s4.702 10.5 10.5 10.5 10.5-4.702 10.5-10.5-4.702-10.5-10.5-10.5zm4.95 14.55l-4.95-2.85-4.95 2.85 1.35-5.55-4.35-3.75 5.7-.45 2.25-5.25 2.25 5.25 5.7.45-4.35 3.75 1.35 5.55z"/></svg>
-                                    <span>Claude Desktop</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <svg class="w-4 h-4 text-slate-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                                    <span>Cursor</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="currentColor"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
-                                    <span>VS Code</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <svg class="w-4 h-4 text-cyan-600" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                                    <span>Zed, Windsurf & more</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Agent Frameworks Card -->
-                        <div class="theme-card p-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-slate-900">Agent Frameworks</h3>
-                                    <p class="text-xs text-purple-600 font-medium">Agent Mode / Deferred Discovery</p>
-                                </div>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-4">Build autonomous AI workflows with popular agent orchestration frameworks.</p>
-                            <div class="space-y-2">
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <span class="w-4 h-4 rounded bg-gradient-to-br from-purple-500 to-pink-500"></span>
-                                    <span>LangGraph</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <span class="w-4 h-4 rounded bg-gradient-to-br from-blue-500 to-cyan-500"></span>
-                                    <span>LlamaIndex</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <span class="w-4 h-4 rounded bg-gradient-to-br from-amber-500 to-orange-500"></span>
-                                    <span>Goose</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <span class="w-4 h-4 rounded bg-gradient-to-br from-indigo-500 to-violet-500"></span>
-                                    <span>Custom agents</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Enterprise Gateways Card -->
-                        <div class="theme-card p-6" data-aos="fade-up" data-aos-delay="150">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
-                                    <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold text-slate-900">Enterprise Gateways</h3>
-                                    <p class="text-xs text-emerald-600 font-medium">HTTP Transport</p>
-                                </div>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-4">Deploy remotely with enterprise MCP gateways for team-wide access.</p>
-                            <div class="space-y-2">
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <span class="w-4 h-4 rounded bg-gradient-to-br from-emerald-500 to-teal-500"></span>
-                                    <span>Obot.ai</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <span class="w-4 h-4 rounded bg-gradient-to-br from-slate-600 to-slate-800"></span>
-                                    <span>Smithery</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <span class="w-4 h-4 rounded bg-gradient-to-br from-red-500 to-rose-500"></span>
-                                    <span>Lasso Security</span>
-                                </div>
-                                <div class="flex items-center gap-2 text-sm text-slate-700">
-                                    <span class="w-4 h-4 rounded bg-gradient-to-br from-gray-500 to-gray-700"></span>
-                                    <span>Any HTTP client</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features Section -->
-            <section id="features" class="theme-section theme-section--alt py-16 md:py-20">
-                <div class="section-shell">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <span class="hero-eyebrow mb-4">Features</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 font-display">Built for the enterprise</h2>
-                        <p class="text-lg text-slate-600 mt-4">Production-ready MCP server with enterprise-grade security and flexibility</p>
-                    </div>
-                    
-                    <!-- Main Features Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-6xl mx-auto">
-                        <!-- Dual-Mode Operation -->
-                        <div class="theme-card p-6" data-aos="fade-up" data-aos-delay="0">
-                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">Dual-Mode Operation</h4>
-                            <p class="text-sm text-slate-600">Switch between standard MCP server mode for direct tool access or autonomous agent mode for complex workflows.</p>
-                        </div>
-                        
-                        <!-- Flexible Transports -->
-                        <div class="theme-card p-6" data-aos="fade-up" data-aos-delay="50">
-                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-100 to-cyan-50 flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">Flexible Transports</h4>
-                            <p class="text-sm text-slate-600">STDIO for desktop clients like Claude or Cursor, HTTP/SSE for remote deployments and web-based integrations.</p>
-                        </div>
-                        
-                        <!-- Enterprise Auth -->
-                        <div class="theme-card p-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-100 to-indigo-50 flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">Enterprise Auth</h4>
-                            <p class="text-sm text-slate-600">OAuth2 with Private Key JWT (RFC 7523) for production or simple API tokens for development environments.</p>
-                        </div>
-                        
-                        <!-- CSV Export -->
-                        <div class="theme-card p-6" data-aos="fade-up" data-aos-delay="150">
-                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">CSV Export</h4>
-                            <p class="text-sm text-slate-600">Save query results to files for reporting and analysis. Large datasets export automatically to reduce token costs.</p>
-                        </div>
-                    </div>
-
-                    <!-- Security & Standards -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-10 border-t border-gray-200/60 max-w-6xl mx-auto" data-aos="fade-up">
-                        <!-- Enterprise Security -->
-                        <div class="theme-card p-8">
-                            <div class="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4 mb-4">
-                                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-100 to-orange-50 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 mb-2 font-display">Enterprise Security</h3>
-                                    <p class="text-slate-600 mb-4">AST-based sandbox with multi-layer protection</p>
-                                    <ul class="space-y-2 text-sm text-slate-600 text-left">
-                                        <li class="flex items-start gap-2">
-                                            <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                            <span><strong>Pattern Blocking:</strong> Dangerous operations blocked at AST level</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                            <span><strong>Import Control:</strong> Pre-injected modules, no arbitrary imports</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                            <span><strong>Function Whitelist:</strong> Only safe built-in functions allowed</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                            <span><strong>HTTP Restriction:</strong> Read-only GET requests, data stays local</span>
-                                        </li>
-                                    </ul>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Open Source & Standards -->
-                        <div class="theme-card p-8">
-                            <div class="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4 mb-4">
-                                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-50 flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <!-- Spacer for 6-1-5 grid -->
+                        <div class="hero-spacer"></div>
+
+                        <div class="hero-right-column">
+                            <!-- Hero Demo Video -->
+                            <div class="hero-demo" data-aos="fade-left" data-aos-delay="300" style="background: rgba(10, 15, 20, 0.6); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                                <div class="hero-demo__badge" style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; background: rgba(45, 212, 191, 0.1); border: 1px solid rgba(45, 212, 191, 0.2); border-radius: 100px; margin-bottom: 12px;">
+                                    <span style="width: 8px; height: 8px; border-radius: 50%; background: #2dd4bf; box-shadow: 0 0 10px #2dd4bf;"></span>
+                                    <span style="font-family: var(--font-mono); font-size: 10px; color: var(--accent-color); font-weight: 700; letter-spacing: 0.05em;">LIVE_DEMO.MP4</span>
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 mb-2 font-display">Open Source & Standards Compliant</h3>
-                                    <p class="text-slate-600 mb-4">Built on proven standards and open-source principles</p>
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-700">
-                                            <span class="text-xl">🌟</span>
-                                            <span class="text-sm font-medium">Elastic License 2.0</span>
-                                        </div>
-                                        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-700">
-                                            <span class="text-xl">📐</span>
-                                            <span class="text-sm font-medium">MCP Specification</span>
-                                        </div>
-                                        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-700">
-                                            <span class="text-xl">🏗️</span>
-                                            <span class="text-sm font-medium">Production Ready</span>
-                                        </div>
-                                        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-700">
-                                            <span class="text-xl">🔐</span>
-                                            <span class="text-sm font-medium">OAuth2 RFC 7523</span>
-                                        </div>
-                                    </div>
+                                <video class="hero-demo__video" controls muted playsinline loop style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                                    <source src="./images/tako-mcp-server.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="hero-demo__caption" style="margin-top: 12px; padding: 0 8px;">
+                                    <p style="font-size: 13px; color: #fff; font-weight: 600; margin-bottom: 4px;">Tako MCP in Claude Desktop</p>
+                                    <p style="font-size: 12px; line-height: 1.4;">Watch the agent process thousands of users server-side without context window limitations.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Pricing Section -->
-            <section id="pricing">
-                <div class="wrap">
-                    <div class="section-heading" data-aos="fade-up">
-                        <span>Pricing</span>
-                        <h2>Simple, transparent pricing</h2>
-                        <p>Start free with full read access. Upgrade when you need write operations and enterprise controls.</p>
-                    </div>
-
-                    <div class="pricing-grid">
-                        <article class="pricing-card pricing-card--trial" data-aos="fade-up">
-                            <div class="pricing-card__header">
-                                <span class="pricing-card__badge">Open Source</span>
-                                <h3>Community</h3>
-                                <p>For individuals & small teams exploring Okta automation.</p>
-                            </div>
-                            <div class="pricing-card__price">
-                                <span class="pricing-card__value">$0</span>
-                                <div class="pricing-card__duration">
-                                    <span>Forever</span>
-                                    <span>Full read access</span>
-                                </div>
-                            </div>
-                            <ul class="pricing-card__features" role="list">
-                                <li>Full read access to Okta APIs</li>
-                                <li>Users, Groups, Apps, Policies, Logs</li>
-                                <li>Basic MCP & Agent Mode</li>
-                                <li>CSV export & OAuth2 auth</li>
-                                <li>STDIO & HTTP transports</li>
-                                <li>Docker & self-hosted</li>
-                                <li>Community support</li>
-                            </ul>
-                            <a class="pricing-card__cta button button--primary" href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener noreferrer">Get Started Free</a>
-                        </article>
-                        <article class="pricing-card pricing-card--highlight" data-aos="fade-up" data-aos-delay="120">
-                            <div class="pricing-card__header">
-                                <span class="pricing-card__badge">Coming Soon</span>
-                                <h3>Enterprise</h3>
-                                <p>For organizations at scale needing write operations and advanced controls.</p>
-                            </div>
-                            <ul class="pricing-card__features" role="list">
-                                <li>Everything in Community, plus:</li>
-                                <li>Write operations</li>
-                                <li>Multi-tenant support</li>
-                                <li>Role-based access control</li>
-                                <li>Approval workflows</li>
-                                <li>Custom tool builder</li>
-                                <li>SSO & audit log streaming</li>
-                                <li>Priority support & SLA</li>
-                            </ul>
-                            <a class="pricing-card__cta button button--primary" href="mailto:enterprise@fctr.io?subject=Enterprise%20Edition%20Inquiry">Contact Sales</a>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Quick Start Section -->
-            <section id="get-started" class="theme-section theme-section--alt py-16 md:py-20">
-                <div class="section-shell">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <span class="hero-eyebrow mb-4">Get Started</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 font-display">Ready in 5 minutes</h2>
-                        <p class="text-lg text-slate-600 mt-4 max-w-2xl mx-auto">Three simple steps to start querying Okta with natural language.</p>
-                    </div>
-                    
-                    <!-- Quick Start Cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <!-- Step 1: Clone -->
-                        <div class="theme-card p-6 relative" data-aos="fade-up" data-aos-delay="50">
-                            <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">1</div>
-                            <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 mt-2">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                            </div>
-                            <h3 class="font-bold text-slate-900 mb-2">Clone the Repository</h3>
-                            <p class="text-sm text-slate-600 mb-4">Download the source code from GitHub. Choose Docker for quick setup or Python for more control.</p>
-                            <div class="bg-slate-900 rounded-lg p-3 text-xs font-mono text-slate-300 overflow-x-auto">
-                                <code>git clone github.com/fctr-id/fctr-okta-mcp-server</code>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 2: Configure -->
-                        <div class="theme-card p-6 relative" data-aos="fade-up" data-aos-delay="100">
-                            <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">2</div>
-                            <div class="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center mb-4 mt-2">
-                                <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                            <h3 class="font-bold text-slate-900 mb-2">Add Okta Credentials</h3>
-                            <p class="text-sm text-slate-600 mb-4">Configure your Okta org URL and choose API Token for development or OAuth2 for production.</p>
-                            <div class="bg-slate-900 rounded-lg p-3 text-xs font-mono text-slate-300 overflow-x-auto">
-                                <code>OKTA_CLIENT_ORGURL=https://your-org.okta.com</code>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 3: Connect -->
-                        <div class="theme-card p-6 relative" data-aos="fade-up" data-aos-delay="150">
-                            <div class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-lime-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">3</div>
-                            <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mb-4 mt-2">
-                                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <h3 class="font-bold text-slate-900 mb-2">Connect & Query</h3>
-                            <p class="text-sm text-slate-600 mb-4">Add the MCP server to Claude Desktop, Cursor, or VS Code and start querying with natural language.</p>
-                            <div class="bg-slate-900 rounded-lg p-3 text-xs font-mono text-emerald-400 overflow-x-auto">
-                                <code>"Find all users without MFA" ✓</code>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center mt-10" data-aos="fade-up" data-aos-delay="200">
-                        <a href="https://github.com/fctr-id/fctr-okta-mcp-server#readme" target="_blank" rel="noopener noreferrer" class="button button--primary">
-                            <span>View Full Setup Guide</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section id="cta">
-                <div class="wrap">
-                    <div class="section-heading" data-aos="fade-up">
-                        <span>Get Started</span>
-                    </div>
-
-                    <div class="cta" data-aos="fade-up">
-                        <h3 class="cta__title">Start querying Okta with AI</h3>
-                        <p class="cta__description">Free, open source, self-hosted. Ready to run in 5 minutes.</p>
-
-                        <div class="cta__actions">
-                            <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener noreferrer" class="button button--primary">
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-                                </svg>
-                                <span>Get Started Free</span>
-                            </a>
-                            <a href="https://github.com/fctr-id/fctr-okta-mcp-server#readme" target="_blank" rel="noopener noreferrer" class="button button--outline">
-                                <span>Documentation</span>
-                            </a>
-                            <a href="mailto:enterprise@fctr.io" class="button button--outline">
-                                <span>Enterprise</span>
-                            </a>
-                        </div>
-
-                        <p class="cta__note">Prefer email? <a href="mailto:enterprise@fctr.io">enterprise@fctr.io</a></p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQ Section -->
-            <section id="faq" class="theme-section py-16 md:py-20">
-                <div class="section-shell">
-                    <div class="text-center mb-12" data-aos="fade-up">
-                        <span class="hero-eyebrow mb-4">FAQ</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-4 font-display">Frequently Asked Questions</h2>
-                    </div>
-                    <div class="space-y-3 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">Is this affiliated with Okta?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">No, this is an independent open-source project built by Fctr Identity. We are not affiliated with Okta, Inc.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">Is my Okta data safe?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">Yes. The server is read-only by default, runs in a sandboxed environment, and all code is validated before execution. Your credentials never leave your infrastructure.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">Which MCP clients are supported?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">Any MCP-compatible client: Claude Desktop, VS Code, Cursor, Zed, and agent frameworks like LangGraph and LlamaIndex.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">Can I self-host this?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">Absolutely. The community edition is fully self-hosted. Run it on your laptop, in Docker, or on your own servers.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">What Okta editions are supported?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">Works with all Okta editions: Workforce Identity, Customer Identity (Auth0), and free Developer accounts.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">What is MCP and how does Tako MCP Server work?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">Model Context Protocol (MCP) is an open standard that connects AI assistants to external tools and data sources. Tako MCP Server implements Anthropic's Code Execution with MCP pattern (deferred tool discovery), allowing your AI to discover Okta APIs progressively and generate Python code for querying your environment.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">What authentication methods are supported?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">Tako MCP Server supports both API Token (simple setup) and OAuth2 with Private Key JWT (recommended for production). OAuth2 provides scoped permissions and better security for enterprise deployments.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">Do I need Docker to run Tako MCP Server?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">No, Docker is optional. You can run Tako MCP Server locally with Python (we recommend uv for package management), but Docker provides the fastest setup without managing dependencies.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">What's the difference between Basic Mode and Agent Mode?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">Basic Mode exposes 20+ Okta tools directly to the AI, using more context upfront. Agent Mode (also called <strong>deferred tool discovery</strong>) uses 4 meta-tools for progressive discovery, saving tokens and enabling autonomous workflows. Agent Mode is ideal for complex queries and agent frameworks like LangGraph.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">How does Tako MCP Server handle rate limits?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">Tako MCP Server includes configurable concurrent request limits based on your Okta plan (Integrator, One App, Enterprise, or Workforce Identity). The server monitors rate limits and provides warnings if limits are exceeded.</div>
-                        </details>
-                        <details class="group border border-slate-200 rounded-xl bg-white hover:shadow-sm transition-shadow">
-                            <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
-                                <h4 class="font-medium text-slate-900">Can Tako MCP Server modify my Okta data?</h4>
-                                <svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </summary>
-                            <div class="px-5 pb-5 text-slate-600">The open-source community edition is read-only by design. Write operations, approval workflows, and role-based access control are available in the upcoming Enterprise Edition.</div>
-                        </details>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="wrap footer__content">
-                <div class="footer__grid">
-                    <div class="footer__brand">
-                    <a href="/index.html" class="footer__logo">
-                        <img src="./assets/fctr-fid-wordmark-only-.3d39f88d.svg" alt="Fctr" class="footer__logo-img footer__logo-img--light" />
-                        <img src="./assets/fctr-fid-wordmark-only-.3d39f88d.svg" alt="Fctr" class="footer__logo-img footer__logo-img--dark" />
-                    </a>                        <p class="footer__description">Open-source AI tools for modern identity management.</p>
-                        <a href="mailto:info@fctr.io" class="footer__contact">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <path d="M22 6l-10 7L2 6"></path>
-                            </svg>
-                            info@fctr.io
-                        </a>
-                    </div>
-
-                    <div class="footer__column">
-                        <h3 class="footer__heading">Product</h3>
-                        <ul class="footer__links">
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#demo">Demo</a></li>
-                            <li><a href="#use-cases">Use Cases</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__column">
-                        <h3 class="footer__heading">Resources</h3>
-                        <ul class="footer__links">
-                            <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" rel="noopener">GitHub Repository</a></li>
-                            <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server/blob/main/README.md" target="_blank" rel="noopener">Documentation</a></li>
-                            <li><a href="mailto:info@fctr.io">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__column">
-                        <h3 class="footer__heading">Legal</h3>
-                        <ul class="footer__links">
-                            <li><a href="/pages/terms.html">Terms of Service</a></li>
-                            <li><a href="/pages/privacy.html">Privacy Policy</a></li>
-                            <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server/blob/main/LICENSE" target="_blank" rel="noopener">License (Elastic 2.0)</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer__meta">
-                    <p>&copy; 2025 Fctr. All rights reserved.</p>
-                    <div class="footer__meta-links">
-                        <a href="/pages/terms.html">Terms</a>
-                        <a href="/pages/privacy.html">Privacy</a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
 
-        
-        
-        <!-- AOS Animation Library -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 600,
-                easing: 'ease-out-cubic',
-                once: true,
-                offset: 50
-            });
-        </script>
-    </body>
+        <!-- Architecture Section -->
+        <section id="architecture">
+            <div class="wrap">
+                <div class="section-header-schematic" data-aos="fade-up">
+                    <div class="section-header-grid">
+                        <div class="heading-area heading-glow">
+                            <span class="mono-tag">Core Logic</span>
+                            <h2>
+                                <span>Deferred Tool</span> <em class="accent-text">Discovery.</em>
+                            </h2>
+                        </div>
+                        <div class="spacer-area"></div>
+                        <div class="description-area">
+                            <p>Tako MCP executes server-side code instead of streaming raw tool data, preserving your context window for complex reasoning.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-grid-connected">
+                    <!-- Standard Flow - Medium Card -->
+                    <div class="bento-card-flat medium" data-aos="fade-up">
+                        <div class="item-meta" style="color: var(--danger-red) !important;">TRADITIONAL MCP</div>
+                        <h4><span>Raw Data</span> <em class="accent-text">to LLM</em></h4>
+                        <div class="architecture-box" style="margin-top: 24px;">
+                            <div style="display: flex; flex-direction: column; gap: 16px;">
+                                <div style="display: flex; gap: 12px;">
+                                    <div class="step-num" style="background: var(--danger-red); color: #fff;">1</div>
+                                    <p style="font-size: 13px;">User asks "Find users without MFA"</p>
+                                </div>
+                                <div style="display: flex; gap: 12px;">
+                                    <div class="step-num" style="background: var(--danger-red); color: #fff;">2</div>
+                                    <p style="font-size: 13px;">Server streams 5,000 users as raw JSON</p>
+                                </div>
+                                <div style="display: flex; gap: 12px; background: rgba(239, 68, 68, 0.1); padding: 8px; border-radius: 4px;">
+                                    <span style="font-size: 14px;">💥</span>
+                                    <p style="font-size: 12px; color: #fca5a5 !important;">Context window exceeded. Results truncated.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tako Flow - Medium Card -->
+                    <div class="bento-card-flat medium" data-aos="fade-up" data-aos-delay="100">
+                        <div class="item-meta">TAKO DEFERRED FLOW</div>
+                        <h4><span>Code</span> <em class="accent-text">to Sandbox</em></h4>
+                        <div class="architecture-box highlight" style="margin-top: 24px;">
+                            <div style="display: flex; flex-direction: column; gap: 16px;">
+                                <div style="display: flex; gap: 12px;">
+                                    <div class="step-num">1</div>
+                                    <p style="font-size: 13px;">LLM receives 3 sample rows + API schema</p>
+                                </div>
+                                <div style="display: flex; gap: 12px;">
+                                    <div class="step-num">2</div>
+                                    <div style="flex: 1;">
+                                        <p style="font-size: 13px;">LLM writes Python analysis script</p>
+                                        <p style="font-size: 11px; color: var(--accent-color); font-family: var(--font-mono);">[okta_audit.py]</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 12px; background: rgba(45, 212, 191, 0.1); padding: 8px; border-radius: 4px;">
+                                    <span style="font-size: 14px;">✓</span>
+                                    <p style="font-size: 12px; color: #bef264 !important;">Sandbox executes script. Returns 100% of data via CSV.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefits - Large Card -->
+                    <div class="bento-card-flat large" data-aos="fade-up">
+                        <h4>
+                            <span>Architectural</span> <em class="accent-text">Advantages</em>
+                        </h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px;">
+                            <div>
+                                <h5 style="color: var(--accent-color); font-size: 14px; margin-bottom: 8px;">90% LESS TOKENS</h5>
+                                <p style="font-size: 13px;">Only sample data and metadata go to the LLM, keeping costs low and speed high.</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--accent-color); font-size: 14px; margin-bottom: 8px;">NO RESULT LIMITS</h5>
+                                <p style="font-size: 13px;">Process 10,000+ entities without hitting token limits or truncation errors.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sandbox - Small Card -->
+                    <div class="bento-card-flat small" data-aos="fade-up" data-aos-delay="100">
+                        <h4>
+                            <span>Secure</span> <em class="accent-text">Sandbox</em>
+                        </h4>
+                        <p style="font-size: 13px;">Code execution is isolated in an AST-based sandbox. Read-only by design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operating Modes Section -->
+        <section id="modes">
+            <div class="wrap">
+                <div class="section-header-schematic" data-aos="fade-up">
+                    <div class="section-header-grid">
+                        <div class="heading-area heading-glow">
+                            <span class="mono-tag">Configuration</span>
+                            <h2>
+                                <span>Two Powerful</span> <em class="accent-text">Operating Modes.</em>
+                            </h2>
+                        </div>
+                        <div class="spacer-area"></div>
+                        <div class="description-area">
+                            <p>Choose the interaction pattern that fits your workflow—from standard tool access to fully autonomous agent logic.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-pillar-grid">
+                    <!-- Default MCP Mode -->
+                    <div class="bento-card-flat okta-pillar" data-aos="fade-up">
+                        <div class="idp-brand">
+                            <div class="idp-icon-mini okta">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            </div>
+                            <h3><span>Default</span> <em class="accent-text">MCP Mode</em></h3>
+                        </div>
+
+                        <div class="idp-mosaic">
+                            <div class="mosaic-item primary">
+                                <div class="item-meta">BEST FOR</div>
+                                <h4>Claude & Cursor</h4>
+                                <p>Direct tool access for standard IDE assistants.</p>
+                            </div>
+                            <div class="mosaic-item support">
+                                <div class="item-meta">CONTEXT</div>
+                                <h4>Full Toolset</h4>
+                                <p>All 20+ Okta tools loaded into context immediately.</p>
+                            </div>
+                            <div class="mosaic-item support">
+                                <div class="item-meta">DATA</div>
+                                <h4>Sample Arrays</h4>
+                                <p>Returns metadata and sample results directly to LLM.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agent Mode -->
+                    <div class="bento-card-flat entra-pillar" data-aos="fade-up" data-aos-delay="100">
+                        <div class="idp-brand">
+                            <div class="idp-icon-mini entra">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h3><span>Autonomous</span> <em class="accent-text">Agent Mode</em></h3>
+                        </div>
+                        
+                        <div class="idp-mosaic mirrored">
+                            <div class="mosaic-item support">
+                                <div class="item-meta">CONTEXT</div>
+                                <h4>Progressive</h4>
+                                <p>Lower initial tokens; tools discovered as needed.</p>
+                            </div>
+                            <div class="mosaic-item support">
+                                <div class="item-meta">DATA</div>
+                                <h4>Full Scale</h4>
+                                <p>Processes thousands of rows via server-side code.</p>
+                            </div>
+                            <div class="mosaic-item primary">
+                                <div class="item-meta">BEST FOR</div>
+                                <h4>Agent Frameworks</h4>
+                                <p>LangGraph, LlamaIndex, and complex autonomous loops.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrations Section -->
+        <section id="integrations">
+            <div class="wrap">
+                <div class="section-header-schematic" data-aos="fade-up">
+                    <div class="section-header-grid">
+                        <div class="heading-area heading-glow">
+                            <span class="mono-tag">Connectivity</span>
+                            <h2>
+                                <span>Works</span> <em class="accent-text">Everywhere.</em>
+                            </h2>
+                        </div>
+                        <div class="spacer-area"></div>
+                        <div class="description-area">
+                            <p>Native STDIO for local desktop environments and HTTP/SSE for remote enterprise deployments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-grid-connected">
+                    <!-- Desktop & IDEs -->
+                    <div class="bento-card-flat small" data-aos="fade-up">
+                        <div class="item-meta">STDIO TRANSPORT</div>
+                        <h4><span>Desktop</span> <em class="accent-text">& IDEs</em></h4>
+                        <p style="font-size: 13px; margin-top: 12px; line-height: 1.6;">Claude Desktop, Cursor AI, VS Code, Zed, and Windsurf.</p>
+                    </div>
+
+                    <!-- Agent Frameworks -->
+                    <div class="bento-card-flat small" data-aos="fade-up" data-aos-delay="100">
+                        <div class="item-meta">AGENT_ORCH</div>
+                        <h4><span>Agent</span> <em class="accent-text">Frameworks</em></h4>
+                        <p style="font-size: 13px; margin-top: 12px; line-height: 1.6;">LangGraph, LlamaIndex, Goose, and custom autonomous agents.</p>
+                    </div>
+
+                    <!-- Enterprise Gateways -->
+                    <div class="bento-card-flat small" data-aos="fade-up" data-aos-delay="200">
+                        <div class="item-meta">HTTP / SSE</div>
+                        <h4><span>Enterprise</span> <em class="accent-text">Gateways</em></h4>
+                        <p style="font-size: 13px; margin-top: 12px; line-height: 1.6;">Obot.ai, Smithery.ai, Lasso Security, and custom clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enterprise Capabilities & Security -->
+        <section id="capabilities">
+            <div class="wrap">
+                <div class="section-header-schematic" data-aos="fade-up">
+                    <div class="section-header-grid">
+                        <div class="heading-area heading-glow">
+                            <span class="mono-tag">Core Capabilities</span>
+                            <h2>
+                                <span>Built for the</span> <em class="accent-text">Enterprise.</em>
+                            </h2>
+                        </div>
+                        <div class="spacer-area"></div>
+                        <div class="description-area">
+                            <p>Production-ready MCP server with enterprise-grade security, flexible transport options, and deterministic execution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-grid-connected">
+                    <!-- Dual-Mode Operation -->
+                    <div class="bento-card-flat medium" data-aos="fade-up">
+                        <div class="item-meta">MODE_SWITCH</div>
+                        <h4><span>Dual-Mode</span> <em class="accent-text">Operation</em></h4>
+                        <p>Switch between standard MCP mode for direct tool access or autonomous agent mode for complex logic execution.</p>
+                    </div>
+                    
+                    <!-- Flexible Transports -->
+                    <div class="bento-card-flat medium" data-aos="fade-up" data-aos-delay="100">
+                        <div class="item-meta">NET_TRANSPORT</div>
+                        <h4><span>Flexible</span> <em class="accent-text">Transports</em></h4>
+                        <p>Native STDIO for desktop clients like Claude or Cursor, and HTTP/SSE for remote enterprise team deployments.</p>
+                    </div>
+                    
+                    <!-- Enterprise Auth -->
+                    <div class="bento-card-flat small" data-aos="fade-up">
+                        <div class="item-meta">SECURITY</div>
+                        <h4><span>Enterprise</span> <em class="accent-text">Auth</em></h4>
+                        <p style="font-size: 13px;">OAuth2 with Private Key JWT (RFC 7523) for production or simple API tokens for development.</p>
+                    </div>
+                    
+                    <!-- CSV Export -->
+                    <div class="bento-card-flat small" data-aos="fade-up" data-aos-delay="100">
+                        <div class="item-meta">DATA_IO</div>
+                        <h4><span>CSV</span> <em class="accent-text">Export</em></h4>
+                        <p style="font-size: 13px;">Automatic large-dataset export to files to reduce token costs and keep context windows clean.</p>
+                    </div>
+
+                    <!-- Open Standards -->
+                    <div class="bento-card-flat small" data-aos="fade-up" data-aos-delay="200">
+                        <div class="item-meta">COMPLIANCE</div>
+                        <h4><span>Open</span> <em class="accent-text">Standards</em></h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px;">
+                            <div style="font-size: 11px;">🌟 Elastic License 2.0</div>
+                            <div style="font-size: 11px;">📐 MCP Specification</div>
+                            <div style="font-size: 11px;">🏗️ Production Ready</div>
+                            <div style="font-size: 11px;">🔐 OAuth2 RFC 7523</div>
+                        </div>
+                    </div>
+
+                    <!-- Security Sandbox - Foundation Card -->
+                    <div class="bento-card-flat large" data-aos="fade-up" style="grid-column: span 6;">
+                        <div class="item-meta">CORE_PROTECTION</div>
+                        <h4><span>Enterprise Security</span> <em class="accent-text">Sandbox</em></h4>
+                        <p style="margin-bottom: 24px;">AST-based sandbox with multi-layer protection designed for safe code execution in production environments.</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+                            <div>
+                                <h5 style="color: var(--accent-color); font-size: 12px; letter-spacing: 0.1em; margin-bottom: 8px;">PATTERN BLOCKING</h5>
+                                <p style="font-size: 12px;">Dangerous operations and OS-level calls are blocked at the Abstract Syntax Tree level before execution.</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--accent-color); font-size: 12px; letter-spacing: 0.1em; margin-bottom: 8px;">IMPORT CONTROL</h5>
+                                <p style="font-size: 12px;">Pre-injected modules only. No arbitrary third-party imports or unauthorized library access allowed.</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--accent-color); font-size: 12px; letter-spacing: 0.1em; margin-bottom: 8px;">FUNCTION WHITELIST</h5>
+                                <p style="font-size: 12px;">Strict enforcement of safe, built-in functions. Isolated logic ensures zero data exfiltration.</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--accent-color); font-size: 12px; letter-spacing: 0.1em; margin-bottom: 8px;">HTTP RESTRICTION</h5>
+                                <p style="font-size: 12px;">Read-only GET request enforcement ensures your identity data is analyzed but never modified.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing">
+            <div class="wrap">
+                <div class="section-header-schematic" data-aos="fade-up">
+                    <div class="section-header-grid">
+                        <div class="heading-area heading-glow">
+                            <span class="mono-tag">Pricing</span>
+                            <h2>
+                                <span>Simple, transparent</span> <em class="accent-text">pricing.</em>
+                            </h2>
+                        </div>
+                        <div class="spacer-area"></div>
+                        <div class="description-area">
+                            <p>Start free with full read access. Upgrade when you need write operations and enterprise controls.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing-grid">
+                    <article class="pricing-card-schematic evaluation" data-aos="fade-up">
+                        <span class="tier-label tier-evaluation">Open Source</span>
+                        <div class="price">$0 <span class="price-unit">Forever</span></div>
+                        <p>For individuals & small teams exploring Okta automation.</p>
+                        <ul class="feature-list">
+                            <li><span>Full read access to Okta APIs</span></li>
+                            <li><span>Users, Groups, Apps, Policies, Logs</span></li>
+                            <li><span>Basic MCP & Agent Mode</span></li>
+                            <li><span>CSV export & OAuth2 auth</span></li>
+                        </ul>
+                        <a class="btn-pricing-schematic" href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank">Get Started Free</a>
+                    </article>
+                    <article class="pricing-card-schematic production featured-splash" data-aos="fade-up" data-aos-delay="120">
+                        <div class="corner-bracket top-left"></div>
+                        <div class="corner-bracket top-right"></div>
+                        <div class="corner-bracket bottom-left"></div>
+                        <div class="corner-bracket bottom-right"></div>
+                        <span class="tier-label tier-production">Enterprise</span>
+                        <div class="price">Custom <span class="price-unit">Coming Soon</span></div>
+                        <p>For organizations at scale needing write operations and advanced controls.</p>
+                        <ul class="feature-list">
+                            <li><span>Write operations & approvals</span></li>
+                            <li><span>Multi-tenant support & RBAC</span></li>
+                            <li><span>Custom tool builder</span></li>
+                            <li><span>SSO & audit log streaming</span></li>
+                            <li><span>Priority support & SLA</span></li>
+                        </ul>
+                        <a class="btn-pricing-schematic accent" href="mailto:enterprise@fctr.io">Contact Sales</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Onboarding Section -->
+        <section id="get-started">
+            <div class="wrap">
+                <div class="section-header-schematic" data-aos="fade-up">
+                    <div class="section-header-grid">
+                        <div class="heading-area heading-glow">
+                            <span class="mono-tag">Onboarding</span>
+                            <h2>
+                                <span>Ready in</span> <em class="accent-text">5 Minutes.</em>
+                            </h2>
+                        </div>
+                        <div class="spacer-area"></div>
+                        <div class="description-area">
+                            <p>Three simple steps to start querying Okta with natural language using Tako MCP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-grid-connected">
+                    <!-- Step 1 -->
+                    <div class="bento-card-flat small" data-aos="fade-up">
+                        <div class="item-meta">STEP_01</div>
+                        <h4><span>Clone</span> <em class="accent-text">Repository</em></h4>
+                        <p style="font-size: 13px; margin-bottom: 16px;">Download the source code. Use Docker for quick setup or Python for more control.</p>
+                        <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 4px; font-family: var(--font-mono); font-size: 10px; color: var(--accent-color); overflow-x: auto;">
+                            git clone github.com/fctr-id/fctr-okta-mcp-server
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bento-card-flat small" data-aos="fade-up" data-aos-delay="100">
+                        <div class="item-meta">STEP_02</div>
+                        <h4><span>Configure</span> <em class="accent-text">Access</em></h4>
+                        <p style="font-size: 13px; margin-bottom: 16px;">Add your Okta org URL and choose API Token or OAuth2 for authentication.</p>
+                        <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 4px; font-family: var(--font-mono); font-size: 10px; color: var(--accent-color); overflow-x: auto;">
+                            OKTA_CLIENT_ORGURL=https://your-org.okta.com
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bento-card-flat small" data-aos="fade-up" data-aos-delay="200">
+                        <div class="item-meta">STEP_03</div>
+                        <h4><span>Connect</span> <em class="accent-text">& Query</em></h4>
+                        <p style="font-size: 13px; margin-bottom: 16px;">Add the MCP server to Claude Desktop or Cursor and start querying.</p>
+                        <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 4px; font-family: var(--font-mono); font-size: 10px; color: #bef264; overflow-x: auto;">
+                            "Find all users without MFA" ✓
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="cta">
+            <div class="wrap">
+                <div class="section-header-schematic" data-aos="fade-up">
+                    <div class="section-header-grid">
+                        <div class="heading-area heading-glow">
+                            <span class="mono-tag">Get Started</span>
+                            <h2>
+                                <span>Start querying Okta</span> <em class="accent-text">with AI.</em>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-metric-container" data-aos="fade-up">
+                    <div class="corner-bracket top-left"></div>
+                    <div class="corner-bracket top-right"></div>
+                    <div class="corner-bracket bottom-left"></div>
+                    <div class="corner-bracket bottom-right"></div>
+
+                    <div class="cta-grid">
+                        <div class="cta-content">
+                            <h2>Free, open source, <em class="accent-text">self-hosted.</em></h2>
+                            <p>Deploy in 5 minutes and eliminate the context window limits of traditional MCP servers.</p>
+                        </div>
+                        <div class="cta-action-box">
+                            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                                <a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank" class="btn-command-submit" style="padding: 12px 24px; text-decoration: none; background: var(--accent-color); color: #030712;">
+                                    <span>Get Started Free</span>
+                                </a>
+                                <a href="https://github.com/fctr-id/fctr-okta-mcp-server#readme" target="_blank" class="btn-command-submit" style="padding: 12px 24px; text-decoration: none; background: transparent; border: 1px solid var(--accent-color);">
+                                    <span>Documentation</span>
+                                </a>
+                            </div>
+                            <p class="cta-subnote">MIT Licensed · Production Ready · Community Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="wrap">
+                <div class="section-header-schematic" data-aos="fade-up">
+                    <div class="section-header-grid">
+                        <div class="heading-area heading-glow">
+                            <span class="mono-tag">FAQ</span>
+                            <h2>
+                                <span>Commonly asked</span> <em class="accent-text">questions.</em>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-schematic-container" data-aos="fade-up">
+                    <div class="faq-grid">
+                        <!-- Q1 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_01]</div>
+                                <span class="faq-question">Is this affiliated with Okta?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>No, this is an independent open-source project built by Fctr Identity. We are not affiliated with Okta, Inc.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q2 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_02]</div>
+                                <span class="faq-question">Is my Okta data safe?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>Yes. The server is read-only by default, runs in a sandboxed environment, and all code is validated before execution. Your credentials never leave your infrastructure.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q3 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_03]</div>
+                                <span class="faq-question">Which MCP clients are supported?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>Any MCP-compatible client: Claude Desktop, VS Code, Cursor, Zed, and agent frameworks like LangGraph and LlamaIndex.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q4 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_04]</div>
+                                <span class="faq-question">Can I self-host this?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>Absolutely. The community edition is fully self-hosted. Run it on your laptop, in Docker, or on your own servers.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q5 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_05]</div>
+                                <span class="faq-question">What Okta editions are supported?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>Works with all Okta editions: Workforce Identity, Customer Identity (Auth0), and free Developer accounts.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q6 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_06]</div>
+                                <span class="faq-question">What is MCP and how does Tako MCP Server work?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>Model Context Protocol (MCP) is an open standard that connects AI assistants to external tools and data sources. Tako MCP Server implements Anthropic's Code Execution with MCP pattern (deferred tool discovery), allowing your AI to discover Okta APIs progressively and generate Python code for querying your environment.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q7 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_07]</div>
+                                <span class="faq-question">What authentication methods are supported?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>Tako MCP Server supports both API Token (simple setup) and OAuth2 with Private Key JWT (recommended for production). OAuth2 provides scoped permissions and better security for enterprise deployments.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q8 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_08]</div>
+                                <span class="faq-question">Do I need Docker to run Tako MCP Server?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>No, Docker is optional. You can run Tako MCP Server locally with Python (we recommend uv for package management), but Docker provides the fastest setup without managing dependencies.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q9 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_09]</div>
+                                <span class="faq-question">What's the difference between Basic Mode and Agent Mode?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>Basic Mode exposes 20+ Okta tools directly to the AI, using more context upfront. Agent Mode (also called deferred tool discovery) uses  meta-tools for progressive discovery, saving tokens and enabling autonomous workflows. Agent Mode is ideal for complex queries and agent frameworks like LangGraph.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q10 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_10]</div>
+                                <span class="faq-question">How does Tako MCP Server handle rate limits?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>Tako MCP Server includes configurable concurrent request limits based on your Okta plan (Integrator, One App, Enterprise, or Workforce Identity). The server monitors rate limits and provides warnings if limits are exceeded.</p></div>
+                            </div>
+                        </div>
+                        <!-- Q11 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <div class="faq-hud-id">[Q_11]</div>
+                                <span class="faq-question">Can Tako MCP Server modify my Okta data?</span>
+                                <div class="faq-plus-icon"></div>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-content"><p>The open-source community edition is read-only by design. Write operations, approval workflows, and role-based access control are available in the upcoming Enterprise Edition.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <div class="footer-grid-4">
+                <!-- Column 1: Brand & Desc -->
+                <div class="footer-col brand-col">
+                    <img src="./assets/fctr-fid-wordmark-only-.3d39f88d.svg" alt="Fctr Wordmark" class="footer-logo">
+                    <p class="footer-description">
+                        Open-source MCP server for Okta. Scale your AI's context with deferred tool discovery.
+                    </p>
+                    <div class="footer-contact-info">
+                        <a href="mailto:info@fctr.io" class="footer-email-link">info@fctr.io</a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Product -->
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#home">Tako MCP</a></li>
+                        <li><a href="#capabilities">Capabilities</a></li>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-nav">
+                        <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server" target="_blank">GitHub</a></li>
+                        <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server#readme" target="_blank">Documentation</a></li>
+                        <li><a href="ai-agent.html">Tako AI Agent</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Legal -->
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-nav">
+                        <li><a href="/pages/terms.html">Terms of Service</a></li>
+                        <li><a href="/pages/privacy.html">Privacy Policy</a></li>
+                        <li><a href="https://github.com/fctr-id/fctr-okta-mcp-server/blob/main/LICENSE" target="_blank">License</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-schematic">
+                <div class="copyright">&copy; 2026 Fctr Identity Portal. All Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
+    
+    
+</body>
 </html>
-

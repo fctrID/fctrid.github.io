@@ -1,0 +1,39 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+  <!-- FCTR 2026 - PREMIUM DARK FAVICON -->
+  <defs>
+    <!-- Standard Ridge Gradient -->
+    <linearGradient id="FavFlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#22d3ee" />
+      <stop offset="100%" style="stop-color:#007DC1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. BACKGROUND: Brand Dark Navy Squircle -->
+  <!-- rx="24" provides that modern, premium "App Icon" look -->
+  <rect width="100" height="100" rx="24" fill="#0C0D1F" />
+
+  <!-- 2. SIMPLIFIED ICON: Optimized for Visibility -->
+  <!-- 
+    Padding: 18% (Scale 0.64) 
+    This ensures the icon doesn't touch the edges, keeping it "Jewel-like" 
+  -->
+  <g transform="translate(50, 52) scale(0.64) translate(-50, -53)">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      
+      <!-- Outer Ridge (Thickened for micro-scale) -->
+      <path d="M 12,98 V 44 A 38,36 0 0 1 88,44 V 60" 
+            stroke="url(#FavFlow)" 
+            stroke-width="15" />
+      
+      <!-- Inner Ridge -->
+      <path d="M 38,44 A 12,12 0 0 1 62,44 V 74 A 12,12 0 0 1 38,74 V 70" 
+            stroke="#22d3ee" 
+            stroke-width="10" />
+      
+      <!-- Central Pill (Pure White for maximum contrast on dark) -->
+      <path d="M 50,52 V 66" 
+            stroke="#ffffff" 
+            stroke-width="8" />
+    </g>
+  </g>
+</svg>
