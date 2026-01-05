@@ -1,21 +1,22 @@
 <svg viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-  <!-- FCTR 2026 - HORIZONTAL WORDMARK - WIDE PROPORTIONS + SHADOW RIDGE -->
-  
-  <!-- 1. ICON 
-       Widened from 76 to 84 units for stability. 
-       Glow filters removed. Shadow ridge (0.3 opacity) retained.
+  <!-- FCTR 2026 - HEADER WORDMARK [TITANIUM EDITION]
+       - Transparent background for Navigation Bars
+       - Colors synced to #f8fafc (Near-White)
+       - Wide proportions / No status dot
   -->
+  
+  <!-- 1. ICON (Left Aligned) -->
   <g transform="translate(14, 6) scale(0.62)">
-    <g fill="none" stroke="#dbdbdb" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke="#f8fafc" stroke-linecap="round" stroke-linejoin="round">
       
       <!-- OUTER RIDGE -->
       <path d="M 8,95 V 42 A 42,38 0 0 1 92,42 V 58" 
             stroke-width="11" />
       
-      <!-- THE SHADOW RIDGE (Kept as requested) -->
+      <!-- THE SHADOW RIDGE (Architectural Reflection) -->
       <path d="M 18,90 V 42 A 32,28 0 0 1 82,42 V 66" 
             stroke-width="10"
-            stroke-opacity="0.3" />
+            stroke-opacity="0.15" />
                
       <!-- INNER RIDGE -->
       <path d="M 35,44 A 15,13 0 0 1 65,44 V 74 A 15,13 0 0 1 35,74 V 70" 
@@ -24,15 +25,11 @@
       <!-- THE CENTRAL PILL -->
       <path d="M 50,52 V 66" stroke-width="10" />
     </g>
-
-    <!-- PRECISION STATUS DOT -->
-    <circle cx="8" cy="92" r="3.5" fill="#dbdbdb" />
+    <!-- DOT REMOVED for brand consistency -->
   </g>
 
-  <!-- 2. WORDMARK 
-       Adjusted spacing to 110 to accommodate the wider icon.
-  -->
-  <g transform="translate(110, 21) scale(0.95)" fill="#dbdbdb">
+  <!-- 2. WORDMARK (Right Aligned) -->
+  <g transform="translate(110, 21) scale(0.95)" fill="#f8fafc">
     <path d="M 0,0 H 36 V 10 H 13 V 16 H 32 V 26 H 13 V 40 H 0 V 0 Z" />
     <path d="M 85.5,14 A 20,20 0 1 0 85.5,26 H 71.5 A 7,9 0 1 1 71.5,14 Z" />
     <path d="M 94,0 H 134 V 10 H 120.5 V 40 H 107.5 V 10 H 94 V 0 Z" />
