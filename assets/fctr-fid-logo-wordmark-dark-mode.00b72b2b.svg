@@ -1,0 +1,41 @@
+<svg viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+  <!-- FCTR 2026 - HORIZONTAL WORDMARK - WIDE PROPORTIONS + SHADOW RIDGE -->
+  
+  <!-- 1. ICON 
+       Widened from 76 to 84 units for stability. 
+       Glow filters removed. Shadow ridge (0.3 opacity) retained.
+  -->
+  <g transform="translate(14, 6) scale(0.62)">
+    <g fill="none" stroke="#dbdbdb" stroke-linecap="round" stroke-linejoin="round">
+      
+      <!-- OUTER RIDGE -->
+      <path d="M 8,95 V 42 A 42,38 0 0 1 92,42 V 58" 
+            stroke-width="11" />
+      
+      <!-- THE SHADOW RIDGE (Kept as requested) -->
+      <path d="M 18,90 V 42 A 32,28 0 0 1 82,42 V 66" 
+            stroke-width="10"
+            stroke-opacity="0.3" />
+               
+      <!-- INNER RIDGE -->
+      <path d="M 35,44 A 15,13 0 0 1 65,44 V 74 A 15,13 0 0 1 35,74 V 70" 
+            stroke-width="10" />
+      
+      <!-- THE CENTRAL PILL -->
+      <path d="M 50,52 V 66" stroke-width="10" />
+    </g>
+
+    <!-- PRECISION STATUS DOT -->
+    <circle cx="8" cy="92" r="3.5" fill="#dbdbdb" />
+  </g>
+
+  <!-- 2. WORDMARK 
+       Adjusted spacing to 110 to accommodate the wider icon.
+  -->
+  <g transform="translate(110, 21) scale(0.95)" fill="#dbdbdb">
+    <path d="M 0,0 H 36 V 10 H 13 V 16 H 32 V 26 H 13 V 40 H 0 V 0 Z" />
+    <path d="M 85.5,14 A 20,20 0 1 0 85.5,26 H 71.5 A 7,9 0 1 1 71.5,14 Z" />
+    <path d="M 94,0 H 134 V 10 H 120.5 V 40 H 107.5 V 10 H 94 V 0 Z" />
+    <path d="M 144,0 H 170 C 182,0 188,5 188,13 C 188,19 184,23 176,25 L 190,40 H 176 L 164,26 H 157 V 40 H 144 V 0 Z M 157,9 V 17 H 170 C 174,17 175,16 175,13.5 C 175,11 174,10 170,10 H 157 Z" />
+  </g>
+</svg>

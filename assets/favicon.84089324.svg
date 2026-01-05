@@ -1,0 +1,29 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+  <!-- FCTR 2026 - FAVICON OPTIMIZED (NO SHADOW / HIGH CONTRAST) -->
+  
+  <!-- 1. BACKGROUND LAYER -->
+  <rect width="256" height="256" fill="#0C0D1F" />
+
+  <!-- 2. THE CENTERED ICON 
+       - Scale increased to 2.1 to fill the favicon frame
+       - Stroke weights increased for small-scale legibility
+  -->
+  <g transform="translate(128, 128) scale(2.1) translate(-50, -52)">
+    <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+      
+      <!-- OUTER RIDGE (Thickened to 14 for visibility) -->
+      <path d="M 8,95 V 42 A 42,38 0 0 1 92,42 V 58" 
+            stroke-width="14" />
+               
+      <!-- INNER RIDGE (Thickened to 12) -->
+      <path d="M 35,44 A 15,13 0 0 1 65,44 V 74 A 15,13 0 0 1 35,74 V 70" 
+            stroke-width="12" />
+      
+      <!-- THE CENTRAL PILL -->
+      <path d="M 50,52 V 66" stroke-width="12" />
+    </g>
+
+    <!-- PRECISION STATUS DOT (Enlarged to r=5 for favicon visibility) -->
+    <circle cx="8" cy="92" r="5" fill="#FFFFFF" />
+  </g>
+</svg>
