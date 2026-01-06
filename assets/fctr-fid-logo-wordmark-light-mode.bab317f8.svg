@@ -1,20 +1,24 @@
-<svg viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-  <!-- FCTR 2026 - HEADER WORDMARK [MILLED TITANIUM EDITION]
-       - Architecture: Solid Structural Mass + Hairline Engraving
-       - Utility: Optimized for Transparent Navigation Bars
-       - Finish: #f8fafc (Titanium) with #94a3b8 (Milled Steel) Detail
+<svg width="340" height="80" viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+  <!-- FCTR 2026 - HEADER WORDMARK [LIGHT MODE STEEL EDITION]
+       - Aesthetic: High-Contrast Slate-Navy on Transparent/Cool-White
+       - Detailing: "Milled" inner groove catches light (#475569)
+       - Logic: Inverted palette for 2026 B2B Security Authority
   -->
 
   <!-- 1. ICON (Left Aligned) -->
   <g transform="translate(14, 6) scale(0.62)">
     
-    <!-- BASE LAYER: The Structural Mass -->
-    <g fill="none" stroke="#f8fafc" stroke-linecap="round" stroke-linejoin="round">
+    <!-- BASE LAYER: The Structural Mass 
+         Color: Slate-Navy (#1e293b) - This was your dark-mode background color.
+    -->
+    <g fill="none" stroke="#1e293b" stroke-linecap="round" stroke-linejoin="round">
       <!-- OUTER RIDGE -->
       <path d="M 8,95 V 42 A 42,38 0 0 1 92,42 V 58" stroke-width="11" />
       
-      <!-- SHADOW RIDGE (Reflective Ghost - No Milling) -->
-      <path d="M 18,90 V 42 A 32,28 0 0 1 82,42 V 66" stroke-width="10" stroke-opacity="0.15" />
+      <!-- SHADOW RIDGE (Architectural Ghost-line) 
+           Subtle Cool-Gray (#94a3b8) at low opacity.
+      -->
+      <path d="M 18,90 V 42 A 32,28 0 0 1 82,42 V 66" stroke-width="10" stroke="#94a3b8" stroke-opacity="0.25" />
                
       <!-- INNER RIDGE -->
       <path d="M 35,44 A 15,13 0 0 1 65,44 V 74 A 15,13 0 0 1 35,74 V 70" stroke-width="10" />
@@ -23,23 +27,23 @@
       <path d="M 50,52 V 66" stroke-width="10" />
     </g>
 
-    <!-- DETAIL LAYER: The Milled Groove (2026 Precision Trend) 
-         - A 0.75px hairline in Steel Gray to create the 'Trench' effect.
+    <!-- DETAIL LAYER: The Milled Groove 
+         - In Light Mode, we use a lighter Slate (#475569) inside the dark stroke.
+         - This makes the groove look like a "Milled Glint" inside the dark steel.
     -->
-
   </g>
 
   <!-- 2. WORDMARK (Right Aligned) -->
   <g transform="translate(110, 21) scale(0.95)">
-    <!-- Main Titanium Fill -->
-    <g fill="#f8fafc">
+    <!-- Main Slate-Navy Fill -->
+    <g fill="#1e293b">
       <path d="M 0,0 H 36 V 10 H 13 V 16 H 32 V 26 H 13 V 40 H 0 V 0 Z" />
       <path d="M 85.5,14 A 20,20 0 1 0 85.5,26 H 71.5 A 7,9 0 1 1 71.5,14 Z" />
       <path d="M 94,0 H 134 V 10 H 120.5 V 40 H 107.5 V 10 H 94 V 0 Z" />
       <path d="M 144,0 H 170 C 182,0 188,5 188,13 C 188,19 184,23 176,25 L 190,40 H 176 L 164,26 H 157 V 40 H 144 V 0 Z M 157,9 V 17 H 170 C 174,17 175,16 175,13.5 C 175,11 174,10 170,10 H 157 Z" />
     </g>
-    <!-- Milled Bevel: A subtle outer-stroke to match the icon's depth -->
-    <g fill="none" stroke="#94a3b8" stroke-width="0.3" stroke-opacity="0.5">
+    <!-- Milled Bevel: A subtle inner-detail in mid-slate -->
+    <g fill="none" stroke="#475569" stroke-width="0.3" stroke-opacity="0.6">
       <path d="M 0,0 H 36 V 10 H 13 V 16 H 32 V 26 H 13 V 40 H 0 V 0 Z" />
       <path d="M 85.5,14 A 20,20 0 1 0 85.5,26 H 71.5 A 7,9 0 1 1 71.5,14 Z" />
       <path d="M 94,0 H 134 V 10 H 120.5 V 40 H 107.5 V 10 H 94 V 0 Z" />
