@@ -39,7 +39,7 @@
             "featureList": [
                 "Natural Language Processing",
                 "ReAct Pattern Architecture", 
-                "Context Engineering",
+                "Dynamic Context Engineering",
                 "Local LLM Support",
                 "Self-Healing Code",
                 "Enterprise Security & Sandboxing"
@@ -105,10 +105,10 @@
             transition: all 0.3s ease;
         }
     </style>
-  <script type="module" crossorigin src="./assets/ai_agent.2d24acaa.js"></script>
+  <script type="module" crossorigin src="./assets/ai_agent.0df1bac4.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill.c7c6310f.js">
   <link rel="modulepreload" crossorigin href="./assets/ai-dropdown.8941eb75.js">
-  <link rel="stylesheet" href="./assets/ai-dropdown.c32c1b84.css">
+  <link rel="stylesheet" href="./assets/ai-dropdown.bbfd2b64.css">
   <link rel="stylesheet" href="./assets/ai-agent.1431bbf5.css">
 </head>
 <body>
@@ -143,7 +143,13 @@
             </nav>
 
             <div class="header-actions">
-                <a href="https://github.com/fctr-id/okta-ai-agent" target="_blank" class="btn-header-cta">GitHub</a>
+                <a href="https://github.com/fctr-id/okta-ai-agent" target="_blank" class="btn-header-cta" style="display: flex; align-items: center; gap: 10px; padding: 8px 16px;">
+                    <span>GitHub</span>
+                    <span style="display: flex; align-items: center; gap: 4px; background: #030712; padding: 2px 8px; border-radius: 100px; border: 1px solid rgba(251, 191, 36, 0.3); font-size: 11px; font-weight: 700; color: #fff; box-shadow: 0 0 10px rgba(251, 191, 36, 0.1);">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <span id="github-star-count">...</span>
+                    </span>
+                </a>
                 
                 <!-- Mobile Menu Toggle -->
                 <button id="menu-toggle" aria-label="Toggle Navigation">
@@ -184,7 +190,7 @@
                                         <div class="feature-icon-lit">
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                        <span>Self-Healing ReAct Engine</span>
+                                        <span>Based on ReAct agentic pattern</span>
                                     </li>
                                     <li class="hero-feature-item">
                                         <div class="feature-icon-lit">
@@ -424,7 +430,7 @@
                 <div class="bento-grid-connected">
                     <div class="bento-card-flat medium" data-aos="fade-up">
                         <div class="item-meta">PHASE 01</div>
-                        <h4><span>Context</span> <em class="accent-text">Engineering</em></h4>
+                        <h4><span>Dynamic Context</span> <em class="accent-text">Engineering</em></h4>
                         <p>Tako loads relevant Okta API documentation (107+ endpoints) and local schema before writing any code, eliminating parameter hallucinations entirely.</p>
                     </div>
 
@@ -610,7 +616,7 @@
                         <div class="heading-area heading-glow">
                             <span class="mono-tag">Enterprise Scale</span>
                             <h2>
-                                <span>Built for</span> <em class="accent-text">Complexity.</em>
+                                <span>Architected for</span> <em class="accent-text">Reliability.</em>
                             </h2>
                         </div>
                         <div class="spacer-area"></div>
