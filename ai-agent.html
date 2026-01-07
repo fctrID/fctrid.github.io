@@ -108,7 +108,7 @@
   <script type="module" crossorigin src="./assets/ai_agent.2d24acaa.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill.c7c6310f.js">
   <link rel="modulepreload" crossorigin href="./assets/ai-dropdown.8941eb75.js">
-  <link rel="stylesheet" href="./assets/ai-dropdown.038dc030.css">
+  <link rel="stylesheet" href="./assets/ai-dropdown.c32c1b84.css">
   <link rel="stylesheet" href="./assets/ai-agent.1431bbf5.css">
 </head>
 <body>
@@ -128,7 +128,7 @@
             
             <nav class="header-nav" id="main-nav">
                 <a href="#features" class="nav-link">Features</a>
-                <a href="#self-healing" class="nav-link">Use Cases</a>
+                <a href="#security" class="nav-link">Security</a>
                 <div class="nav-ai-dropdown">
                     <button class="nav-ai-btn nav-link">
                         AI Products
@@ -139,7 +139,6 @@
                         <a href="okta-mcp-server.html">Okta MCP Server</a>
                     </div>
                 </div>
-                <a href="#security" class="nav-link">Security</a>
                 <a href="#get-started" class="nav-link">Get Started</a>
             </nav>
 
@@ -191,13 +190,13 @@
                                         <div class="feature-icon-lit">
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                        <span>10-50x Lower AI Costs</span>
+                                        <span>Bring your own LLM provider</span>
                                     </li>
                                     <li class="hero-feature-item">
                                         <div class="feature-icon-lit">
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                        <span>Local-First Sovereignty</span>
+                                        <span>Local Sovereignty & Sandboxed Security</span>
                                     </li>
                                 </ul>
                             </div>
@@ -708,13 +707,14 @@
                         <p>The reasoning engine only receives your query and minimal data samples—never your complete Okta dataset.</p>
                     </div>
 
-                    <!-- AI Provider Choice -->
-                    <div class="trust-card-item" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Security Sandbox (Highlighted) -->
+                    <div class="trust-card-item featured-splash" data-aos="fade-up" data-aos-delay="200" style="position: relative; border-color: var(--accent-color);">
+                        <div class="popular-badge">SANDBOXED</div>
                         <div class="trust-icon-mini">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
-                        <h4><span>Universal AI</span> <em class="accent-text">Connectivity</em></h4>
-                        <p>Use any LLM provider or deploy completely offline with local models like Llama or Mixtral via Ollama.</p>
+                        <h4><span>Isolated</span> <em class="accent-text">Code Sandbox</em></h4>
+                        <p>All AI-generated code executes within secure, isolated containers, ensuring that every operation is validated and contained within a hardened perimeter.</p>
                     </div>
                 </div>
             </div>
