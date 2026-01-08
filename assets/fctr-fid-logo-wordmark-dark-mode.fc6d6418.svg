@@ -14,7 +14,7 @@
       <path d="M 8,95 V 42 A 42,38 0 0 1 92,42 V 58" stroke-width="11" />
       
       <!-- SHADOW RIDGE (Reflective Ghost - No Milling) -->
-      <path d="M 18,90 V 42 A 32,28 0 0 1 82,42 V 66" stroke-width="10" stroke-opacity="0.15" />
+      <path d="M 18,90 V 42 A 32,28 0 0 1 82,42 V 66" stroke-width="10" stroke-opacity="0.8" stroke="#808080"/>
                
       <!-- INNER RIDGE -->
       <path d="M 35,44 A 15,13 0 0 1 65,44 V 74 A 15,13 0 0 1 35,74 V 70" stroke-width="10" />
