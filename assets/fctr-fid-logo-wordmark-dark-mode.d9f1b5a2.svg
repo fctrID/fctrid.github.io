@@ -30,7 +30,7 @@
   </g>
 
   <!-- 2. WORDMARK (Right Aligned) -->
-  <g transform="translate(110, 21) scale(0.95)">
+  <g transform="translate(95, 21) scale(0.95)">
     <!-- Main Titanium Fill -->
     <g fill="#f8fafc">
       <path d="M 0,0 H 36 V 10 H 13 V 16 H 32 V 26 H 13 V 40 H 0 V 0 Z" />
