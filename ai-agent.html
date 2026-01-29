@@ -126,6 +126,7 @@
             </a>
             
             <nav class="header-nav" id="main-nav">
+                <a href="#video" class="nav-link">Video</a>
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#security" class="nav-link">Security</a>
                 <div class="nav-ai-dropdown">
@@ -167,8 +168,8 @@
                     <!-- 1. The Authority Banner -->
                     <div data-aos="fade-up">
                         <h1 class="hero-main-banner">
-                            <span style="display: block; margin-bottom: 8px;"><span class="text-gradient-cyan">TAKO AI</span> <span class="v-label">v1.5</span></span>
-                            <span style="display: block; font-size: 0.55em; color: rgba(255,255,255,0.8); letter-spacing: normal; font-weight: 600;">Autonomous AI agent for Okta Operations.</span>
+                            <span style="display: block; margin-bottom: 8px;"><span class="text-gradient-cyan">TAKO AI</span> <span class="v-label">v2.0 Beta</span></span>
+                            <span style="display: block; font-size: 0.55em; color: rgba(255,255,255,0.8); letter-spacing: normal; font-weight: 600;">Autonomous AI Agent for Okta Operations.</span>
                         </h1>
                         <h2 id="rotating-question" class="hero-rotating-title">
                             "Why can't john.doe access Salesforce?"
@@ -182,26 +183,26 @@
                             <div class="hero-narrative-block">
                                 <p>
                                     <em class="accent-text" style="display: block; margin-bottom: 8px; font-weight: 600;">Your New Okta AI Sidekick</em>
-                                    Stop writing boilerplate and start shipping results. Tako AI autonomously reasons through the Okta API, drafts production ready code, and self-heals runtime errors in real-time.
+                                    Stop drowning in support tickets. Tako AI answers questions, troubleshoots access issues, and automates complex Okta tasks in seconds—using simple natural language.
                                 </p>
                                 <ul class="hero-feature-list" style="margin-top: 24px;">
                                     <li class="hero-feature-item">
                                         <div class="feature-icon-lit">
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                        <span>Based on ReAct agentic pattern</span>
+                                        <span>Resolve identity tickets 10x faster</span>
                                     </li>
                                     <li class="hero-feature-item">
                                         <div class="feature-icon-lit">
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                        <span>Bring your own LLM provider</span>
+                                        <span>100% Private—Data stays on your infrastructure</span>
                                     </li>
                                     <li class="hero-feature-item">
                                         <div class="feature-icon-lit">
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                         </div>
-                                        <span>Local Sovereignty & Sandboxed Security</span>
+                                        <span>Works with OpenAI, Claude, Gemini & Ollama</span>
                                     </li>
                                 </ul>
                             </div>
@@ -225,46 +226,25 @@
                         <!-- Spacer for 6-1-5 grid -->
                         <div class="hero-spacer"></div>
 
-                        <div class="hero-right-column hide-mobile">
-                            <!-- AI Reasoning Terminal -->
+                        <div class="hero-right-column hide-mobile" id="video">
+                            <!-- Tako v2.0 Video -->
                             <div class="hero-metrics-unit" data-aos="fade-up" data-aos-delay="100">
-                                <div class="hero-stats-card ai-terminal-card">
-                                    <div class="ai-terminal-header">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <em class="accent-text" style="margin-left: auto; font-family: var(--font-mono); font-size: 9px; opacity: 0.6;">REASONER_V1.5</em>
+                                <div class="hero-stats-card" style="padding: 0; overflow: hidden; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(34, 211, 238, 0.3);">
+                                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/LAgDgrzOwYU?rel=0" 
+                                            title="Tako AI v2.0: Setup & Demo" 
+                                            frameborder="0" 
+                                            loading="lazy" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;">
+                                        </iframe>
                                     </div>
-                                    
-                                    <div class="terminal-content" style="font-family: var(--font-mono); font-size: 13px; color: #fff; line-height: 1.8;">
-                                        <div style="color: #bef264;">> 01_INTENT_ANALYSIS</div>
-                                        <div style="padding-left: 12px; color: var(--text-secondary); font-size: 12px;">"Verify user access patterns for john.doe"</div>
-
-                                        <div style="color: var(--accent-color); opacity: 0.8; margin-top: 8px;">> 02_DISCOVERY</div>
-                                        <div style="padding-left: 12px; font-size: 12px;">Found 107 entities. Filtered to 5 operations.</div>
-                                        
-                                        <div style="color: #fbbf24; margin-top: 8px;">> 03_CODE_GENERATION</div>
-                                        <div style="padding-left: 12px; font-size: 12px;">Drafted production script [okta_audit.py]</div>
-                                        
-                                        <div style="color: #22d3ee; margin-top: 8px;">> 04_FINAL_ACTION</div>
-                                        <div style="padding-left: 12px; font-size: 12px;">Exporting results to <span style="text-decoration: underline;">audit_report.csv</span></div>
-
-                                        <div style="margin-top: 16px; display: flex; align-items: center; gap: 8px;">
-                                            <span class="live-pulse" style="width: 8px; height: 8px;"></span>
-                                            <span style="font-size: 10px; opacity: 0.5;">READY_FOR_NEXT_QUERY_</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="hero-stats-footer" style="border-top: 1px solid rgba(255,255,255,0.05); margin-top: 10px; padding-top: 12px;">
-                                        <div class="validation-group" style="flex-direction: row; align-items: center; gap: 16px;">
-                                            <span class="idp-label">Works with:</span>
-                                            <div class="idp-mini-stack">
-                                                <div class="idp-chip okta" style="border-color: var(--accent-color); color: #fff;">
-                                                    <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 18c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/></svg>
-                                                    Okta
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div style="padding: 16px; border-top: 1px solid rgba(255,255,255,0.05);">
+                                        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-color); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">NEW: Tako AI v2.0</div>
+                                        <div style="font-size: 14px; color: #fff; font-weight: 600;">Setup & Demo Walkthrough</div>
+                                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Architecture overview, Docker installation, and live query demos</div>
                                     </div>
                                 </div>
                             </div>
@@ -303,40 +283,10 @@
             </div>
         </section>
 
-        <!-- Autonomous Use Cases -->
-
-            <!-- 3. Demo Video Section (YouTube)
-            <section id="demo" class="theme-section relative overflow-hidden py-20 lg:py-28" aria-labelledby="demo-title">
-                <div aria-hidden="true" class="absolute inset-0 -z-10">
-                    <div class="absolute top-20 right-0 h-64 w-64 rounded-full bg-gradient-to-bl from-primary/10 to-purple-400/10 blur-[90px] dark:from-primary/20 dark:to-purple-400/20"></div>
-                    <div class="absolute bottom-40 left-10 h-72 w-72 rounded-full bg-gradient-to-tr from-secondary/5 to-blue-400/10 blur-[100px] dark:from-secondary/15 dark:to-blue-400/20"></div>
-                </div>
-
-                <div class="section-shell">
-                    <div class="section-heading" data-aos="fade-up">
-                        <span>Demo</span>
-                        <h2 id="demo-title">See Tako in Action</h2>
-                        <p>Watch our step-by-step installation guide and feature demonstration.</p>
-                    </div>
-
-                    <div class="video-container" data-aos="zoom-in">
-                        <div class="video-wrapper">
-                            <div id="yt-placeholder" style="position: absolute; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center;">
-                                <div style="display: flex; flex-direction: column; align-items: center;">
-                                    <svg style="height: 3rem; width: 3rem; animation: spin 1s linear infinite; color: #2563eb;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <circle style="opacity: 0.25;" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                        <path style="opacity: 0.75;" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                    </svg>
-                                    <p style="margin-top: 0.75rem; color: #4b5563;">Loading video...</p>
-                                </div>
-                            </div>
-
-                            <iframe src="https://www.youtube.com/embed/PC8arYq5kZk?rel=0" title="Tako: Fctr AI Agent Demo" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onload="document.getElementById('yt-placeholder').style.display='none';"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            -->
+        <!-- Tako AI v2.0 Demo Video -->
+        <section id="demo" class="theme-section relative overflow-hidden py-20 lg:py-28" style="display: none;">
+            <!-- Hidden - video now in hero section -->
+        </section>
 
         <!-- Autonomous Use Cases -->
         <section id="use-cases">
@@ -416,39 +366,39 @@
                         <div class="heading-area heading-glow">
                             <span class="mono-tag">Architecture</span>
                             <h2>
-                                <span>The Autonomous</span> <em class="accent-text">Engineer.</em>
+                                <span>Multi-Agent</span> <em class="accent-text">Committee.</em>
                             </h2>
                         </div>
                         <div class="spacer-area"></div>
                         <div class="description-area">
-                            <p>Tako v1.5 collapses the agent committee into a single Autonomous Engineer that reads the manual, drafts code, and fixes its own bugs.</p>
+                            <p>Tako v2.0 introduces a specialized multi-agent architecture where four independent experts collaborate to deliver 10x faster sync and 50-70% lower AI costs.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bento-grid-connected">
                     <div class="bento-card-flat medium" data-aos="fade-up">
-                        <div class="item-meta">PHASE 01</div>
-                        <h4><span>Dynamic Context</span> <em class="accent-text">Engineering</em></h4>
-                        <p>Tako loads relevant Okta API documentation (107+ endpoints) and local schema before writing any code, eliminating parameter hallucinations entirely.</p>
+                        <div class="item-meta">AGENT 01</div>
+                        <h4><span>Strategic</span> <em class="accent-text">Router</em></h4>
+                        <p>The Router analyzes your query and decides whether to fetch live API data, query the local SQL cache, or synthesize a hybrid response for maximum accuracy.</p>
                     </div>
 
                     <div class="bento-card-flat medium" data-aos="fade-up" data-aos-delay="100">
-                        <div class="item-meta">PHASE 02</div>
-                        <h4><span>The ReAct</span> <em class="accent-text">Loop</em></h4>
-                        <p>Acting as a senior engineer, Tako drafts production-ready Python code and passes it through deterministic security validation to block unsafe operations.</p>
+                        <div class="item-meta">AGENT 02</div>
+                        <h4><span>The ReAct</span> <em class="accent-text">API Engineer</em></h4>
+                        <p>Acting as a senior engineer, this agent drafts production-ready Python code to interact with 107+ Okta endpoints, validated by strict security guardrails.</p>
                     </div>
 
                     <div class="bento-card-flat medium" data-aos="fade-up">
-                        <div class="item-meta">PHASE 03</div>
-                        <h4><span>Self-Healing</span> <em class="accent-text">Execution</em></h4>
-                        <p>Scripts run in a secure sandbox. If an error occurs, Tako diagnoses the stack trace, rewrites the fix, and re-runs the code—all in milliseconds.</p>
+                        <div class="item-meta">AGENT 03</div>
+                        <h4><span>Data & SQL</span> <em class="accent-text">specialist</em></h4>
+                        <p>Optimized for enterprise-scale processing, this agent manages the local SQLite database, performing complex joins and aggregations across 50K+ users.</p>
                     </div>
 
                     <div class="bento-card-flat medium" data-aos="fade-up" data-aos-delay="100">
-                        <div class="item-meta">PHASE 04</div>
-                        <h4><span>Hybrid Data</span> <em class="accent-text">Retrieval</em></h4>
-                        <p>Tako intelligently merges instant local SQL cache results with fresh live API data, streaming a clean, structured JSON response to your dashboard.</p>
+                        <div class="item-meta">AGENT 04</div>
+                        <h4><span>Synthesis</span> <em class="accent-text">Engine</em></h4>
+                        <p>Final results are cleaned, formatted as structured JSON, and streamed to your dashboard with full traceability and CSV export capabilities.</p>
                     </div>
                 </div>
             </div>
@@ -620,7 +570,7 @@
                         </div>
                         <div class="spacer-area"></div>
                         <div class="description-area">
-                            <p>Tako v1.5.0-beta delivers deterministic results through a ReAct Agent Architecture, combining local sovereignty with advanced reasoning.</p>
+                            <p>Tako v2.0.0-beta delivers deterministic results through a Multi-Agent Committee, combining 10x faster sync with advanced cross-entity reasoning.</p>
                         </div>
                     </div>
                 </div>
@@ -631,47 +581,47 @@
                         <h4>
                             <span>Dual-Model</span> <em class="accent-text">Economy</em>
                         </h4>
-                        <p>10-50x cost reduction using efficient models like Gemini 3 Flash and Claude 4.5 Haiku. Optimized reasoning and coding phases split for maximum ROI.</p>
+                        <p>50-70% cost reduction using efficient models like Gemini 3 Flash and Claude 4.5 Haiku. Optimized reasoning and coding tasks are split between specialized agents for maximum ROI.</p>
                     </div>
 
                     <!-- Safety Guards - Small Card (2) -->
                     <div class="bento-card-flat small" data-aos="fade-up" data-aos-delay="100">
                         <h4>
-                            <span>Circuit</span> <em class="accent-text">Breakers</em>
+                            <span>Multi-Arch</span> <em class="accent-text">Support</em>
                         </h4>
-                        <p>Built-in circuit breakers prevent runaway loops. Intelligent rate limit management automatically respects Okta quotas.</p>
+                        <p>Native Docker images for both AMD64 and ARM64. Deploy on everything from high-compute AWS Graviton clusters to local Mac mini workstations.</p>
                     </div>
 
                     <!-- AI Provider Flexibility - Medium Card (3) -->
                     <div class="bento-card-flat medium" data-aos="fade-up">
                         <h4>
-                            <span>Local</span> <em class="accent-text">Models</em>
+                            <span>10x Faster</span> <em class="accent-text">Sync</em>
                         </h4>
-                        <p>Deploy completely offline using Ollama. Supports air-gapped environments with full Llama and Mixtral compatibility.</p>
+                        <p>Complete architecture rewrite optimized for batched API throughput and efficient data mapping. Reduces sync cycles from hours to minutes, even for complex 50K+ user environments.</p>
                     </div>
 
                     <!-- Complete API Coverage - Medium Card (3) -->
                     <div class="bento-card-flat medium" data-aos="fade-up" data-aos-delay="100">
                         <h4>
-                            <span>Token</span> <em class="accent-text">Reduction</em>
+                            <span>Token</span> <em class="accent-text">Minimization</em>
                         </h4>
-                        <p>99% token reduction through intelligent context filtering. The agent loads only the necessary schema for your specific query.</p>
+                        <p>Isolated agent contexts prevent token bloat. The Multi-Agent Committee ensures each specialized AI only receives the exact schema needed for its task.</p>
                     </div>
 
                     <!-- Zero Cloud Dependencies - Small Card (2) -->
                     <div class="bento-card-flat small" data-aos="fade-up">
                         <h4>
-                            <span>Data</span> <em class="accent-text">Sovereignty</em>
+                            <span>Hybrid Data</span> <em class="accent-text">Modes</em>
                         </h4>
-                        <p>All Okta data stays in your local SQLite database. Only small samples are sent to AI providers.</p>
+                        <p>Flexible retrieval: Choose API Mode for real-time freshness, Database Mode for sub-second local queries, or Hybrid Mode for the best of both.</p>
                     </div>
 
                     <!-- Production-Ready Code - Large Card (4) -->
                     <div class="bento-card-flat large" data-aos="fade-up" data-aos-delay="100">
                         <h4>
-                            <span>Deterministic</span> <em class="accent-text">Flow</em>
+                            <span>Redesigned</span> <em class="accent-text">App Logic</em>
                         </h4>
-                        <p>Unlike simple chatbots, Tako follows a rigid ReAct pattern. Every query produces a versioned Python script, fully audited before execution.</p>
+                        <p>Advanced group attribution and accurate application assignment tracking. Captures hidden access patterns and granular permission statuses across all Okta entities.</p>
                     </div>
                 </div>
             </div>
@@ -751,7 +701,7 @@
                     <!-- GitHub Start -->
                     <div class="pricing-card-schematic evaluation" data-aos="fade-up">
                         <span class="tier-label tier-evaluation">Open Source</span>
-                        <div class="price">v1.5 <span class="price-unit">Stable</span></div>
+                        <div class="price">v2.0 <span class="price-unit">Beta</span></div>
                         <p>Clone the repository and follow our quick setup guide to deploy in your environment.</p>
                         <ul class="feature-list">
                             <li>
